@@ -16,6 +16,27 @@
 		<link rel="stylesheet" href="css/APlayer.min.css">
 		<script src="css/APlayer.min.js"></script>
 		<script src="css/Meting.min.js"></script>
+		<script language="javascript">
+			var now = new Date();
+			function createtime(){
+				var grt= new Date("5/20/2020 12:00:00");
+				now.setTime(now.getTime()+250);
+				days = (now - grt ) / 1000 / 60 / 60 / 24;
+				dnum = Math.floor(days);
+				hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+				hnum = Math.floor(hours);
+				if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+				minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+				mnum = Math.floor(minutes);
+				if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+				seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+				snum = Math.round(seconds);
+				if(String(snum).length ==1 ){snum = "0" + snum;}
+				document.getElementById("timeDate").innerHTML = "网站已运行"+dnum+"天";
+				document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+			}
+			setInterval("createtime()",250); 
+		</script>
 	</head>
 	<body bgcolor="black">
 		<video autoplay="autoplay" loop="loop" muted="muted" style="margin: auto; position: absolute; z-index: -2; top: 0;left: 0; width: 100%; height: 100%; object-fit: cover;" src="https://wp.zp68.com/sub/filestores/2020/05/17/cd78f27a6c3caf2fb9775d784cbede70.mp4" type="video/mp4"></video>
@@ -52,7 +73,11 @@
 			</pre>
 		</meting-js>
 		<div style="position: fixed; width: 400px; height: 30px; background: rgba(0,0,0,0.00); top:95%; left: 50%; transform: translate(-200px,-15px); text-align: center;">
-			<strong>Made by </strong><a title="访问：https://github.com/1210718010" href="https://github.com/1210718010"   target="_blank"><em>dzb</em></a><br /><em><script type="text/javascript" src="//quote.51.la/q?id=20809489&mb=4"></script><em>
+			<strong>Made by </strong><a title="访问：https://github.com/1210718010" href="https://github.com/1210718010"   target="_blank"><em>dzb</em></a>
+			<br />
+			<em><script type="text/javascript" src="//quote.51.la/q?id=20809489&mb=4"></script><em>
+			<br />
+			<strong id="timeDate">载入天数……</strong><strong id="times">载入时分秒……</strong>
 		</div>
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
