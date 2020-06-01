@@ -13,9 +13,27 @@
 			img {width: 60px; }
  
 		</style>
-		<link rel="stylesheet" href="css/APlayer.min.css">
-		<script src="css/APlayer.min.js"></script>
-		<script src="css/Meting.min.js"></script>
+		<link rel="stylesheet" href="https://k-on.blog/css/APlayer.min.css">
+		<script src="https://k-on.blog/css/APlayer.min.js"></script>
+		<div id="aplayer"></div>
+		<script type="text/javascript">
+			const ap = new APlayer({
+				container: document.getElementById('aplayer'),
+				fixed: true,
+				autoplay: true,
+				theme: '#858585',
+				preload: 'auto',
+				volume: 0.5,
+				lrcType: 1,
+				audio: [{
+					name: '旅立ちの日に',
+					artist: '日本群星',
+					url: 'https://wp.zp68.com/sub/filestores/2020/05/17/47a226d5765b523feaf68367d3b45870.mp3',
+					cover: 'https://wp.zp68.com/sub/filestores/2020/05/21/3c31e38656f64d718b312dbdce804939.jpg',
+					lrc: '[00:00.00]旅立ちの日に - 日本群星\n[00:17.06]白い光の中に　山なみは萌えて\n[00:27.77]遥かな空の果てまでも　君は飞び立つ\n[00:38.23]限り无く青い空に　心ふるわせ\n[00:48.95]自由を駆ける鸟よ　ふり返ることもせず\n[00:59.24]勇気を翼にこめて希望の风にのり\n[01:09.88]このひろい大空に梦をたくして'
+				}]
+			});
+		</script>
 		<script language="javascript">
 			var now = new Date();
 			function createtime(){
@@ -52,26 +70,6 @@
 				<a href="mailto:1210718010@qq.com" target="_blank"><em class="img"><img src="https://files.catbox.moe/9j1mcg.svg" title="向我发送邮件" alt="E-mail" /></em></a>
 		</div>
 		<div style="position: fixed; z-index: -1; width: 1920px; height: 1080px; background: rgba(0,0,0,0.00); top:50%; left: 50%; transform: translate(-960px,-540px); text-align: center;"></div>
-		<meting-js
-			name="旅立ちの日に"
-			artist="日本群星"
-			url="https://wp.zp68.com/sub/filestores/2020/05/17/47a226d5765b523feaf68367d3b45870.mp3"
-			cover="https://wp.zp68.com/sub/filestores/2020/05/21/3c31e38656f64d718b312dbdce804939.jpg"
-			fixed="true"
-			volume="0.5"
-			autoplay="true"
-			theme="#858585"
-			list-folded="true">
-			<pre hidden>
-				[00:00.00]旅立ちの日に - 日本群星
-				[00:17.06]白い光の中に　山なみは萌えて
-				[00:27.77]遥かな空の果てまでも　君は飞び立つ
-				[00:38.23]限り无く青い空に　心ふるわせ
-				[00:48.95]自由を駆ける鸟よ　ふり返ることもせず
-				[00:59.24]勇気を翼にこめて希望の风にのり
-				[01:09.88]このひろい大空に梦をたくして
-			</pre>
-		</meting-js>
 		<div style="position: fixed; cursor: default; width: 800px; height: 30px; background: rgba(0,0,0,0.00); top:97%; left: 50%; transform: translate(-400px,-15px); text-align: center;">
 			<strong>Made by </strong><a title="访问：https://github.com/1210718010" href="https://github.com/1210718010" target="_blank"><em>dzb</em></a>
 			<strong> ‖ </strong>
