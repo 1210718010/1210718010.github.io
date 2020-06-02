@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>关于 ~ K-ON!</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<div id="gitalk-container"></div>
 		<style type="text/css">
 			div {margin: 50px auto 40px auto; width: 1000px; cursor: default; }
 			a {color: #4183c4; text-decoration: none; }
@@ -28,6 +31,19 @@
 				<p class="over">① <a href="https://github.com/MoePlayer/APlayer" target="_blank">APlayer</a> - <a href="https://github.com/DIYgod" target="_blank">DIYgod</a></p>
 			</ul>
 		</div>
+		<script>
+			var gitalk = new Gitalk({
+				clientID: 'e6bfd9be8575b4d97808',
+				clientSecret: '152faf0307fdd083d1f401d987151eef22ec6bb1',
+				repo: 'comment',
+				owner: '1210718010',
+				admin: ['1210718010'],
+			})
+			gitalk.render('gitalk-container')
+		</script>
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
 </html>
+
+
+
