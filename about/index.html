@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="zh-CN">
 	<head>
 		<meta charset="utf-8">
 		<title>关于 ~ K-ON!</title>
@@ -13,16 +13,6 @@
 			p {color: rgba(0, 0, 0, 0.7); margin: 20px 0; line-height: 1.2; }
 			p.over {color: rgba(0, 0, 0, 0.7); margin: 20px 0; line-height: 0.3; }
 		</style>
-		<script>
-			var gitalk = new Gitalk({
-				clientID: 'e6bfd9be8575b4d97808',
-				clientSecret: '152faf0307fdd083d1f401d987151eef22ec6bb1',
-				repo: 'comment',
-				owner: '1210718010',
-				admin: ['1210718010'],
-			})
-			gitalk.render('gitalk-container')
-		</script>
 	</head>
 	<body bgcolor="#CDCDCD">
 		<div class="over">
@@ -43,6 +33,16 @@
 			<br />
 			<div id="gitalk-container"></div>
 		</div>
+		<script>
+			var gitalk = new Gitalk({
+				clientID: 'e6bfd9be8575b4d97808',
+				clientSecret: '152faf0307fdd083d1f401d987151eef22ec6bb1',
+				repo: 'comment',
+				owner: '1210718010',
+				admin: ['1210718010'],
+			})
+			gitalk.render('gitalk-container')
+		</script>
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
 </html>
