@@ -1,5 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^k-on.blog/about$ [NC,OR]
-RewriteRule ^(.*)$ https://about.k-on.blog/$1 [R=301,L]
-</IfModule>
