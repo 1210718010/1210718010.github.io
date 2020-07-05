@@ -6,6 +6,10 @@
 		<link rel="shortcut icon" href="https://k-on.blog/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+		<script type="text/javascript" src="https://wp.zp68.com/static/api/dz/js/jquery.js"></script>
+		<script type="text/javascript">var jq = jQuery.noConflict();</script>
+		<script type="text/javascript" src="https://wp.zp68.com/static/api/dz/js/jquery.mybox2.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="https://wp.zp68.com/static/api/dz/images/mybox.css" />
 		<style type="text/css">
 			div.over {margin: 50px auto 50px auto; width: 1000px; cursor: default; }
 			a {color: #4183c4; text-decoration: none; }
@@ -45,11 +49,6 @@
 			})
 			gitalk.render('gitalk-container')
 		</script>
-		<!-- 晓云网络 -->
-		<script type="text/javascript" src="https://wp.zp68.com/static/api/dz/js/jquery.js"></script>
-		<script type="text/javascript">var jq = jQuery.noConflict();</script>
-		<script type="text/javascript" src="https://wp.zp68.com/static/api/dz/js/jquery.mybox2.js" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="https://wp.zp68.com/static/api/dz/images/mybox.css" />
 		<script type="text/javascript">
 			var upload_url = 'https://wp.zp68.com/api/dz/upload?uid=4554&folder_id=2018&plugin_type=dx3&hash=4e4a3bbd9e2c6fb56654ec120b45dc66';
 			function get_my_last(){
@@ -61,11 +60,11 @@
 					document.getElementById('pd_fl_box').innerHTML = lang_upload_tips;
 					document.getElementById('pd_fl_box').innerHTML += callback;
 					document.getElementById('pd_fl_box').style.display = '';
+					}
+					);
 				}
-			);
 			}
-			}
-				jq(document).ready(function(){
+			jq(document).ready(function(){
 				jq('<div class="pd_b_box"><a href="'+upload_url+'" id="a_phpdisk_upload" onclick="document.getElementById(\'pd_fl_box\').style.display=\'none\'"></a> <a href="javascript:;" id="a_phpdisk_fl" onclick="get_my_last()"></a></div><div class="clear"></div><div id=\'pd_fl_box\' style="display:none"></div><br>').insertBefore('#attachnotice_attach');
 				show_box('a_phpdisk_upload',lang_btn_txt,upload_url,500,350);
 			});
