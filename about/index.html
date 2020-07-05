@@ -45,6 +45,32 @@
 			})
 			gitalk.render('gitalk-container')
 		</script>
+		<!-- 晓云网络 -->
+		<script type="text/javascript" src="https://wp.zp68.com/static/api/dz/js/jquery.js"></script>
+		<script type="text/javascript">var jq = jQuery.noConflict();</script>
+		<script type="text/javascript" src="https://wp.zp68.com/static/api/dz/js/jquery.mybox2.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="https://wp.zp68.com/static/api/dz/images/mybox.css" />
+		<script type="text/javascript">
+			var upload_url = 'https://wp.zp68.com/api/dz/upload?uid=4554&folder_id=2018&plugin_type=dx3&hash=4e4a3bbd9e2c6fb56654ec120b45dc66';
+			function get_my_last(){
+				if(document.getElementById('pd_fl_box').style.display==''){
+				document.getElementById('pd_fl_box').style.display='none';
+				}else{
+					jQuery.getScript('https://wp.zp68.com/api/dz/Lists?uid=4554&folder_id=2018&plugin_type=dx3&hash=4e4a3bbd9e2c6fb56654ec120b45dc66&t='+ Math.random(),
+					function(){
+					document.getElementById('pd_fl_box').innerHTML = lang_upload_tips;
+					document.getElementById('pd_fl_box').innerHTML += callback;
+					document.getElementById('pd_fl_box').style.display = '';
+				}
+			);
+			}
+			}
+				jq(document).ready(function(){
+				jq('<div class="pd_b_box"><a href="'+upload_url+'" id="a_phpdisk_upload" onclick="document.getElementById(\'pd_fl_box\').style.display=\'none\'"></a> <a href="javascript:;" id="a_phpdisk_fl" onclick="get_my_last()"></a></div><div class="clear"></div><div id=\'pd_fl_box\' style="display:none"></div><br>').insertBefore('#attachnotice_attach');
+				show_box('a_phpdisk_upload',lang_btn_txt,upload_url,500,350);
+			});
+		</script>
+		<!-- end -->
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
 </html>
