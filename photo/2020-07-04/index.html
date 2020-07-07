@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>2020-07-04 ~ photo ~ K-ON!</title>
 		<link rel="shortcut icon" href="https://k-on.blog/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 		<style type="text/css">
 			a {color: #4183c4; text-decoration: none; }
 			a:hover {text-decoration: underline; }
@@ -128,6 +130,19 @@
 		<img src="https://wp.zp68.com/sub/filestores/2020/07/05/2de43b6d3d00b835eadac3f45e50ef70.jpg" title="52.jpg" alt="52.jpg" />
 		<a href="https://wp.zp68.com/sub/filestores/2020/07/05/a03f2b0243edf106721513c7bd600bf7.jpg" target="_blank"><p>53.jpg</p></a>
 		<img src="https://wp.zp68.com/sub/filestores/2020/07/05/a03f2b0243edf106721513c7bd600bf7.jpg" title="53.jpg" alt="53.jpg" />
+		<br />
+		<div id="gitalk-container"></div>
+		<script>
+			var gitalk = new Gitalk({
+				clientID: 'e6bfd9be8575b4d97808',
+				clientSecret: '152faf0307fdd083d1f401d987151eef22ec6bb1',
+				repo: 'comment',
+				owner: '1210718010',
+				admin: ['1210718010'],
+				language: 'zh-CN',
+			})
+			gitalk.render('gitalk-container')
+		</script>
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
 </html>
