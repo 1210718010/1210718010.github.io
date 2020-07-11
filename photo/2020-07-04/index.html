@@ -15,6 +15,7 @@
 			p.yiban {color: rgba(0, 0, 0, 0.7); cursor: default; }
 			p:hover.yiban {text-decoration: none; }
 			img {width: 350px; }
+			#map {position: fixed; top: 0; right: 0; width: 200px; height: 100%; z-index: 100; }
 		</style>
 	</head>
 	<body bgcolor="#CDCDCD">
@@ -142,6 +143,11 @@
 				language: 'zh-CN',
 			})
 			gitalk.render('gitalk-container')
+		</script>
+		<canvas id="map"></canvas>
+		<script src="https://larsjung.de/pagemap/latest/demo/pagemap.min.js"></script>
+		<script>
+			pagemap(document.querySelector('#map'));
 		</script>
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
