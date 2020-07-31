@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #222;
+  background: #000;
 }
 
 .rotating-text {
@@ -39,21 +39,9 @@ body {
 }
 
 .alizarin {
-  color: #e74c3c;
+  color: #fff;
 }
 
 .wisteria {
-  color: #8e44ad;
-}
-
-.peter-river {
-  color: #3498db;
-}
-
-.emerald {
-  color: #2ecc71;
-}
-
-.sun-flower {
-  color: #f1c40f;
+  color: #fff;
 }
