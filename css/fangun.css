@@ -23,6 +23,7 @@ body {
   position: absolute;
   display: flex;
   opacity: 0;
+  color: white;
 }
 .rotating-text p .word .letter {
   transform-origin: center center 25px;
@@ -36,24 +37,4 @@ body {
 }
 .rotating-text p .word .letter.behind {
   transform: rotateX(-90deg);
-}
-
-.alizarin {
-  color: #e74c3c;
-}
-
-.wisteria {
-  color: #8e44ad;
-}
-
-.peter-river {
-  color: #3498db;
-}
-
-.emerald {
-  color: #2ecc71;
-}
-
-.sun-flower {
-  color: #f1c40f;
 }
