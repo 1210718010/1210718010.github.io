@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #222;
+  background: #000;
 }
 
 .rotating-text {
@@ -14,27 +14,27 @@ body {
   color: white;
   transform: translateX(-80px);
 }
-.rotating-text p.fangun {
+.rotating-text {
   display: inline-flex;
   margin: 0;
   vertical-align: top;
 }
-.rotating-text p.fangun .word {
+.rotating-text .word {
   position: absolute;
   display: flex;
   opacity: 0;
 }
-.rotating-text p.fangun .word .letter {
+.rotating-text .word .letter {
   transform-origin: center center 25px;
 }
-.rotating-text p.fangun .word .letter.out {
+.rotating-text .word .letter.out {
   transform: rotateX(90deg);
   transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
-.rotating-text p.fangun .word .letter.in {
+.rotating-text .word .letter.in {
   transition: 0.38s ease;
 }
-.rotating-text p.fangun .word .letter.behind {
+.rotating-text .word .letter.behind {
   transform: rotateX(-90deg);
 }
 
