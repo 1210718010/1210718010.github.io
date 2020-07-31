@@ -14,27 +14,27 @@ body {
   color: white;
   transform: translateX(-80px);
 }
-.rotating-text {
+.rotating-text p{
   display: inline-flex;
   margin: 0;
   vertical-align: top;
 }
-.rotating-text .word {
+.rotating-text p.word {
   position: absolute;
   display: flex;
   opacity: 0;
 }
-.rotating-text .word .letter {
+.rotating-text p.word .letter {
   transform-origin: center center 25px;
 }
-.rotating-text .word .letter.out {
+.rotating-text p.word .letter.out {
   transform: rotateX(90deg);
   transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
-.rotating-text .word .letter.in {
+.rotating-text p.word .letter.in {
   transition: 0.38s ease;
 }
-.rotating-text .word .letter.behind {
+.rotating-text p.word .letter.behind {
   transform: rotateX(-90deg);
 }
 
