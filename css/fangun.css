@@ -2,10 +2,10 @@
 
 .rotating-text {
   position: fixed;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 100px;
   background: rgba(0,0,0,0.00);
-  top:45%;
+  top:30%;
   left: 50%;
   transform: translate(-200px,-150px);
   text-align: center;
