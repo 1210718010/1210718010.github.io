@@ -1,1 +1,1 @@
-# [http://k-on.blog/](http://k-on.blog/ "K-ON!") #
+# [https://k-on.blog/](https://k-on.blog/ "K-ON!") #
