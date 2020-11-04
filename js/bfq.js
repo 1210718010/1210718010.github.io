@@ -30,34 +30,34 @@ var musics = [
 	"http://music.163.com/song/media/outer/url?id=30590331.mp3",
 ];
 var songs = [
-	"ハルヒの想い - 神前暁"
-	"「プラチナむかつく」 - 神前暁"
-	"妄想は個人の自由 - 浜口史郎"
-	"歳月-雲流れ- - Foxtail-Grass Studio"
-	"my most precious treasure -orgel- - 麻枝准"
-	"海の形 - 昙轩"
-	"アゲイン - 横山克"
-	"追想、桜ノ國 - はちみつれもん"
-	"渚 - 京田誠一"
-	"思い出をありがとう - 坂本昌一郎"
-	"Rain after Summer - 羽肿"
-	"疲れたので家に帰ろう - 浜口史郎"
-	"手つかずの感情 - 中山真斗"
-	"どれだけ希望を持ったのか - 中山真斗"
-	"브람스 자장가 - 자장가"
-	"やわらかな方程式 - 中山真斗"
-	"You - dai/M.Graveyard"
-	"Creep - Gamper & Dadoni/Ember Island"
-	"城南花已开 - 三亩地"
-	"secret base ~君がくれたもの~ - 茅野愛衣/戸松遥/早見沙織"
-	"打上花火 - DAOKO/米津玄師"
-	"僕に光をくれたんだ - 中山真斗"
-	"秋も冬も春も - 吉森信"
-	"恋のうた - Yunomi/鬼頭明里"
-	"だんご大家族 - 茶太"
-	"Sleeping In - Phil Good"
-	"Bloom of Youth - 清水淳一"
-	"秋 - FLOWER FLOWER"
+	"ハルヒの想い - 神前暁",
+	"「プラチナむかつく」 - 神前暁",
+	"妄想は個人の自由 - 浜口史郎",
+	"歳月-雲流れ- - Foxtail-Grass Studio",
+	"my most precious treasure -orgel- - 麻枝准",
+	"海の形 - 昙轩",
+	"アゲイン - 横山克",
+	"追想、桜ノ國 - はちみつれもん",
+	"渚 - 京田誠一",
+	"思い出をありがとう - 坂本昌一郎",
+	"Rain after Summer - 羽肿",
+	"疲れたので家に帰ろう - 浜口史郎",
+	"手つかずの感情 - 中山真斗",
+	"どれだけ希望を持ったのか - 中山真斗",
+	"브람스 자장가 - 자장가",
+	"やわらかな方程式 - 中山真斗",
+	"You - dai/M.Graveyard",
+	"Creep - Gamper & Dadoni/Ember Island",
+	"城南花已开 - 三亩地",
+	"secret base ~君がくれたもの~ - 茅野愛衣/戸松遥/早見沙織",
+	"打上花火 - DAOKO/米津玄師",
+	"僕に光をくれたんだ - 中山真斗",
+	"秋も冬も春も - 吉森信",
+	"恋のうた - Yunomi/鬼頭明里",
+	"だんご大家族 - 茶太",
+	"Sleeping In - Phil Good",
+	"Bloom of Youth - 清水淳一",
+	"秋 - FLOWER FLOWER",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
