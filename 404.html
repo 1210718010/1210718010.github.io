@@ -8,6 +8,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://k-on.blog/js/svg.js"></script>
 		<script src="https://k-on.blog/js/music.js"></script>
+		<script src="https://k-on.blog/js/bfq.js"></script>
 		<style>
 			h1 {color: white; text-align: center; line-height: 60px; font-size: 40px; font-weight: 100; margin: 0 auto 10px auto; opacity: 0.8; cursor: default;  }
 			h2 {color: white; text-align: center; line-height: 60px; font-size: 20px; font-weight: 500; margin: 0 0 80px 0; opacity: 0.8; cursor: default; }
@@ -33,7 +34,7 @@
 		</div>
 		<div style="position: fixed; width: 40px; height: 40px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-50px); ">
 			<a id="audio"><img id="stop" alt="播放/暂停" src="https://k-on.blog/img/zt.svg" /></a>
-			<audio id="music" src="http://music.163.com/song/media/outer/url?id=436016480.mp3"></audio>
+			<audio id="music"></audio>
 		</div>
 		<div style="position: fixed; width: 400px; height: 20px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(60px,-54px); ">
 			<p id="songs" class="song1"></p>
