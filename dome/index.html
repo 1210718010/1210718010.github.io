@@ -13,7 +13,6 @@
                    url: "about"
                };
                history.pushState(state, "HTML 5 History API simple demo", "go");
-               window.onpopstate = function (e) { document.title = e.state.title; }
            }
            document.write('<a href="javascript:go()">点击这里</a>');
        }
