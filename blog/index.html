@@ -8,14 +8,18 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://k-on.blog/js/svg.js"></script>
 		<script src="https://k-on.blog/js/music.js"></script>
+		<script src="https://k-on.blog/js/bfq.js"></script>
+		<script src="https://k-on.blog/js/cbl.js"></script>
 		<style type="text/css">
-			#audio {cursor: pointer; }
-			#stop {width: 40px; height: 40px; opacity: 0.8; }
-			#stop:hover {opacity: 1.0; }
 			.cd {width: 40px; height: 40px; opacity: 0.8; }
 			.cd:hover {opacity: 1.0; }
 			.dk {z-index: 99; }
 			.gb {opacity: 0; z-index: 89; }
+			.song1 {color: #fff; ; opacity: 0; font-size: 15px; }
+			.song2 {color: #fff; ; opacity: 0.7; font-size: 15px; }
+			#audio {cursor: pointer; }
+			#stop {width: 40px; height: 40px; opacity: 0.8; }
+			#stop:hover {opacity: 1.0; }
 			#slider{
             width: 300px;
             position: fixed;
@@ -35,10 +39,12 @@
 		<div class="gb" id="ccc" style="position: fixed; width: 40px; height: 40px; background: rgba(0,0,0,0.00); top: 0%; left: 100%; transform: translate(-60px,20px); ">
 			<img class="cd" alt="关闭菜单" src="https://k-on.blog/img/gb.svg" />
 		</div>
-		<script src="https://k-on.blog/js/cbl.js"></script>
 		<div style="position: fixed; width: 40px; height: 40px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-50px); ">
 			<a id="audio"><img id="stop" alt="播放/暂停" src="https://k-on.blog/img/zt.svg" /></a>
-			<audio id="music" src="http://music.163.com/song/media/outer/url?id=30590331.mp3"></audio>
+			<audio id="music"></audio>
+		</div>
+		<div style="position: fixed; width: 500px; height: 20px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(60px,-54px); ">
+			<p id="songs" class="song1"></p>
 		</div>
 		<script type="text/javascript" src="//js.users.51.la/20809489.js"></script>
 	</body>
