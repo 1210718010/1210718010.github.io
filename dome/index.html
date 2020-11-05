@@ -1,18 +1,17 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html;charset=gb2312" />
-<title>HTML5 history¶ÔÏópushState·½·¨Ê¾Àı--±à³ÌÉè¼ÆÍø</title>
-<meta name="Keywords" runat="server" id="metaKey" content="html5,history,pushstate"/>
+<meta charset="utf-8">
+<title>HTML5 historyå¯¹è±¡pushStateæ–¹æ³•ç¤ºä¾‹--ç¼–ç¨‹è®¾è®¡ç½‘</title>
 </head>
 <body>
    <script type="text/javascript">
 
-       document.write('µ±Ç°Ê±¼ä:' + new Date().toLocaleString());
+       document.write('å½“å‰æ—¶é—´:' + new Date().toLocaleString());
        var supportPushState = history && history.pushState;
        if (supportPushState) {
            window.go = function () {
-               var state = { //ÕâÀï¿ÉÒÔÊÇÄãÏë¸øä¯ÀÀÆ÷µÄÒ»¸öState¶ÔÏó£¬ÎªºóÃæµÄStateEvent×ö×¼±¸¡£
+               var state = { //è¿™é‡Œå¯ä»¥æ˜¯ä½ æƒ³ç»™æµè§ˆå™¨çš„ä¸€ä¸ªStateå¯¹è±¡ï¼Œä¸ºåé¢çš„StateEventåšå‡†å¤‡ã€‚
                    title: "HTML 5 History API simple demo",
                    url: "about"
 
@@ -20,7 +19,7 @@
                history.pushState(state, "HTML 5 History API simple demo", "go");
                window.onpopstate = function (e) { document.title = e.state.title; }
            }
-           document.write('<a href="javascript:go()">µã»÷ÕâÀï</a>');
+           document.write('<a href="javascript:go()">ç‚¹å‡»è¿™é‡Œ</a>');
        }
    </script>
 </body>
