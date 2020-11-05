@@ -9,7 +9,7 @@ $(document).ready(function () {
 		ccc.attr("class", "dk")
 	})
 	ccc.click( function () {
-		slider.animate({right:-300},500);
+		slider.animate({right:-400},500);
 		ccc.attr("class", "gb")
 		bbb.attr("class", "dk")
 	})
