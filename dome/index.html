@@ -2,17 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>dome</title>
+<title>HTML5 history对象pushState方法示例--编程设计网</title>
 </head>
 <body>
    <script type="text/javascript">
        var supportPushState = history && history.pushState;
        if (supportPushState) {
            window.go = function () {
-               var state = {
+               var state = { //这里可以是你想给浏览器的一个State对象，为后面的StateEvent做准备。
+                   title: "HTML 5 History API simple demo",
                    url: "about"
+
                };
                history.pushState(state, "HTML 5 History API simple demo", "go");
+               window.onpopstate = function (e) { document.title = e.state.title; }
            }
            document.write('<a href="javascript:go()">点击这里</a>');
        }
