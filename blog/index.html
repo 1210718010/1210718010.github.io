@@ -11,6 +11,8 @@
 		<script src="https://k-on.blog/js/bfq.js"></script>
 		<script src="https://k-on.blog/js/cbl.js"></script>
 		<style type="text/css">
+			.tx {width: 150px; height: 150px; position: absolute; left:50%; top: 0%; margin-left: -75px;margin-top: 75px; opacity: 0.8; }
+			.js {width: 350px; height: 600px; position: absolute; left:50%; top: 0%; margin-left: -175px;margin-top: 250px; text-align: center; color: #fff; opacity: 0.8; }
 			.cd {width: 40px; height: 40px; opacity: 0.8; }
 			.cd:hover {opacity: 1.0; }
 			.dk {z-index: 99; }
@@ -20,19 +22,20 @@
 			#audio {cursor: pointer; }
 			#stop {width: 40px; height: 40px; opacity: 0.8; }
 			#stop:hover {opacity: 1.0; }
-			#slider{
-            width: 300px;
-            position: fixed;
-            background-color: rgba(40,40,40,0.70);
-            top: 0;
-            bottom: 0;
-            right:-300px;
-            transition: right 0.1s;
-        }
+			#slider{ width: 350px; position: fixed; background-color: rgba(40,40,40,0.7); top: 0; bottom: 0; right:-350px; transition: right 0.1s; }
 		</style>
 	</head>
 	<body bgcolor="#1F1F1F">
-		<div id="slider"><p style="color: white;">zwjs</p></div>
+		<div style="color: rgba(255,255,255,0.8); background-color: #323232; border-style:solid; border-radius:40px; border-width:0px; margin : 100px 16% 100px 16%; padding: 30px 5% 30px 5%; ">
+			<p>还没想好写啥</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+		</div>
+		<div id="slider">
+			<img class="tx" src="tx.png" alt="头像" />
+			<div class="js">
+				<br/>
+				<p>还没想好写啥</p>
+			</div>
+		</div>
 		<div class="dk" id="bbb" style="position: fixed; width: 40px; height: 40px; background: rgba(0,0,0,0.00); top: 0%; left: 100%; transform: translate(-60px,20px); ">
 			<img class="cd" alt="打开菜单" src="https://k-on.blog/img/cd.svg" />
 		</div>
