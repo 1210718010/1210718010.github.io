@@ -9,11 +9,11 @@
 			$(document).ready(function(){
 				$("a").click(function(event){
 					event.preventDefault();
+					history.pushState( null, null, '/about/');
+					document.title = 'about';
+					htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
+					$("#myDiv").html(htmlobj.responseText);
 				});
-				history.pushState( null, null, '/about/');
-				document.title = 'about';
-				htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
-				$("#myDiv").html(htmlobj.responseText);
 			});
 		</script>
 	</head>
