@@ -7,8 +7,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			function myFunction(){
-				$("aaa a").click(function(evt){
-					evt.preventDefault();
+				$("a").click(function(event){
+					event.preventDefault();
 				});
 				history.pushState( null, null, '/about/');
 				document.title = 'about';
@@ -18,6 +18,6 @@
 		</script>
 	</head>
 	<body>
-		<div id="myDiv"><a id="aaa" href="https://k-on.blog/about/" onclick="myFunction()" style="cursor: pointer">点我试试</a></div>
+		<div id="myDiv"><a href="https://k-on.blog/about/" onclick="myFunction()" style="cursor: pointer">点我试试</a></div>
 	</body>
 </html>
