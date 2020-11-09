@@ -6,18 +6,15 @@
 		<title>K-ON!</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
-			$(function(){
-				$("#aaa").click(function(){
-					document.title = 'about';
-					function delall(){
-						var aaa=document.getElementById("aaa");
-						aaa.parentNode.removeChild(aaa);
-					}
-				})
-			})
+			function myFunction(){
+				history.pushState( null, null, '/about/');
+				document.title = 'about';
+				var aaa=document.getElementById("aaa");
+				aaa.parentNode.removeChild(aaa);
+			}
 		</script>
 	</head>
 	<body>
-		<a id="aaa" onclick="history.pushState( null, null, '/about/');" style="cursor: pointer">点我试试</a>
+		<a id="aaa" onclick="myFunction()" style="cursor: pointer">点我试试</a>
 	</body>
 </html>
