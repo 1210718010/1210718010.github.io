@@ -7,6 +7,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
-		<button onclick="history.pushState( null, null, '/about/');">点我试试</button>
+		<script type="text/javascript">
+			aaa.onclick = function() {
+				history.pushState( null, null, '/about/');
+			}
+		</script>
+		<a id="aaa" >123</a>
 	</body>
 </html>
