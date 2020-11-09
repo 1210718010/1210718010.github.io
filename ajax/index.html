@@ -9,10 +9,8 @@
 	<body>
 		<script type="text/javascript">
 			var die = document.getElementById('aaa');
-			aaa.onclick = function() {
-				history.pushState( null, null, '/about/');
-			}
+			aaa.onclick = history.pushState( null, null, '/about/')
 		</script>
-		<div id="aaa" style="cursor: pointer;">123</div>
+		<a id="aaa" style="cursor: pointer;">123</a>
 	</body>
 </html>
