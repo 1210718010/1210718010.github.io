@@ -9,14 +9,12 @@
 			function myFunction(){
 				history.pushState( null, null, '/about/');
 				document.title = 'about';
-				var aaa=document.getElementById("aaa");
-				aaa.removeChild(aaa);
 				htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
 				$("#myDiv").html(htmlobj.responseText);
 			}
 		</script>
 	</head>
 	<body>
-		<div id="myDiv"><a id="aaa" onclick="myFunction()" style="cursor: pointer">点我试试</a></div>
+		<div id="myDiv"><a onclick="myFunction()" style="cursor: pointer">点我试试</a></div>
 	</body>
 </html>
