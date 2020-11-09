@@ -10,7 +10,8 @@
 				$("#aaa").click(function(){
 					document.title = 'about';
 					function delall(){
-						$("#aaa").parentNode.removeChild($("#aaa"));
+						var aaa=document.getElementById("aaa");
+						aaa.parentNode.removeChild(aaa);
 					}
 				})
 			})
