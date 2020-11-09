@@ -8,10 +8,11 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			$("#aaa").onclick = function() {
+			var die = document.getElementById('aaa');
+			aaa.onclick = function() {
 				history.pushState( null, null, '/about/');
 			}
 		</script>
-		<a id="aaa" >123</a>
+		<a id="aaa" style="cursor: pointer;">123</a>
 	</body>
 </html>
