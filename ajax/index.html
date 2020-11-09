@@ -4,23 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>K-ON!</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<script type="text/javascript">
-			document.write('当前时间:' + new Date().toLocaleString());
-			var supportPushState = history && history.pushState;
-			if (supportPushState) {
-				window.go = function () {
-					var state = { //这里可以是你想给浏览器的一个State对象，为后面的StateEvent做准备。
-						title: "HTML 5 History API simple demo",
-						url: "go"
-					};
-					history.pushState(state, "HTML 5 History API simple demo", "go");
-					window.onpopstate = function (e) { document.title = e.state.title; }
-				}
-				document.write('<br /><br /><br /><a href="javascript:go()">点击这里看看，地址栏url已经更新【非更新hash】，但是上面显示当前时间并没有改变</a>');
-			}
-			else alert('当前浏览器不支持history.pushState方法');
+			var state = ( {
+				url: about,
+				title: about,
+			} );
+			onclick = history.pushState( null, null, '/about');
+			window.history.pushState(state, about, about);
 		</script>
+		<button class="rdbtn" onclick="history.pushState( null, null, '/about');">点我试试</button>
 	</body>
 </html>
