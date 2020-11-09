@@ -9,11 +9,14 @@
 			$(function(){
 				$("#aaa").click(function(){
 					document.title = 'about';
+					function delall(){
+						$("#aaa").parentNode.removeChild($("#aaa"));
+					}
 				})
 			})
 		</script>
 	</head>
 	<body>
-		<a id="aaa" href="https://k-on.blog/about/" onclick="history.pushState( null, null, '/about/');" style="cursor: pointer">点我试试</a>
+		<a id="aaa" onclick="history.pushState( null, null, '/about/');" style="cursor: pointer">点我试试</a>
 	</body>
 </html>
