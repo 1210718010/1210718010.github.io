@@ -29,6 +29,7 @@ var musics = [
 	"http://music.163.com/song/media/outer/url?id=30590331.mp3",
 	"http://music.163.com/song/media/outer/url?id=480353.mp3",
 	"http://music.163.com/song/media/outer/url?id=1327337964.mp3",
+	"http://music.163.com/song/media/outer/url?id=28188231.mp3",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -60,6 +61,7 @@ var songs = [
 	"秋 - FLOWER FLOWER",
 	"いつも何度でも - 宗次郎",
 	"新宝島 - Lefty Hand Cream",
+	"オセンチな歩美 - 大野克夫",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
