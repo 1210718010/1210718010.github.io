@@ -9,9 +9,8 @@
 	<body>
 		<script type="text/javascript">
 			$(function(){
-				$("#aaa").click(function(){
-					window.history.pushState( null, null, '/about/')
-				}
+				$("#aaa").click( history.pushState( null, null, '/about/') )
+			}
 		</script>
 		<p id="aaa" style="cursor: pointer;">123</p>
 	</body>
