@@ -6,15 +6,17 @@
 		<title>K-ON!</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
-			function myFunction(){
+			$(document).ready(function(){
 				$("a").click(function(event){
 					event.preventDefault();
 				});
+			});
+			function myFunction(){
 				history.pushState( null, null, '/about/');
 				document.title = 'about';
 				htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
 				$("#myDiv").html(htmlobj.responseText);
-			}
+			};
 		</script>
 	</head>
 	<body>
