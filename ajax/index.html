@@ -8,8 +8,9 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			var die = document.getElementById('aaa');
-			aaa.onclick = history.pushState( null, null, '/about/')
+			$("#aaa").click(function(){
+				history.pushState( null, null, '/about/')
+			}
 		</script>
 		<a id="aaa" style="cursor: pointer;">123</a>
 	</body>
