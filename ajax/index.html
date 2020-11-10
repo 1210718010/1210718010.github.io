@@ -13,8 +13,13 @@
 					document.title = 'about';
 					htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
 					$("#myDiv").html(htmlobj.responseText);
+					var aaa=document.getElementById("aaa");
+					aaa.removeChild(aaa);
 				});
 			});
+			window.addEventListener("popstate",function(){
+				document.write(2);
+			},false);
 		</script>
 	</head>
 	<body>
