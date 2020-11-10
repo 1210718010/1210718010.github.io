@@ -15,11 +15,13 @@
 					$("#myDiv").html(htmlobj.responseText);
 					var aaa=document.getElementById("aaa");
 					aaa.removeChild(aaa);
+					document.title=1;
 				});
 			});
 			window.addEventListener("popstate",function(){
 				htmlobj=$.ajax({url:"https://k-on.blog/2.txt",async:false});
 				$("#myDiv").html(htmlobj.responseText);
+				document.title=2;
 			},false);
 		</script>
 	</head>
