@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>K-ON!</title>
+		<title>1</title>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$("a").click(function(event){
 					event.preventDefault();
 					history.pushState( null, null, '/about/');
-					document.title = '1';
+					document.title = '2';
 					htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
 					$("#myDiv").html(htmlobj.responseText);
 					var aaa=document.getElementById("aaa");
@@ -20,11 +20,11 @@
 			window.addEventListener("popstate",function(){
 				htmlobj=$.ajax({url:"https://k-on.blog/2.txt",async:false});
 				$("#myDiv").html(htmlobj.responseText);
-				document.title = '2';
-			},false);
+				document.title = '1';
+			});
 		</script>
 	</head>
 	<body>
-		<div id="myDiv"><a href="https://k-on.blog/about/" style="cursor: pointer">点我试试</a></div>
+		<div id="myDiv"><a id="aaa" href="https://k-on.blog/about/" style="cursor: pointer">点我试试</a></div>
 	</body>
 </html>
