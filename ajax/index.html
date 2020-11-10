@@ -19,11 +19,14 @@
 			});
 			window.addEventListener("popstate",function(){
 				htmlobj=$.ajax({url:"https://k-on.blog/2.txt",async:false});
-				$("#myDiv").html(htmlobj.responseText);
+				$("#myBody").html(htmlobj.responseText);
 			},false);
 		</script>
 	</head>
-	<body>
+	<body >
 		<div id="myDiv"><a href="https://k-on.blog/about/" style="cursor: pointer">点我试试</a></div>
+	</body>
+	<body id="myBody">
+		
 	</body>
 </html>
