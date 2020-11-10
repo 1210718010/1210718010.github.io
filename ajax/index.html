@@ -10,18 +10,17 @@
 				$("a").click(function(event){
 					event.preventDefault();
 					history.pushState( null, null, '/about/');
-					document.title = 'about';
+					document.title = '1';
 					htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
 					$("#myDiv").html(htmlobj.responseText);
 					var aaa=document.getElementById("aaa");
 					aaa.removeChild(aaa);
-					document.title=1;
 				});
 			});
 			window.addEventListener("popstate",function(){
 				htmlobj=$.ajax({url:"https://k-on.blog/2.txt",async:false});
 				$("#myDiv").html(htmlobj.responseText);
-				document.title=2;
+				document.title = '2';
 			},false);
 		</script>
 	</head>
