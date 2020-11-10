@@ -1,4 +1,26 @@
 // JavaScript Document
+var img = "https://k-on.blog/img/zt.svg";
+$(function(){
+	$("#stop").click(function(){
+		img = $(this).attr('src');
+		if (img == "https://k-on.blog/img/zt.svg") {
+			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
+		}else{
+			$("#stop").attr("src", "https://k-on.blog/img/zt.svg");
+		}
+	});
+});
+$(function(){
+    $("#audio").click(function(){
+        if(music.paused){
+            music.play();
+            $("#audio").removeClass("pause").addClass("play");
+        }else{
+            music.pause();
+            $("#audio").removeClass("play").addClass("pause");
+        }
+    });
+});
 var musics = [
 	"http://music.163.com/song/media/outer/url?id=29836459.mp3",
 	"http://music.163.com/song/media/outer/url?id=460508.mp3",
@@ -79,9 +101,9 @@ window.onload = function()
 }
 $(document).ready(function () {
 	$('#stop').on('mouseenter', function () {
-		$('#songs').attr("class", "song2")
-	})
+		$('#songs').attr("class", "song2");
+	});
 	$('#stop').on('mouseleave', function () {
-		$('#songs').attr("class", "song1")
-	})
-})
+		$('#songs').attr("class", "song1");
+	});
+});
