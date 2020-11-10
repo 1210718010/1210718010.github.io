@@ -18,7 +18,8 @@
 				});
 			});
 			window.addEventListener("popstate",function(){
-				document.write(2);
+				htmlobj=$.ajax({url:"https://k-on.blog/2.txt",async:false});
+				$("#myDiv").html(htmlobj.responseText);
 			},false);
 		</script>
 	</head>
