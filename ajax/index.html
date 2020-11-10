@@ -11,16 +11,14 @@
 					event.preventDefault();
 					history.pushState( null, null, '/about/');
 					document.title = '2';
-					htmlobj=$.ajax({url:"https://k-on.blog/1.txt",async:false});
-					$("#myDiv").html(htmlobj.responseText);
+					document.getElementById("myDiv").innerHTML = "2";
 					var aaa=document.getElementById("aaa");
 					aaa.removeChild(aaa);
 				});
 			});
 			window.addEventListener("popstate",function(){
-				htmlobj=$.ajax({url:"https://k-on.blog/2.txt",async:false});
-				$("#myDiv").html(htmlobj.responseText);
 				document.title = '1';
+				document.getElementById("myDiv").innerHTML = "1";
 			});
 		</script>
 	</head>
