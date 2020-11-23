@@ -53,6 +53,7 @@ var musics = [
 	"http://music.163.com/song/media/outer/url?id=1478124731.mp3",
 	"http://music.163.com/song/media/outer/url?id=1416498803.mp3",
 	"http://music.163.com/song/media/outer/url?id=609890.mp3",
+	"http://music.163.com/song/media/outer/url?id=28445782.mp3",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -86,6 +87,7 @@ var songs = [
 	"Rooms of Memories - Masdito Bachtiar",
 	"Selfishness - Christabel Annora",
 	"ふわふわ♪ - 牧野由依",
+	"Fonte - 出羽良彰",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
