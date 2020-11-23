@@ -50,8 +50,6 @@ var musics = [
 	"http://music.163.com/song/media/outer/url?id=480353.mp3",
 	"http://music.163.com/song/media/outer/url?id=1327337964.mp3",
 	"http://music.163.com/song/media/outer/url?id=28188231.mp3",
-	"http://music.163.com/song/media/outer/url?id=1478124731.mp3",
-	"http://music.163.com/song/media/outer/url?id=1416498803.mp3",
 	"http://music.163.com/song/media/outer/url?id=609890.mp3",
 	"http://music.163.com/song/media/outer/url?id=28445782.mp3",
 ];
@@ -84,8 +82,6 @@ var songs = [
 	"いつも何度でも - 宗次郎",
 	"新宝島 - Lefty Hand Cream",
 	"オセンチな歩美 - 大野克夫",
-	"Rooms of Memories - Masdito Bachtiar",
-	"Selfishness - Christabel Annora",
 	"ふわふわ♪ - 牧野由依",
 	"Fonte - 出羽良彰",
 ];
