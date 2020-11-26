@@ -3,7 +3,7 @@ var img = "https://k-on.blog/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
 		img = $(this).attr('src');
-		if (img == "https://k-on.blog/img/zt.svg") {
+		if (img == "https://k-on.blog/img/zt.svg"){
 			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
 		}else{
 			$("#stop").attr("src", "https://k-on.blog/img/zt.svg");
@@ -99,11 +99,28 @@ window.onload = function()
 		music.play();
 	}
 }
-$(document).ready(function () {
-	$('#stop').on('mouseenter', function () {
+$(document).ready(function(){
+	$('#stop').on('mouseenter',function(){
 		$('#songs').attr("class", "song2");
+		$('#up').attr("class", "up2");
+		$('#down').attr("class", "down2");
 	});
-	$('#stop').on('mouseleave', function () {
+	$('#bfq').on('mouseleave',function(){
 		$('#songs').attr("class", "song1");
+		$('#up').attr("class", "up1");
+		$('#down').attr("class", "down1");
 	});
 });
+$(function(){
+	let vol = 0.3;
+	$('#music')[0].volume = vol;
+	$('#up').click(function(){
+		vol =vol<1?(vol*10 +1)/10:1;
+		$('#music')[0].volume = vol;
+	});
+	$('#down').click(function(){
+		vol =vol>0?(vol*10 -1)/10:0;
+		$('#music')[0].volume = vol;
+	});
+});
+
