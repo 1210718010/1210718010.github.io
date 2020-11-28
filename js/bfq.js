@@ -21,7 +21,7 @@ $(function(){
         }
     });
 });
-var url = "http://music.163.com/song/media/outer/url?id=";
+var url = "https://music.163.com/song/media/outer/url?id=";
 var musics = [
 	"29836459",
 	"460508",
