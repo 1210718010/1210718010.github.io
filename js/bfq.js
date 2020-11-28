@@ -53,6 +53,7 @@ var musics = [
 	"28188231",
 	"609890",
 	"28445782",
+	"22707008",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -85,6 +86,7 @@ var songs = [
 	"オセンチな歩美 - 大野克夫",
 	"ふわふわ♪ - 牧野由依",
 	"Fonte - 出羽良彰",
+	"潮鳴り - 折戸伸治",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
