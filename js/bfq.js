@@ -95,7 +95,7 @@ window.onload = function()
 	music.onended = function()
 	{
 		index = Math.floor(Math.random() * musics.length);
-		music.src = musics[index];
+		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
 		music.play();
 	}
