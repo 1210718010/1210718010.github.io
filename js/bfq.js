@@ -21,37 +21,38 @@ $(function(){
         }
     });
 });
+var url = "http://music.163.com/song/media/outer/url?id=";
 var musics = [
-	"http://music.163.com/song/media/outer/url?id=29836459.mp3",
-	"http://music.163.com/song/media/outer/url?id=460508.mp3",
-	"http://music.163.com/song/media/outer/url?id=27853860.mp3",
-	"http://music.163.com/song/media/outer/url?id=730631.mp3",
-	"http://music.163.com/song/media/outer/url?id=471936.mp3",
-	"http://music.163.com/song/media/outer/url?id=535056564.mp3",
-	"http://music.163.com/song/media/outer/url?id=31562026.mp3",
-	"http://music.163.com/song/media/outer/url?id=27582622.mp3",
-	"http://music.163.com/song/media/outer/url?id=22706980.mp3",
-	"http://music.163.com/song/media/outer/url?id=28699446.mp3",
-	"http://music.163.com/song/media/outer/url?id=430685732.mp3",
-	"http://music.163.com/song/media/outer/url?id=30482673.mp3",
-	"http://music.163.com/song/media/outer/url?id=26215042.mp3",
-	"http://music.163.com/song/media/outer/url?id=26215043.mp3",
-	"http://music.163.com/song/media/outer/url?id=26215045.mp3",
-	"http://music.163.com/song/media/outer/url?id=561798054.mp3",
-	"http://music.163.com/song/media/outer/url?id=485612576.mp3",
-	"http://music.163.com/song/media/outer/url?id=468176711.mp3",
-	"http://music.163.com/song/media/outer/url?id=33911781.mp3",
-	"http://music.163.com/song/media/outer/url?id=496869422.mp3",
-	"http://music.163.com/song/media/outer/url?id=1438864651.mp3",
-	"http://music.163.com/song/media/outer/url?id=1484336476.mp3",
-	"http://music.163.com/song/media/outer/url?id=760533.mp3",
-	"http://music.163.com/song/media/outer/url?id=546730028.mp3",
-	"http://music.163.com/song/media/outer/url?id=30590331.mp3",
-	"http://music.163.com/song/media/outer/url?id=480353.mp3",
-	"http://music.163.com/song/media/outer/url?id=1327337964.mp3",
-	"http://music.163.com/song/media/outer/url?id=28188231.mp3",
-	"http://music.163.com/song/media/outer/url?id=609890.mp3",
-	"http://music.163.com/song/media/outer/url?id=28445782.mp3",
+	"29836459",
+	"460508",
+	"27853860",
+	"730631",
+	"471936",
+	"535056564",
+	"31562026",
+	"27582622",
+	"22706980",
+	"28699446",
+	"430685732",
+	"30482673",
+	"26215042",
+	"26215043",
+	"26215045",
+	"561798054",
+	"485612576",
+	"468176711",
+	"33911781",
+	"496869422",
+	"1438864651",
+	"1484336476",
+	"760533",
+	"546730028",
+	"30590331",
+	"480353",
+	"1327337964",
+	"28188231",
+	"609890",
+	"28445782",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -89,7 +90,7 @@ var index = 0;
 index = Math.floor(Math.random() * musics.length);
 window.onload = function()
 {
-	music.src = musics[index];
+	music.src = url + musics[index] + ".mp3";
 	document.getElementById("songs").innerHTML=songs[index];
 	music.onended = function()
 	{
