@@ -107,7 +107,9 @@ window.onload = function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
-		music.play();
+		if(!music.paused){
+			music.play();
+		};
 	});
 };
 $(document).ready(function(){
