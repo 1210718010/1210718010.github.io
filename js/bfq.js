@@ -108,9 +108,11 @@ window.onload = function(){
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
 		if(music.paused){
+			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
 		}else{
-			music.play();
+			$("#stop").attr("src", "https://k-on.blog/img/zt.svg");
 		};
+		music.play();
 	});
 };
 $(document).ready(function(){
