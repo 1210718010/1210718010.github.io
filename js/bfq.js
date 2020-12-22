@@ -115,11 +115,13 @@ $(document).ready(function(){
 		$('#songs').attr("class", "song2");
 		$('#up').attr("class", "up2");
 		$('#down').attr("class", "down2");
+		$('#next').attr("class", "next2");
 	});
 	$('#bfq').on('mouseleave',function(){
 		$('#songs').attr("class", "song1");
 		$('#up').attr("class", "up1");
 		$('#down').attr("class", "down1");
+		$('#next').attr("class", "next1");
 	});
 });
 $(function(){
