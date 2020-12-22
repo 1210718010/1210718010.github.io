@@ -107,7 +107,8 @@ window.onload = function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
-		if(!music.paused){
+		if(music.paused){
+		}else{
 			music.play();
 		};
 	});
