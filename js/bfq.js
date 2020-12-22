@@ -109,8 +109,6 @@ window.onload = function(){
 		document.getElementById("songs").innerHTML=songs[index];
 		if(music.paused){
 			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
-		}else{
-			$("#stop").attr("src", "https://k-on.blog/img/zt.svg");
 		};
 		music.play();
 	});
