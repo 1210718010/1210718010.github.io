@@ -90,22 +90,26 @@ var songs = [
 	"Fonte - 出羽良彰",
 	"潮鳴り - 折戸伸治",
 	"一番の宝物 - karuta",
-	"オセンチな歩美 - 大野克夫"
+	"オセンチな歩美 - 大野克夫",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
-window.onload = function()
-{
+window.onload = function(){
 	music.src = url + musics[index] + ".mp3";
 	document.getElementById("songs").innerHTML=songs[index];
-	music.onended = function()
-	{
+	music.onended = function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
 		music.play();
-	}
-}
+	};
+	$("#next").click(function(){
+		index = Math.floor(Math.random() * musics.length);
+		music.src = url + musics[index] + ".mp3";
+		document.getElementById("songs").innerHTML=songs[index];
+		music.play();
+	});
+};
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
 		$('#songs').attr("class", "song2");
@@ -130,4 +134,3 @@ $(function(){
 		$('#music')[0].volume = vol;
 	});
 });
-
