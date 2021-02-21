@@ -114,7 +114,7 @@ window.onload = function(){
 	});
 	if('mediaSession' in navigator){
 		navigator.mediaSession.metadata = new MediaMetadata({
-			title:'song[indexx]',
+			title: song[index],
 		});
 	};
 };
