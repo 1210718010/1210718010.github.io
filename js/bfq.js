@@ -100,22 +100,12 @@ window.onload = function(){
 	music.onended = function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
-		if('mediaSession' in navigator){
-			navigator.mediaSession.metadata = new MediaMetadata({
-				title: 'song[index]',
-			});
-		};
 		document.getElementById("songs").innerHTML=songs[index];
 		music.play();
 	};
 	$("#next").click(function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
-		if('mediaSession' in navigator){
-			navigator.mediaSession.metadata = new MediaMetadata({
-				title: 'song[index]',
-			});
-		};
 		document.getElementById("songs").innerHTML=songs[index];
 		if(music.paused){
 			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
@@ -150,3 +140,8 @@ $(function(){
 		$('#music')[0].volume = vol;
 	});
 });
+if('mediaSession' in navigator){
+	navigator.mediaSession.metadata = new MediaMetadata({
+		title: song[index],
+	});
+};
