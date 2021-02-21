@@ -102,7 +102,7 @@ window.onload = function(){
 		music.src = url + musics[index] + ".mp3";
 		if('mediaSession' in navigator){
 			navigator.mediaSession.metadata = new MediaMetadata({
-				title: song[index],
+				title: 'song[index]',
 			});
 		};
 		document.getElementById("songs").innerHTML=songs[index];
@@ -113,7 +113,7 @@ window.onload = function(){
 		music.src = url + musics[index] + ".mp3";
 		if('mediaSession' in navigator){
 			navigator.mediaSession.metadata = new MediaMetadata({
-				title: song[index],
+				title: 'song[index]',
 			});
 		};
 		document.getElementById("songs").innerHTML=songs[index];
