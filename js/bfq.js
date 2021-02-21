@@ -112,6 +112,11 @@ window.onload = function(){
 		};
 		music.play();
 	});
+	if('mediaSession' in navigator){
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title:'song[indexx]',
+		});
+	};
 };
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
