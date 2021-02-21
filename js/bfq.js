@@ -142,6 +142,6 @@ $(function(){
 });
 if('mediaSession' in navigator){
 	navigator.mediaSession.metadata = new MediaMetadata({
-		title: song[index],
+		title: 'song[index]',
 	});
 };
