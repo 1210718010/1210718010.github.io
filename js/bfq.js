@@ -140,8 +140,3 @@ $(function(){
 		$('#music')[0].volume = vol;
 	});
 });
-if('mediaSession' in navigator){
-	navigator.mediaSession.metadata = new MediaMetadata({
-		title: 'song[index]',
-	});
-};
