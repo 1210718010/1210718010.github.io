@@ -1,7 +1,7 @@
 <!--
 	K-ON!
 	© 2020 dzb.
-	Update: 2020.11.28 - 20:05
+	Update: 2021.05.17 - 4:50
 	===
 	「TECH OTAKUS SAVE THE WORLD」
 -->
@@ -13,28 +13,28 @@
 		<title>K-ON!</title>
 		<link rel="shortcut icon" href="https://k-on.blog/favicon.ico" type="image/x-icon">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://k-on.blog/js/bfq.js"></script>
+		<script src="bfq.js"></script>
 		<style type="text/css">
 			p {font-size: 18px; cursor: default; }
 			strong {color: white; text-align: center; opacity: 0.8; cursor: default; font-weight: normal; }
 			a {color: white; text-decoration:none; }
 			em {color: white; text-align: center; opacity: 0.8; font-weight: normal; font-style: normal; }
+			em:hover {opacity: 1.0; text-decoration: underline; }
 			em.title {font-size: 40px; font-weight: 100; }
-			em.title:hover {opacity: 1.0; text-decoration:none; }
+			em.title:hover {opacity: 1.0; text-decoration: none; }
 			em.img {opacity: 0.7; font-style: normal; }
-			em:hover {opacity: 1.0; text-decoration:underline; }
 			img {width: 60px; height: 85px; }
-			.song1 {color: #fff; opacity: 0; z-index: -5; cursor: default; font-size: 15px; }
-			.song2 {color: #fff; opacity: 0.7; z-index: 5; cursor: default; font-size: 15px; }
-			.up1 {width: 17px; height: 17px; opacity: 0; z-index: -5; }
-			.up2 {width: 17px; height: 17px; opacity: 0.8; z-index: 5; cursor: pointer; }
+			.song1 {color: #fff; opacity: 0.7; z-index: 0; cursor: default; font-size: 15px; }
+			.song2 {color: #fff; opacity: 0; z-index: -1; cursor: default; font-size: 15px; }
+			.up1 {width: 17px; height: 17px; opacity: 0; z-index: -1; }
+			.up2 {width: 17px; height: 17px; opacity: 0.8; z-index: 0; cursor: pointer; }
 			.up2:hover {opacity: 1.0; }
-			.down1 {width: 17px; height: 17px; opacity: 0; z-index: -5; }
-			.down2 {width: 17px; height: 17px; opacity: 0.8; z-index: 5; cursor: pointer; }
+			.down1 {width: 17px; height: 17px; opacity: 0; z-index: -1; }
+			.down2 {width: 17px; height: 17px; opacity: 0.8; z-index: 0; cursor: pointer; }
 			.down2:hover {opacity: 1.0; }
-			.next1 {width: 25px; height: 25px; opacity: 0.8; z-index: 5; cursor: pointer; }
-			.next2 {width: 25px; height: 25px; opacity: 0; z-index: -5; }
-			.next1:hover {opacity: 1.0; }
+			.next1 {width: 25px; height: 25px; opacity: 0; z-index: -1; }
+			.next2 {width: 25px; height: 25px; opacity: 0.8; z-index: 0; cursor: pointer; }
+			.next2:hover {opacity: 1.0; }
 			#audio {cursor: pointer; }
 			#stop {width: 40px; height: 40px; opacity: 0.8;  }
 			#stop:hover {opacity: 1.0; }
@@ -59,19 +59,19 @@
 			<a href="mailto:1210718010@qq.com" target="_blank"><em class="img"><img src="https://k-on.blog/img/mail.svg" title="向我发送邮件" alt="E-mail" /></em></a>
 		</div>
 		<div style="position: fixed; font-size: 14px; cursor: default; width: 800px; height: 30px; background: rgba(0,0,0,0.00); top:96%; left: 50%; transform: translate(-400px,-15px); text-align: center;">
-			<strong>by </strong><a title="访问：https://github.com/1210718010" href="https://github.com/1210718010" target="_blank"><em>dzb</em></a>
+			<strong>by </strong><a title="访问：https://github.com/1210718010" href="https://github.com/1210718010" target="_blank"><em>dzb</em></a><strong>.</strong>
 		</div>
-		<div id="bfq" style="position: fixed; cursor: default; width: 40px; height: 60px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-70px); ">
+		<div id="bfq" style="position: fixed; cursor: default; width: 80px; height: 60px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-70px); ">
 			<img id="up" class="up1" alt="加" src="https://k-on.blog/img/up.svg" />
 			<img id="down" class="down1" alt="减" src="https://k-on.blog/img/down.svg" />
 			<a id="audio"><img id="stop" alt="播放/暂停" src="https://k-on.blog/img/zt.svg" /></a>
+			<div style="position: fixed; width: 25px; height: 25px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(50px,-30px); ">
+				<img id="next" class="next1" alt="下一首" src="https://k-on.blog/img/next.svg" />
+			</div>
 			<audio id="music"></audio>
 		</div>
-		<div style="position: fixed; width: 500px; height: 20px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(60px,-54px); ">
+		<div style="position: fixed; width: 500px; height: 20px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(60px,-54px); z-index: -1; ">
 			<p id="songs" class="song1"></p>
-		</div>
-		<div style="position: fixed; width: 25px; height: 25px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(58px,-39px); ">
-			<img id="next" class="next1" alt="下一首" src="https://k-on.blog/img/next.svg" />
 		</div>
 	</body>
 </html>
