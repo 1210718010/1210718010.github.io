@@ -92,6 +92,7 @@ var songs = [
 	"潮鳴り - 折戸伸治",
 	"一番の宝物 - karuta",
 	"オセンチな歩美 - 大野克夫",
+	"Embrace - Sappheiros",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
