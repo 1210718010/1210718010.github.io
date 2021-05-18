@@ -56,6 +56,18 @@ var musics = [
 	"409872504",
 	"504016400",
 	"518904426",
+	"865492223",
+	"441116287",
+	"520461943",
+	"29849049",
+	"1431292823",
+	"536570516",
+	"1409311773",
+	"1472480890",
+	"1459343252",
+	"1444071945",
+	"514765041",
+	"514761044",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -91,6 +103,18 @@ var songs = [
 	"ninelie - Aimer/EGOIST",
 	"Stay - Ember Island",
 	"Umbrella - Ember Island",
+	"Let It Go - Loni Lovato",
+	"茜さす - Aimer",
+	"動く、動く - 水瀬いのり/久保ユリカ",
+	"Amhrán na farraige - Lisa Hannigan",
+	"夜航星 - 不才",
+	"ここから、ここから - 水瀬いのり/花澤香菜/井口裕香/早見沙織",
+	"夜に駆ける - YOASOBI",
+	"群青 - YOASOBI",
+	"たぶん - YOASOBI",
+	"ハルジオン - YOASOBI",
+	"NO, Thank You! - 放課後ティータイム",
+	"U&I - 放課後ティータイム",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
