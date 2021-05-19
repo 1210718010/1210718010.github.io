@@ -72,6 +72,12 @@ var musics = [
 	"28875230",
 	"469440680",
 	"446732031",
+	"1464841552",
+	"443794",
+	"443242",
+	"1470435430",
+	"506196018",
+	"1818031620",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -123,6 +129,12 @@ var songs = [
 	"晚安喵 - 艾索",
 	"有你的江湖 - 岚AYA",
 	"winter bokeh - idealism/jinsang",
+	"The Ugly Duckling - Cheetah Mobile Games",
+	"あの夏へ - 久石譲",
+	"Summer - 久石譲",
+	"革命前夜 - 井口裕香",
+	"Legends Never Die - Against the Current",
+	"让风告诉你 - 花玲/喵☆酱/宴宁/kinsen",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
