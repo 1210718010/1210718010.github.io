@@ -1,12 +1,12 @@
 // JavaScript Document
-var img = "https://k-on.blog/img/zt.svg";
+var img = "https://1210718010.github.io/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
 		img = $(this).attr('src');
-		if (img == "https://k-on.blog/img/zt.svg"){
-			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
+		if (img == "https://1210718010.github.io/img/zt.svg"){
+			$("#stop").attr("src", "https://1210718010.github.io/img/bf.svg");
 		}else{
-			$("#stop").attr("src", "https://k-on.blog/img/zt.svg");
+			$("#stop").attr("src", "https://1210718010.github.io/img/zt.svg");
 		}
 	});
 });
@@ -152,7 +152,7 @@ window.onload = function(){
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
 		if(music.paused){
-			$("#stop").attr("src", "https://k-on.blog/img/bf.svg");
+			$("#stop").attr("src", "https://1210718010.github.io/img/bf.svg");
 		};
 		music.play();
 	});
