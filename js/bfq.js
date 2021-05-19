@@ -1,4 +1,5 @@
 // JavaScript Document
+// Update:2021.05.20 04:45
 var img = "https://1210718010.github.io/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
@@ -129,7 +130,7 @@ var songs = [
 	"晚安喵 - 艾索",
 	"有你的江湖 - 岚AYA",
 	"winter bokeh - idealism/jinsang",
-	"The Ugly Duckling - Cheetah Mobile Games",
+	"The Ugly Duckling - Dancing Line",
 	"あの夏へ - 久石譲",
 	"Summer - 久石譲",
 	"革命前夜 - 井口裕香",
