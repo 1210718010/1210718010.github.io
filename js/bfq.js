@@ -157,7 +157,6 @@ window.onload = function(){
 		};
 		music.play();
 	});
-	
 };
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
