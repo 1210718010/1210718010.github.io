@@ -1,13 +1,13 @@
 // JavaScript Document
-// Update:2021.05.20 04:45
-var img = "https://1210718010.github.io/img/zt.svg";
+// Update:2021.05.21 23:40
+var img = "https://muxmus.com/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
 		img = $(this).attr('src');
-		if (img == "https://1210718010.github.io/img/zt.svg"){
-			$("#stop").attr("src", "https://1210718010.github.io/img/bf.svg");
+		if (img == "https://muxmus.com/img/zt.svg"){
+			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}else{
-			$("#stop").attr("src", "https://1210718010.github.io/img/zt.svg");
+			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
 		}
 	});
 });
@@ -153,7 +153,7 @@ window.onload = function(){
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML=songs[index];
 		if(music.paused){
-			$("#stop").attr("src", "https://1210718010.github.io/img/bf.svg");
+			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		};
 		music.play();
 	});
