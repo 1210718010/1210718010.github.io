@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>博客 ~ 木辛木杉</title>
+		<link rel="shortcut icon" href="https://muxmus.com/favicon.ico" type="image/x-icon">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://muxmus.com/js/bfq.js"></script>
+		<script src="https://muxmus.com/js/cbl.js"></script>
+		<style type="text/css">
+			p {font-size: 17px; opacity: 0.9; }
+			a {color: #4183c4; text-decoration: none; }
+			a:hover {text-decoration: underline; }
+			.tx {width: 150px; height: 150px; position: absolute; left:50%; top: 0%; margin-left: -75px;margin-top: 75px; opacity: 0.8; }
+			.js {width: 350px; height: 600px; position: absolute; left:50%; top: 0%; margin-left: -175px;margin-top: 250px; text-align: center; color: #fff; opacity: 0.8; }
+			.cd {width: 40px; height: 40px; opacity: 0.8; }
+			.cd:hover {opacity: 1.0; }
+			.dk {z-index: 99; }
+			.gb {opacity: 0; z-index: 89; }
+			.song1 {color: #fff; opacity: 0; z-index: -5; cursor: default; font-size: 15px; }
+			.song2 {color: #fff; opacity: 0.7; z-index: 5; cursor: default; font-size: 15px; }
+			.up1 {width: 17px; height: 17px; opacity: 0; z-index: -5; }
+			.up2 {width: 17px; height: 17px; opacity: 0.8; z-index: 5; cursor: pointer; }
+			.up2:hover {opacity: 1.0; }
+			.down1 {width: 17px; height: 17px; opacity: 0; z-index: -5; }
+			.down2 {width: 17px; height: 17px; opacity: 0.8; z-index: 5; cursor: pointer; }
+			.down2:hover {opacity: 1.0; }
+			.next1 {width: 25px; height: 25px; opacity: 0.8; z-index: 5; cursor: pointer; }
+			.next2 {width: 25px; height: 25px; opacity: 0; z-index: -5; }
+			.next1:hover {opacity: 1.0; }
+			#audio {cursor: pointer; }
+			#stop {width: 40px; height: 40px; opacity: 0.8; }
+			#stop:hover {opacity: 1.0; }
+			#slider{ width: 350px; position: fixed; background-color: rgba(40,40,40,0.7); top: 0; bottom: 0; right:-350px; transition: right 0.1s; }
+		</style>
+	</head>
+	<body bgcolor="#1F1F1F">
+		<div style="color: rgba(255,255,255,0.8); background-color: #323232; border-style:solid; border-radius:40px; border-width:0px; margin : 100px 16% 100px 16%; padding: 30px 5% 30px 5%; ">
+			<h2>关于原神游戏适龄提示的一些讨论</h2>
+			<p style="font-size: 13px; opacity: 0.6; ">2021.06.01 18:00</p>
+			<br/>
+			<p>昨天，原神在b站发布的视频开头多了一个12+的标识，然后很多人在评论里说原神从9+游戏变成12+了。之前大家说的9+游戏是来自App Store的年龄分级。</p>
+			<br/>
+			<a target="_blank" href="https://i0.hdslb.com/bfs/article/779dc1530fb65e7581402356d10e11caed0b3e05.png"><img alt="" width="400px" src="https://i0.hdslb.com/bfs/article/779dc1530fb65e7581402356d10e11caed0b3e05.png" /></a>
+			<br/>
+			<br/>
+			<p>可以看到年龄那一格是9+（目前也还是9+）。</p>
+			<br/>
+			<a target="_blank" href="https://i0.hdslb.com/bfs/article/20375e1698fb9e77a6b7dc003afe254a35255bba.jpg"><img alt="" width="400px" src="https://i0.hdslb.com/bfs/article/20375e1698fb9e77a6b7dc003afe254a35255bba.jpg" /></a>
+			<br/>
+			<br/>
+			<p>然后这是App Store不同年龄级别可能出现的内容，但其实这个分级在国内意义不大。</p>
+			<br/>
+			<p>然后这是现在的12+的标识，我现在网上搜了一下这个CADPA，是<a target="_blank" href="http://cadpa.org.cn/">中国音像与数字出版协会</a>，游戏出版属于他管。<a target="_blank" href="http://jinbao.people.cn/n1/2020/1228/c421674-31981560.html">http://jinbao.people.cn/n1/2020/1228/c421674-31981560.html</a>，这是人民网对网络游戏适龄提示的一篇报道，其中适龄提示划分为8+、12+、16+。</p>
+			<br/>
+			<a target="_blank" href="https://i0.hdslb.com/bfs/article/5ad8017daa9e8b28dd8a7fed9a9cd745729bce54.jpg"><img alt="" width="400px" src="https://i0.hdslb.com/bfs/article/5ad8017daa9e8b28dd8a7fed9a9cd745729bce54.jpg" /></a>
+			<br/>
+			<br/>
+			<p>然后报道明确指出：适龄提示不是分级，只是用来帮助未成年人选择游戏和方便家长、社会监管。</p>
+			<br/>
+			<p>同时适龄提示并没有强制性，一款16+的游戏，用16岁以下的身份证也可以注册。</p>
+			<br/>
+			<p>所以不要觉得原神的剧情因为12+会变得幼稚，国内所有的合法游戏都要符合社会主义核心价值观，都要充分考虑未成年人接触肯能产生的影响（不论是多少+）。</p>
+			<br/>
+			<p>最后，说点我想说的。原神目前的剧情我觉得挺好的，可能部分人觉得一部好的作品必须要有讽刺意义，必须要深刻并富有哲理。但怎么说呢，游戏的审核远比小说严格，一款游戏的受众也远比一本小说广。可能很多国外的3A游戏的剧情很深刻，但放到国内甚至都无法出版。所以简单点没什么不好的。</p>
+		</div>
+		<div id="slider">
+			<img class="tx" src="https://i.ibb.co/9c7PWB4/tx.png" alt="头像" />
+			<div class="js">
+				<br/>
+				<a href="https://muxmus.com/"><p>返回首页</p></a>
+			</div>
+		</div>
+		<div class="dk" id="bbb" style="position: fixed; width: 40px; height: 40px; background: rgba(0,0,0,0.00); top: 0%; left: 100%; transform: translate(-60px,20px); ">
+			<img class="cd" alt="打开菜单" src="https://muxmus.com/img/cd.svg" />
+		</div>
+		<div class="gb" id="ccc" style="position: fixed; width: 40px; height: 40px; background: rgba(0,0,0,0.00); top: 0%; left: 100%; transform: translate(-60px,20px); ">
+			<img class="cd" alt="关闭菜单" src="https://muxmus.com/img/gb.svg" />
+		</div>
+		<div id="bfq" style="position: fixed; cursor: default; width: 40px; height: 60px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-70px); ">
+			<img id="up" class="up1" alt="加" src="https://muxmus.com/img/up.svg" />
+			<img id="down" class="down1" alt="减" src="https://muxmus.com/img/down.svg" />
+			<a id="audio"><img id="stop" alt="播放/暂停" src="https://muxmus.com/img/zt.svg" /></a>
+			<audio id="music"></audio>
+		</div>
+		<div style="position: fixed; width: 500px; height: 20px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(60px,-54px); ">
+			<p id="songs" class="song1"></p>
+		</div>
+		<div style="position: fixed; width: 25px; height: 25px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(58px,-39px); ">
+			<img id="next" class="next1" alt="下一首" src="https://muxmus.com/img/next.svg" />
+		</div>
+	</body>
+</html>
