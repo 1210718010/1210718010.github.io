@@ -27,7 +27,7 @@
 			#ss:hover {opacity: 1.0; }
 		</style>
 	</head>
-	<body bgcolor="#1F1F1F" onload="start();">
+	<body bgcolor="#1F1F1F">
 		<div style="position: fixed; width: 700px; height: 200px; background: rgba(0,0,0,0.00); top:50%; left: 45%; transform: translate(-350px,-100px); text-align: center;">
 			<input type="text" value="" id="search" />
 			<div style="position: fixed; width: 50px; height: 50px; background: rgba(0,0,0,0.00); top:0%; left: 100%; transform: translate(-50px,0px); text-align: center;">
@@ -48,32 +48,49 @@
 			});
 		</script>
 		<div style="position: fixed; width: 200px; height: 50px; background: rgba(0,0,0,0.00); top:0%; left: 100%; transform: translate(-210px,10px); text-align: center;">
-			<p id="timeDiv" style="color: #fff; opacity: 0.7; font-size: 15px;"></p>
+			<p id="div1" style="color: #fff; opacity: 0.7; font-size: 15px;"></p>
 		</div>
 		<script>
-			function check(val) {
-				if (val < 10) {
-					return ("0" + val);
-				} 
-				else {
-					return (val);
+			window.onload = function(){
+			var oDiv  = document.getElementsByTagName('div')[0];
+			//alert(oDiv);
+			function fnTimeGo(){
+				var sNow = new Date();
+				var iYear  = sNow.getFullYear();
+				var iMonth = sNow.getMonth()+1;
+				var iDay = sNow.getDate();
+				var iWeek = sNow.getDay();
+				var iHore = sNow.getHours();
+				var iMin =sNow.getMinutes();
+				var iSecond = sNow.getSeconds();
+
+				var Str = '北京时间：'+iYear+'.'+iMonth+'.'+iDay+' '+ fnToweek(iWeek) +' '+ fnTodou(iHore)+':'+fnTodou(iMin)+':'+fnTodou(iSecond);
+
+				oDiv.innerHTML = Str
+
+			}
+
+			//先行调用一次，解决1秒延迟问题
+			fnTimeGo();
+			//设置定时器，每隔1秒更新一次时间
+			setInterval(fnTimeGo,1000);
+
+			function fnToweek(i){
+				if(i==0){return '星期日'}
+				else if(i==1){return '星期一'}
+				else if(i==2){return '星期二'}
+				else if(i==3){return '星期三'}
+				else if(i==4){return '星期四'}
+				else if(i==5){return '星期五'}
+				else {return '星期六'}
 				}
-			}
-			function displayTime() {
-				var timeDiv=document.getElementById("timeDiv");
-				var date = new Date();
-				var year = date.getFullYear();
-				var month = date.getMonth() + 1;
-				var day = date.getDate();
-				var hour = date.getHours();
-				var minutes = date.getMinutes();
-				var second = date.getSeconds();
-				var timestr = year + "." + month + "." + day + "  " + check(hour) + ":" + check(minutes) + ":" + check(second);
-				timeDiv.innerHTML = timestr;
-			}
-			function start(){
-				window.setInterval("displayTime()",1000)
-			}
+
+			function fnTodou(i){
+				if(i<10){return '0'+i ;}
+					else return i ;
+				}
+
+		}
 		</script>
 		<div id="bfq" style="position: fixed; cursor: default; width: 80px; height: 60px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-70px); z-index: 2; ">
 			<img id="up" class="up1" alt="加" src="https://muxmus.com/img/up.svg" />
