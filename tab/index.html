@@ -48,11 +48,11 @@
 			});
 		</script>
 		<div style="position: fixed; width: 200px; height: 50px; background: rgba(0,0,0,0.00); top:0%; left: 100%; transform: translate(-210px,10px); text-align: center;">
-			<p id="div1" style="color: #fff; opacity: 0.7; font-size: 15px;"></p>
+			<p style="color: #fff; opacity: 0.7; font-size: 15px;"></p>
 		</div>
 		<script>
 			window.onload = function(){
-			var oDiv  = document.getElementsByTagName('div')[0];
+			var oDiv  = document.getElementsByTagName('p')[0];
 			//alert(oDiv);
 			function fnTimeGo(){
 				var sNow = new Date();
@@ -64,7 +64,7 @@
 				var iMin =sNow.getMinutes();
 				var iSecond = sNow.getSeconds();
 
-				var Str = '北京时间：'+iYear+'.'+iMonth+'.'+iDay+' '+ fnToweek(iWeek) +' '+ fnTodou(iHore)+':'+fnTodou(iMin)+':'+fnTodou(iSecond);
+				var Str = iYear+'.'+iMonth+'.'+iDay+' '+ fnToweek(iWeek) +' '+ fnTodou(iHore)+':'+fnTodou(iMin)+':'+fnTodou(iSecond);
 
 				oDiv.innerHTML = Str
 
