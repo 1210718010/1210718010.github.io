@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update:2021.05.21 23:40
+// Update:2021.06.08 22:35
 var img = "https://muxmus.com/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
@@ -67,9 +67,7 @@ var musics = [
 	"1472480890",
 	"1459343252",
 	"1444071945",
-	"514765041",
 	"514761044",
-	"514543069",
 	"28875230",
 	"469440680",
 	"446732031",
@@ -124,9 +122,7 @@ var songs = [
 	"群青 - YOASOBI",
 	"たぶん - YOASOBI",
 	"ハルジオン - YOASOBI",
-	"NO, Thank You! - 放課後ティータイム",
 	"U&I - 放課後ティータイム",
-	"天使にふれたよ! - 放課後ティータイム",
 	"晚安喵 - 艾索",
 	"有你的江湖 - 岚AYA",
 	"winter bokeh - idealism/jinsang",
