@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+input {
+	background-color: rgba(255,255,255,0.15);
+	border: 0;
+	outline: 0;
+	color: #fff;
+	caret-color: #fff;
+	padding: 15px;
+	width: 530px;
+	font-size: 18px;
+	border-radius: 8px;
+}
+
+#ss {
+	width: 50px;
+	height: 50px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#ss:hover {
+	opacity: 1.0;
+}
