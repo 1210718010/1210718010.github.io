@@ -8,6 +8,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://muxmus.com/js/bfq.js"></script>
 		<script src="https://muxmus.com/js/cbl.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 		<style type="text/css">
 			p {font-size: 17px; opacity: 0.9; }
 			a {color: #4183c4; text-decoration: none; }
@@ -33,6 +35,8 @@
 			#stop {width: 40px; height: 40px; opacity: 0.8; }
 			#stop:hover {opacity: 1.0; }
 			#slider{ width: 350px; position: fixed; background-color: rgba(40,40,40,0.7); top: 0; bottom: 0; right:-350px; transition: right 0.1s; }
+			.gt-counts {color: rgba(255,255,255,0.7); }
+			.gt-user-name {color: rgba(255,255,255,0.7); }
 		</style>
 	</head>
 	<body bgcolor="#1F1F1F">
@@ -64,7 +68,20 @@
 			<p>所以不要觉得原神的剧情因为12+会变得幼稚，国内所有的合法游戏都要符合社会主义核心价值观，都要充分考虑未成年人接触肯能产生的影响（不论是多少+）。</p>
 			<br/>
 			<p>最后，说点我想说的。原神目前的剧情我觉得挺好的，可能部分人觉得一部好的作品必须要有讽刺意义，必须要深刻并富有哲理。但怎么说呢，游戏的审核远比小说严格，一款游戏的受众也远比一本小说广。可能很多国外的3A游戏的剧情很深刻，但放到国内甚至都无法出版。所以简单点没什么不好的。</p>
+			<br />
+			<div id="gitalk-container"></div>
 		</div>
+		<script>
+			var gitalk = new Gitalk({
+				clientID: '7285424ec928b4d481a6',
+				clientSecret: '334ae45ea79ff4447542eedba52fac3eb85efbf3',
+				repo: 'comment',
+				owner: '1210718010',
+				admin: ['1210718010'],
+				language: 'zh-CN',
+			})
+			gitalk.render('gitalk-container')
+		</script>
 		<div id="slider">
 			<img class="tx" src="https://i.ibb.co/9c7PWB4/tx.png" alt="头像" />
 			<div class="js">
