@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+a {
+	color: #fff;
+	opacity: 1.0;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.tx {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	left:50%; top: 0%;
+	margin-left: -75px;
+	margin-top: 75px;
+	opacity: 0.8;
+}
+.js {
+	width: 350px;
+	height: 600px;
+	position: absolute;
+	left:50%;
+	top: 0%;
+	margin-left:-175px;
+	margin-top: 250px;
+	text-align: center;
+	color: #fff;
+	opacity: 0.8;
+}
+.cd {
+	width: 40px;
+	height: 40px;
+	opacity: 0.8;
+}
+.cd:hover {
+	opacity: 1.0;
+}
+.dk {
+	z-index: 99;
+}
+.gb {
+	opacity: 0;
+	z-index: 89;
+}
