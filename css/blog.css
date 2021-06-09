@@ -21,6 +21,11 @@ a:hover {
 	padding: 30px 5%;
 }
 
+.date {
+	font-size: 13px;
+	opacity: 0.6;
+}
+
 .tx {
 	width: 150px;
 	height: 150px;
