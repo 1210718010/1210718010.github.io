@@ -5,18 +5,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>404 ~ 木辛木杉</title>
 		<link rel="shortcut icon" href="https://muxmus.com/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="https://muxmus.com/css/404.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/bfq.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://muxmus.com/js/bfq.js"></script>
-		<style>
-			h1 {color: white; text-align: center; line-height: 60px; font-size: 40px; font-weight: 100; margin: 0 auto 10px auto; opacity: 0.8; cursor: default;  }
-			h2 {color: white; text-align: center; line-height: 60px; font-size: 20px; font-weight: 500; margin: 0 0 80px 0; opacity: 0.8; cursor: default; }
-			div.main{width:260px;margin: 0 auto 0 auto;}
-			.over {margin: 0 auto 0 auto; text-align: center;font-weight: bold; color: rgba(255,255,255,0.7); border: 2px solid #1F1F1F; padding: 12px 12px; background: #1F1F1F; width: 80px; box-shadow: 0px 0px 35px 5px #565656;cursor: Pointer; }
-			.left {float: left; }
-			.right {float: right; }
-			.over:hover {color: #1F1F1F; background: #909090; }
-		</style>
 	</head>
 	<body bgcolor="#1F1F1F">
 		<br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -26,16 +18,16 @@
 			<a href="https://muxmus.com/" title="访问：muxmus.com"><div class="over left">返回首页</div></a>
 			<a href="mailto:1210718010@qq.com" title="向我发送邮件" target="_blank"><div class="over right">与我联系</div></a>
 		</div>
-		<div id="bfq" style="position: fixed; cursor: default; width: 80px; height: 60px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(10px,-70px); z-index: 2; ">
+		<div id="bfq" class="divb">
 			<img id="up" class="up1" alt="加" src="https://muxmus.com/img/up.svg" />
 			<img id="down" class="down1" alt="减" src="https://muxmus.com/img/down.svg" />
 			<a id="audio"><img id="stop" alt="播放/暂停" src="https://muxmus.com/img/zt.svg" /></a>
-			<div style="position: fixed; width: 25px; height: 25px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(50px,-30px); ">
+			<div class="divn">
 				<img id="next" class="next1" alt="下一首" src="https://muxmus.com/img/next.svg" />
 			</div>
 			<audio id="music"></audio>
 		</div>
-		<div style="position: fixed; width: 500px; height: 20px; background: rgba(0,0,0,0.00); top:100%; left: 0%; transform: translate(60px,-54px); z-index: 1; ">
+		<div class="divs">
 			<p id="songs" class="song1"></p>
 		</div>
 	</body>
