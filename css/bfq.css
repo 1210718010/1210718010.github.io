@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+
 .song1 {
 	color: #fff;
 	opacity: 0.7;
@@ -7,6 +8,7 @@
 	cursor: default;
 	font-size: 15px;
 }
+
 .song2 {
 	color: #fff;
 	opacity: 0;
@@ -14,12 +16,14 @@
 	cursor: default;
 	font-size: 15px;
 }
+
 .up1 {
 	width: 17px;
 	height: 17px;
 	opacity: 0;
 	z-index: -1;
 }
+
 .up2 {
 	width: 17px;
 	height: 17px;
@@ -27,15 +31,18 @@
 	z-index: 0;
 	cursor: pointer;
 }
+
 .up2:hover {
 	opacity: 1.0;
 }
+
 .down1 {
 	width: 17px;
 	height: 17px;
 	opacity: 0;
 	z-index: -1;
 }
+
 .down2 {
 	width: 17px;
 	height: 17px;
@@ -43,15 +50,18 @@
 	z-index: 0;
 	cursor: pointer;
 }
+
 .down2:hover {
 	opacity: 1.0;
 }
+
 .next1 {
 	width: 25px;
 	height: 25px;
 	opacity: 0;
 	z-index: -1;
 }
+
 .next2 {
 	width: 25px;
 	height: 25px;
@@ -59,9 +69,11 @@
 	z-index: 0;
 	cursor: pointer;
 }
+
 .next2:hover {
 	opacity: 1.0;
 }
+
 #audio {
 	cursor: pointer;
 }
