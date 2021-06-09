@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.over {
+	margin: 50px auto 50px auto;
+	width: 800px;
+	cursor: default;
+}
+
+a {
+	color: #4183c4;
+	text-decoration: none;
+}
+			
+a:hover {
+	text-decoration: underline;
+}
+			
+h1 {
+	color: rgba(256,256,256,0.7);
+	text-align: center;
+	position:relative;
+	line-height: 60px;
+	font-size: 60px;
+	font-weight: 100;
+	margin: 0px 0 50px 0;
+}
+			
+p {color: rgba(256,256,256,0.7);
+	margin: 20px 0;
+	line-height: 1.2;
+}
