@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+p {
+	font-size: 18px;
+	cursor: default;
+}
+
+strong {
+	color: white;
+	text-align: center;
+	opacity: 0.8;
+	cursor: default;
+	font-weight: normal;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+em {
+	color: white;
+	text-align: center;
+	opacity: 0.8;
+	font-weight: normal;
+	font-style: normal;
+}
+
+em.title {
+	font-size: 40px;
+	font-weight: 100;
+}
+
+em.title:hover {
+	opacity: 1.0;
+	text-decoration: none;
+}
+
+em.img {
+	opacity: 0.7;
+	font-style: normal;
+}
+
+em:hover {
+	opacity: 1.0;
+	text-decoration: underline;
+}
+
+img {
+	width: 60px;
+	height: 85px;
+}
+
+.divm {
+	position: fixed;
+	width: 400px;
+	height: 300px;
+	background: rgba(0,0,0,0.00);
+	top:45%;
+	left: 50%;
+	transform: translate(-200px,-150px);
+	text-align: center;
+}
+
+.divf {
+	position: fixed;
+	font-size: 14px;
+	cursor: default;
+	width: 800px;
+	height: 30px;
+	background: rgba(0,0,0,0.00);
+	top:96%;
+	left: 50%;
+	transform: translate(-400px,-15px);
+	text-align: center;
+}
+
+.divb {
+	position: fixed;
+	cursor: default;
+	width: 80px;
+	height: 60px;
+	background: rgba(0,0,0,0.00);
+	top:100%;
+	left: 0%;
+	transform: translate(10px,-70px);
+	z-index: 2;
+}
+
+.divn {
+	position: fixed;
+	width: 25px;
+	height: 25px;
+	background: rgba(0,0,0,0.00);
+	top:100%;
+	left: 0%;
+	transform: translate(50px,-30px);
+}
+
+.divs {
+	position: fixed;
+	width: 500px;
+	height: 20px;
+	background: rgba(0,0,0,0.00);
+	top:100%;
+	left: 0%;
+	transform: translate(60px,-54px);
+	z-index: 1;
+}
