@@ -2,13 +2,19 @@
 /* CSS Document */
 
 a {
-	color: #fff;
-	opacity: 1.0;
+	color: #58a6ff;
+	opacity: 0.8;
 	text-decoration: none;
 }
 
 a:hover {
 	text-decoration: underline;
+}
+
+.title{
+	color: #fff;
+	opacity: 1.0;
+	text-decoration: none;
 }
 
 .divm {
