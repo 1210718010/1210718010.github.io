@@ -8,5 +8,5 @@ $("#search").bind("keydown",function(e){
 	let keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
 	if (keyCode == 13){
 		getinput();
-	};
+	}
 })
