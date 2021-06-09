@@ -93,7 +93,7 @@ var songs = [
 	"手つかずの感情 - 中山真斗",
 	"どれだけ希望を持ったのか - 中山真斗",
 	"やわらかな方程式 - 中山真斗",
-	"you - M.Graveyard",
+	"You - M.Graveyard",
 	"Creep - Gamper & Dadoni/Ember Island",
 	"城南花已开 - 三亩地",
 	"secret base ~君がくれたもの~ - 茅野愛衣/戸松遥/早見沙織",
