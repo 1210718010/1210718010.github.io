@@ -1,8 +1,5 @@
 // JavaScript Document
-// Update:2021.06.08 22:35
-$(function(){
-	document.getElementById("player").innerHTML = "<script src=\"https:\/\/muxmus.com\/js\/player.js\"><\/script>";
-});
+// Update:2021.06.11 07:20
 var img = "https://muxmus.com/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
