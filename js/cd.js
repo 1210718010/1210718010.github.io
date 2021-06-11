@@ -1,6 +1,6 @@
 // JavaScript Document
 document.write("<div id=\"slider\">");
-document.write("	<img class=\"tx\" src=\"https:\/\/i.ibb.co\/9c7PWB4\/tx.png\" alt=\"头像\" \/>");
+document.write("	<img class=\"tx\" src=\"https:\/\/files.catbox.moe\/w8ygtu.png\" alt=\"头像\" \/>");
 document.write("	<div class=\"js\">");
 document.write("		<br\/>");
 document.write("		<a href=\"https:\/\/muxmus.com\/\"><p>返回首页<\/p><\/a>");
