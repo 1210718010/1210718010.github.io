@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update:2021.06.14 03:40
+// Update:2021.06.19 05:50
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https:\/\/muxmus.com\/img\/up.svg\" \/>");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https:\/\/muxmus.com\/img\/down.svg\" \/>");
@@ -151,17 +151,17 @@ var index = 0;
 index = Math.floor(Math.random() * musics.length);
 window.onload = function(){
 	music.src = url + musics[index] + ".mp3";
-	document.getElementById("songs").innerHTML=songs[index];
+	document.getElementById("songs").innerHTML = songs[index];
 	music.onended = function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
-		document.getElementById("songs").innerHTML=songs[index];
+		document.getElementById("songs").innerHTML = songs[index];
 		music.play();
 	};
 	$("#next").click(function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
-		document.getElementById("songs").innerHTML=songs[index];
+		document.getElementById("songs").innerHTML = songs[index];
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		};
@@ -186,11 +186,11 @@ $(function(){
 	let vol = 0.3;
 	$('#music')[0].volume = vol;
 	$('#up').click(function(){
-		vol =vol<1?(vol*10 +1)/10:1;
+		vol = vol<1?(vol*10+1)/10:1;
 		$('#music')[0].volume = vol;
 	});
 	$('#down').click(function(){
-		vol =vol>0?(vol*10 -1)/10:0;
+		vol = vol>0?(vol*10-1)/10:0;
 		$('#music')[0].volume = vol;
 	});
 });
