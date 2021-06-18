@@ -16,10 +16,10 @@ var img = "https://muxmus.com/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
 		img = $(this).attr('src');
-		if (img == "https://muxmus.com/img/zt.svg"){
-			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+		if (img == "https:\/\/muxmus.com\/img\/zt.svg"){
+			$("#stop").attr("src", "https:\/\/muxmus.com\/img\/bf.svg");
 		}else{
-			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
+			$("#stop").attr("src", "https:\/\/muxmus.com\/img\/zt.svg");
 		}
 	});
 });
