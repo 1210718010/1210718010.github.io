@@ -151,10 +151,10 @@ function next(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML = songs[index];
-		music.play();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
+		music.play();
 	})
 }
 if(document.all){
