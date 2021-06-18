@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.06.19 06:13(GMT+8)
+// Update: 2021.06.19 07:00(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -12,26 +12,17 @@ document.write("</div>");
 document.write("<div class=\"divs\">");
 document.write("	<p id=\"songs\" class=\"song1\"></p>");
 document.write("</div>");
-var img = "https://muxmus.com/img/zt.svg";
-$(function(){
-	$("#stop").click(function(){
-		img = $(this).attr('src');
-		if (img == "https://muxmus.com/img/zt.svg"){
-			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
-		}else{
-			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
-		}
-	});
-});
 $(function(){
 	$("#audio").click(function(){
 		if(music.paused){
 			music.play();
+			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}else{
 			music.pause();
+			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
 		}
-	});
-});
+	})
+})
 var url = "https://music.163.com/song/media/outer/url?id=";
 var musics = [
 	"29836459",
@@ -147,7 +138,7 @@ var songs = [
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
-window.onload = function(){
+function next(){
 	music.src = url + musics[index] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[index];
 	music.onended = function(){
@@ -155,40 +146,46 @@ window.onload = function(){
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML = songs[index];
 		music.play();
-	};
+	}
 	$("#next").click(function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
 		document.getElementById("songs").innerHTML = songs[index];
+		music.play();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
-		};
-		music.play();
-	});
-};
+		}
+	})
+}
+if(document.all){
+	window.attachEvent('onload',next)
+}
+else{
+	window.addEventListener('load',next,false);
+}
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
 		$('#songs').attr("class", "song2");
 		$('#up').attr("class", "up2");
 		$('#down').attr("class", "down2");
 		$('#next').attr("class", "next2");
-	});
+	})
 	$('#bfq').on('mouseleave',function(){
 		$('#songs').attr("class", "song1");
 		$('#up').attr("class", "up1");
 		$('#down').attr("class", "down1");
 		$('#next').attr("class", "next1");
-	});
-});
+	})
+})
 $(function(){
 	let vol = 0.3;
 	$('#music')[0].volume = vol;
 	$('#up').click(function(){
 		vol = vol<1?(vol*10+1)/10:1;
 		$('#music')[0].volume = vol;
-	});
+	})
 	$('#down').click(function(){
 		vol = vol>0?(vol*10-1)/10:0;
 		$('#music')[0].volume = vol;
-	});
-});
+	})
+})
