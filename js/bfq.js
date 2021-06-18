@@ -6,7 +6,7 @@ document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https://muxm
 document.write("	<a id=\"audio\"><img id=\"stop\" alt=\"播放/暂停\" src=\"https://muxmus.com/img/zt.svg\" /></a>");
 document.write("	<div class=\"divn\">");
 document.write("		<img id=\"next\" class=\"next1\" alt=\"下一首\" src=\"https://muxmus.com/img/next.svg\" />");
-document.write("	<\/div>");
+document.write("	</div>");
 document.write("	<audio id=\"music\" preload=\"auto\"></audio>");
 document.write("</div>");
 document.write("<div class=\"divs\">");
