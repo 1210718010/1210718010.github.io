@@ -1,38 +1,36 @@
 // JavaScript Document
-// Update:2021.06.19 05:50
+// Update: 2021.06.19 06:13(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
-document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https:\/\/muxmus.com\/img\/up.svg\" \/>");
-document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https:\/\/muxmus.com\/img\/down.svg\" \/>");
-document.write("	<a id=\"audio\"><img id=\"stop\" alt=\"播放\/暂停\" src=\"https:\/\/muxmus.com\/img\/zt.svg\" \/><\/a>");
+document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https://muxmus.com/img/up.svg\" />");
+document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https://muxmus.com/img/down.svg\" />");
+document.write("	<a id=\"audio\"><img id=\"stop\" alt=\"播放/暂停\" src=\"https://muxmus.com/img/zt.svg\" /></a>");
 document.write("	<div class=\"divn\">");
-document.write("		<img id=\"next\" class=\"next1\" alt=\"下一首\" src=\"https:\/\/muxmus.com\/img\/next.svg\" \/>");
+document.write("		<img id=\"next\" class=\"next1\" alt=\"下一首\" src=\"https://muxmus.com/img/next.svg\" />");
 document.write("	<\/div>");
-document.write("	<audio id=\"music\" preload=\"auto\"><\/audio>");
-document.write("<\/div>");
+document.write("	<audio id=\"music\" preload=\"auto\"></audio>");
+document.write("</div>");
 document.write("<div class=\"divs\">");
-document.write("	<p id=\"songs\" class=\"song1\"><\/p>");
-document.write("<\/div>");
+document.write("	<p id=\"songs\" class=\"song1\"></p>");
+document.write("</div>");
 var img = "https://muxmus.com/img/zt.svg";
 $(function(){
 	$("#stop").click(function(){
 		img = $(this).attr('src');
-		if (img == "https:\/\/muxmus.com\/img\/zt.svg"){
-			$("#stop").attr("src", "https:\/\/muxmus.com\/img\/bf.svg");
+		if (img == "https://muxmus.com/img/zt.svg"){
+			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}else{
-			$("#stop").attr("src", "https:\/\/muxmus.com\/img\/zt.svg");
+			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
 		}
 	});
 });
 $(function(){
-    $("#audio").click(function(){
-        if(music.paused){
-            music.play();
-            $("#audio").removeClass("pause").addClass("play");
-        }else{
-            music.pause();
-            $("#audio").removeClass("play").addClass("pause");
-        }
-    });
+	$("#audio").click(function(){
+		if(music.paused){
+			music.play();
+		}else{
+			music.pause();
+		}
+	});
 });
 var url = "https://music.163.com/song/media/outer/url?id=";
 var musics = [
