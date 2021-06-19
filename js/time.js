@@ -1,4 +1,5 @@
 // JavaScript Document
+document.write("<div id=\"divt\"></div>");
 function startTime(){
 	var today = new Date();
 	var year = today.getFullYear();
