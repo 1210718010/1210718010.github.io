@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+
+#divt {
+	color: #fff;
+	opacity: 0.8;
+	text-align: right;
+	font-size: 18px;
+	position: fixed;
+	cursor: default;
+	width: 200px;
+	height: 25px;
+	background: rgba(0,0,0,0.00);
+	top: 100%;
+	left: 100%;
+	transform: translate(-220px,-40px);
+}
