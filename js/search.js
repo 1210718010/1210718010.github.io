@@ -15,4 +15,4 @@ $("#search").bind("keydown",function(e){
 	if (keyCode == 13){
 		getinput();
 	}
-})
+});
