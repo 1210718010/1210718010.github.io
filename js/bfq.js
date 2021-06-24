@@ -21,8 +21,8 @@ $(function(){
 			music.pause();
 			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
 		}
-	})
-})
+	});
+});
 var url = "https://music.163.com/song/media/outer/url?id=";
 var musics = [
 	"29836459",
@@ -155,7 +155,7 @@ function next(){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
 		music.play();
-	})
+	});
 }
 if(document.all){
 	window.attachEvent('onload',next)
@@ -169,23 +169,23 @@ $(document).ready(function(){
 		$('#up').attr("class", "up2");
 		$('#down').attr("class", "down2");
 		$('#next').attr("class", "next2");
-	})
+	});
 	$('#bfq').on('mouseleave',function(){
 		$('#songs').attr("class", "song1");
 		$('#up').attr("class", "up1");
 		$('#down').attr("class", "down1");
 		$('#next').attr("class", "next1");
-	})
-})
+	});
+});
 $(function(){
 	let vol = 0.3;
 	$('#music')[0].volume = vol;
 	$('#up').click(function(){
 		vol = vol<1?(vol*10+1)/10:1;
 		$('#music')[0].volume = vol;
-	})
+	});
 	$('#down').click(function(){
 		vol = vol>0?(vol*10-1)/10:0;
 		$('#music')[0].volume = vol;
-	})
-})
+	});
+});
