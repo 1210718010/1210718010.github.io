@@ -61,6 +61,10 @@ a:hover {
 	text-decoration: none;
 }
 
+.js a:hover {
+	text-decoration: underline;
+}
+
 .cd {
 	width: 40px;
 	height: 40px;
