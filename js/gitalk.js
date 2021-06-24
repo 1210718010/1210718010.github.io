@@ -6,5 +6,5 @@ var gitalk = new Gitalk({
 	owner: '1210718010',
 	admin: ['1210718010'],
 	language: 'zh-CN',
-})
+});
 gitalk.render('gitalk-container')
