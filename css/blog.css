@@ -55,6 +55,12 @@ a:hover {
 	opacity: 0.8;
 }
 
+.js a {
+	color: #fff;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
 .cd {
 	width: 40px;
 	height: 40px;
