@@ -146,6 +146,13 @@ index = Math.floor(Math.random() * musics.length);
 		document.getElementById("songs").innerHTML = songs[index];
 		music.play();
 	}
+$(document).ready(function(){
+	$('#stop').on('mouseenter',function(){
+		$('#songs').attr("class", "song2");
+		$('#up').attr("class", "up2");
+		$('#down').attr("class", "down2");
+		$('#next').attr("class", "next2");
+	});
 function next(){
 	$("#next").click(function(){
 		index = Math.floor(Math.random() * musics.length);
@@ -157,13 +164,6 @@ function next(){
 		music.play();
 	});
 }
-$(document).ready(function(){
-	$('#stop').on('mouseenter',function(){
-		$('#songs').attr("class", "song2");
-		$('#up').attr("class", "up2");
-		$('#down').attr("class", "down2");
-		$('#next').attr("class", "next2");
-	});
 if(document.all){
 	window.attachEvent('onload',next)
 }
