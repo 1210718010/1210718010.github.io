@@ -74,4 +74,5 @@ img {
 	left: 50%;
 	transform: translate(-400px,-15px);
 	text-align: center;
+	z-index: 3;
 }
