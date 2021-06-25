@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.06.19 07:00(GMT+8)
+// Update: 2021.06.26 06:06(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -138,6 +138,7 @@ var songs = [
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
+function next(){
 	music.src = url + musics[index] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[index];
 	music.onended = function(){
@@ -146,14 +147,6 @@ index = Math.floor(Math.random() * musics.length);
 		document.getElementById("songs").innerHTML = songs[index];
 		music.play();
 	}
-$(document).ready(function(){
-	$('#stop').on('mouseenter',function(){
-		$('#songs').attr("class", "song2");
-		$('#up').attr("class", "up2");
-		$('#down').attr("class", "down2");
-		$('#next').attr("class", "next2");
-	});
-function next(){
 	$("#next").click(function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
@@ -170,6 +163,13 @@ if(document.all){
 else{
 	window.addEventListener('load',next,false);
 }
+$(document).ready(function(){
+	$('#stop').on('mouseenter',function(){
+		$('#songs').attr("class", "song2");
+		$('#up').attr("class", "up2");
+		$('#down').attr("class", "down2");
+		$('#next').attr("class", "next2");
+	});
 	$('#bfq').on('mouseleave',function(){
 		$('#songs').attr("class", "song1");
 		$('#up').attr("class", "up1");
