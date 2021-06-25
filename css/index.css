@@ -67,12 +67,12 @@ img {
 	position: fixed;
 	font-size: 14px;
 	cursor: default;
-	width: 800px;
+	width: 100px;
 	height: 30px;
 	background: rgba(0,0,0,0.00);
 	top:96%;
 	left: 50%;
-	transform: translate(-400px,-15px);
+	transform: translate(-50px,-15px);
 	text-align: center;
 	z-index: 3;
 }
