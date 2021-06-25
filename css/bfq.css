@@ -55,6 +55,7 @@
 	height: 17px;
 	opacity: 0;
 	z-index: -1;
+	pointer-events: none;
 }
 
 .up2 {
@@ -74,6 +75,7 @@
 	height: 17px;
 	opacity: 0;
 	z-index: -1;
+	pointer-events: none;
 }
 
 .down2 {
@@ -93,6 +95,7 @@
 	height: 25px;
 	opacity: 0;
 	z-index: -1;
+	pointer-events: none;
 }
 
 .next2 {
