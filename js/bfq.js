@@ -138,7 +138,6 @@ var songs = [
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
-function next(){
 	music.src = url + musics[index] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[index];
 	music.onended = function(){
@@ -147,6 +146,7 @@ function next(){
 		document.getElementById("songs").innerHTML = songs[index];
 		music.play();
 	}
+function next(){
 	$("#next").click(function(){
 		index = Math.floor(Math.random() * musics.length);
 		music.src = url + musics[index] + ".mp3";
@@ -157,12 +157,6 @@ function next(){
 		music.play();
 	});
 }
-if(document.all){
-	window.attachEvent('onload',next)
-}
-else{
-	window.addEventListener('load',next,false);
-}
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
 		$('#songs').attr("class", "song2");
@@ -170,6 +164,12 @@ $(document).ready(function(){
 		$('#down').attr("class", "down2");
 		$('#next').attr("class", "next2");
 	});
+if(document.all){
+	window.attachEvent('onload',next)
+}
+else{
+	window.addEventListener('load',next,false);
+}
 	$('#bfq').on('mouseleave',function(){
 		$('#songs').attr("class", "song1");
 		$('#up').attr("class", "up1");
