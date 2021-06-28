@@ -1,5 +1,5 @@
 // JavaScript Document
-document.write("<div id=\"divt\"><p id=\"time\"></p></div>");
+document.write("<div id=\"divt\"></div>");
 function startTime(){
 	var today = new Date();
 	var year = today.getFullYear();
@@ -13,7 +13,7 @@ function startTime(){
 	hh = checkTime(hh);
 	mm = checkTime(mm);
 	ss = checkTime(ss);
-	document.getElementById('time').innerHTML = year + "." + month + "." + day + " " + hh + ":" + mm + ":" + ss;
+	document.getElementById('divt').innerHTML = year + "." + month + "." + day + " " + hh + ":" + mm + ":" + ss;
 	setTimeout('startTime()',100);
 }
 function checkTime(i){
