@@ -132,7 +132,7 @@ var songs = [
 	"たぶん - YOASOBI",
 	"ハルジオン - YOASOBI",
 	"U&I - 放課後ティータイム",
-	"天使にふれたよ! - 放課後ティータイム"
+	"天使にふれたよ! - 放課後ティータイム",
 	"晚安喵 - 艾索",
 	"有你的江湖 - 岚AYA",
 	"winter bokeh - idealism/jinsang",
@@ -148,7 +148,7 @@ var songs = [
 	"僕が死のうと思ったのは - 中島美嘉",
 	"勾指起誓 - 洛天依/ilem",
 	"彼女は旅に出る - 鎖那",
-	"東京ウインターセッション - HoneyWorks"
+	"東京ウインターセッション - HoneyWorks",
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
