@@ -80,6 +80,11 @@ var musics = [
 	"1818031620",
 	"1446326362",
 	"1480100912",
+	"1445783796",
+	"26830207",
+	"1345872140",
+	"509106775",
+	"522528589",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -137,6 +142,11 @@ var songs = [
 	"让风告诉你 - 花玲/喵☆酱/宴宁/kinsen",
 	"葵橋 - さユり",
 	"GAMER - Synth Monsters/千璃Senri/SADRECORDS",
+	"Pride - 遥海",
+	"僕が死のうと思ったのは - 中島美嘉",
+	"勾指起誓 - 洛天依/ilem",
+	"彼女は旅に出る - 鎖那",
+	"東京ウインターセッション - HoneyWorks"
 ];
 var index = 0;
 index = Math.floor(Math.random() * musics.length);
