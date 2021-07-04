@@ -150,21 +150,41 @@ var songs = [
 	"彼女は旅に出る - 鎖那",
 	"東京ウインターセッション - HoneyWorks",
 ];
-var index = 0;
-index = Math.floor(Math.random() * musics.length);
+var count = musics.length;
+var original = new Array;
+for (var i = 0; i < count; i++){
+	original[i] = i;
+}
+original.sort(function(){
+	return 0.5 - Math.random();
+});
+var i = 0;
 function next(){
-	music.src = url + musics[index] + ".mp3";
-	document.getElementById("songs").innerHTML = songs[index];
+	music.src = url + musics[original[i]] + ".mp3";
+	document.getElementById("songs").innerHTML = songs[original[i]];
+	i += 1;
 	music.onended = function(){
-		index = Math.floor(Math.random() * musics.length);
-		music.src = url + musics[index] + ".mp3";
-		document.getElementById("songs").innerHTML = songs[index];
+		if(i == musics.length){
+			original.sort(function(){
+				return 0.5 - Math.random();
+			});
+			i = 0;
+		}
+		music.src = url + musics[original[i]] + ".mp3";
+		document.getElementById("songs").innerHTML = songs[original[i]];
+		i += 1;
 		music.play();
 	}
 	$("#next").click(function(){
-		index = Math.floor(Math.random() * musics.length);
-		music.src = url + musics[index] + ".mp3";
-		document.getElementById("songs").innerHTML = songs[index];
+		if(i == musics.length){
+			original.sort(function(){
+				return 0.5 - Math.random();
+			});
+			i = 0;
+		}
+		music.src = url + musics[original[i]] + ".mp3";
+		document.getElementById("songs").innerHTML = songs[original[i]];
+		i += 1;
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
