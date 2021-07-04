@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.07.02 12:10(GMT+8)
+// Update: 2021.07.04 19:36(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https://muxmus.com/img/down.svg\" />");
