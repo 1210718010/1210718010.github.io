@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+a {
+	color: #fff;
+	font-size: 30px;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+
+p {
+	color: #fff;
+	font-size: 30px;
+	opacity: 0.8;
+	cursor: default;
+}
