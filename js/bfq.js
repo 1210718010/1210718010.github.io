@@ -165,37 +165,36 @@ function next(){
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
 	music.onended = function(){
-		play();
+		nextSong();
 		music.play();
 	}
 	$("#next").click(function(){
-		play();
-		music.play();
+		nextSong();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
 		music.play();
 	});
 }
-function play(){
+function nextSong(){
 	if(i == musics.length){
 		num = original[count];
 		original.sort(function(){
 			return 0.5 - Math.random();
 		});
-		ifnum();
+		ifNum();
 		i = 0;
 	}
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
 }
-function ifnum(){
+function ifNum(){
 	if(original[0] == num){
 		original.sort(function(){
 			return 0.5 - Math.random();
 		});
-		ifnum();
+		ifNum();
 	}
 }
 if(document.all){
