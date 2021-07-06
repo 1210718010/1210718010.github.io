@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.07.04 19:36(GMT+8)
+// Update: 2021.07.06 12:40(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"加\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"减\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -150,46 +150,53 @@ var songs = [
 	"彼女は旅に出る - 鎖那",
 	"東京ウインターセッション - HoneyWorks",
 ];
-var count = musics.length;
+var count = musics.length - 1;
 var original = new Array;
-for (var i = 0; i < count; i++){
+for (var i = 0; i <= count; i++){
 	original[i] = i;
 }
 original.sort(function(){
 	return 0.5 - Math.random();
 });
 var i = 0;
+var num = 0;
 function next(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
 	music.onended = function(){
-		if(i == musics.length){
-			original.sort(function(){
-				return 0.5 - Math.random();
-			});
-			i = 0;
-		}
-		music.src = url + musics[original[i]] + ".mp3";
-		document.getElementById("songs").innerHTML = songs[original[i]];
-		i += 1;
+		play();
 		music.play();
 	}
 	$("#next").click(function(){
-		if(i == musics.length){
-			original.sort(function(){
-				return 0.5 - Math.random();
-			});
-			i = 0;
-		}
-		music.src = url + musics[original[i]] + ".mp3";
-		document.getElementById("songs").innerHTML = songs[original[i]];
-		i += 1;
+		play();
+		music.play();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
 		music.play();
 	});
+}
+function play(){
+	if(i == musics.length){
+		num = original[count];
+		original.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifnum();
+		i = 0;
+	}
+	music.src = url + musics[original[i]] + ".mp3";
+	document.getElementById("songs").innerHTML = songs[original[i]];
+	i += 1;
+}
+function ifnum(){
+	if(original[0] == num){
+		original.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifnum();
+	}
 }
 if(document.all){
 	window.attachEvent('onload',next)
