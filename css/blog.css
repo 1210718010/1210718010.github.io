@@ -11,7 +11,7 @@
 	text-decoration: underline;
 }
 
-.title{
+.title a {
 	color: #fff;
 	opacity: 1.0;
 	text-decoration: none;
