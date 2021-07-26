@@ -1,20 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
 
-.divm>a {
+.divm .title {
+	color: #fff;
+	opacity: 1.0;
+	text-decoration: none;
+}
+
+.divm a {
 	color: #58a6ff;
 	opacity: 0.8;
 	text-decoration: none;
 }
 
-.divm>a:hover {
+.divm a:hover {
 	text-decoration: underline;
-}
-
-.title {
-	color: #fff;
-	opacity: 1.0;
-	text-decoration: none;
 }
 
 .divm {
