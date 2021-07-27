@@ -1,5 +1,5 @@
 // JavaScript Document
-var tips = new Array[16];
+var tips = new Array(16);
 tips[0] = "<div id=\"slider\">";
 tips[1] = "	<img class=\"tx\" src=\"https://files.catbox.moe/w8ygtu.png\" alt=\"\" />";
 tips[2] = "	<div class=\"js\">";
