@@ -10,9 +10,14 @@
 		<link rel="stylesheet" href="https://muxmus.com/css/gitalk.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content'});
+		</script>
 		<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 	</head>
 	<body bgcolor="#1F1F1F">
+		<div id="main-content">
 		<div class="divm">
 			<h2>关于《全员恶玉》的一些看法</h2>
 			<p class="date">2020.12.25 04:05</p>
@@ -50,6 +55,7 @@
 		<script src="https://muxmus.com/js/cbl.js"></script>
 		<script src="https://muxmus.com/js/link.js"></script>
 		<script src="https://muxmus.com/js/gitalk.js"></script>
+		</div>
 		<script src="https://muxmus.com/js/bfq.js"></script>
 	</body>
 </html>
