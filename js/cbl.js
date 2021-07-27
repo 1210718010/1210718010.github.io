@@ -1,5 +1,5 @@
 // JavaScript Document
-function(){
+$(document).ready(function(){
 	document.write("<div id=\"slider\">");
 	document.write("	<img class=\"tx\" src=\"https://files.catbox.moe/w8ygtu.png\" alt=\"\" />");
 	document.write("	<div class=\"js\">");
@@ -16,8 +16,8 @@ function(){
 	document.write("<div class=\"gb\" id=\"ccc\">");
 	document.write("	<img class=\"cd\" alt=\"\" src=\"https://muxmus.com/img/gb.svg\" />");
 	document.write("</div>");
-}
-$(document).ready(function () {
+});
+$(document).ready(function(){
 	var bbb = $('#bbb');
 	var ccc = $('#ccc');
 	var slider = $('#slider');
