@@ -8,8 +8,13 @@
 		<link rel="stylesheet" href="https://muxmus.com/css/blog.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/bfq.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content'});
+		</script>
 	</head>
 	<body bgcolor="#1F1F1F">
+		<div id="main-content">
 		<div class="divm">
 			<p>2020.12.25 04:05</p>
 			<a class="title" href="https://muxmus.com/blog/20201225/"><p>关于《全员恶玉》的一些看法</p></a>
@@ -18,6 +23,7 @@
 			<a class="title" href="https://muxmus.com/blog/20210601/"><p>关于原神游戏适龄提示的一些讨论</p></a>
 		</div>
 		<script src="https://muxmus.com/js/cbl.js"></script>
+		</div>
 		<script src="https://muxmus.com/js/bfq.js"></script>
 	</body>
 </html>
