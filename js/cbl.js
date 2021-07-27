@@ -17,7 +17,7 @@ tips[13] = "<div class=\"gb\" id=\"ccc\">";
 tips[14] = "	<img class=\"cd\" alt=\"\" src=\"https://muxmus.com/img/gb.svg\" />";
 tips[15] = "</div>";
 for (var i = 0;i < tips.length;i++){ 
-	document.getElementById('cbl').innerHTML = (tips[i]);
+	document.getElementById('cbl').innerHTML = tips[i];
 }
 $(document).ready(function(){
 	var bbb = $('#bbb');
