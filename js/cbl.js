@@ -1,4 +1,5 @@
 // JavaScript Document
+$(document).ready(function(){
 var tips = new Array(16);
 tips[0] = "<div id=\"slider\">";
 tips[1] = "	<img class=\"tx\" src=\"https://files.catbox.moe/w8ygtu.png\" alt=\"\" />";
@@ -19,6 +20,7 @@ tips[15] = "</div>";
 for (var i = 0; i < tips.length; i++){ 
 	document.getElementById('cbl').innerHTML = tips[i];
 }
+});
 $(document).ready(function(){
 	var bbb = $('#bbb');
 	var ccc = $('#ccc');
