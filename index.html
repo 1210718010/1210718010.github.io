@@ -9,14 +9,19 @@
 		<link rel="stylesheet" href="https://muxmus.com/css/index.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/bfq.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content'});
+		</script>
 	</head>
 	<body bgcolor="#1F1F1F">
+		<div id="main-content">
 		<div class="divm">
 			<h1><a href="https://muxmus.com" title="muxmus"><em class="title">木辛木杉</em></a></h1>
 			<p>
-				<a href="https://muxmus.com/info/" target="_blank"><em>个人</em></a>
+				<a date-pjax href="https://muxmus.com/info/" target="_blank"><em>个人</em></a>
 				&nbsp;<strong>|</strong>&nbsp;
-				<a href="https://muxmus.com/blog/"><em>博客</em></a>
+				<a date-pjax href="https://muxmus.com/blog/"><em>博客</em></a>
 				&nbsp;<strong>|</strong>&nbsp;
 				<a href="https://muxmus.com/contents/"><em>目录</em></a>
 				&nbsp;<strong>|</strong>&nbsp;
@@ -30,6 +35,7 @@
 		</div>
 		<div class="divf">
 			<strong>by </strong><a href="https://github.com/1210718010" target="_blank"><em>dzb</em></a><strong>.</strong>
+		</div>
 		</div>
 		<script src="https://muxmus.com/js/bfq.js"></script>
 	</body>
