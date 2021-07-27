@@ -52,6 +52,10 @@ img {
 	height: 85px;
 }
 
+.divm img {
+	width: 400px;
+}
+
 .divz {
 	position: fixed;
 	width: 400px;
