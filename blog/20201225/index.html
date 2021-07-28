@@ -11,6 +11,30 @@
 		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).on('ready pjax:end', function(event) {
+				var bbb = $('#bbb');
+				var ccc = $('#ccc');
+				var slider = $('#slider');
+				bbb.click(function(){
+					slider.animate({right:0},500);
+					bbb.attr("class","gb");
+					ccc.attr("class","dk");
+				});
+				ccc.click(function(){
+					slider.animate({right:-350},500);
+					ccc.attr("class","gb");
+					bbb.attr("class","dk");
+				});
+				var gitalk = new Gitalk({
+					clientID: '7285424ec928b4d481a6',
+					clientSecret: '334ae45ea79ff4447542eedba52fac3eb85efbf3',
+					repo: 'comment',
+					owner: '1210718010',
+					admin: ['1210718010'],
+					language: 'zh-CN',
+				});
+				gitalk.render('gitalk-container')
+			});
 		</script>
 	</head>
 	<body bgcolor="#1F1F1F">
@@ -47,7 +71,10 @@
 				<br>
 				<p>最后我想说，人家专门做了个阴间小剧场来解释背景和世界观，可某些人你还是什么都没看懂就打差分，希望之后评分能长起来吧！</p>
 				<br >
+				<div id="gitalk-container"></div>
 			</div>
+			<script src="https://muxmus.com/js/cbl.js"></script>
+			<script src="https://muxmus.com/js/gitalk.js"></script>
 			<script src="https://muxmus.com/js/link.js"></script>
 		</div>
 		<script src="https://muxmus.com/js/bfq.js"></script>
