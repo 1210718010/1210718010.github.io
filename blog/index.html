@@ -11,6 +11,10 @@
 		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).on('ready pjax:end', function(event) {
+				$(event.target).writeHTMLasJS()
+				$(event.target).cbl()
+			})
 		</script>
 	</head>
 	<body bgcolor="#1F1F1F">
