@@ -12,7 +12,7 @@
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
 			$(document).on('ready pjax:end', function(event) {
-				$(event.target).cbl()
+				(event.target).cbl()
 			})
 		</script>
 	</head>
