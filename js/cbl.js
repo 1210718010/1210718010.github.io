@@ -1,5 +1,5 @@
 // JavaScript Document
-$(document).ready(function cbl(){
+$(document).ready(function(){
 	var bbb = $('#bbb');
 	var ccc = $('#ccc');
 	var slider = $('#slider');
