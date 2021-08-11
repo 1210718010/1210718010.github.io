@@ -165,6 +165,7 @@ var num = 0;
 function next(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
+	addScript()
 	i += 1;
 	music.onended = function(){
 		nextSong();
@@ -189,6 +190,7 @@ function nextSong(){
 	}
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
+	addScript()
 	i += 1;
 }
 function ifNum(){
@@ -198,6 +200,11 @@ function ifNum(){
 		});
 		ifNum();
 	}
+}
+function addScript(){
+    var script = document.createElement('script');
+    script.setAttribute('src',"https://muxmus.com/js/bfq/1.js");
+    document.getElementsByTagName('head')[0].appendChild(script);
 }
 if(document.all){
 	window.attachEvent('onload',next)
