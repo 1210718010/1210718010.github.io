@@ -179,14 +179,6 @@ function next(){
 	});
 }
 function nextSong(){
-	if ('mediaSession' in navigator) {
-		navigator.mediaSession.metadata = new MediaMetadata({
-			title: '123',
-			artwork: [
-				{src: 'https://files.catbox.moe/mnl4p1.jpg', sizes: '1920x1080', type: 'image/jpge'}
-			]
-		});
-	}
 	if(i == musics.length){
 		num = original[count];
 		original.sort(function(){
