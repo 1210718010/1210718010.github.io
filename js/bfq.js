@@ -86,6 +86,7 @@ var musics = [
 	"1345872140",
 	"509106775",
 	"522528589",
+	"30394495",
 ];
 var songs = [
 	"ハルヒの想い - 神前暁",
@@ -149,6 +150,7 @@ var songs = [
 	"勾指起誓 - 洛天依/ilem",
 	"彼女は旅に出る - 鎖那",
 	"東京ウインターセッション - HoneyWorks",
+	"Stray - Feint",
 ];
 var count = musics.length - 1;
 var original = new Array;
