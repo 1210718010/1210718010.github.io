@@ -169,7 +169,7 @@ function next(){
 	music.onended = function(){
 		if ('mediaSession' in navigator) {
 			navigator.mediaSession.metadata = new MediaMetadata({
-				title: song[original[i]] ,
+				title: '123',
 				artwork: [
 					{src: 'https://files.catbox.moe/mnl4p1.jpg', sizes: '1920x1080', type: 'image/jpge'}
 				]
