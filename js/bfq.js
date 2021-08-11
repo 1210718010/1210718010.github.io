@@ -13,7 +13,7 @@ document.write("<div class=\"divs\">");
 document.write("	<p id=\"songs\" class=\"song1\"></p>");
 document.write("</div>");
 $(function(){
-	$("#audio").click(function porp(){
+	$("#audio").click(function(){
 		if(music.paused){
 			music.play();
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
@@ -171,7 +171,7 @@ function next(){
 		nextSong();
 		music.play();
 	}
-	$("#next").click(function clickNext(){
+	$("#next").click(function(){
 		nextSong();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
