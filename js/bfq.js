@@ -166,10 +166,10 @@ function next(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
+	addScript();
 	music.onended = function(){
 		nextSong();
 		music.play();
-		addScript();
 	}
 	$("#next").click(function(){
 		nextSong();
@@ -177,7 +177,6 @@ function next(){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
 		music.play();
-		addScript();
 	});
 }
 function nextSong(){
@@ -192,6 +191,7 @@ function nextSong(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
+	addScript();
 }
 function ifNum(){
 	if(original[0] == num){
