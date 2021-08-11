@@ -9,6 +9,21 @@
 		<link rel="stylesheet" href="https://muxmus.com/css/search.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/bfq.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script>
+			if ('mediaSession' in navigator) {
+				navigator.mediaSession.metadata = new MediaMetadata({
+					title: 'title',
+					artist: 'artist',
+					album: '木辛木杉',
+					artwork: [
+						{src: 'https://files.catbox.moe/w8ygtu.png', sizes: '476x477', type: 'image/png'}
+					]
+				});
+				navigator.mediaSession.setActionHandler('play', function() { /* Code excerpted. */ });
+				navigator.mediaSession.setActionHandler('pause', function() { /* Code excerpted. */ });
+				navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
+			}
+		</script>
 	</head>
 	<body bgcolor="#1F1F1F" onload="startTime()">
 		<script src="https://muxmus.com/js/time.js"></script>
