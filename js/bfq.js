@@ -171,7 +171,7 @@ function next(){
 		nextSong();
 		music.play();
 	}
-	$("#next").click(function(){
+	$("#next").click(function clickNext(){
 		nextSong();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
