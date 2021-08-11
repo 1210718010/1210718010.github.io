@@ -13,7 +13,7 @@ document.write("<div class=\"divs\">");
 document.write("	<p id=\"songs\" class=\"song1\"></p>");
 document.write("</div>");
 $(function(){
-	$("#audio").click(function(){
+	$("#audio").click(function porp(){
 		if(music.paused){
 			music.play();
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
