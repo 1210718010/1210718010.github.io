@@ -167,26 +167,10 @@ function next(){
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
 	music.onended = function(){
-		if ('mediaSession' in navigator) {
-			navigator.mediaSession.metadata = new MediaMetadata({
-				title: '123',
-				artwork: [
-					{src: 'https://files.catbox.moe/mnl4p1.jpg', sizes: '1920x1080', type: 'image/jpge'}
-				]
-			});
-		}
 		nextSong();
 		music.play();
 	}
 	$("#next").click(function(){
-		if ('mediaSession' in navigator) {
-			navigator.mediaSession.metadata = new MediaMetadata({
-				title: song[original[i]] ,
-				artwork: [
-					{src: 'https://files.catbox.moe/mnl4p1.jpg', sizes: '1920x1080', type: 'image/jpge'}
-				]
-			});
-		}
 		nextSong();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
@@ -195,6 +179,14 @@ function next(){
 	});
 }
 function nextSong(){
+	if ('mediaSession' in navigator) {
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: '123',
+			artwork: [
+				{src: 'https://files.catbox.moe/mnl4p1.jpg', sizes: '1920x1080', type: 'image/jpge'}
+			]
+		});
+	}
 	if(i == musics.length){
 		num = original[count];
 		original.sort(function(){
