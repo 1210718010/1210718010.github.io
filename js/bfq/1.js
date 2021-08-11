@@ -6,7 +6,17 @@ if ('mediaSession' in navigator) {
 		{src: 'https://files.catbox.moe/mnl4p1.jpg', sizes: '1920x1080', type: 'image/jpge'}
 	]
 	});
-	navigator.mediaSession.setActionHandler('play', porp());
-	navigator.mediaSession.setActionHandler('pause', porp());
-	navigator.mediaSession.setActionHandler('nexttrack', clickNext());
+	navigator.mediaSession.setActionHandler('play', function(){
+		$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+	});
+	navigator.mediaSession.setActionHandler('pause', function(){
+		$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
+	});
+	navigator.mediaSession.setActionHandler('nexttrack', function(){
+		nextSong();
+		if(music.paused){
+			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+		}
+		music.play();
+	});
 }
