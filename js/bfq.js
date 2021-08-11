@@ -168,16 +168,16 @@ function next(){
 	i += 1;
 	music.onended = function(){
 		nextSong();
-		addScript();
 		music.play();
+		addScript();
 	}
 	$("#next").click(function(){
 		nextSong();
-		addScript();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
 		music.play();
+		addScript();
 	});
 }
 function nextSong(){
