@@ -168,10 +168,12 @@ function next(){
 	i += 1;
 	music.onended = function(){
 		nextSong();
+		addScript();
 		music.play();
 	}
 	$("#next").click(function(){
 		nextSong();
+		addScript();
 		if(music.paused){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
@@ -198,6 +200,12 @@ function ifNum(){
 		});
 		ifNum();
 	}
+}
+function addScript(){
+    var script = document.createElement('script');
+    script.setAttribute('type','text/javascript');
+    script.setAttribute('src',"https://muxmus.com/js/bfq/1.js");
+    document.getElementsByTagName('head')[0].appendChild(script);
 }
 if(document.all){
 	window.attachEvent('onload',next)
