@@ -166,7 +166,6 @@ function next(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
-	addScript();
 	music.onended = function(){
 		nextSong();
 		music.play();
@@ -191,7 +190,6 @@ function nextSong(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
 	i += 1;
-	addScript();
 }
 function ifNum(){
 	if(original[0] == num){
@@ -200,12 +198,6 @@ function ifNum(){
 		});
 		ifNum();
 	}
-}
-function addScript(){
-    var script = document.createElement('script');
-    script.setAttribute('type','text/javascript');
-    script.setAttribute('src',"https://muxmus.com/js/bfq/1.js");
-    document.getElementsByTagName('head')[0].appendChild(script);
 }
 if(document.all){
 	window.attachEvent('onload',next)
