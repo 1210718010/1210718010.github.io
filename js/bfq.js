@@ -216,6 +216,39 @@ var artist = [
 	"HoneyWorks",
 	"Feint",
 ];
+var album[
+	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg",
+	"X0Jdt5C1MLbZjLTb2lZzsw==/109951165561011067.jpg",
+	"tJl-San_dLNzomvAT77KJg==/853221023197375.jpg",
+	"eyw6kIJBcGpwk31id-XrUA==/3275445142255309.jpg",
+	"tBHOY6ZMq6grfs3GcvJWbg==/109951163768131371.jpg",
+	"bc0niruJ9rBQz2kDKltjhg==/2937895070114174.jpg",
+	"G3fWGyhZ-K5HnPEYihEZXg==/5738351185435997.jpg",
+	"PtLd62-khEg8iCutTdE5Vg==/109951163286813093.jpg",
+	"KPluSQe8ANKOYHmKKQJgig==/6012129581245478.jpg",
+	"0qSEuzSqPNrACMPoGy8efw==/109951162863729074.jpg",
+	"e0bWedo3fOZROYKZ1VERPg==/109951165579703663.jpg",
+	"i-SguJ4MFxaGXf33MNKEXw==/2270491511396203.jpg",
+	"i-SguJ4MFxaGXf33MNKEXw==/2270491511396203.jpg",
+	"i-SguJ4MFxaGXf33MNKEXw==/2270491511396203.jpg",
+	"KK6lEOnt-ADbrvT7cflDaQ==/109951163296300547.jpg",
+	"H0VQBvES9ijYpu4lhZIYPw==/18712588395060972.jpg",
+	"i-7ktILRPImJ0NwiH8DABg==/109951162885959979.jpg",
+	"qMg2-kgxvYwMRvABdQJ91Q==/109951166198069948.jpg",
+	"ZUCE_1Tl_hkbtamKmSNXEg==/109951163009282836.jpg",
+	"pEStWtGqwpJqeiig0EBGgQ==/109951164884055054.jpg",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+	"",
+];
 var count = musicId.length - 1;
 var original = new Array;
 for (var i = 0; i <= count; i++){
@@ -270,7 +303,7 @@ function media(){
 	navigator.mediaSession.metadata = new MediaMetadata({
 		title: title[original[i]],
 		artist: artist[original[i]],
-		artwork: [{src: "https://files.catbox.moe/mnl4p1.jpg"}]
+		artwork: [{src: "https://p1.music.126.net/" + album[original[i]] }]
 	});
 	navigator.mediaSession.setActionHandler('play', function(){
 		music.play();
