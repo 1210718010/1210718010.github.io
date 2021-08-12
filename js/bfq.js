@@ -216,7 +216,7 @@ var artist = [
 	"HoneyWorks",
 	"Feint",
 ];
-var album[
+var album = [
 	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg",
 	"X0Jdt5C1MLbZjLTb2lZzsw==/109951165561011067.jpg",
 	"tJl-San_dLNzomvAT77KJg==/853221023197375.jpg",
@@ -237,7 +237,7 @@ var album[
 	"qMg2-kgxvYwMRvABdQJ91Q==/109951166198069948.jpg",
 	"ZUCE_1Tl_hkbtamKmSNXEg==/109951163009282836.jpg",
 	"pEStWtGqwpJqeiig0EBGgQ==/109951164884055054.jpg",
-	"",
+	"jNhg3v8ayCzL_k470qQyvQ==/3424978721550752.jpg",
 	"",
 	"",
 	"",
