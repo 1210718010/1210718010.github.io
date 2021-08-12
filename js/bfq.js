@@ -24,7 +24,7 @@ $(function(){
 	});
 });
 var url = "https://music.163.com/song/media/outer/url?id=";
-var musics = [
+var musicId = [
 	"29836459",
 	"460508",
 	"730631",
@@ -88,71 +88,135 @@ var musics = [
 	"522528589",
 	"30394495",
 ];
-var songs = [
-	"ハルヒの想い - 神前暁",
-	"「プラチナむかつく」 - 神前暁",
-	"歳月-雲流れ- - Foxtail-Grass Studio",
-	"my most precious treasure -orgel- - 麻枝准",
-	"海の形 - 昙轩",
-	"アゲイン - 横山克",
-	"追想、桜ノ國 - はちみつれもん",
-	"渚 - 麻枝准",
-	"思い出をありがとう - 坂本昌一郎",
-	"Rain after Summer - 羽肿",
-	"疲れたので家に帰ろう - 浜口史郎",
-	"手つかずの感情 - 中山真斗",
-	"どれだけ希望を持ったのか - 中山真斗",
-	"やわらかな方程式 - 中山真斗",
-	"You - M.Graveyard",
-	"Creep - Gamper & Dadoni/Ember Island",
-	"城南花已开 - 三亩地",
-	"secret base ~君がくれたもの~ - 茅野愛衣/戸松遥/早見沙織",
-	"打上花火 - DAOKO/米津玄師",
-	"僕に光をくれたんだ - 中山真斗",
-	"だんご大家族 - 真理絵/茶太/Morrigan/Rio",
-	"Bloom of Youth - 清水淳一",
-	"秋 - FLOWER FLOWER",
-	"いつも何度でも - 宗次郎",
-	"新宝島 - Lefty Hand Cream",
-	"ふわふわ♪ - 牧野由依",
-	"Fonte - 出羽良彰",
-	"潮鳴り - 折戸伸治",
-	"一番の宝物 - karuta",
-	"Embrace - Sappheiros",
-	"ninelie - Aimer/EGOIST",
-	"Stay - Ember Island",
-	"Umbrella(Matte Remix) - Matte/Ember Island",
-	"Let It Go - Idina Menzel",
-	"茜さす - Aimer",
-	"動く、動く - 水瀬いのり/久保ユリカ",
-	"Amhrán na farraige - Lisa Hannigan",
-	"夜航星 - 不才",
-	"ここから、ここから - 水瀬いのり/花澤香菜/井口裕香/早見沙織",
-	"夜に駆ける - YOASOBI",
-	"群青 - YOASOBI",
-	"たぶん - YOASOBI",
-	"ハルジオン - YOASOBI",
-	"U&I - 放課後ティータイム",
-	"天使にふれたよ! - 放課後ティータイム",
-	"晚安喵 - 艾索",
-	"有你的江湖 - 岚AYA",
-	"winter bokeh - idealism/jinsang",
-	"The Ugly Duckling - Dancing Line",
-	"あの夏へ - 久石譲",
-	"Summer - 久石譲",
-	"革命前夜 - 井口裕香",
-	"Legends Never Die - Against the Current",
-	"让风告诉你 - 花玲/喵☆酱/宴宁/kinsen",
-	"葵橋 - さユり",
-	"GAMER - Synth Monsters/千璃Senri/SADRECORDS",
-	"Pride - 遥海",
-	"僕が死のうと思ったのは - 中島美嘉",
-	"勾指起誓 - 洛天依/ilem",
-	"彼女は旅に出る - 鎖那",
-	"東京ウインターセッション - HoneyWorks",
-	"Stray - Feint",
+var title = [
+	"ハルヒの想い",
+	"「プラチナむかつく」",
+	"歳月-雲流れ-",
+	"my most precious treasure -orgel-",
+	"海の形",
+	"アゲイン",
+	"追想、桜ノ國",
+	"渚",
+	"思い出をありがとう",
+	"Rain after Summer",
+	"疲れたので家に帰ろう",
+	"手つかずの感情",
+	"どれだけ希望を持ったのか",
+	"やわらかな方程式",
+	"You",
+	"Creep",
+	"城南花已开",
+	"secret base ~君がくれたもの~",
+	"打上花火",
+	"僕に光をくれたんだ",
+	"だんご大家族",
+	"Bloom of Youth",
+	"秋",
+	"いつも何度でも",
+	"新宝島",
+	"ふわふわ♪",
+	"Fonte",
+	"潮鳴り",
+	"一番の宝物",
+	"Embrace",
+	"ninelie",
+	"Stay",
+	"Umbrella(Matte Remix)",
+	"Let It Go",
+	"茜さす",
+	"動く、動く",
+	"Amhrán na farraige",
+	"夜航星",
+	"ここから、ここから",
+	"夜に駆ける",
+	"群青",
+	"たぶん",
+	"ハルジオン",
+	"U&I",
+	"天使にふれたよ!",
+	"晚安喵",
+	"有你的江湖",
+	"winter bokeh",
+	"The Ugly Duckling",
+	"あの夏へ",
+	"Summer",
+	"革命前夜",
+	"Legends Never Die",
+	"让风告诉你",
+	"葵橋",
+	"GAMER",
+	"Pride",
+	"僕が死のうと思ったのは",
+	"勾指起誓",
+	"彼女は旅に出る",
+	"東京ウインターセッション",
+	"Stray",
 ];
-var count = musics.length - 1;
+var artist = [
+	"神前暁",
+	"神前暁",
+	"Foxtail-Grass Studio",
+	"麻枝准",
+	"昙轩",
+	"横山克",
+	"はちみつれもん",
+	"麻枝准",
+	"坂本昌一郎",
+	"羽肿",
+	"浜口史郎",
+	"中山真斗",
+	"中山真斗",
+	"中山真斗",
+	"M.Graveyard",
+	"Gamper & Dadoni/Ember Island",
+	"三亩地",
+	"茅野愛衣/戸松遥/早見沙織",
+	"DAOKO/米津玄師",
+	"中山真斗",
+	"真理絵/茶太/Morrigan/Rio",
+	"清水淳一",
+	"FLOWER FLOWER",
+	"宗次郎",
+	"Lefty Hand Cream",
+	"牧野由依",
+	"出羽良彰",
+	"折戸伸治",
+	"karuta",
+	"Sappheiros",
+	"Aimer/EGOIST",
+	"Ember Island",
+	"Matte/Ember Island",
+	"Idina Menzel",
+	"Aimer",
+	"水瀬いのり/久保ユリカ",
+	"Lisa Hannigan",
+	"不才",
+	"水瀬いのり/花澤香菜/井口裕香/早見沙織",
+	"YOASOBI",
+	"YOASOBI",
+	"YOASOBI",
+	"YOASOBI",
+	"放課後ティータイム",
+	"放課後ティータイム",
+	"艾索",
+	"岚AYA",
+	"idealism/jinsang",
+	"Dancing Line",
+	"久石譲",
+	"久石譲",
+	"井口裕香",
+	"Against the Current",
+	"花玲/喵☆酱/宴宁/kinsen",
+	"さユり",
+	"Synth Monsters/千璃Senri/SADRECORDS",
+	"遥海",
+	"中島美嘉",
+	"洛天依/ilem",
+	"鎖那",
+	"HoneyWorks",
+	"Feint",
+];
+var count = musicId.length - 1;
 var original = new Array;
 for (var i = 0; i <= count; i++){
 	original[i] = i;
@@ -163,8 +227,8 @@ original.sort(function(){
 var i = 0;
 var num = 0;
 function next(){
-	music.src = url + musics[original[i]] + ".mp3";
-	document.getElementById("songs").innerHTML = songs[original[i]];
+	music.src = url + musicId[original[i]] + ".mp3";
+	document.getElementById("songs").innerHTML = title[original[i]] + " · " + artist[original[i]];
 	media()
 	i += 1;
 	music.onended = function(){
@@ -180,7 +244,7 @@ function next(){
 	});
 }
 function nextSong(){
-	if(i == musics.length){
+	if(i == musicId.length){
 		num = original[count];
 		original.sort(function(){
 			return 0.5 - Math.random();
@@ -188,8 +252,8 @@ function nextSong(){
 		ifNum();
 		i = 0;
 	}
-	music.src = url + musics[original[i]] + ".mp3";
-	document.getElementById("songs").innerHTML = songs[original[i]];
+	music.src = url + musicId[original[i]] + ".mp3";
+	document.getElementById("songs").innerHTML = title[original[i]] + " · " + artist[original[i]];
 	media()
 	i += 1;
 }
@@ -204,7 +268,8 @@ function ifNum(){
 function media(){
     if ('mediaSession' in navigator){
 	navigator.mediaSession.metadata = new MediaMetadata({
-		title: songs[original[i]],
+		title: title[original[i]],
+		artist: artist[original[i]],
 		artwork: [{src: "https://files.catbox.moe/mnl4p1.jpg"}]
 	});
 	navigator.mediaSession.setActionHandler('play', function(){
