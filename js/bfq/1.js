@@ -1,7 +1,7 @@
 // JavaScript Document
 if ('mediaSession' in navigator) {
 	navigator.mediaSession.metadata = new MediaMetadata({
-		title: '木辛木杉',
+		title: songs[original[i]] ,
 		artwork: [{src: "https://files.catbox.moe/mnl4p1.jpg"}]
 	});
 	navigator.mediaSession.setActionHandler('play', function(){
