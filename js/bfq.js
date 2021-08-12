@@ -165,7 +165,7 @@ var num = 0;
 function next(){
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
-	addScript()
+	media()
 	i += 1;
 	music.onended = function(){
 		nextSong();
@@ -190,7 +190,7 @@ function nextSong(){
 	}
 	music.src = url + musics[original[i]] + ".mp3";
 	document.getElementById("songs").innerHTML = songs[original[i]];
-	addScript()
+	media()
 	i += 1;
 }
 function ifNum(){
@@ -201,10 +201,28 @@ function ifNum(){
 		ifNum();
 	}
 }
-function addScript(){
-    var script = document.createElement('script');
-    script.setAttribute('src',"https://muxmus.com/js/bfq/1.js");
-    document.getElementsByTagName('head')[0].appendChild(script);
+function media(){
+    if ('mediaSession' in navigator){
+	navigator.mediaSession.metadata = new MediaMetadata({
+		title: songs[original[i]],
+		artwork: [{src: "https://files.catbox.moe/mnl4p1.jpg"}]
+	});
+	navigator.mediaSession.setActionHandler('play', function(){
+		music.play();
+		$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+	});
+	navigator.mediaSession.setActionHandler('pause', function(){
+		music.pause();
+		$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
+	});
+	navigator.mediaSession.setActionHandler('nexttrack', function(){
+		nextSong();
+		if(music.paused){
+			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+		}
+		music.play();
+	});
+    }
 }
 if(document.all){
 	window.attachEvent('onload',next)
