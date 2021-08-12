@@ -16,11 +16,9 @@ $(function(){
 	$("#audio").click(function(){
 		if(music.paused){
 			music.play();
-			navigator.mediaSession.playbackState = "playing";
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}else{
 			music.pause();
-			navigator.mediaSession.playbackState = "Paused";
 			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
 		}
 	});
@@ -172,7 +170,6 @@ function next(){
 	music.onended = function(){
 		nextSong();
 		music.play();
-		navigator.mediaSession.playbackState = "playing";
 	}
 	$("#next").click(function(){
 		nextSong();
@@ -180,7 +177,6 @@ function next(){
 			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
 		}
 		music.play();
-		navigator.mediaSession.playbackState = "playing";
 	});
 }
 function nextSong(){
