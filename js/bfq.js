@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.08.23 23:40(GMT+8)
+// Update: 2021.09.07 22:28(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -76,6 +76,7 @@ var musicId = [
 	"509106775",
 	"522528589",
 	"30394495",
+	"28941713",
 ];
 var title = [
 	"ハルヒの想い",
@@ -140,6 +141,7 @@ var title = [
 	"彼女は旅に出る",
 	"東京ウインターセッション",
 	"Stray",
+	"No title",
 ];
 var artist = [
 	"神前暁",
@@ -204,6 +206,7 @@ var artist = [
 	"鎖那",
 	"HoneyWorks",
 	"Feint",
+	"Reol/ギガP",
 ];
 var album = [
 	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg",
@@ -268,6 +271,7 @@ var album = [
 	"McwYbq8c2e9uugG51Rm-Jg==/109951166222733663.jpg",
 	"_Is4YWbdiD4yBoxeR4ZGoA==/109951166200289382.jpg",
 	"p7dvgqMiARZSTzwax7fBBw==/7848313999196206.jpg",
+	"cZPx3peGTuWEI_GaZB5CDg==/8892850045794893.jpg",
 ];
 var count = musicId.length - 1;
 var original = new Array;
