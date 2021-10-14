@@ -74,7 +74,6 @@ var musicId = [
 	"1345872140",
 	"509106775",
 	"522528589",
-	"30394495",
 	"28941713",
 ];
 var title = [
@@ -138,7 +137,6 @@ var title = [
 	"勾指起誓",
 	"彼女は旅に出る",
 	"東京ウインターセッション",
-	"Stray",
 	"No title",
 ];
 var artist = [
@@ -202,7 +200,6 @@ var artist = [
 	"洛天依 / ilem",
 	"鎖那",
 	"HoneyWorks",
-	"Feint",
 	"Reol / ギガP",
 ];
 var album = [
@@ -266,7 +263,6 @@ var album = [
 	"eMyCr0gv0kPGlew9XTNjyA==/109951163944178164.jpg",
 	"McwYbq8c2e9uugG51Rm-Jg==/109951166222733663.jpg",
 	"_Is4YWbdiD4yBoxeR4ZGoA==/109951166200289382.jpg",
-	"p7dvgqMiARZSTzwax7fBBw==/7848313999196206.jpg",
 	"cZPx3peGTuWEI_GaZB5CDg==/8892850045794893.jpg",
 ];
 var count = musicId.length - 1;
