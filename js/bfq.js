@@ -75,6 +75,10 @@ var musicId = [
 	"509106775",
 	"522528589",
 	"28941713",
+	"1901371647",
+	"1891619161",
+	"1357953768",
+	"1451122312",
 ];
 var title = [
 	"ハルヒの想い",
@@ -138,6 +142,10 @@ var title = [
 	"彼女は旅に出る",
 	"東京ウインターセッション",
 	"No title",
+	"孤勇者",
+	"Playground",
+	"だから僕は音楽を辞めた",
+	"Ur So F**kInG cOoL",
 ];
 var artist = [
 	"神前暁",
@@ -201,6 +209,10 @@ var artist = [
 	"鎖那",
 	"HoneyWorks",
 	"Reol / ギガP",
+	"陈奕迅",
+	"Bea Miller",
+	"ヨルシカ",
+	"Tones and I",
 ];
 var album = [
 	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg",
@@ -264,6 +276,10 @@ var album = [
 	"McwYbq8c2e9uugG51Rm-Jg==/109951166222733663.jpg",
 	"_Is4YWbdiD4yBoxeR4ZGoA==/109951166200289382.jpg",
 	"cZPx3peGTuWEI_GaZB5CDg==/8892850045794893.jpg",
+	"aG5zqxkBRfLiV7A8W0iwgA==/109951166702962263.jpg",
+	"tou7ElOOrFaJ7ICkNMmUkA==/109951166688022119.jpg",
+	"ks136mj7FcZXgZ8IF-cpSA==/109951163986681435.jpg",
+	"prKwlqTMjzCJ6l-kl3mIww==/109951165019003881.jpg",
 ];
 var count = musicId.length - 1;
 var original = new Array;
