@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.12.26 13:37(GMT+8)
+// Update: 2021.12.26 13:38(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
