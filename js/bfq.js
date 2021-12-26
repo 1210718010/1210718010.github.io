@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.10.14 16:14(GMT+8)
+// Update: 2021.12.26 13:28(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -145,7 +145,7 @@ var title = [
 	"孤勇者",
 	"Playground",
 	"だから僕は音楽を辞めた",
-	"Ur So F**kInG cOoL",
+	"Ur So FuCkInG cOoL",
 ];
 var artist = [
 	"神前暁",
