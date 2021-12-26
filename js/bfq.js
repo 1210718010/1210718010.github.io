@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2021.12.26 13:28(GMT+8)
+// Update: 2021.12.26 13:37(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -47,7 +47,6 @@ var musicId = [
 	"409872504",
 	"504016400",
 	"518904426",
-	"28031119",
 	"441116287",
 	"520461943",
 	"29849049",
@@ -114,7 +113,6 @@ var title = [
 	"ninelie",
 	"Stay",
 	"Umbrella(Matte Remix)",
-	"Let It Go",
 	"茜さす",
 	"動く、動く",
 	"Amhrán na farraige",
@@ -181,7 +179,6 @@ var artist = [
 	"Aimer / EGOIST",
 	"Ember Island",
 	"Matte / Ember Island",
-	"Idina Menzel",
 	"Aimer",
 	"水瀬いのり / 久保ユリカ",
 	"Lisa Hannigan",
@@ -248,7 +245,6 @@ var album = [
 	"g7aakYG_Wfmrn1_IDfVUXA==/109951165050166241.jpg",
 	"gTBPHihncu4dAY91JbpOVA==/109951163019332860.jpg",
 	"1LrtvH8EpKb5iHKR9qEU0Q==/109951163063843501.jpg",
-	"NLFGxxSG5UbyWq7qsZhiDw==/109951165994457519.jpg",
 	"ESKiNVBmXgTD5qZgW75S-A==/109951166198341336.jpg",
 	"SxU9ZctOvc4lJHDa-vcKyg==/109951163072078462.jpg",
 	"KoX76KbSnDSf-dCaqWUzOw==/6626756582011433.jpg",
