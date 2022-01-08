@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.01.08 21:41(GMT+8)
+// Update: 2022.01.09 01:45(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -62,7 +62,6 @@ var musicId = [
 	"446732031",
 	"1464841552",
 	"443794",
-	"443242",
 	"1470435430",
 	"506196018",
 	"1818031620",
@@ -128,7 +127,6 @@ var title = [
 	"winter bokeh",
 	"The Ugly Duckling",
 	"あの夏へ",
-	"Summer",
 	"革命前夜",
 	"Legends Never Die",
 	"让风告诉你",
@@ -193,7 +191,6 @@ var artist = [
 	"艾索",
 	"idealism / jinsang",
 	"Dancing Line",
-	"久石譲",
 	"久石譲",
 	"井口裕香",
 	"Against the Current",
@@ -260,7 +257,6 @@ var album = [
 	"fq0hzTQfWUi8rzv0qhe4Ug==/18583945534233783",
 	"Opsxqd-3B0YFy-OAuKUPrw==/109951165159939277",
 	"0dym_keDqAbqYlOiQmUjiw==/109951164728012307",
-	"CD0JLUdR6QqCIRUium0Gmw==/109951164727886582",
 	"h5EaaG1M7F31yy1aJ1D7eA==/109951163677145681",
 	"2aTrg-Zz72Ms6ySsjPcKCg==/109951163918904060",
 	"pYKBjkB6FoNh5Yxkb9uCbw==/109951165698369632",
