@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.02.19 15:00(GMT+8)
+// Update: 2022.02.19 15:18(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -52,9 +52,7 @@ var musicId = [
 	"29849049",
 	"1431292823",
 	"1409311773",
-	"1472480890",
 	"1459343252",
-	"1444071945",
 	"26201959",
 	"446732031",
 	"1464841552",
@@ -73,6 +71,7 @@ var musicId = [
 	"1891619161",
 	"1357953768",
 	"28707142",
+	"1500151579",
 ];
 var title = [
 	"ハルヒの想い",
@@ -113,9 +112,7 @@ var title = [
 	"Amhrán na farraige",
 	"夜航星",
 	"夜に駆ける",
-	"群青",
 	"たぶん",
-	"ハルジオン",
 	"天使にふれたよ!",
 	"winter bokeh",
 	"The Ugly Duckling",
@@ -134,6 +131,7 @@ var title = [
 	"Playground",
 	"だから僕は音楽を辞めた",
 	"嘿咻狂想曲",
+	"アンコール",
 ];
 var artist = [
 	"神前暁",
@@ -175,8 +173,6 @@ var artist = [
 	"不才",
 	"YOASOBI",
 	"YOASOBI",
-	"YOASOBI",
-	"YOASOBI",
 	"放課後ティータイム",
 	"idealism / jinsang",
 	"Dancing Line",
@@ -195,6 +191,7 @@ var artist = [
 	"Bea Miller",
 	"ヨルシカ",
 	"艾索",
+	"YOASOBI",
 ];
 var album = [
 	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955",
@@ -235,9 +232,7 @@ var album = [
 	"KoX76KbSnDSf-dCaqWUzOw==/6626756582011433",
 	"EIJc2Wt5AEsIHCFcVxm6pg==/109951165033567317",
 	"3xWlqwYmfwRFebeiONUpGg==/109951164546210608",
-	"sF9I_mKMVNtsCD-ZXzfV_A==/109951165251958014",
 	"l-oheMQzLncYGGv3E7Wn9A==/109951165101444453",
-	"_xZS7ETwZ-EK71Yvr-MFcQ==/109951164945006694",
 	"B_sCLXthAHgoVEMIRNU1hw==/109951163559682176",
 	"fq0hzTQfWUi8rzv0qhe4Ug==/18583945534233783",
 	"Opsxqd-3B0YFy-OAuKUPrw==/109951165159939277",
@@ -256,6 +251,7 @@ var album = [
 	"tou7ElOOrFaJ7ICkNMmUkA==/109951166688022119",
 	"ks136mj7FcZXgZ8IF-cpSA==/109951163986681435",
 	"MjXuHJB9kDPu7X45aUs5GQ==/14457478393642798",
+	"r3HQ2Na5Z-CvnDGHmcl9-A==/109951165515346936",
 ];
 var count = musicId.length - 1;
 var original = new Array;
