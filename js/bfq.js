@@ -51,13 +51,11 @@ var musicId = [
 	"520461943",
 	"29849049",
 	"1431292823",
-	"536570516",
 	"1409311773",
 	"1472480890",
 	"1459343252",
 	"1444071945",
 	"26201959",
-	"28875230",
 	"446732031",
 	"1464841552",
 	"443794",
@@ -74,6 +72,7 @@ var musicId = [
 	"28941713",
 	"1891619161",
 	"1357953768",
+	"28707142",
 ];
 var title = [
 	"ハルヒの想い",
@@ -113,13 +112,11 @@ var title = [
 	"動く、動く",
 	"Amhrán na farraige",
 	"夜航星",
-	"ここから、ここから",
 	"夜に駆ける",
 	"群青",
 	"たぶん",
 	"ハルジオン",
 	"天使にふれたよ!",
-	"晚安喵",
 	"winter bokeh",
 	"The Ugly Duckling",
 	"あの夏へ",
@@ -136,6 +133,7 @@ var title = [
 	"No title",
 	"Playground",
 	"だから僕は音楽を辞めた",
+	"嘿咻狂想曲",
 ];
 var artist = [
 	"神前暁",
@@ -175,13 +173,11 @@ var artist = [
 	"水瀬いのり / 久保ユリカ",
 	"Lisa Hannigan",
 	"不才",
-	"水瀬いのり / 花澤香菜 / 井口裕香 / 早見沙織",
 	"YOASOBI",
 	"YOASOBI",
 	"YOASOBI",
 	"YOASOBI",
 	"放課後ティータイム",
-	"艾索",
 	"idealism / jinsang",
 	"Dancing Line",
 	"久石譲",
@@ -198,6 +194,7 @@ var artist = [
 	"Reol / ギガP",
 	"Bea Miller",
 	"ヨルシカ",
+	"艾索",
 ];
 var album = [
 	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955",
@@ -237,13 +234,11 @@ var album = [
 	"SxU9ZctOvc4lJHDa-vcKyg==/109951163072078462",
 	"KoX76KbSnDSf-dCaqWUzOw==/6626756582011433",
 	"EIJc2Wt5AEsIHCFcVxm6pg==/109951165033567317",
-	"DTYRx9BI0xZin4gUZXvG7Q==/109951163156090435",
 	"3xWlqwYmfwRFebeiONUpGg==/109951164546210608",
 	"sF9I_mKMVNtsCD-ZXzfV_A==/109951165251958014",
 	"l-oheMQzLncYGGv3E7Wn9A==/109951165101444453",
 	"_xZS7ETwZ-EK71Yvr-MFcQ==/109951164945006694",
 	"B_sCLXthAHgoVEMIRNU1hw==/109951163559682176",
-	"aQhLC9kR4Z7iiwIuynXnQA==/14402502812253006",
 	"fq0hzTQfWUi8rzv0qhe4Ug==/18583945534233783",
 	"Opsxqd-3B0YFy-OAuKUPrw==/109951165159939277",
 	"0dym_keDqAbqYlOiQmUjiw==/109951164728012307",
@@ -260,6 +255,7 @@ var album = [
 	"cZPx3peGTuWEI_GaZB5CDg==/8892850045794893",
 	"tou7ElOOrFaJ7ICkNMmUkA==/109951166688022119",
 	"ks136mj7FcZXgZ8IF-cpSA==/109951163986681435",
+	"MjXuHJB9kDPu7X45aUs5GQ==/14457478393642798",
 ];
 var count = musicId.length - 1;
 var original = new Array;
