@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.01.09 01:45(GMT+8)
+// Update: 2022.02.19 14:47(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
@@ -56,7 +56,6 @@ var musicId = [
 	"1472480890",
 	"1459343252",
 	"1444071945",
-	"26201948",
 	"26201959",
 	"28875230",
 	"446732031",
@@ -73,10 +72,8 @@ var musicId = [
 	"509106775",
 	"522528589",
 	"28941713",
-	"1901371647",
 	"1891619161",
 	"1357953768",
-	"1451122312",
 ];
 var title = [
 	"ハルヒの想い",
@@ -121,7 +118,6 @@ var title = [
 	"群青",
 	"たぶん",
 	"ハルジオン",
-	"U&I",
 	"天使にふれたよ!",
 	"晚安喵",
 	"winter bokeh",
@@ -138,10 +134,8 @@ var title = [
 	"彼女は旅に出る",
 	"東京ウインターセッション",
 	"No title",
-	"孤勇者",
 	"Playground",
 	"だから僕は音楽を辞めた",
-	"Ur So FuCkInG cOoL",
 ];
 var artist = [
 	"神前暁",
@@ -187,7 +181,6 @@ var artist = [
 	"YOASOBI",
 	"YOASOBI",
 	"放課後ティータイム",
-	"放課後ティータイム",
 	"艾索",
 	"idealism / jinsang",
 	"Dancing Line",
@@ -203,10 +196,8 @@ var artist = [
 	"鎖那",
 	"HoneyWorks",
 	"Reol / ギガP",
-	"陈奕迅",
 	"Bea Miller",
 	"ヨルシカ",
-	"Tones and I",
 ];
 var album = [
 	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955",
@@ -252,7 +243,6 @@ var album = [
 	"l-oheMQzLncYGGv3E7Wn9A==/109951165101444453",
 	"_xZS7ETwZ-EK71Yvr-MFcQ==/109951164945006694",
 	"B_sCLXthAHgoVEMIRNU1hw==/109951163559682176",
-	"B_sCLXthAHgoVEMIRNU1hw==/109951163559682176",
 	"aQhLC9kR4Z7iiwIuynXnQA==/14402502812253006",
 	"fq0hzTQfWUi8rzv0qhe4Ug==/18583945534233783",
 	"Opsxqd-3B0YFy-OAuKUPrw==/109951165159939277",
@@ -268,10 +258,8 @@ var album = [
 	"McwYbq8c2e9uugG51Rm-Jg==/109951166222733663",
 	"_Is4YWbdiD4yBoxeR4ZGoA==/109951166200289382",
 	"cZPx3peGTuWEI_GaZB5CDg==/8892850045794893",
-	"aG5zqxkBRfLiV7A8W0iwgA==/109951166702962263",
 	"tou7ElOOrFaJ7ICkNMmUkA==/109951166688022119",
 	"ks136mj7FcZXgZ8IF-cpSA==/109951163986681435",
-	"prKwlqTMjzCJ6l-kl3mIww==/109951165019003881",
 ];
 var count = musicId.length - 1;
 var original = new Array;
