@@ -36,11 +36,12 @@ div.main{
 	margin: 0 auto 0 auto;
 	text-align: center;
 	font-weight: bold;
-	color: rgba(255,255,255,0.7);
-	border: 2px solid #1F1F1F;
-	padding: 12px 12px; background: #1F1F1F;
+	color: rgba(255,255,255,0.8);
+	border: 2px solid rgba(131,147,125,0.6);
+	padding: 12px 12px; 
+	background: rgba(141,157,135,0.7);
 	width: 80px;
-	box-shadow: 0px 0px 35px 5px #565656;
+	box-shadow: 0px 0px 35px 5px rgba(256,256,256,0.6);
 	cursor: Pointer;
 }
 			
@@ -53,6 +54,6 @@ div.main{
 }
 			
 .over:hover {
-	color: #1F1F1F;
-	background: #909090;
+	color: rgb(131,147,125);
+	background: rgba(256,256,256,0.6);
 }
