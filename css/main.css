@@ -103,8 +103,8 @@ img {
 }
 
 .divm {
-	color: rgba(255,255,255,0.8);
-	background-color: #323232;
+	color:  rgba(256,256,256,0.8);
+	background-color: rgba(111,127,105,0.7);
 	border-style: solid;
 	border-radius: 40px;
 	border-width: 0px;
@@ -187,7 +187,7 @@ img {
 #slider{
 	width: 350px;
 	position: fixed;
-	background-color: rgba(40,40,40,0.7);
+	background-color: rgba(71,87,65,0.7);
 	top: 0;
 	bottom: 0;
 	right:-350px;
