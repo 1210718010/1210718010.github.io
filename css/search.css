@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+	background-image: url(https://muxmus.com/img/texture.png);
+}
+
 .divm {
 	position: fixed;
 	width: 700px;
