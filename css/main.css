@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+	background-image: url(https://muxmus.com/img/texture.png);
+}
+
 p {
 	font-size: 18px;
 	cursor: default;
