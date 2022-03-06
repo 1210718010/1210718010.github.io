@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+	background-image: url(http://zhongguose.com/img/texture.png);
+}
+
 #divt {
 	color: #fff;
 	opacity: 0.8;
