@@ -11,7 +11,7 @@ p {
 }
 
 strong {
-	color: white;
+	color: #000;
 	text-align: center;
 	opacity: 0.8;
 	cursor: default;
@@ -19,12 +19,12 @@ strong {
 }
 
 a {
-	color: white;
+	color: #000;
 	text-decoration: none;
 }
 
 em {
-	color: white;
+	color: #000;
 	text-align: center;
 	opacity: 0.8;
 	font-weight: normal;
@@ -87,7 +87,7 @@ img {
 }
 
 .divm .title {
-	color: #fff;
+	color: #000;
 	opacity: 1.0;
 	text-decoration: none;
 }
@@ -103,7 +103,7 @@ img {
 }
 
 .divm {
-	color:  rgba(256,256,256,0.8);
+	color:  rgba(0,0,0,0.8);
 	background-color: rgba(111,127,105,0.7);
 	border-style: solid;
 	border-radius: 40px;
@@ -136,12 +136,12 @@ img {
 	margin-left:-175px;
 	margin-top: 250px;
 	text-align: center;
-	color: #fff;
+	color: #000;
 	opacity: 0.8;
 }
 
 .js a {
-	color: #fff;
+	color: #000;
 	opacity: 0.8;
 	text-decoration: none;
 }
