@@ -57,7 +57,7 @@ img {
 }
 
 .divm img {
-	width: 400px;
+	width: 300px;
 	height: auto;
 }
 
@@ -184,7 +184,7 @@ img {
 	transform: translate(-60px,20px);
 }
 
-#slider{
+#slider {
 	width: 350px;
 	position: fixed;
 	background-color: rgba(71,87,65,0.7);
@@ -192,4 +192,8 @@ img {
 	bottom: 0;
 	right:-350px;
 	transition: right 0.1s;
+}
+
+.h2 {
+	cursor: default;
 }
