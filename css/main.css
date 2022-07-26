@@ -197,3 +197,7 @@ img {
 .h2 {
 	cursor: default;
 }
+
+.dateTime {
+	color: #58a6ff;
+}
