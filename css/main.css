@@ -56,14 +56,16 @@ em:hover {
 	height: 85px;
 }
 
-.divm .heng {
+.divm .zhao {
 	width: 50%;
 	height:auto;
 }
 
-.divm .shu {
-	width: 50%;
-	height: auto;
+@media all and (orientation : portrait) {
+	.divm .zhao {
+		width: 85%;
+		height:auto;
+	}
 }
 
 .divm .tuPian {
@@ -122,8 +124,8 @@ em:hover {
 	border-style: solid;
 	border-radius: 40px;
 	border-width: 0px;
-	margin: 100px 8%;
-	padding: 30px 5%;
+	margin: 80px 6%;
+	padding: 20px 4%;
 }
 
 .date {
