@@ -51,17 +51,17 @@ em:hover {
 	text-decoration: underline;
 }
 
-img {
+.logo {
 	width: 60px;
 	height: 85px;
 }
 
-.divm .heng img {
+.divm .heng {
 	width: auto;
 	height:300px;
 }
 
-.divm .shu img {
+.divm .shu {
 	width: 300px;
 	height: auto;
 }
