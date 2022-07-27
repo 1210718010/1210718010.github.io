@@ -59,11 +59,18 @@ em:hover {
 .divm .heng {
 	width: auto;
 	height:400px;
+	display: table-cell;
 }
 
 .divm .shu {
 	width: 300px;
 	height: auto;
+	display: table-cell;
+}
+
+.divm .shushi {
+	font-size: 15px;
+	opacity: 0.8;
 }
 
 .divz {
