@@ -59,13 +59,11 @@ em:hover {
 .divm .heng {
 	width: auto;
 	height:400px;
-	display: table-cell;
 }
 
 .divm .shu {
-	width: 300px;
+	width: 600px;
 	height: auto;
-	display: table-cell;
 }
 
 .divm .zhushi {
@@ -122,6 +120,7 @@ em:hover {
 	border-width: 0px;
 	margin: 100px 16%;
 	padding: 30px 5%;
+	display: table-cell;
 }
 
 .date {
