@@ -62,10 +62,21 @@ em:hover {
 }
 
 @media all and (orientation : portrait) {
+	
 	.divm .zhao {
 		width: 85%;
 		height:auto;
 	}
+	
+	.divm {
+	color:  rgba(0,0,0,0.8);
+	background-color: rgba(111,127,105,0.7);
+	border-style: solid;
+	border-radius: 40px;
+	border-width: 0px;
+	margin: 60px 2%;
+	padding: 10px 2%;
+	
 }
 
 .divm .tuPian {
@@ -124,8 +135,8 @@ em:hover {
 	border-style: solid;
 	border-radius: 40px;
 	border-width: 0px;
-	margin: 80px 6%;
-	padding: 20px 4%;
+	margin: 100px 8%;
+	padding: 30px 5%;
 }
 
 .date {
