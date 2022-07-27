@@ -56,6 +56,24 @@ em:hover {
 	height: 85px;
 }
 
+.h2 {
+	cursor: default;
+}
+
+.dateTime {
+	font-weight: bold;
+}
+
+.divm {
+	color:  rgba(0,0,0,0.8);
+	background-color: rgba(111,127,105,0.7);
+	border-style: solid;
+	border-radius: 40px;
+	border-width: 0px;
+	margin: 100px 8%;
+	padding: 30px 5%;
+}
+
 .divm .zhao {
 	width: 50%;
 	height:auto;
@@ -88,6 +106,22 @@ em:hover {
 	opacity: 0.9;
 }
 
+.divm .title {
+	color: #000;
+	opacity: 1.0;
+	text-decoration: none;
+}
+
+.divm .lianJie a {
+	color: #58a6ff;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+.divm a:hover {
+	text-decoration: underline;
+}
+
 .divz {
 	position: fixed;
 	width: 400px;
@@ -111,32 +145,6 @@ em:hover {
 	transform: translate(-50px,-15px);
 	text-align: center;
 	z-index: 3;
-}
-
-.divm .title {
-	color: #000;
-	opacity: 1.0;
-	text-decoration: none;
-}
-
-.divm .lianJie a {
-	color: #58a6ff;
-	opacity: 0.8;
-	text-decoration: none;
-}
-
-.divm a:hover {
-	text-decoration: underline;
-}
-
-.divm {
-	color:  rgba(0,0,0,0.8);
-	background-color: rgba(111,127,105,0.7);
-	border-style: solid;
-	border-radius: 40px;
-	border-width: 0px;
-	margin: 100px 8%;
-	padding: 30px 5%;
 }
 
 .date {
@@ -219,12 +227,4 @@ em:hover {
 	bottom: 0;
 	right:-350px;
 	transition: right 0.1s;
-}
-
-.h2 {
-	cursor: default;
-}
-
-.dateTime {
-	font-weight: bold;
 }
