@@ -66,9 +66,13 @@ em:hover {
 	height: auto;
 }
 
-.divm .zhushi {
-	font-size: 15px;
-	opacity: 0.8;
+.divm .tuPian {
+	text-align: center;
+}
+
+.divm .zhuShi {
+	font-size: 16px;
+	opacity: 0.9;
 }
 
 .divz {
@@ -102,7 +106,7 @@ em:hover {
 	text-decoration: none;
 }
 
-.divm .lianjie a {
+.divm .lianJie a {
 	color: #58a6ff;
 	opacity: 0.8;
 	text-decoration: none;
