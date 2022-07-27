@@ -56,14 +56,6 @@ em:hover {
 	height: 85px;
 }
 
-.h2 {
-	cursor: default;
-}
-
-.dateTime {
-	font-weight: bold;
-}
-
 .divm {
 	color:  rgba(0,0,0,0.8);
 	background-color: rgba(111,127,105,0.7);
@@ -81,11 +73,6 @@ em:hover {
 
 @media all and (orientation : portrait) {
 	
-	.divm .zhao {
-		width: 85%;
-		height:auto;
-	}
-	
 	.divm {
 	color:  rgba(0,0,0,0.8);
 	background-color: rgba(111,127,105,0.7);
@@ -94,6 +81,11 @@ em:hover {
 	border-width: 0px;
 	margin: 60px 2%;
 	padding: 10px 2%;
+	
+	.divm .zhao {
+		width: 85%;
+		height:auto;
+	}
 	
 }
 
@@ -145,6 +137,22 @@ em:hover {
 	transform: translate(-50px,-15px);
 	text-align: center;
 	z-index: 3;
+}
+
+.divm .title {
+	color: #000;
+	opacity: 1.0;
+	text-decoration: none;
+}
+
+.divm .lianJie a {
+	color: #58a6ff;
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+.divm a:hover {
+	text-decoration: underline;
 }
 
 .date {
@@ -227,4 +235,12 @@ em:hover {
 	bottom: 0;
 	right:-350px;
 	transition: right 0.1s;
+}
+
+.h2 {
+	cursor: default;
+}
+
+.dateTime {
+	font-weight: bold;
 }
