@@ -74,8 +74,13 @@ em:hover {
 	padding: 30px 5%;
 }
 
-.divm .zhao {
+.divm .heng {
 	width: 50%;
+	height:auto;
+}
+
+.divm .shu {
+	width: 30%;
 	height:auto;
 }
 
@@ -91,8 +96,13 @@ em:hover {
 		padding: 20px 5%;
 	}
 	
-	.divm .zhao {
-		width: 95%;
+	.divm .heng {
+		width: 100%;
+		height:auto;
+	}
+	
+	.divm .shu {
+		width: 100%;
 		height:auto;
 	}
 	
