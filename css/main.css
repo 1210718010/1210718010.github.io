@@ -56,7 +56,12 @@ img {
 	height: 85px;
 }
 
-.divm img {
+.divm .heng img {
+	width: auto;
+	height:300px;
+}
+
+.divm .shu img {
 	width: 300px;
 	height: auto;
 }
