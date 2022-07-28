@@ -249,7 +249,7 @@ em:hover {
 #slider {
 	width: 350px;
 	position: fixed;
-	background-color: rgba(71,87,65,0.7);
+	background-color: rgba(71,87,65,0.8);
 	top: 0;
 	bottom: 0;
 	right:-350px;
