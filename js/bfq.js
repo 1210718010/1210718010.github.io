@@ -1,18 +1,18 @@
 // JavaScript Document
 // Update: 2022.02.19 15:18(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
-document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" />");
-document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" />");
-document.write("	<a id=\"audio\"><img id=\"stop\" alt=\"\" src=\"https://muxmus.com/img/zt.svg\" /></a>");
+document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"/img/up.svg\" />");
+document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"/img/down.svg\" />");
+document.write("	<a id=\"audio\"><img id=\"stop\" alt=\"\" src=\"/img/zt.svg\" /></a>");
 document.write("	<div class=\"divn\">");
-document.write("		<img id=\"next\" class=\"next1\" alt=\"\" src=\"https://muxmus.com/img/next.svg\" />");
+document.write("		<img id=\"next\" class=\"next1\" alt=\"\" src=\"/img/next.svg\" />");
 document.write("	</div>");
 document.write("	<audio id=\"music\" preload=\"auto\"></audio>");
 document.write("</div>");
 document.write("<div class=\"divs\">");
 document.write("	<p id=\"songs\" class=\"song1\"></p>");
 document.write("</div>");
-var url = "https://music.163.com/song/media/outer/url?id=";
+var url = "//music.163.com/song/media/outer/url?id=";
 var musicId = [
 	"29836459",
 	"460508",
@@ -267,10 +267,10 @@ $(function(){
 	$("#audio").click(function(){
 		if(music.paused){
 			music.play();
-			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+			$("#stop").attr("src", "/img/bf.svg");
 		}else{
 			music.pause();
-			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
+			$("#stop").attr("src", "/img/zt.svg");
 		}
 	});
 });
@@ -283,14 +283,14 @@ function musicClick(){
 	$("#last").click(function(){
 		lastSong();
 		if(music.paused){
-			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+			$("#stop").attr("src", "/img/bf.svg");
 		}
 		music.play();
 	});
 	$("#next").click(function(){
 		nextSong();
 		if(music.paused){
-			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+			$("#stop").attr("src", "/img/bf.svg");
 		}
 		music.play();
 	});
@@ -345,27 +345,27 @@ function media(){
 		navigator.mediaSession.metadata = new MediaMetadata({
 			title: title[original[i]],
 			artist: artist[original[i]],
-			artwork: [{src: "https://p1.music.126.net/" + album[original[i]] + ".jpg?param=300y300" }],
+			artwork: [{src: "//p1.music.126.net/" + album[original[i]] + ".jpg?param=300y300" }],
 		});
 		navigator.mediaSession.setActionHandler('play', function(){
 			music.play();
-			$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+			$("#stop").attr("src", "/img/bf.svg");
 		});
 		navigator.mediaSession.setActionHandler('pause', function(){
 			music.pause();
-			$("#stop").attr("src", "https://muxmus.com/img/zt.svg");
+			$("#stop").attr("src", "/img/zt.svg");
 		});
 		navigator.mediaSession.setActionHandler('nexttrack', function(){
 			nextSong();
 			if(music.paused){
-				$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+				$("#stop").attr("src", "/img/bf.svg");
 			}
 			music.play();
 		});
 		navigator.mediaSession.setActionHandler('previoustrack', function(){
 			lastSong();
 			if(music.paused){
-				$("#stop").attr("src", "https://muxmus.com/img/bf.svg");
+				$("#stop").attr("src", "/img/bf.svg");
 			}
 			music.play();
 		});
