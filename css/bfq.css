@@ -3,7 +3,7 @@
 
 .divb {
 	position: fixed;
-	top:100%;
+	top: 100%;
 	left: 0%;
 	z-index: 2;
 	width: 80px;
@@ -15,7 +15,7 @@
 
 .divn {
 	position: fixed;
-	top:100%;
+	top: 100%;
 	left: 0%;
 	width: 25px;
 	height: 25px;
@@ -25,7 +25,7 @@
 
 .divs {
 	position: fixed;
-	top:100%;
+	top: 100%;
 	left: 0%;
 	z-index: 1;
 	width: 500px;
