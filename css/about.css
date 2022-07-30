@@ -15,22 +15,23 @@ a {
 	color: #4183c4;
 	text-decoration: none;
 }
-			
+
 a:hover {
 	text-decoration: underline;
 }
-			
+
 h1 {
+	position: relative;
+	margin: 0px 0 50px 0;
 	color: rgba(256,256,256,0.7);
 	text-align: center;
-	position:relative;
-	line-height: 60px;
-	font-size: 60px;
 	font-weight: 100;
-	margin: 0px 0 50px 0;
+	font-size: 60px;
+	line-height: 60px;
 }
-			
-p {color: rgba(256,256,256,0.7);
+
+p {
 	margin: 20px 0;
+	color: rgba(256,256,256,0.7);
 	line-height: 1.2;
 }
