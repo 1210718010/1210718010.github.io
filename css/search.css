@@ -7,36 +7,36 @@ body {
 
 .divm {
 	position: fixed;
+	top: 50%;
+	left: 45%;
 	width: 700px;
 	height: 200px;
 	background: rgba(0,0,0,0.00);
-	top:50%;
-	left: 45%;
-	transform: translate(-350px,-100px);
 	text-align: center;
+	transform: translate(-350px,-100px);
 }
 
 .divin {
 	position: fixed;
+	top: 0%;
+	left: 100%;
 	width: 50px;
 	height: 50px;
 	background: rgba(0,0,0,0.00);
-	top:0%;
-	left: 100%;
-	transform: translate(-50px,0px);
 	text-align: center;
+	transform: translate(-50px,0px);
 }
 
 input {
-	background-color: rgba(0,0,0,0.15);
-	border: 0;
-	outline: 0;
-	color: #000;
-	caret-color: #000;
 	padding: 15px;
 	width: 530px;
-	font-size: 18px;
+	outline: 0;
+	border: 0;
 	border-radius: 8px;
+	background-color: rgba(0,0,0,0.15);
+	color: #000;
+	font-size: 18px;
+	caret-color: #000;
 }
 
 #ss {
