@@ -2,17 +2,17 @@
 /* CSS Document */
 
 #divt {
-	color: #000;
-	opacity: 0.8;
-	text-align: right;
-	font-size: 18px;
 	position: fixed;
-	cursor: default;
+	top: 100%;
+	left: 100%;
+	z-index: 99;
 	width: 200px;
 	height: 25px;
 	background: rgba(0,0,0,0.00);
-	top: 100%;
-	left: 100%;
+	color: #000;
+	text-align: right;
+	font-size: 18px;
+	opacity: 0.8;
+	cursor: default;
 	transform: translate(-220px,-40px);
-	z-index: 99;
 }
