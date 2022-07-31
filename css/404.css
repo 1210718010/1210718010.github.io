@@ -7,7 +7,7 @@ body {
 
 h1 {
 	margin: 0 auto 10px auto;
-	color: white;
+	color: #000;
 	text-align: center;
 	font-weight: 100;
 	font-size: 40px;
@@ -18,7 +18,7 @@ h1 {
 
 h2 {
 	margin: 0 0 80px 0;
-	color: white;
+	color: #000;
 	text-align: center;
 	font-weight: 500;
 	font-size: 20px;
@@ -36,10 +36,10 @@ h2 {
 	margin: 0 auto 0 auto;
 	padding: 12px 12px;
 	width: 80px;
-	border: 2px solid rgba(131,147,125,0.6);
-	background: rgba(131,147,125,0.7);
-	box-shadow: 0px 0px 35px 5px rgba(256,256,256,0.6);
-	color: rgba(255,255,255,0.8);
+	border: 2px solid rgba(151,167,145,0.7);
+	background: rgba(151,167,145,0.7);
+	box-shadow: 0px 0px 35px 5px rgba(0,0,0,0.6);
+	color: rgba(0,0,0,0.8);
 	text-align: center;
 	font-weight: bold;
 	cursor: Pointer;
@@ -54,6 +54,6 @@ h2 {
 }
 
 .over:hover {
-	background: rgba(256,256,256,0.6);
-	color: rgb(131,147,125);
+	background: rgba(0,0,0,0.6);
+	color: rgb(151,167,145);
 }
