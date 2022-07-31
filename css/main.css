@@ -56,6 +56,12 @@ em:hover {
 	height: 85px;
 }
 
+.lianJie {
+	color: #0051af;
+	text-decoration: none;
+	opacity: 0.8;
+}
+
 .h2 {
 	cursor: default;
 }
@@ -97,12 +103,6 @@ em:hover {
 	color: #000;
 	text-decoration: none;
 	opacity: 1.0;
-}
-
-.divm .lianJie {
-	color: #0051af;
-	text-decoration: none;
-	opacity: 0.8;
 }
 
 .divm a:hover {
