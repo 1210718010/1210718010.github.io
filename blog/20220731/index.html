@@ -14,6 +14,14 @@
 		<script>hljs.highlightAll();</script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			function js_reload(){
+				hljs.highlightAll();
+			}
+			$(document).on('pjax:start', function(event){
+				js_reload();
+			});
+			$(document).on('pjax:end', function(event
+			});
 			$(document).on('ready pjax:end', function(event) {
 				var bbb = $('#bbb');
 				var ccc = $('#ccc');
