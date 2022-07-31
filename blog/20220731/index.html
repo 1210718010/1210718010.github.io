@@ -14,16 +14,6 @@
 		<script>hljs.highlightAll();</script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
-			function js_reload(){
-				var js1 = document.createElement('script');
-				js1.src = '/js/highlight.min.js';
-				js1.async = 'async';
-				$('.container')[0].insertAdjacentElement('afterbegin', js1);
-				hljs.highlightAll();
-			}
-			$(document).on('pjax:start', function(event){
-				js_reload();
-			});
 			$(document).on('ready pjax:end', function(event) {
 				var bbb = $('#bbb');
 				var ccc = $('#ccc');
@@ -38,6 +28,7 @@
 					ccc.attr("class","gb");
 					bbb.attr("class","dk");
 				});
+				hljs.highlightAll();
 			});
 		</script>
 	</head>
@@ -292,8 +283,6 @@ $(function(){
 			</div>
 			<script src="/js/cbl.js"></script>
 			<script src="/js/link.js"></script>
-			<script src="/js/highlight.min.js"></script>
-			<script>hljs.highlightAll();</script>
 		</div>
 		<script src="/js/bfq.js"></script>
 	</body>
