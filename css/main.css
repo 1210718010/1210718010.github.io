@@ -100,34 +100,14 @@ em:hover {
 }
 
 .divm .lianJie a {
-	color: #58a6ff;
-	text-decoration: none;
-	opacity: 0.8;
-}
-
-.divm a:hover {
-	text-decoration: underline;
-}
-
-.divm .title {
-	color: #000;
-	text-decoration: none;
-	opacity: 1.0;
-}
-
-.divm .lianJie a {
-	color: #58a6ff;
-	text-decoration: none;
-	opacity: 0.8;
-}
-
-.divm a:hover {
-	text-decoration: underline;
-}
-
-.lian1 ｛
 	color: #0051af;
-｝
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.divm a:hover {
+	text-decoration: underline;
+}
 
 .divz {
 	position: fixed;
