@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>将自己的网址当成短链来使用 ~ 博客 ~ 木辛木杉</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/bfq.css">
+		<link rel="stylesheet" href="/css/github-dark.min.css">
+		<script src="/js/jquery-3.6.0.min.js"></script>
+		<script src="/js/jquery.pjax.js"></script>
+		<script src="/js/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).on('ready pjax:end', function(event) {
+				var bbb = $('#bbb');
+				var ccc = $('#ccc');
+				var slider = $('#slider');
+				bbb.click(function(){
+					slider.animate({right:0},500);
+					bbb.attr("class","gb");
+					ccc.attr("class","dk");
+				});
+				ccc.click(function(){
+					slider.animate({right:-350},500);
+					ccc.attr("class","gb");
+					bbb.attr("class","dk");
+				});
+			});
+		</script>
+	</head>
+	<body bgcolor="#97a791">
+		<div id="main-content">
+			<div class="divm">
+				<h2>将自己的网址当成短链来使用</h2>
+				<p class="date">2022.07.31 17:42</p>
+				<br>
+				<p>每次新的链接都得新建个html，虽然麻烦但也有点用，或者之后写个自动化的程序</p>
+				<p>如果觉得放在主页有些乱，可以把所有的html放在个很短的文件夹里</p>
+				<p>比如我是全放在s文件夹里，这样的短链就是muxmus.com/s/*</p>
+				<p>下面是Demo和代码：</p>
+				<a class="lianJie" target="_blank" href="/s/1/">Demo</a>
+				<p>HTML文件</p>
+				<a class="lianJie" target="_blank" href="//github.com/1210718010/1210718010.github.io/blob/master/s/1/index.html">index.html</a>
+				<pre><code class="language-html">
+&lt!doctype html&gt
+&lthtml lang="zh-CN"&gt
+	&lthead&gt
+		&ltmeta charset="utf-8"&gt
+		&ltmeta name="viewport" content="width=device-width,initial-scale=1.0"&gt
+		&lttitle&gt短链 ~ 木辛木杉&lt/title&gt
+		&ltlink rel="shortcut icon" href="/favicon.ico" type="image/x-icon"&gt
+	&lt/head&gt
+	&ltbody bgcolor="#97a791"&gt
+		&ltp style="color: rgba(0,0,0,0.8"&gt正在跳转……&lt/p&gt
+		&ltscript&gt
+			window.location.href="https://muxmus.com/";
+			//这里放需要跳转的网址
+		&lt/script&gt
+	&lt/body&gt
+&lt/html&gt
+				</code></pre>
+			</div>
+			<div id="slider">
+				<img class="tx" src="/img/bk_8.png" alt="" />
+				<div class="js">
+					<br>
+					<p><a date-pjax href="/blog/">返回目录</a></p>
+					<br>
+					<p>自制网页js音乐播放器</p>
+					<p><a date-pjax href="/blog/20220727-2/">天台山</a></p>
+					<p><a date-pjax href="/blog/20220727/"></a>中华大扁锹饲养日志</p>
+				</div>
+			</div>
+			<div class="dk" id="bbb">
+				<img class="cd" alt="" src="/img/cd.svg" />
+			</div>
+			<div class="gb" id="ccc">
+				<img class="cd" alt="" src="/img/gb.svg" />
+			</div>
+			<script src="/js/cbl.js"></script>
+			<script src="/js/link.js"></script>
+		</div>
+		<script src="/js/bfq.js"></script>
+	</body>
+</html>
