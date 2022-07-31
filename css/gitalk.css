@@ -1,8 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
 
-.gt-action-login {
-	color: #000;
+svg {
+	clolr: #0051af;
+}
+
+.gt-container {
+	color: #0051af;
+}
+
+.gt-container:hover {
+	color: #0056ba;
 }
 
 .gt-counts {
@@ -21,18 +29,6 @@
 	color: #0051af;
 }
 
-.gt-link-counts {
-	color: #0051af;
-}
-
 .gt-link-project {
 	color: #0051af;
-}
-
-.gt-popup {
-	background: #83937d;
-}
-
-.gt-loader {
-	color: #000;
 }
