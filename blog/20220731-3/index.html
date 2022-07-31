@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>js在网页中显示当前时间 ~ 博客 ~ 木辛木杉</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/bfq.css">
+		<link rel="stylesheet" href="/css/github-dark.min.css">
+		<script src="/js/jquery-3.6.0.min.js"></script>
+		<script src="/js/jquery.pjax.js"></script>
+		<script src="/js/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).on('ready pjax:end', function(event) {
+				var bbb = $('#bbb');
+				var ccc = $('#ccc');
+				var slider = $('#slider');
+				bbb.click(function(){
+					slider.animate({right:0},500);
+					bbb.attr("class","gb");
+					ccc.attr("class","dk");
+				});
+				ccc.click(function(){
+					slider.animate({right:-350},500);
+					ccc.attr("class","gb");
+					bbb.attr("class","dk");
+				});
+			});
+		</script>
+	</head>
+	<body bgcolor="#97a791">
+		<div id="main-content">
+			<div class="divm">
+				<h2>js在网页中显示当前时间</h2>
+				<p class="date">2022.07.27 03:13</p>
+				<br>
+				<p>下面是Demo和代码：</p>
+				<a class="lianJie" target="_blank" href="./demo.html">Demo</a>
+				<p>直接引用下面两个并在&ltbady&gt中加入“ onload="startTime()" ”</p>
+				<ul>
+					<a class="lianJie" target="_blank" href="//github.com/1210718010/1210718010.github.io/blob/master/css/time.css">time.css</a>
+					<br>
+					<a class="lianJie" target="_blank" href="//github.com/1210718010/1210718010.github.io/blob/master/js/time.js">time.js</a>
+				</ul>
+				<pre><code class="language-html">
+&ltlink rel="stylesheet" href="https://muxmus.com/css/time.css"&gt
+&ltbody onload="startTime()"&gt
+	&ltscript src="https://muxmus.com/js/time.js"&gt&lt/script&gt
+&lt/body&gt
+				</code></pre>
+				<p class="zhuShi">ps：js文件可能需要引用在正文中，也就是&ltbody&gt和&lt/body&gt之间。</p>
+				<p>下面是带注释讲解的js代码</p>
+				<pre><code class="language-js">
+// JavaScript Document
+document.write("&ltdiv id=\"divt\"&gt&lt/div&gt");
+function startTime(){
+	var today = new Date();
+	var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	var day = today.getDate();
+	var hh = today.getHours();
+	var mm = today.getMinutes();
+	var ss = today.getSeconds();
+	month = checkTime(month);
+	day = checkTime(day);
+	hh = checkTime(hh);
+	mm = checkTime(mm);
+	ss = checkTime(ss);
+	document.getElementById('divt').innerHTML = year + "." + month + "." + day + " " + hh + ":" + mm + ":" + ss;
+	//这里分别为年月日时分秒，可以自行更改样式和精确度
+	setTimeout('startTime()',100);
+	//这里设置多久同步一次时间，单位毫秒，越小越精准但越吃资源，不建议大于1000
+}
+function checkTime(i){
+	if(i<10){
+		i = "0" + i;
+	}
+	return i;
+}
+//这里是在个位数的前面补零
+				</code></pre>
+			</div>
+			<div id="slider">
+				<img class="tx" src="/img/bk_8.png" alt="" />
+				<div class="js">
+					<br>
+					<p><a date-pjax href="/blog/">返回目录</a></p>
+					<br>
+					<p>自制网页js音乐播放器</p>
+					<p><a date-pjax href="/blog/20220727-2/">天台山</a></p>
+					<p><a date-pjax href="/blog/20220727/"></a>中华大扁锹饲养日志</p>
+				</div>
+			</div>
+			<div class="dk" id="bbb">
+				<img class="cd" alt="" src="/img/cd.svg" />
+			</div>
+			<div class="gb" id="ccc">
+				<img class="cd" alt="" src="/img/gb.svg" />
+			</div>
+			<script src="/js/cbl.js"></script>
+			<script src="/js/link.js"></script>
+		</div>
+		<script src="/js/bfq.js"></script>
+	</body>
+</html>
