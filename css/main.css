@@ -35,17 +35,17 @@ em {
 	opacity: 0.8;
 }
 
-em.title {
+em .title {
 	font-weight: 100;
 	font-size: 40px;
 }
 
-em.title:hover {
+em .title:hover {
 	text-decoration: none;
 	opacity: 1.0;
 }
 
-em.img {
+em .img {
 	font-style: normal;
 	opacity: 0.7;
 }
