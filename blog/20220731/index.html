@@ -10,8 +10,8 @@
 		<link rel="stylesheet" href="/css/github-dark.min.css">
 		<script src="/js/jquery-3.6.0.min.js"></script>
 		<script src="/js/jquery.pjax.js"></script>
-		<script data-pjax src="/js/highlight.min.js"></script>
-		<script data-pjax>hljs.highlightAll();</script>
+		<script src="/js/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
 			$(document).on('ready pjax:end', function(event) {
@@ -28,9 +28,6 @@
 					ccc.attr("class","gb");
 					bbb.attr("class","dk");
 				});
-			});
-			$("script[data-pjax]").each(function () {
-				$(this).parent().append($(this).remove());
 			});
 		</script>
 	</head>
@@ -285,8 +282,11 @@ $(function(){
 			</div>
 			<script src="/js/cbl.js"></script>
 			<script src="/js/link.js"></script>
-			<script data-pjax src="/js/highlight.min.js"></script>
-			<script data-pjax>hljs.highlightAll();</script>
+			<script type="text/javascript">
+				$(document).on('pjax:complete', function() {
+					hljs.highlightAll();
+				});
+			</script>
 		</div>
 		<script src="/js/bfq.js"></script>
 	</body>
