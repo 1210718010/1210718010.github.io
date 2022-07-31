@@ -5,12 +5,6 @@ body {
 	background-image: url(/img/texture.png);
 }
 
-div .over {
-	margin: 50px auto 50px auto;
-	width: 800px;
-	cursor: default;
-}
-
 a {
 	color: #4183c4;
 	text-decoration: none;
@@ -34,4 +28,10 @@ p {
 	margin: 20px 0;
 	color: rgba(256,256,256,0.7);
 	line-height: 1.2;
+}
+
+.over {
+	margin: 50px auto 50px auto;
+	width: 800px;
+	cursor: default;
 }
