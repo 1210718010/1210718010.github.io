@@ -7,8 +7,10 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/bfq.css">
+		<link rel="stylesheet" href="/css/github-dark.min.css">
 		<script src="/js/jquery-3.6.0.min.js"></script>
 		<script src="/js/jquery.pjax.js"></script>
+		<script src="/js/highlight.min.js"></script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
 			$(document).on('ready pjax:end', function(event) {
@@ -25,7 +27,9 @@
 					ccc.attr("class","gb");
 					bbb.attr("class","dk");
 				});
+				hljs.highlightAll();
 			});
+			hljs.highlightAll();
 		</script>
 	</head>
 	<body bgcolor="#97a791">
