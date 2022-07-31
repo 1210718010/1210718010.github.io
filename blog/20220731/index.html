@@ -41,6 +41,7 @@
 				<p>首先，该播放器就是左下角的那个，支持顺序播放，随机播放，上一首下一首，调节音量，在Chrome的MediaSession媒体控件中显示专辑图等。</p>
 				<p>我是直接用的网易云的音乐和专辑图，你也可以修改成其他网站的音乐和图片。</p>
 				<p>svg图全是去<a class="lianJie" target="_blank" href="//www.iconfont.cn/">阿里的图标库</a>里找的，你也可以换成其他的。</p>
+				<p>需要引用<a class="lianJie" target="_blank" href="//jquery.com/">jQuery</a></p>
 				<p>下面是Demo和代码：</p>
 				<a class="lianJie" target="_blank" href="./demo.html">Demo</a>
 				<p>直接引用下面两个就好了：</p>
@@ -51,9 +52,10 @@
 				</ul>
 				<pre><code class="language-html">
 &ltlink rel="stylesheet" href="https://muxmus.com/css/bfq.css"&gt
+&ltscript src="https://muxmus.com/js/jquery-3.6.0.min.js"&gt&lt/script&gt
 &ltscript src="https://muxmus.com/js/bfq.js"&gt&lt/script&gt
 				</code></pre>
-				<p class="zhuShi">ps：js文件可能需要引用在末尾，也就是&lt/body&gt的前面。</p>
+				<p class="zhuShi">ps：bfq.js文件可能需要引用在末尾，也就是&lt/body&gt的前面。</p>
 				<p>下面是带注释讲解的js代码</p>
 				<pre><code class="language-js">
 // JavaScript Document
