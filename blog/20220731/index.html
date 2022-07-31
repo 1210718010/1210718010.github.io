@@ -15,6 +15,10 @@
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
 			function js_reload(){
+				var js1 = document.createElement('script');
+				js1.src = '/js/highlight.min.js';
+				js1.async = 'async';
+				$('.container')[0].insertAdjacentElement('afterbegin', js1);
 				hljs.highlightAll();
 			}
 			$(document).on('pjax:start', function(event){
