@@ -51,10 +51,6 @@ em:hover {
 	opacity: 1.0;
 }
 
-.lianJie ｛
-	color: #0051af;
-｝
-
 .logo {
 	width: 60px;
 	height: 85px;
@@ -128,6 +124,10 @@ em:hover {
 .divm a:hover {
 	text-decoration: underline;
 }
+
+.lian1 ｛
+	color: #0051af;
+｝
 
 .divz {
 	position: fixed;
