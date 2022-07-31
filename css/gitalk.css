@@ -5,11 +5,11 @@ svg {
 	fill: #0051af;
 }
 
-.gt-container {
+.gt-container a {
 	color: #0051af;
 }
 
-.gt-container:hover {
+.gt-container a:hover {
 	color: #0056ba;
 }
 
