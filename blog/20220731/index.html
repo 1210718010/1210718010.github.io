@@ -99,7 +99,7 @@ var album = [
 	"X0Jdt5C1MLbZjLTb2lZzsw==/109951165561011067",
 	"tJl-San_dLNzomvAT77KJg==/853221023197375",
 	//这里放网易云的专辑图链接，用F12找到专辑图的链接
-	//例如“http://p1.music.126.net/YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg?param=130y130”，只取中间的“YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955”就行了
+	//例如“ http://p1.music.126.net/YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg?param=130y130 ”，只取中间的“ YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955 ”就行了
 ];
 var count = musicId.length - 1;
 var original = new Array;
@@ -186,7 +186,7 @@ function ifNext(){
 }
 function musicPlay(){
 	music.src = url + musicId[original[i]] + ".mp3";
-	//如果你要使用其他网站的音乐，需要调整这里和前面的musicId数组
+	//如果你要使用其他网站的音乐，需要调整这里、开头的url变量和前面的musicId数组
 	document.getElementById("songs").innerHTML = title[original[i]] + " · " + artist[original[i]];
 	//这里输出显示在右下角的歌曲名和歌手名，可自行调整样式
 	media();
@@ -246,7 +246,7 @@ $(document).ready(function(){
 });
 $(function(){
 	var vol = 0.3;
-	//这里是载入是的默认音量，可以从0到1任意调节
+	//这里的0.3是载入时的默认音量，可以从0到1任意调节
 	$('#music')[0].volume = vol;
 	$('#up').click(function(){
 		vol = vol<1?(vol*10+1)/10:1;
