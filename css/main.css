@@ -158,13 +158,13 @@ em:hover {
 	margin-left: -175px;
 	width: 350px;
 	height: 600px;
-	color: #000;
+	color: #fff;
 	text-align: center;
 	opacity: 0.8;
 }
 
 .js a {
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 	opacity: 0.8;
 }
