@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.08.20 01:12(GMT+8)
+// Update: 2022.08.20 02:30(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"/img/down.svg\" />");
@@ -12,7 +12,6 @@ document.write("</div>");
 document.write("<div class=\"divs\">");
 document.write("	<p id=\"songs\" class=\"song1\"></p>");
 document.write("</div>");
-var url = "//music.163.com/song/media/outer/url?id=";
 var musicId = [
 	"29836459",
 	"460508",
@@ -253,6 +252,7 @@ var album = [
 	"MjXuHJB9kDPu7X45aUs5GQ==/14457478393642798",
 	"r3HQ2Na5Z-CvnDGHmcl9-A==/109951165515346936",
 ];
+var url = "//music.163.com/song/media/outer/url?id=";
 var count = musicId.length - 1;
 var original = new Array;
 var i = 0;
@@ -274,6 +274,12 @@ $(function(){
 		}
 	});
 });
+if(document.all){
+	window.attachEvent('onload',musicClick);
+}
+else{
+	window.addEventListener('load',musicClick,false);
+}
 function musicClick(){
 	musicPlay();
 	music.onended = function(){
@@ -307,6 +313,14 @@ function lastSong(){
 	}
 	musicPlay();
 }
+function ifLast(){
+	if(original[count] == num){
+		original.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifLast();
+	}
+}
 function nextSong(){
 	i += 1;
 	if(i > count){
@@ -318,14 +332,6 @@ function nextSong(){
 		i = 0;
 	}
 	musicPlay();
-}
-function ifLast(){
-	if(original[count] == num){
-		original.sort(function(){
-			return 0.5 - Math.random();
-		});
-		ifLast();
-	}
 }
 function ifNext(){
 	if(original[0] == num){
@@ -374,12 +380,6 @@ function media(){
 			music.play();
 		});
 	}
-}
-if(document.all){
-	window.attachEvent('onload',musicClick);
-}
-else{
-	window.addEventListener('load',musicClick,false);
 }
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
