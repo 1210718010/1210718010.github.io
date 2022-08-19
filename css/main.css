@@ -51,6 +51,10 @@ em:hover {
 	opacity: 1.0;
 }
 
+code {
+	font-size: 17px;
+}
+
 .logo {
 	width: 60px;
 	height: 85px;
