@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.08.20 02:30(GMT+8)
+// Update: 2022.08.20 03:30(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"/img/down.svg\" />");
