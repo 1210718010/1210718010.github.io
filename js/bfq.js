@@ -341,39 +341,39 @@ function musicPlay(){
 	media();
 }
 function media(){
-    if ('mediaSession' in navigator){
-	    navigator.mediaSession.metadata = new MediaMetadata({
-		    title: title[original[i]],
-		    artist: artist[original[i]],
-		    artwork: [{src: "//p1.music.126.net/" + album[original[i]] + ".jpg?param=300y300" }],
-	    });
-	    navigator.mediaSession.setActionHandler('play', function(){
-		    music.play();
-		    $("#stop").attr("src", "/img/bf.svg");
-	    });
-	    navigator.mediaSession.setActionHandler('pause', function(){
-		    music.pause();
-		    $("#stop").attr("src", "/img/zt.svg");
-	    });
-	    navigator.mediaSession.setActionHandler('stop', function(){
-		    music.pause();
-		    $("#stop").attr("src", "/img/zt.svg");
-	    });
-	    navigator.mediaSession.setActionHandler('nexttrack', function(){
-		    nextSong();
-		    if(music.paused){
-			    $("#stop").attr("src", "/img/bf.svg");
-		    }
-		    music.play();
-	    });
-	    navigator.mediaSession.setActionHandler('previoustrack', function(){
-		    lastSong();
-		    if(music.paused){
-			    $("#stop").attr("src", "/img/bf.svg");
-		    }
-		    music.play();
-	    });
-    }
+	if ('mediaSession' in navigator){
+    		navigator.mediaSession.metadata = new MediaMetadata({
+			title: title[original[i]],
+			artist: artist[original[i]],
+			artwork: [{src: "//p1.music.126.net/" + album[original[i]] + ".jpg?param=300y300" }],
+		});
+		navigator.mediaSession.setActionHandler('play', function(){
+			music.play();
+			$("#stop").attr("src", "/img/bf.svg");
+		});
+		navigator.mediaSession.setActionHandler('pause', function(){
+			music.pause();
+			$("#stop").attr("src", "/img/zt.svg");
+		});
+		navigator.mediaSession.setActionHandler('stop', function(){
+			music.pause();
+			$("#stop").attr("src", "/img/zt.svg");
+		});
+		navigator.mediaSession.setActionHandler('nexttrack', function(){
+			nextSong();
+			if(music.paused){
+				$("#stop").attr("src", "/img/bf.svg");
+			}
+			music.play();
+		});
+		navigator.mediaSession.setActionHandler('previoustrack', function(){
+			lastSong();
+			if(music.paused){
+				$("#stop").attr("src", "/img/bf.svg");
+			}
+			music.play();
+		});
+	}
 }
 if(document.all){
 	window.attachEvent('onload',musicClick);
