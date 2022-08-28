@@ -5717,6 +5717,7 @@ $(function(){
 		if(music.paused){
 			music.play();
 			$("#stop").attr("src", "/img/bf.svg");
+			media();
 		}else{
 			music.pause();
 			$("#stop").attr("src", "/img/zt.svg");
