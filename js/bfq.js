@@ -2630,12 +2630,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166218954398&auth=2ceaa5c293587f895280f4bfa1ffc1a0b678ddd9"
     },
     {
-        title: "刺猬法则",
-        author: "己酉 / 蓝蓝 / 林畅宝 / 余海荣",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1913932895&auth=1f92f00c4c1e7390361c3140ed24ddde848aa637",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166055883295&auth=54304a0c950f044073909d95c71338de48d17066"
-    },
-    {
         title: "情熱の花",
         author: "トリプルブッキング",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=4935136&auth=519ff21064b68bce5b8ee07606b0b084450ac06c",
