@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.08.28 21:51(GMT+8)
+// Update: 2022.08.29 02:54(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("	<img id=\"up\" class=\"up1\" alt=\"\" src=\"/img/up.svg\" />");
 document.write("	<img id=\"down\" class=\"down1\" alt=\"\" src=\"/img/down.svg\" />");
@@ -5804,10 +5804,7 @@ function media(){
 			$("#stop").attr("src", "/img/zt.svg");
 		});
 		navigator.mediaSession.setActionHandler('stop', function(){
-			if(music.play){
-				music.pause();
-				$("#stop").attr("src", "/img/zt.svg");
-			}
+			$("#stop").attr("src", "/img/zt.svg");
 		});
 		navigator.mediaSession.setActionHandler('nexttrack', function(){
 			nextSong();
