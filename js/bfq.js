@@ -5694,6 +5694,7 @@ var count = song.length - 1;
 var original = new Array;
 var i = 0;
 var num = 0;
+var flag = 0;
 for (var j = 0; j <= count; j++){
 	original[j] = j;
 }
@@ -5721,6 +5722,7 @@ else{
 function musicClick(){
 	musicPlay();
 	music.onended = function(){
+        flag = 0;
 		nextSong();
 		music.play();
 	}
@@ -5740,6 +5742,7 @@ function musicClick(){
 	});
 }
 function lastSong(){
+    flag = 1;
 	i -= 1;
 	if(i < 0){
 		num = original[0];
@@ -5760,6 +5763,7 @@ function ifLast(){
 	}
 }
 function nextSong(){
+    flag = 0;
 	i += 1;
 	if(i > count){
 		num = original[count];
@@ -5822,9 +5826,16 @@ function media(){
 	}
 }
 function onError(){
-	nextSong();
-	$("#stop").attr("src", "/img/bf.svg");
-	music.play();
+    if(flag == 0){
+        nextSong();
+        $("#stop").attr("src", "/img/bf.svg");
+        music.play();
+    }else{
+        lastSong();
+        $("#stop").attr("src", "/img/bf.svg");
+        music.play();
+    }
+	
 }
 $(document).ready(function(){
 	$('#stop').on('mouseenter',function(){
