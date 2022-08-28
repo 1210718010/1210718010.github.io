@@ -11664,7 +11664,6 @@ function onError(){
         $("#stop").attr("src", "/img/bf.svg");
         music.play();
     }
-    
 }
 $(document).ready(function(){
     $('#stop').on('mouseenter',function(){
