@@ -2126,12 +2126,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165049905274&auth=e669c92f579b90b1cc7b990c3cf93a744ee3cebf"
     },
     {
-        title: "Take Me Higher",
-        author: "Diana Ross",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=2420681&auth=b58a0ffa59293c0f9d9a464b0a19b5c615d3f255",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951167212022821&auth=ccd6cf172846645afb9bed1fcf113956fd634bfc"
-    },
-    {
         title: "不可思議のカルテ",
         author: "瀬戸麻沙美 / 東山奈央 / 種崎敦美 / 内田真礼 / 久保ユリカ / 水瀬いのり",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1313052943&auth=89c089a02026948acdc0520cda86e7284411ad8c",
