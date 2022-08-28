@@ -63,7 +63,7 @@
 				<pre><code class="language-js">
 // JavaScript Document
 //如果要引用到别的网站，需要下载svg图标放在相同目录，或者修改svg的地址在前面加上“https://muxmus.com”
-//如果你和我一样用的是网易云的歌，那么请注意，需要vip的歌曲无法播放，请随时留意变为vip的歌曲并删除它们
+//如果你和我一样用的是网易云的歌，那么请注意，需要vip的歌曲只能试听30秒，失效的歌曲会自动跳过
 document.write("&ltdiv id=\"bfq\" class=\"divb\"&gt");
 document.write("	&ltimg id=\"up\" class=\"up1\" alt=\"\" src=\"/img/up.svg\" /&gt");
 document.write("	&ltimg id=\"down\" class=\"down1\" alt=\"\" src=\"/img/down.svg\" /&gt");
@@ -71,41 +71,34 @@ document.write("	&lta id=\"audio\"&gt&ltimg id=\"stop\" alt=\"\" src=\"/img/zt.s
 document.write("	&ltdiv class=\"divn\"&gt");
 document.write("		&ltimg id=\"next\" class=\"next1\" alt=\"\" src=\"/img/next.svg\" /&gt");
 document.write("	&lt/div&gt");
-document.write("	&ltaudio id=\"music\" preload=\"auto\">&lt/audio&gt");
+document.write("	&ltaudio id=\"music\" preload=\"auto\" onerror=\"onError()\" &gt&lt/audio&gt");
 document.write("&lt/div>");
 document.write("&ltdiv class=\"divs\">");
 document.write("	&ltp id=\"songs\" class=\"song1\">&lt/p>");
 document.write("&lt/div>");
-var musicId = [
-	"29836459",
-	"460508",
-	"730631",
-	//这里放网易云音乐的id，例如这是一首歌的网址“https://music.163.com/#/song?id=29836459”，
-	//id就是最后那一串数“29836459”
-	//可无限添加，需用逗号隔开，需与下面的歌曲名歌手名专辑图链接一一对应
+var song = [
+    {
+        title: "title1",
+        author: "author1",
+        url: "url1.mp3",
+        pic: "pic1.jpg"
+    },
+    {
+        title: "title2",
+        author: "author2",
+        url: "url2.mp3",
+        pic: "pic2.jpg"
+    },
+    {
+        title: "title3",
+        author: "author3",
+        url: "url3.mp3",
+        pic: "pic3.jpg"
+    }
+	//这里放音乐的信息，title是标题，author是作者，url是音乐链接，pic是专辑图链接
+	//可无限添加，需用逗号隔开
 ];
-var title = [
-	"ハルヒの想い",
-	"「プラチナむかつく」",
-	"歳月-雲流れ-",
-	//这里放歌曲名
-];
-var artist = [
-	"神前暁",
-	"神前暁",
-	"Foxtail-Grass Studio",
-	//这里放歌手名
-];
-var album = [
-	"YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955",
-	"X0Jdt5C1MLbZjLTb2lZzsw==/109951165561011067",
-	"tJl-San_dLNzomvAT77KJg==/853221023197375",
-	//这里放网易云的专辑图链接，用F12找到专辑图的链接
-	//例如“ http://p1.music.126.net/YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955.jpg?param=130y130 ”，
-	//只取中间的“ YcMoW1Y4UKLJXLbF8SCdww==/3247957351157955 ”就行了
-];
-var url = "//music.163.com/song/media/outer/url?id=";
-var count = musicId.length - 1;
+var count = song.length - 1;
 //变量count用于储存歌曲总数
 var original = new Array;
 //变量original用于储存随机打乱的数列，以实现每次的播放顺序都是随机的
@@ -125,6 +118,7 @@ $(function(){
 		if(music.paused){
 			music.play();
 			$("#stop").attr("src", "/img/bf.svg");
+			media();
 		}else{
 			music.pause();
 			$("#stop").attr("src", "/img/zt.svg");
@@ -154,7 +148,7 @@ function musicClick(){
 		}
 		music.play();
 	});
-	//上一首键的点击事件，虽然我没有写上一首键，因为不知道放在哪
+	//上一首键的点击事件，虽然我没有写上一首键，因为不知道放在哪合适
 	$("#next").click(function(){
 		nextSong();
 		if(music.paused){
@@ -219,9 +213,8 @@ function ifNext(){
 //以防止连续播放相同的歌曲
 //如果需要顺序播放，则删去此ifNext函数
 function musicPlay(){
-	music.src = url + musicId[original[i]] + ".mp3";
-	//如果你要使用其他网站的音乐，需要调整这里、开头的url变量和前面的musicId数组
-	document.getElementById("songs").innerHTML = title[original[i]] + " · " + artist[original[i]];
+	music.src = song[original[i]].url;
+	document.getElementById("songs").innerHTML = song[original[i]].title + " · " + song[original[i]].author;
 	//这里输出显示在右下角的歌曲名和歌手名，可自行调整样式
 	media();
 }
@@ -229,11 +222,9 @@ function musicPlay(){
 function media(){
 	if ('mediaSession' in navigator){
     		navigator.mediaSession.metadata = new MediaMetadata({
-			title: title[original[i]],
-			artist: artist[original[i]],
-			artwork: [{src: "//p1.music.126.net/" + album[original[i]] + ".jpg?param=300y300" }],
-			//这里的“300y300”可以调整缩略图的分辨率，如果太大可能加载过慢
-			//如果你要使用其他网站的图片，需要调整这里和前面的album数组
+			title: song[original[i]].title,
+			artist: song[original[i]].author,
+			artwork: [{src: song[original[i]].pic }],
 		});
 		//新建mediaSession
 		navigator.mediaSession.setActionHandler('play', function(){
@@ -247,8 +238,10 @@ function media(){
 		});
 		//在mediaSession中点击播放时执行
 		navigator.mediaSession.setActionHandler('stop', function(){
-			music.pause();
-			$("#stop").attr("src", "/img/zt.svg");
+			if(music.play){
+				music.pause();
+				$("#stop").attr("src", "/img/zt.svg");
+			}
 		});
 		//在mediaSession中点击关闭执行
 		navigator.mediaSession.setActionHandler('nexttrack', function(){
