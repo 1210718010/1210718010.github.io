@@ -3470,12 +3470,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166178980774&auth=242d63f15116853f0ca4c6c8f8b420f33cfd24b5"
     },
     {
-        title: "与你同行",
-        author: "小Ray",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1420751518&auth=4dea00d77ff685e3f94998f735a75407a29b3fa7",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164674934832&auth=5f7da79a83e217fb181ed7000b1d1d7d818e3b94"
-    },
-    {
         title: "Moves Like Jagger",
         author: "Maroon 5 / Christina Aguilera",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=21253966&auth=6d81352ef89c30f18337b157412f6b853fe9cc74",
