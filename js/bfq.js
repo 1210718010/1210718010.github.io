@@ -2624,12 +2624,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951163351759724&auth=74f1d67f8b9eaf987bfee6efd70769209e500d48"
     },
     {
-        title: "Trauma",
-        author: "NF",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1380238623&auth=c683013af62a6e582d04ee86e6db3a03854de8f3",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164240566781&auth=4bea911047f69c9a248fdf55565141cfe60ab7e0"
-    },
-    {
         title: "プラチナジェット",
         author: "佳村はるか / 千菅春香 / 木村珠莉 / 大和田仁美 / 高野麻美",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=30706885&auth=a8be8789582606c324325aa0d5e2ac4b4e3dc530",
