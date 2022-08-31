@@ -2240,12 +2240,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165980929049&auth=aff9e789cc83f206feaee0ea82ca4016040406c9"
     },
     {
-        title: "Water",
-        author: "Kehlani",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1446799845&auth=8fd5e5b00925439dbf1a64bb8e4d031d6970507e",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164973088589&auth=e856fa0346fc2091413cd90bdfd0fde911bf5216"
-    },
-    {
         title: "Fire",
         author: "Kasabian",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=19054782&auth=9c96e8fe50149b3bcddcc7498551a59d9b151d68",
