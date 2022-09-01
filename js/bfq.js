@@ -3764,12 +3764,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165052089697&auth=df6103b570b417646c3348f9e90c5877e2a0f11e"
     },
     {
-        title: "It Is Well",
-        author: "Bethel Regadanz Knapp",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1376316778&auth=44641de6e0e12f2e3c3b12dac50201d508076880",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164196573440&auth=3aa66b488ea7e57367647811bab927c7916befb8"
-    },
-    {
         title: "Seve",
         author: "Tez Cadey",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=30394891&auth=622374d1577db83eb8a1275d09c9e6042a655679",
