@@ -1550,12 +1550,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951163676678222&auth=423fc03dbef57672e9fac465a58e01710adddf28"
     },
     {
-        title: "꿈속에서",
-        author: "Coldin",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1925343988&auth=5e852dfdf7d6e31b10aa681cd52a0bb021b40242",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951167319713086&auth=2adbe43aa79a4115d58141d436c037b5b5740f21"
-    },
-    {
         title: "心做し",
         author: "一之瀬ユウ / GUMI",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=29747157&auth=9890c5571cc09a511017b4e59c1870baa6780cf0",
