@@ -4040,12 +4040,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165484066989&auth=71d31ffc707e2716e2ba2fd4da34560e122c8f74"
     },
     {
-        title: "Stay With Me（鬼怪OST）",
-        author: "AnnickHong",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1923899343&auth=a35ebd32f6e15437e37f4e883ed04aa8bcd37660",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165900685511&auth=38b835df59682f15948e469732bea61cd627bb9f"
-    },
-    {
         title: "Sugar",
         author: "Maroon 5",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=29019227&auth=6247f7a73462fb11c4f47425c2fce72ff2c0f8b6",
