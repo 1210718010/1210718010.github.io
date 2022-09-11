@@ -2600,12 +2600,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164807311398&auth=a8c58fe489d25ea8c9615f42e19b05037f213e3a"
     },
     {
-        title: "The Theme from Star Wars (Luke's Happy Hardcore Radio Edit)",
-        author: "The Force",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1864404894&auth=6b46994282e4e643e32afac805c92ef96c24f90c",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166218954398&auth=2ceaa5c293587f895280f4bfa1ffc1a0b678ddd9"
-    },
-    {
         title: "情熱の花",
         author: "トリプルブッキング",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=4935136&auth=519ff21064b68bce5b8ee07606b0b084450ac06c",
