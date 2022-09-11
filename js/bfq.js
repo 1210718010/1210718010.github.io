@@ -4202,12 +4202,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165933410801&auth=7245de60d803d013f740e82bea8c3c1406a8e6dd"
     },
     {
-        title: "负隅",
-        author: "长孙肆羽",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1887578173&auth=d452e59a50af18d2140c33f99ba7d518d9b24964",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166526330565&auth=094b031d13331f2127b06417ca75973537826bfc"
-    },
-    {
         title: "ハレルヤ☆エッサイム",
         author: "富田美憂 / 大西沙織 / 大空直美 / 花澤香菜",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=461332143&auth=33ca0e79554b254156337a4e6620e89a0fbc26dc",
