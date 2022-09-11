@@ -2054,12 +2054,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165394617593&auth=ada1af026f53e1c8f44ef6038ddf93bbec941f13"
     },
     {
-        title: "夜空",
-        author: "ONE☆DRAFT",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=794110&auth=f2dd80e8e1d6c4f19504c940dacf676c657d0bfe",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165049143612&auth=368c5d276583f47fd08e85f6dfb759b482b15515"
-    },
-    {
         title: "You",
         author: "千坂 / N2V",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=506520164&auth=4da160cdfe2a1e62e6c65767252d4f0a452c9a26",
