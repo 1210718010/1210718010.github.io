@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>中秋节拍月亮，结果还拍到了木星 ~ 博客 ~ 木辛木杉</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/bfq.css">
+		<link rel="stylesheet" href="/css/github-dark.min.css">
+		<script src="/js/jquery-3.6.0.min.js"></script>
+		<script src="/js/jquery.pjax.js"></script>
+		<script src="/js/highlight.min.js"></script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).on('ready pjax:end', function(event) {
+				var bbb = $('#bbb');
+				var ccc = $('#ccc');
+				var slider = $('#slider');
+				bbb.click(function(){
+					slider.animate({right:0},500);
+					bbb.attr("class","gb");
+					ccc.attr("class","dk");
+				});
+				ccc.click(function(){
+					slider.animate({right:-350},500);
+					ccc.attr("class","gb");
+					bbb.attr("class","dk");
+				});
+				hljs.highlightAll();
+			});
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body bgcolor="#97a791">
+		<div id="main-content">
+			<div class="divm">
+				<h2>中秋节拍月亮，结果还拍到了木星</h2>
+				<p class="date">2022.09.12 10:05</p>
+				<br>
+				<div class="tuPian">
+					<a target="_blank" href="//c2.im5i.com/2022/09/14/5LDVP.jpg"><img class="shu" src="//c2.im5i.com/2022/09/14/5LDVP.md.jpg" alt="" /></a>
+				</div>
+				<div class="tuPian">
+					<a target="_blank" href="//c2.im5i.com/2022/09/14/5LeY7.jpg"><img class="heng" src="//c2.im5i.com/2022/09/14/5LeY7.md.jpg" alt="" /></a>
+				</div>
+				<div class="tuPian">
+					<a target="_blank" href="//c2.im5i.com/2022/09/14/5LaTD.jpg"><img class="heng" src="//c2.im5i.com/2022/09/14/5LaTD.md.jpg" alt="" /></a>
+				</div>
+				<div class="tuPian">
+					<a target="_blank" href="//c2.im5i.com/2022/09/14/5LLBl.jpg"><img class="heng" src="//c2.im5i.com/2022/09/14/5LLBl.md.jpg" alt="" /></a>
+				</div>
+				<div class="tuPian">
+					<a target="_blank" href="//c2.im5i.com/2022/09/14/5Lz72.jpg"><img class="shu" src="//c2.im5i.com/2022/09/14/5Lz72.md.jpg" alt="" /></a>
+				</div>
+				<div class="tuPian">
+					<a target="_blank" href="//c2.im5i.com/2022/09/14/5L4zj.jpg"><img class="heng" src="//c2.im5i.com/2022/09/14/5L4zj.md.jpg" alt="" /></a>
+				</div>
+			</div>
+			<div id="slider">
+				<img class="tx" src="/img/bk_8.png" alt="" />
+				<div class="js">
+					<br>
+					<a date-pjax href="/blog/"><p>返回目录</p></a>
+					<br>
+					<p>[置顶] <a date-pjax href="/blog/20220731/">自制网页js音乐播放器</a></p>
+					<p>中秋节拍月亮，结果还拍到了木星</p>
+					<p><a date-pjax href="/blog/20220731-5/">将自己的网址当成短链来使用</a></p>
+					<p><a date-pjax href="/blog/20220731-4/">js复制时自动添加版权声明</a></p>
+					<p><a date-pjax href="/blog/20220731-3/">js在网页中显示当前时间</a></p>
+					<p><a date-pjax href="/blog/20220731-2/">js自制一个带有搜索框的主页</a></p>
+					<p><a date-pjax href="/blog/20220727-2/">天台山</a></p>
+					<p><a date-pjax href="/blog/20220727/">中华大扁锹饲养日志</a></p>
+				</div>
+			</div>
+			<div class="dk" id="bbb">
+				<img class="cd" alt="" src="/img/cd.svg" />
+			</div>
+			<div class="gb" id="ccc">
+				<img class="cd" alt="" src="/img/gb.svg" />
+			</div>
+			<script src="/js/cbl.js"></script>
+			<script src="/js/link.js"></script>
+		</div>
+		<script src="//cdn.jsdelivr.net/gh/1210718010/1210718010.github.io@master/js/bfq.js"></script>
+	</body>
+</html>
