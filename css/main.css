@@ -165,6 +165,7 @@ code {
 	color: #fff;
 	text-align: center;
 	opacity: 0.8;
+	overflow-y: auto;
 }
 
 .js a {
@@ -242,5 +243,4 @@ code {
 	width: 350px;
 	background-color: rgba(71,87,65,0.8);
 	transition: right 0.1s;
-	overflow-y: auto;
 }
