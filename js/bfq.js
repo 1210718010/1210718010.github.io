@@ -5054,12 +5054,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165023762143&auth=4e248c4eeaf4c0ca385825f34cdddd41dcab499d"
     },
     {
-        title: "空の色",
-        author: "Yumeutsutsu",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1942537294&auth=d15bf12b6166469bca7ab68fcf0cd295e2539388",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951167353139661&auth=0913bc12d6c4d5151aea43dd8d7ab33bbe20b0bc"
-    },
-    {
         title: "Realize",
         author: "鈴木このみ",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1474120993&auth=0dadb5b180fc467e1743f3288dd82fa05bc49a21",
