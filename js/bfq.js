@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.08.29 02:54(GMT+8)
+// Update: 2022.09.25 00:07(GMT+8)
 document.write("<div id=\"bfq\" class=\"divb\">");
 document.write("    <img id=\"up\" class=\"up1\" alt=\"\" src=\"/img/up.svg\" />");
 document.write("    <img id=\"down\" class=\"down1\" alt=\"\" src=\"/img/down.svg\" />");
@@ -3150,12 +3150,6 @@ var song = [
         author: "Rihanna",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=3314177&auth=5e8fdcf530cedbe31f66784c8e3f5e1a25a62582",
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=18777459581152702&auth=50647f051dbe3efa4fb6a389ad567ef84fd700fb"
-    },
-    {
-        title: "前前前世",
-        author: "RADWIMPS",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1371147528&auth=c75d96eb43102098ac46418b6baff5c40db21103",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164140066601&auth=66dab1bfdfdc75e682c095966237bde2a122376d"
     },
     {
         title: "No pain, No game",
