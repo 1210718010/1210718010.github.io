@@ -458,12 +458,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166226235752&auth=e9eb581371d1afb9997e72a99c24ed73db216aad"
     },
     {
-        title: "PLANET",
-        author: "Layer",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=864052676&auth=10f5d71aaf92748aeb589e717a2a048dc382e400",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951163387836925&auth=cc1c413f3584cc25a02a7716d89fe3f44d958933"
-    },
-    {
         title: "Sick & Tired (feat. Lily Hain)",
         author: "Leonell Cassio",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1813965229&auth=b4589edf08075dc11df08d6a568dbdf13b52b3f5",
