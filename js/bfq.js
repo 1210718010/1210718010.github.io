@@ -3830,12 +3830,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165006993792&auth=9f826ee78938ef405e65b4ff3e791e9602f45a96"
     },
     {
-        title: "分析",
-        author: "川井憲次",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=446041&auth=9c3bfaac1eb02c7a76c31f94ef92fe0b8811e37b",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=2520080650880195&auth=c9ede532dd54674ffa29f3919b9306aad1866a2c"
-    },
-    {
         title: "君に会えた日",
         author: "鬼頭明里 / 伊藤美来",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1485826082&auth=1c1dc4be0387503c45587621b00565e863d3c4ff",
