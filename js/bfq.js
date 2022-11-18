@@ -2576,12 +2576,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165001010549&auth=27f1fa5d658dfc38f9ed97be121c1667c942f72d"
     },
     {
-        title: "境界の彼方",
-        author: "放課後のあいつ",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=427142470&auth=2da3b2fdd7337d9ff091097ef28287fee82dd0ab",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166361039007&auth=234dec1e390e4a2682681f2bc065deec32825a8f"
-    },
-    {
         title: "Fiddlesticks,the Ancient Fear",
         author: "英雄联盟",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1431235020&auth=8692cc63ff9830bdcd9f13bf452145d043666710",
@@ -3150,12 +3144,6 @@ var song = [
         author: "ナノ",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=26122325&auth=f0f7727b3ec1f4c9cb8152ae0a69f3d5101474f7",
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166004021897&auth=57d8c713fdb014bd36d05b60bd447fa9ba72d07d"
-    },
-    {
-        title: "想い出は远くの日々",
-        author: "你好-闪电",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1926000425&auth=5a983244a56be2f89549218958f2f64fed7a1236",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166298836476&auth=69078a63d144408fedc7e265ecb222d4e5bcd739"
     },
     {
         title: "運命のルーレット廻して",
