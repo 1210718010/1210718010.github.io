@@ -5594,7 +5594,7 @@ original.sort(function(){
     return 0.5 - Math.random();
 });
 $(function(){
-    $("#audio").click(function(){
+    $("#audio1").click(function(){
         if(music.paused){
             music.play();
             $("#stop").attr("src", "/img/bf.svg");
