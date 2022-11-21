@@ -43,7 +43,7 @@ var bg = [
 	}
 ];
 var bgCount = bg.length - 1;
-$(document).ready( function() {
+$(document).ready(function() {
 	document.getElementById("body").style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[getRndInteger(0, bgCount)].id + ")";
 });
 function getRndInteger(min, max) {
