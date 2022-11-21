@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.11.22 02:00(GMT+8)
+// Update: 2022.11.22 02:30(GMT+8)
 var bg = [
 	{
 		id: "102940261",
@@ -43,9 +43,9 @@ var bg = [
 	}
 ];
 var bgCount = bg.length - 1;
-$(function(){
+$(document).ready( function() {
 	document.getElementById("body").style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[getRndInteger(0, bgCount)].id + ")";
-})
+});
 function getRndInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
