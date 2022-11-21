@@ -1,5 +1,6 @@
+
 <!doctype html>
-<!-- Update: 2022.08.29 13:23(GMT+8) -->
+<!-- Update: 2022.11.22 01:35(GMT+8) -->
 <html lang="zh-CN">
 	<head>
 		<meta charset="utf-8">
@@ -7,34 +8,11 @@
 		<meta name='description' content='木辛木杉的个人网站和博客，会时不时放一些平时出去玩拍的照片，偶尔会发一些写的代码，欢迎访问！'>
 		<title>木辛木杉</title>
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-		<link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="/css/bfq.css">
-		<link rel="stylesheet" href="/css/github-dark.min.css">
+		<link rel="stylesheet" href="/new/main.css">
+		<link rel="stylesheet" href="/new/bfq.css">
 		<script src="/js/jquery-3.6.0.min.js"></script>
-		<script src="/js/jquery.pjax.js"></script>
-		<script src="/js/highlight.min.js"></script>
-		<script>
-			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
-			$(document).on('ready pjax:end', function(event) {
-				var bbb = $('#bbb');
-				var ccc = $('#ccc');
-				var slider = $('#slider');
-				bbb.click(function(){
-					slider.animate({right:0},500);
-					bbb.attr("class","gb");
-					ccc.attr("class","dk");
-				});
-				ccc.click(function(){
-					slider.animate({right:-350},500);
-					ccc.attr("class","gb");
-					bbb.attr("class","dk");
-				});
-				hljs.highlightAll();
-			});
-			hljs.highlightAll();
-		</script>
 	</head>
-	<body bgcolor="#97a791">
+	<body>
 		<div id="main-content">
 			<div class="divz">
 				<h1><a href="" title="木辛木杉"><em class="title">木辛木杉</em></a></h1>
@@ -57,6 +35,32 @@
 				<strong>by </strong><a href="//github.com/1210718010" target="_blank"><em>dzb</em></a><strong>.</strong>
 			</div>
 		</div>
-		<script src="//cdn.jsdelivr.net/gh/1210718010/1210718010.github.io@master/js/bfq.js"></script>
+		<div id="bfq" class="divb">
+	    	<audio id="music" preload="auto" onerror="onError()" ></audio>
+			<div class="circle">
+				<img id="pic" src="" />
+			</div>
+			<div class="line"></div>
+	    	<div id="audio">
+	    		<div class="audio1">
+	    			<img id="stop" alt="" src="/img/zt.svg" />
+	    		</div>
+	    		<div class="divl">
+	    			<img id="last" class="last1" alt="" src="/img/last.svg" />
+	    		</div>
+	    		<div class="divn">
+	    			<img id="next" class="next1" alt="" src="/img/next.svg" />
+	    		</div>
+	    	</div>
+	    	<div class="divu">
+	    		<img id="up" class="up1" alt="" src="/img/up.svg" />
+	    		<img id="down" class="down1" alt="" src="/img/down.svg" />
+	    	</div>
+		</div>
+		<div class="divs">
+		    <p id="songs" class="song1"></p>
+		    <p id="singer" class="singer1"></p>
+		</div>
+		<script src="//cdn.jsdelivr.net/gh/1210718010/1210718010.github.io@master/new/bfq.js"></script>
 	</body>
 </html>
