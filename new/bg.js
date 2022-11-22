@@ -54,18 +54,11 @@ bgOriginal.sort(function(){
     return 0.5 - Math.random();
 });
 $(document).ready(function(){
-	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id + ")";
-	document.body.style.backgroundColor = "black";
-	document.body.style.backgroundRepeat = "no-repeat";
-	document.body.style.backgroundAttachment = "fixed";
-	document.body.style.backgroundSize = "cover";
-	document.body.style.backgroundPosition = "center";
-	bgI += 1;
+	autoSwitch();
 });
 setInterval(function(){
 	if(bgI <= bgCount){
 		autoSwitch();
-		i += 1;
 	}
 	else{
 		bgNum = bgOriginal[bgCount];
@@ -75,7 +68,6 @@ setInterval(function(){
 		ifSwitch();
 		bgI = 0;
 		autoSwitch();
-		i += 1;
 	}
 },1000);
 function autoSwitch(){
@@ -85,6 +77,7 @@ function autoSwitch(){
 	document.body.style.backgroundAttachment = "fixed";
 	document.body.style.backgroundSize = "cover";
 	document.body.style.backgroundPosition = "center";
+	bgI += 1;
 }
 function ifSwitch(){
 	if(bgOriginal[0] == bgNum){
