@@ -159,7 +159,7 @@ setInterval(function(){
 		bgI = 0;
 		autoSwitch();
 	}
-},20000);
+},60000);
 function autoSwitch(){
 	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id + ")";
 	document.body.style.backgroundColor = "black";
