@@ -43,14 +43,50 @@ var bg = [
 	}
 ];
 var bgCount = bg.length - 1;
+var bgOriginal = new Array;
+var bgI = 0;
+var bgNum = 0;
+var bgFlag = 0;
+for (var bgJ = 0; bgJ <= bgCount; bgJ++){
+    bgOriginal[bgJ] = bgJ;
+}
+bgOriginal.sort(function(){
+    return 0.5 - Math.random();
+});
 $(document).ready(function() {
-	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[getRndInteger(0, bgCount)].id + ")";
+	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI].id + ")";
 	document.body.style.backgroundColor = "black";
 	document.body.style.backgroundRepeat = "no-repeat";
 	document.body.style.backgroundAttachment = "fixed";
 	document.body.style.backgroundSize = "cover";
 	document.body.style.backgroundPosition = "center";
+	bgI += 1;
 });
-function getRndInteger(min, max) {
-	return Math.floor(Math.random() * (max - min + 1) ) + min;
+setInterval(function autoSwitch(){
+	if(bgI <= bgCount){
+		document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI].id + ")";
+		document.body.style.backgroundColor = "black";
+		document.body.style.backgroundRepeat = "no-repeat";
+		document.body.style.backgroundAttachment = "fixed";
+		document.body.style.backgroundSize = "cover";
+		document.body.style.backgroundPosition = "center";
+		i += 1
+	}
+	else{
+		bgNum = bgOriginal[bgCount];
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifSwitch();
+		bgI = 0;
+		autoSwitch();
+	}
+},20000);
+function ifSwitch(){
+	if(bgOriginal[0] == bgNum){
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifSwitch();
+	}
 }
