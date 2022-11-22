@@ -45,6 +45,11 @@ var bg = [
 var bgCount = bg.length - 1;
 $(document).ready(function() {
 	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[getRndInteger(0, bgCount)].id + ")";
+	document.body.style.backgroundColor = "black";
+	document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundAttachment = "fixed";
+	document.body.style.backgroundSize = "cover";
+	document.body.style.backgroundPosition = "center";
 });
 function getRndInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
