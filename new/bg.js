@@ -69,7 +69,7 @@ setInterval(function(){
 		bgI = 0;
 		autoSwitch();
 	}
-},1000);
+},20000);
 function autoSwitch(){
 	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id + ")";
 	document.body.style.backgroundColor = "black";
