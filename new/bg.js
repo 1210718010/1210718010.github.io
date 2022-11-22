@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.11.22 02:30(GMT+8)
+// Update: 2022.11.22 12:11(GMT+8)
 var bg = [
 	{
 		id: "102940261",
@@ -54,7 +54,7 @@ bgOriginal.sort(function(){
     return 0.5 - Math.random();
 });
 $(document).ready(function(){
-	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI].id + ")" ;
+	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id + ")";
 	document.body.style.backgroundColor = "black";
 	document.body.style.backgroundRepeat = "no-repeat";
 	document.body.style.backgroundAttachment = "fixed";
@@ -64,7 +64,7 @@ $(document).ready(function(){
 });
 setInterval(function autoSwitch(){
 	if(bgI <= bgCount){
-		document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI].id + ")" ;
+		document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id + ")";
 		document.body.style.backgroundColor = "black";
 		document.body.style.backgroundRepeat = "no-repeat";
 		document.body.style.backgroundAttachment = "fixed";
