@@ -3,23 +3,23 @@
 
 .divb {
 	position: fixed;
-	border-radius: 30px 30px 0px 0px;
-	top: 94%;
-	left: 5%;
-	width: 400px;
-	height: 100px;
+	border-radius: 30px 30px 30px 30px;
+	top: 95%;
+	left: 2%;
+	width: 360px;
+	height: 150px;
 	background: rgba(200,200,200,0.6);
 	cursor: default;
-	transform: translate(0px,-165px);
-	box-shadow: 0px -3px 5px 5px rgba(200,200,200,0.6);
+	transform: translate(0px,-150px);
+	box-shadow: 0px 0px 5px 5px rgba(200,200,200,0.6);
 }
 
 .circle {
 	position: fixed;
-	top: 12%;
-	left: 4%;
-	width: 80px;
-	height: 80px;
+	top: 6%;
+	left: 3%;
+	width: 70px;
+	height: 70px;
 	background-color: rgba(0,0,0,0);
 	border: 3px #000 solid;
 	border-radius: 100px;
@@ -35,13 +35,13 @@
 
 .line {
 	position: fixed;
-	top: 12%;
-	left: 4%;
-	width: 320px;
+	top: 6%;
+	left: 3%;
+	width: 290px;
 	height: 1px;
 	border-top: solid #000 3px;
 	cursor: default;
-	transform: translate(40px,83px);
+	transform: translate(35px,73px);
 }
 
 .divl {
@@ -66,14 +66,12 @@
 
 .divs {
 	position: fixed;
-	border-radius:0px 0px 30px 30px;
-	top: 94%;
-	left: 5%;
-	width: 400px;
-	height: 65px;
-	background: rgba(200,200,200,0.6);
-	transform: translate(0px,-65px);
-	box-shadow: 0px 3px 5px 5px rgba(200,200,200,0.6);
+	top: 95%;
+	left: 2%;
+	width: 360px;
+	height: 50px;
+	background: rgba(0,0,0,0);
+	transform: translate(0px,-50px);
 }
 
 #songs {
@@ -103,39 +101,39 @@
 }
 
 .last1 {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	opacity: 0.8;
 	cursor: pointer;
 }
 
 .last1:hover {
-	width: 51px;
-	height: 51px;
+	width: 41px;
+	height: 41px;
 	opacity: 1.0;
 }
 
 .next1 {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	opacity: 0.8;
 	cursor: pointer;
 }
 
 .next1:hover {
-	width: 51px;
-	height: 51px;
+	width: 41px;
+	height: 41px;
 	opacity: 1.0;
 }
 
 #audio {
 	position: fixed;
 	top: 10%;
-	left: 50%;
-	width: 180px;
-	height: 70px;
+	left: 53%;
+	width: 160px;
+	height: 55px;
 	background: rgba(0,0,0,0);
-	transform: translate(-70px,0px);
+	transform: translate(-80px,0px);
 }
 
 #audio1 {
@@ -149,22 +147,22 @@
 }
 
 #stop {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	opacity: 0.8;
 	cursor: pointer;
 }
 
 #stop:hover {
-	width: 51px;
-	height: 51px;
+	width: 41px;
+	height: 41px;
 	opacity: 1.0;
 }
 
 .divu {
 	position: fixed;
-	top: 56%;
-	left: 90%;
+	top: 35%;
+	left: 86%;
 	width: 20px;
 	height: 50px;
 	background: rgba(0,0,0,0);
