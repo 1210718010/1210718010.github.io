@@ -5739,7 +5739,3 @@ $(function(){
         $('#music')[0].volume = vol;
     });
 });
-img2 = new Image();
-img3 = new Image();
-img2.src = "/img/bf.svg;
-img3.src = "/img/zt.svg";
