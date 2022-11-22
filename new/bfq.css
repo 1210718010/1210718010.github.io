@@ -71,7 +71,7 @@
 	left: 5%;
 	width: 400px;
 	height: 65px;
-	background: rgba(200,200,200,0.5);
+	background: rgba(200,200,200,0.6);
 	transform: translate(0px,-65px);
 	box-shadow: 0px 3px 5px 5px rgba(200,200,200,0.6);
 }
