@@ -5681,7 +5681,7 @@ function media(){
     }
 }
 function lastSong(){
-    flag = 1;
+    flag = 2;
     i -= 1;
     if(i < 0){
         num = original[0];
@@ -5723,11 +5723,18 @@ function ifNext(){
     }
 }
 function onError(){
-    if(flag == 0){
+    if(flag == 0 || flag == 2){
+        musicPlay();
+        $("#stop").attr("src", "/img/bf.svg");
+        music.play();
+        flag += 1;
+    }
+    if(flag == 1){
         nextSong();
         $("#stop").attr("src", "/img/bf.svg");
         music.play();
-    }else{
+    }
+    if(flag == 3){
         lastSong();
         $("#stop").attr("src", "/img/bf.svg");
         music.play();
