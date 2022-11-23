@@ -5605,13 +5605,19 @@ $(function(){
         }
     });
 });
-if(document.all){
-    window.attachEvent('onload',musicClick);
-}
-else{
-    window.addEventListener('load',musicClick,false);
-}
-function musicClick(){
+$(function(){
+    var vol = 0.3;
+    $('#music')[0].volume = vol;
+    $('#up').click(function(){
+        vol = vol<1?(vol*10+1)/10:1;
+        $('#music')[0].volume = vol;
+    });
+    $('#down').click(function(){
+        vol = vol>0?(vol*10-1)/10:0;
+        $('#music')[0].volume = vol;
+    });
+});
+$(function musicClick(){
     musicPlay();
     music.onended = function(){
         flag = 0;
@@ -5632,6 +5638,47 @@ function musicClick(){
         }
         music.play();
     });
+});
+function musicPlay(){
+    music.src = song[original[i]].url;
+    document.getElementById("pic").src = song[original[i]].pic;
+    document.getElementById("songs").innerHTML = song[original[i]].title;
+    document.getElementById("singer").innerHTML = song[original[i]].author;
+    media();
+}
+function media(){
+    if ('mediaSession' in navigator){
+            navigator.mediaSession.metadata = new MediaMetadata({
+            title: song[original[i]].title,
+            artist: song[original[i]].author,
+            artwork: [{src: song[original[i]].pic }],
+        });
+        navigator.mediaSession.setActionHandler('play', function(){
+            music.play();
+            $("#stop").attr("src", "/img/bf.svg");
+        });
+        navigator.mediaSession.setActionHandler('pause', function(){
+            music.pause();
+            $("#stop").attr("src", "/img/zt.svg");
+        });
+        navigator.mediaSession.setActionHandler('stop', function(){
+            $("#stop").attr("src", "/img/zt.svg");
+        });
+        navigator.mediaSession.setActionHandler('nexttrack', function(){
+            nextSong();
+            if(music.paused){
+                $("#stop").attr("src", "/img/bf.svg");
+            }
+            music.play();
+        });
+        navigator.mediaSession.setActionHandler('previoustrack', function(){
+            lastSong();
+            if(music.paused){
+                $("#stop").attr("src", "/img/bf.svg");
+            }
+            music.play();
+        });
+    }
 }
 function lastSong(){
     flag = 1;
@@ -5675,47 +5722,6 @@ function ifNext(){
         ifNext();
     }
 }
-function musicPlay(){
-    music.src = song[original[i]].url;
-    document.getElementById("pic").src = song[original[i]].pic;
-    document.getElementById("songs").innerHTML = song[original[i]].title;
-    document.getElementById("singer").innerHTML = song[original[i]].author;
-    media();
-}
-function media(){
-    if ('mediaSession' in navigator){
-            navigator.mediaSession.metadata = new MediaMetadata({
-            title: song[original[i]].title,
-            artist: song[original[i]].author,
-            artwork: [{src: song[original[i]].pic }],
-        });
-        navigator.mediaSession.setActionHandler('play', function(){
-            music.play();
-            $("#stop").attr("src", "/img/bf.svg");
-        });
-        navigator.mediaSession.setActionHandler('pause', function(){
-            music.pause();
-            $("#stop").attr("src", "/img/zt.svg");
-        });
-        navigator.mediaSession.setActionHandler('stop', function(){
-            $("#stop").attr("src", "/img/zt.svg");
-        });
-        navigator.mediaSession.setActionHandler('nexttrack', function(){
-            nextSong();
-            if(music.paused){
-                $("#stop").attr("src", "/img/bf.svg");
-            }
-            music.play();
-        });
-        navigator.mediaSession.setActionHandler('previoustrack', function(){
-            lastSong();
-            if(music.paused){
-                $("#stop").attr("src", "/img/bf.svg");
-            }
-            music.play();
-        });
-    }
-}
 function onError(){
     if(flag == 0){
         nextSong();
@@ -5727,15 +5733,3 @@ function onError(){
         music.play();
     }
 }
-$(function(){
-    var vol = 0.3;
-    $('#music')[0].volume = vol;
-    $('#up').click(function(){
-        vol = vol<1?(vol*10+1)/10:1;
-        $('#music')[0].volume = vol;
-    });
-    $('#down').click(function(){
-        vol = vol>0?(vol*10-1)/10:0;
-        $('#music')[0].volume = vol;
-    });
-});
