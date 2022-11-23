@@ -5638,7 +5638,7 @@ $(document).ready(function musicClick(){
         }
         music.play();
     });
-}
+});
 function lastSong(){
     flag = 1;
     i -= 1;
