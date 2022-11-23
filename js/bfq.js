@@ -5746,40 +5746,6 @@ function ifNext(){
         ifNext();
     }
 }
-function media(){
-    if ('mediaSession' in navigator){
-            navigator.mediaSession.metadata = new MediaMetadata({
-            title: song[original[i]].title,
-            artist: song[original[i]].author,
-            artwork: [{src: song[original[i]].pic }],
-        });
-        navigator.mediaSession.setActionHandler('play', function(){
-            music.play();
-            $("#stop").attr("src", "/img/bf.svg");
-        });
-        navigator.mediaSession.setActionHandler('pause', function(){
-            music.pause();
-            $("#stop").attr("src", "/img/zt.svg");
-        });
-        navigator.mediaSession.setActionHandler('stop', function(){
-            $("#stop").attr("src", "/img/zt.svg");
-        });
-        navigator.mediaSession.setActionHandler('nexttrack', function(){
-            nextSong();
-            if(music.paused){
-                $("#stop").attr("src", "/img/bf.svg");
-            }
-            music.play();
-        });
-        navigator.mediaSession.setActionHandler('previoustrack', function(){
-            lastSong();
-            if(music.paused){
-                $("#stop").attr("src", "/img/bf.svg");
-            }
-            music.play();
-        });
-    }
-}
 function onError(){
     if(flag == 0){
         nextSong();
