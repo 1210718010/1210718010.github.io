@@ -143,14 +143,13 @@ for (var bgJ = 0; bgJ <= bgCount; bgJ++){
 bgOriginal.sort(function(){
     return 0.5 - Math.random();
 });
-$(document).ready(function(){
+$(function(){
 	autoSwitch();
 });
 setInterval(function(){
 	if(bgI <= bgCount){
 		autoSwitch();
-	}
-	else{
+	}else{
 		bgNum = bgOriginal[bgCount];
 		bgOriginal.sort(function(){
 			return 0.5 - Math.random();
