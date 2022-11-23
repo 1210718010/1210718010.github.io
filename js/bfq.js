@@ -5617,13 +5617,7 @@ $(function(){
         }
     });
 });
-if(document.all){
-    window.attachEvent('onload',musicClick);
-}
-else{
-    window.addEventListener('load',musicClick,false);
-}
-function musicClick(){
+$(document).ready(function musicClick(){
     musicPlay();
     music.onended = function(){
         flag = 0;
