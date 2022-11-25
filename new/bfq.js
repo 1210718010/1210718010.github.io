@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.11.22 01:30(GMT+8)
+// Update: 2022.11.25 12:50(GMT+8)
 var song = [
     {
         title: "There For You",
@@ -5724,6 +5724,7 @@ function ifNext(){
 }
 function onError(){
     if(flag == 0 || flag == 2){
+        music.src =  " ";
         musicPlay();
         $("#stop").attr("src", "/img/bf.svg");
         music.play();
