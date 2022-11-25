@@ -1712,12 +1712,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=732274744107448&auth=28ee5b399b1d72f51238e981984b70da6014d082"
     },
     {
-        title: "Dancin (Laidback Luke Remix)",
-        author: "Aaron Smith / Luvli",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1356219265&auth=3898acbfb005dd885b18cab63449ba1850e62be2",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166665325766&auth=16baf24a47774b6b48929e73bd7e06b0663a478a"
-    },
-    {
         title: "Tattoo",
         author: "Gjan",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=27984264&auth=043d0682cbdd910dd7d99a65c1f1e39630af4db2",
