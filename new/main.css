@@ -133,7 +133,7 @@ code {
 
 .divf {
 	position: fixed;
-	border-radius: 20px;
+	border-radius: 10px;
 	top: 92%;
 	left: 50%;
 	z-index: 99;
@@ -144,7 +144,7 @@ code {
 	font-size: 14px;
 	cursor: default;
 	transform: translate(-40px,-11px);
-	box-shadow: 0px 0px 5px 5px rgba(200,200,200,0.6);
+	box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.6);
 }
 
 .date {
