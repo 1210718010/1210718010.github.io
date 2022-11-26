@@ -14,7 +14,7 @@ function startTime(){
 	mm = checkTime(mm);
 	ss = checkTime(ss);
 	document.getElementById('divt').innerHTML = year + "." + month + "." + day + " " + hh + ":" + mm + ":" + ss;
-	setTime(startTime(),100);
+	setTimeout(startTime(),100);
 }
 function checkTime(i){
 	if(i<10){
