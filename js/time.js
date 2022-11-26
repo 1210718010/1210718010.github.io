@@ -1,6 +1,7 @@
 // JavaScript Document
 document.write("<div id=\"divt\"></div>");
-$(function startTime(){
+setInterval(startTime(),100);
+function startTime(){
 	var today = new Date();
 	var year = today.getFullYear();
 	var month = today.getMonth() + 1;
@@ -14,8 +15,7 @@ $(function startTime(){
 	mm = checkTime(mm);
 	ss = checkTime(ss);
 	document.getElementById('divt').innerHTML = year + "." + month + "." + day + " " + hh + ":" + mm + ":" + ss;
-	setTimeout('startTime()',100);
-});
+}
 function checkTime(i){
 	if(i<10){
 		i = "0" + i;
