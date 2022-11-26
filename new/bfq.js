@@ -5617,6 +5617,7 @@ $(function musicClick(){
         flag = 0;
         nextSong();
         music.play();
+        setTimeout("setFlag()",10000);
     }
     $("#last").click(function(){
         lastSong();
@@ -5686,6 +5687,7 @@ function lastSong(){
         i = count;
     }
     musicPlay();
+    setTimeout("setFlag()",10000);
 }
 function ifLast(){
     if(original[count] == num){
@@ -5707,6 +5709,7 @@ function nextSong(){
         i = 0;
     }
     musicPlay();
+    setTimeout("setFlag()",10000);
 }
 function ifNext(){
     if(original[0] == num){
@@ -5717,21 +5720,31 @@ function ifNext(){
     }
 }
 function onError(){
-    if(flag == 0 || flag == 2){
-        music.src =  " ";
-        musicPlay();
+    if(flag == 0){
+        nextSong();
         $("#stop").attr("src", "/img/bf.svg");
         music.play();
-        flag += 1;
+    }
+    if(flag == 2){
+        lastSong();
+        $("#stop").attr("src", "/img/bf.svg");
+        music.play();
     }
     if(flag == 1){
+        lastSong();
+        music.play();
         nextSong();
         $("#stop").attr("src", "/img/bf.svg");
         music.play();
     }
     if(flag == 3){
+        nextSong();
+        music.play();
         lastSong();
-        $("#stop").attr("src", "/img/bf.svg");
+        $("#stop").attr("src","/img/bf.svg");
         music.play();
     }
+}
+function setFlag(){
+    flag += 1;
 }
