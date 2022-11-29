@@ -2504,12 +2504,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=581641651102216&auth=55d6dfa21f92f6cc57b9fd62e0849eef7fd6521e"
     },
     {
-        title: "绯色月下、狂咲ノ絶",
-        author: "EastNewSound",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=22785282&auth=f7e0cb76e8847d7e809b5febf678ff6ba6db9379",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166050123509&auth=3963d434ef2803b1f64982658e8ae93891cc5336"
-    },
-    {
         title: "幽默曲",
         author: "Josef Suk",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=26020723&auth=49958727f89e0793e9a92d6bb6475c67bb16507c",
