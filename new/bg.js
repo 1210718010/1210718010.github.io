@@ -160,7 +160,7 @@ setInterval(function(){
 	}
 },60000);
 function autoSwitch(){
-	document.body.style.background = "url(//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id + ")";
+	document.body.style.background = "url(//px.s.rainchan.win/img/original/" + bg[bgOriginal[bgI]].id + ")";
 	document.body.style.backgroundColor = "black";
 	document.body.style.backgroundRepeat = "no-repeat";
 	document.body.style.backgroundAttachment = "fixed";
