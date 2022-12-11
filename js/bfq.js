@@ -3518,12 +3518,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951166200195907&auth=69cdf9842f7e238d595aeeeb28417c51ca2c4b9f"
     },
     {
-        title: "Fantastic Baby (Live)",
-        author: "BIGBANG",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=28341572&auth=0ba5098d10b92aa1db9ff938eeb5ec32497b4829",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=5949457418049487&auth=8d606c5a17692c8099e8cf3b6e568e438ba786a0"
-    },
-    {
         title: "一笑懸命",
         author: "遊助",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=399249&auth=11e190be9a3b9c79ce15a2754d93fe0166633985",
