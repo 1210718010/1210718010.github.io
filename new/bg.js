@@ -130,7 +130,38 @@ var bg = [
 		id: "82528811",
 		title: "",
 		artist: ""
+	},
+	{
+		id: "61879076",
+		title: "",
+		artist: ""
+	},
+	{
+		id: "79288120",
+		title: "",
+		artist: ""
+	},
+	{
+		id: "34844544",
+		title: "",
+		artist: ""
+	},
+	{
+		id: "69080429",
+		title: "",
+		artist: ""
+	},
+	{
+		id: "57793944",
+		title: "",
+		artist: ""
+	},
+	{
+		id: "70937229",
+		title: "",
+		artist: ""
 	}
+	
 ];
 var bgCount = bg.length - 1;
 var bgOriginal = new Array;
