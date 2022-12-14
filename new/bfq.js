@@ -230,12 +230,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951163448406902&auth=298e8e9287313aeb318c99bc9e32a36008211664"
     },
     {
-        title: "みちしるべ",
-        author: "鱼老师",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1379215154&auth=6299063a7104a08085c7d416edc00c678d1ecaf5",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951164228261030&auth=292a819c1788fe0e70e9cf349a485d07a06d8550"
-    },
-    {
         title: "People I Don't Like",
         author: "Upsahl",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1460893478&auth=a882a3c84f69b1968afb573ad9c9aa8b2454d8c1",
