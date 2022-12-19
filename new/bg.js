@@ -199,7 +199,7 @@ function autoSwitch(){
 	document.body.style.backgroundPosition = "center";
 	bgI += 1;
 	img1 = new Image();
-	img1.src = "//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI + 1]].id;
+	img1.src = "//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id;
 }
 function ifSwitch(){
 	if(bgOriginal[0] == bgNum){
