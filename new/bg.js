@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2022.11.22 12:11(GMT+8)
+// Update: 2022.12.19 23:06(GMT+8)
 var bg = [
 	{
 		id: "102940261",
@@ -198,7 +198,7 @@ function autoSwitch(){
 	document.body.style.backgroundSize = "cover";
 	document.body.style.backgroundPosition = "center";
 	bgI += 1;
-	img1 = new Image();
+	var img1 = new Image();
 	img1.src = "//pximg.rainchan.win/img?img_id=" + bg[bgOriginal[bgI]].id;
 }
 function ifSwitch(){
