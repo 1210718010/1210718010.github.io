@@ -1,6 +1,6 @@
 // JavaScript Document
 // Update: 2022.11.22 17:30(GMT+8)
-$("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><div id=\"artist\"><a id=\"title\" href=\"\" target=\"_blank\"><span id=\"bgName\"></span></a></div>");
+$("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><div id=\"artist\"><span id=\"bgName\"><a id=\"title\" href=\"\" target=\"_blank\"></a></span></div>");
 var img = [
 	{
 		id: "101114306",
@@ -212,7 +212,7 @@ setInterval(function(){
 },60000);
 function autoSwitch(){
 	$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//i.pixiv.re/img-original/img/" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
-	document.getElementById("bgName").innerHTML = img[bgOriginal[bgI]].title + " · " + img[bgOriginal[bgI]].artist;
+	document.getElementById("title").innerHTML = img[bgOriginal[bgI]].title + " · " + img[bgOriginal[bgI]].artist;
 	$("#title").attr("href","//www.pixiv.net/artworks/" + img[bgOriginal[bgI]].id);
 	bgI++;
 	$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//i.pixiv.re/img-original/img/" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 0;");
