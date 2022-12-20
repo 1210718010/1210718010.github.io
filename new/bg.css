@@ -11,7 +11,6 @@
 	background: rgba(0,0,0,0);
 	text-align: left;
 	font-size: 15px;
-	cursor: pointer;
 	transform: translate(0%,0%);
 } 
 
@@ -21,6 +20,8 @@
 
 #title {
 	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+	cursor: pointer;
 }
 
 #title:hover {
