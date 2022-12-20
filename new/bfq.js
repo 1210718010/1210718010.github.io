@@ -1,5 +1,8 @@
 // JavaScript Document
-// Update: 2022.11.25 12:50(GMT+8)
+// Update: 2022.12.20 11:08(GMT+8)
+const text = document.createTextNode("&lt;audio id=&quot;music&quot; preload=&quot;auto&quot; onerror=&quot;onError()&quot; &gt;&lt;/audio&gt;&lt;div class=&quot;circle&quot;&gt;&lt;img id=&quot;pic&quot; src=&quot;&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div id=&quot;audio&quot;&gt;&lt;div id=&quot;audio1&quot;&gt;&lt;img id=&quot;stop&quot; alt=&quot;&quot; src=&quot;https://muxmus.com/img/zt.svg&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;divl&quot;&gt;&lt;img id=&quot;last&quot; class=&quot;last1&quot; alt=&quot;&quot; src=&quot;https://muxmus.com/img/last.svg&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;divn&quot;&gt;&lt;img id=&quot;next&quot; class=&quot;next1&quot; alt=&quot;&quot; src=&quot;https://muxmus.com/img/next.svg&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;divu&quot;&gt;&lt;img id=&quot;up&quot; class=&quot;up1&quot; alt=&quot;&quot; src=&quot;https://muxmus.com/img/up.svg&quot; /&gt;&lt;img id=&quot;down&quot; class=&quot;down1&quot; alt=&quot;&quot; src=&quot;https://muxmus.com/img/down.svg&quot; /&gt;&lt;/div&gt;&lt;div class=&quot;divs&quot;&gt;&lt;p id=&quot;songs&quot; class=&quot;song1&quot;&gt;&lt;/p&gt;&lt;p id=&quot;singer&quot; class=&quot;singer1&quot;&gt;&lt;/p&gt;&lt;/div&gt;");
+const pNode = document.getElementById("bfq");
+pNode.appendChild(text);
 var song = [
     {
         title: "There For You",
