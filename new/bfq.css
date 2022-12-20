@@ -108,8 +108,6 @@
 }
 
 .last1:hover {
-	width: 41px;
-	height: 41px;
 	opacity: 1.0;
 }
 
@@ -121,8 +119,6 @@
 }
 
 .next1:hover {
-	width: 41px;
-	height: 41px;
 	opacity: 1.0;
 }
 
@@ -136,7 +132,7 @@
 	transform: translate(-80px,0px);
 }
 
-#audio1 {
+.audio1 {
 	position: fixed;
 	top: 60%;
 	left: 50%;
@@ -146,7 +142,18 @@
 	transform: translate(-25px,-25px);
 }
 
-#stop {
+.audio2 {
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	background: rgba(0,0,0,0);
+	transform: translate(-25px,-25px);
+	opacity: 0;
+}
+
+.stop {
 	width: 40px;
 	height: 40px;
 	opacity: 0.8;
@@ -154,8 +161,6 @@
 }
 
 #stop:hover {
-	width: 41px;
-	height: 41px;
 	opacity: 1.0;
 }
 
