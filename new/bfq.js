@@ -1,6 +1,6 @@
 // JavaScript Document
-// Update: 2022.12.20 11:08(GMT+8)
-$("#bfq").append("<audio id=\"music\" preload=\"auto\" onerror=\"onError()\" ></audio><div class=\"circle\"><img id=\"pic\" src=\"\" /></div><div class=\"line\"></div><div id=\"audio\"><div id=\"audio1\"><img id=\"stop\" alt=\"\" src=\"https://muxmus.com/img/zt.svg\" /></div><div class=\"divl\"><img id=\"last\" class=\"last1\" alt=\"\" src=\"https://muxmus.com/img/last.svg\" /></div><div class=\"divn\"><img id=\"next\" class=\"next1\" alt=\"\" src=\"https://muxmus.com/img/next.svg\" /></div></div><div class=\"divu\"><img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" /><img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" /></div><div class=\"divs\"><p id=\"songs\" class=\"song1\"></p><p id=\"singer\" class=\"singer1\"></p></div>");
+// Update: 2022.12.20 15:09(GMT+8)
+$("#bfq").append("<audio id=\"music\" preload=\"auto\" onerror=\"onError()\" ></audio><div class=\"circle\"><img id=\"pic\" src=\"\" /></div><div class=\"line\"></div><div id=\"audio\"><div id=\"audio1\" class=\"audio1\"><img class=\"stop\" alt=\"\" src=\"https://muxmus.com/img/zt.svg\" /></div><div id=\"audio2\" class=\"audio2\"><img class=\"stop\" alt=\"\" src=\"https://muxmus.com/img/bf.svg\" /></div><div class=\"divl\"><img id=\"last\" class=\"last1\" alt=\"\" src=\"https://muxmus.com/img/last.svg\" /></div><div class=\"divn\"><img id=\"next\" class=\"next1\" alt=\"\" src=\"https://muxmus.com/img/next.svg\" /></div></div><div class=\"divu\"><img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" /><img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" /></div><div class=\"divs\"><p id=\"songs\" class=\"song1\"></p><p id=\"singer\" class=\"singer1\"></p></div>");
 var song = [
     {
         title: "There For You",
@@ -5571,14 +5571,16 @@ original.sort(function(){
     return 0.5 - Math.random();
 });
 $(function(){
-    $("#stop").click(function(){
+    $(".stop").click(function(){
         if(music.paused){
             music.play();
-            $("#stop").attr("src", "/img/bf.svg");
+            $("#audio1").attr("class","audio2");
+            $("#audio2").attr("class","audio1");
             media();
         }else{
             music.pause();
-            $("#stop").attr("src", "/img/zt.svg");
+            $("#audio1").attr("class","audio1");
+            $("#audio2").attr("class","audio2");
         }
     });
 });
@@ -5595,25 +5597,22 @@ $(function(){
     });
 });
 $(function musicClick(){
-    musicPlay();
+    music.src = song[original[i]].url;
+    document.getElementById("pic").src = song[original[i]].pic;
+    document.getElementById("songs").innerHTML = song[original[i]].title;
+    document.getElementById("singer").innerHTML = song[original[i]].author;
+    media();
     music.onended = function(){
         flag = 0;
         nextSong();
         music.play();
-        setTimeout("setFlag()",10000);
     }
     $("#last").click(function(){
         lastSong();
-        if(music.paused){
-            $("#stop").attr("src", "/img/bf.svg");
-        }
         music.play();
     });
     $("#next").click(function(){
         nextSong();
-        if(music.paused){
-            $("#stop").attr("src", "/img/bf.svg");
-        }
         music.play();
     });
 });
@@ -5623,6 +5622,8 @@ function musicPlay(){
     document.getElementById("songs").innerHTML = song[original[i]].title;
     document.getElementById("singer").innerHTML = song[original[i]].author;
     media();
+    $("#audio1").attr("class","audio2");
+    $("#audio2").attr("class","audio1");
 }
 function media(){
     if ('mediaSession' in navigator){
@@ -5633,33 +5634,30 @@ function media(){
         });
         navigator.mediaSession.setActionHandler('play', function(){
             music.play();
-            $("#stop").attr("src", "/img/bf.svg");
+            $("#audio1").attr("class","audio2");
+            $("#audio2").attr("class","audio1");
         });
         navigator.mediaSession.setActionHandler('pause', function(){
             music.pause();
-            $("#stop").attr("src", "/img/zt.svg");
+            $("#audio1").attr("class","audio1");
+            $("#audio2").attr("class","audio2");
         });
         navigator.mediaSession.setActionHandler('stop', function(){
-            $("#stop").attr("src", "/img/zt.svg");
+            $("#audio1").attr("class","audio1");
+            $("#audio2").attr("class","audio2");
         });
         navigator.mediaSession.setActionHandler('nexttrack', function(){
             nextSong();
-            if(music.paused){
-                $("#stop").attr("src", "/img/bf.svg");
-            }
             music.play();
         });
         navigator.mediaSession.setActionHandler('previoustrack', function(){
             lastSong();
-            if(music.paused){
-                $("#stop").attr("src", "/img/bf.svg");
-            }
             music.play();
         });
     }
 }
 function lastSong(){
-    flag = 2;
+    flag = 1;
     i -= 1;
     if(i < 0){
         num = original[0];
@@ -5670,7 +5668,6 @@ function lastSong(){
         i = count;
     }
     musicPlay();
-    setTimeout("setFlag()",10000);
 }
 function ifLast(){
     if(original[count] == num){
@@ -5692,7 +5689,6 @@ function nextSong(){
         i = 0;
     }
     musicPlay();
-    setTimeout("setFlag()",10000);
 }
 function ifNext(){
     if(original[0] == num){
@@ -5705,29 +5701,14 @@ function ifNext(){
 function onError(){
     if(flag == 0){
         nextSong();
-        $("#stop").attr("src", "/img/bf.svg");
         music.play();
-    }
-    if(flag == 2){
-        lastSong();
-        $("#stop").attr("src", "/img/bf.svg");
-        music.play();
+        if (music.paused){
+            $("#audio1").attr("class","audio1");
+            $("#audio2").attr("class","audio2");
+        }
     }
     if(flag == 1){
         lastSong();
         music.play();
-        nextSong();
-        $("#stop").attr("src", "/img/bf.svg");
-        music.play();
     }
-    if(flag == 3){
-        nextSong();
-        music.play();
-        lastSong();
-        $("#stop").attr("src","/img/bf.svg");
-        music.play();
-    }
-}
-function setFlag(){
-    flag += 1;
 }
