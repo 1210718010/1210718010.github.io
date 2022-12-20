@@ -19,3 +19,7 @@
 #bgName {
 	background: rgba(200,200,200,0.6);
 }
+
+#bgName:hover {
+	text-decoration: underline;
+}
