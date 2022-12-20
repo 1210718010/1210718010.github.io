@@ -5030,12 +5030,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951167765268039&auth=0d8bff0789670a004f56a078a3860332886300dd"
     },
     {
-        title: "Love is gone",
-        author: "Pinky P / GhostNote",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1464728778&auth=76980cc5dea7f87ecc0a6a93870b84974191c39d",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165159505358&auth=dde6a2df06af9d8575ec9c61cd14da2cfb3f30fc"
-    },
-    {
         title: "Born to Do",
         author: "Steven Cooper",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=28458116&auth=9c2c2c65ec8aad5de8e18af35ea9e3e2d88502cd",
