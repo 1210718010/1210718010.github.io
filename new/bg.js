@@ -197,19 +197,27 @@ bgOriginal.sort(function(){
 $(function(){
 	autoSwitch();
 });
-setInterval(function(){
-	if(bgI <= bgCount){
-		autoSwitch();
-	}else{
-		bgNum = bgOriginal[bgCount];
-		bgOriginal.sort(function(){
-			return 0.5 - Math.random();
-		});
-		ifSwitch();
-		bgI = 0;
-		autoSwitch();
-	}
-},60000);
+if(document.all){
+    window.attachEvent('onload',secondClick);
+}
+else{
+    window.addEventListener('load',secondClick,false);
+}
+function secondClick(){
+	setInterval(function(){
+		if(bgI <= bgCount){
+			autoSwitch();
+		}else{
+			bgNum = bgOriginal[bgCount];
+			bgOriginal.sort(function(){
+				return 0.5 - Math.random();
+			});
+			ifSwitch();
+			bgI = 0;
+			autoSwitch();
+		}
+	},60000);
+}
 function autoSwitch(){
 	$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//i.pixiv.re/img-original/img/" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
 	document.getElementById("title").innerHTML = img[bgOriginal[bgI]].title + " · " + img[bgOriginal[bgI]].artist;
