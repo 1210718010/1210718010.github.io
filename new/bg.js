@@ -219,11 +219,11 @@ function secondClick(){
 	},60000);
 }
 function autoSwitch(){
-	$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px.s.rainchan.win/img/original/" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
+	$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px.s.rainchan.win/img/original/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
 	document.getElementById("title").innerHTML = img[bgOriginal[bgI]].title + " · " + img[bgOriginal[bgI]].artist;
 	$("#title").attr("href","//www.pixiv.net/artworks/" + img[bgOriginal[bgI]].id);
 	bgI++;
-	$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px.s.rainchan.win/img/original/" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 0;");
+	$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px.s.rainchan.win/img/original/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 0;");
 }
 function ifSwitch(){
 	if(bgOriginal[0] == bgNum){
