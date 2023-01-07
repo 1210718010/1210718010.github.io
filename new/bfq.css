@@ -140,6 +140,7 @@
 	height: 50px;
 	background: rgba(0,0,0,0);
 	transform: translate(-25px,-25px);
+	z-index: 99;
 }
 
 .audio2 {
@@ -150,6 +151,7 @@
 	height: 50px;
 	background: rgba(0,0,0,0);
 	transform: translate(-25px,-25px);
+	z-index: -10;
 	opacity: 0;
 }
 
