@@ -160,7 +160,7 @@
 	cursor: pointer;
 }
 
-#stop:hover {
+.stop:hover {
 	opacity: 1.0;
 }
 
