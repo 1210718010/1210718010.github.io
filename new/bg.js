@@ -193,6 +193,36 @@ var img = [
 		title: "森の遺跡",
 		artist: "mocha",
 		url: "2021/01/19/01/00/24/87148917_p0.png"
+	},
+	{
+		id: "91269619",
+		title: "葉月",
+		artist: "mocha",
+		url: "2021/07/16/00/43/47/91269619_p0.png"
+	},
+	{
+		id: "76752787",
+		title: "ZIPANG",
+		artist: "mocha",
+		url: "2019/09/13/00/42/06/76752787_p0.png"
+	},
+	{
+		id: "84661248",
+		title: "藤重ね",
+		artist: "mocha",
+		url: "2020/09/28/01/06/24/84661248_p0.png"
+	},
+	{
+		id: "85776163",
+		title: "ブルーブルーブルー",
+		artist: "mocha",
+		url: "2020/11/20/01/17/48/85776163_p0.png"
+	},
+	{
+		id: "66337051",
+		title: "天使のはしご",
+		artist: "mocha",
+		url: "2017/12/18/00/56/22/66337051_p0.png"
 	}
 ];
 var bgCount = img.length - 1;
