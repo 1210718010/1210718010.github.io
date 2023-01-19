@@ -181,6 +181,18 @@ var img = [
 		title: "翔鶴",
 		artist: "藤ちょこ（藤原）",
 		url: "2018/09/30/00/03/27/70937229_p0.png"
+	},
+	{
+		id: "85527668",
+		title: "空渡り",
+		artist: "mocha",
+		url: "2020/11/08/00/42/47/85527668_p0.png"
+	},
+	{
+		id: "87148917",
+		title: "森の遺跡",
+		artist: "mocha",
+		url: "2021/01/19/01/00/24/87148917_p0.png"
 	}
 ];
 var bgCount = img.length - 1;
