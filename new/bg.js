@@ -223,6 +223,18 @@ var img = [
 		title: "天使のはしご",
 		artist: "mocha",
 		url: "2017/12/18/00/56/22/66337051_p0.png"
+	},
+	{
+		id: "63450144",
+		title: "no title",
+		artist: "雨陌",
+		url: "2017/06/18/20/05/30/63450144_p0.png"
+	},
+	{
+		id: "88417243",
+		title: "no title",
+		artist: "雨陌",
+		url: "2021/03/13/18/08/24/88417243_p0.png"
 	}
 ];
 var bgCount = img.length - 1;
@@ -262,7 +274,7 @@ function secondClick(){
 }
 function autoSwitch(){
 	$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px2.rainchan.win/img/original/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
-	document.getElementById("title").innerHTML = img[bgOriginal[bgI]].title + " · " + img[bgOriginal[bgI]].artist;
+	document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]] + " | 画师：" + img[bgOriginal[bgI]].artist;
 	$("#title").attr("href","//www.pixiv.net/artworks/" + img[bgOriginal[bgI]].id);
 	bgI++;
 	$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px2.rainchan.win/img/original/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 0;");
