@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2023.1.1 13:33(GMT+8)
+// Update: 2023.1.22 23:00(UTC+8)
 $("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><div id=\"artist\"><span id=\"bgName\"><a id=\"title\" href=\"\" target=\"_blank\"></a></span></div>");
 var img = [
 	{
