@@ -6,7 +6,7 @@
 	top: 100%;
 	left: 100%;
 	z-index: 99;
-	width: 180px;
+	width: 200px;
 	height: 25px;
 	background: rgba(200,200,200,0.6);
 	color: #000;
@@ -14,7 +14,7 @@
 	font-size: 18px;
 	opacity: 0.8;
 	cursor: default;
-	transform: translate(-200px,-45px);
+	transform: translate(-220px,-45px);
 	box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.6);
 	border-radius: 10px;
 }
