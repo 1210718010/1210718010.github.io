@@ -1671,12 +1671,6 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165946294003&auth=6fbc6d5cb5f32005ef21d2a2a33a6dd65bf6f09d"
     },
     {
-        title: "Bad Apple!! feat. nomico",
-        author: "Roselia",
-        url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1433323875&auth=d458e5a1034421833eba0d8580cec0a336b3dbf0",
-        pic: "https://api.i-meto.com/meting/api?server=netease&type=pic&id=109951165809231238&auth=04ea43a9aded162b1e42b83d6b6c4a8db786189a"
-    },
-    {
         title: "forget-me-not",
         author: "ReoNa",
         url: "https://api.i-meto.com/meting/api?server=netease&type=url&id=1343835014&auth=628ef265e717de042184e3526ce1e28ac5785b42",
