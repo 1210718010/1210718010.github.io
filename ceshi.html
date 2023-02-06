@@ -1,20 +1,25 @@
-<!doctype html>
-<html lang="zh-CN">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Hello World</title>
-		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-	</head>
-	<body>
-		<div id="aplayer"></div>
-		<meting-js
-		server="netease"
-		type="playlist"
-		id="7610708927">
-		</meting-js>
-	</body>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>测试页面</title>
+    <link rel="stylesheet" href="https://unpkg.com/aplayer/dist/APlayer.min.css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/aplayer/dist/APlayer.min.js"></script>
+    <script>
+        var meting_api = 'api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+    </script>
+    <script src="https://unpkg.com/@xizeyoupan/meting@latest/dist/Meting.min.js"></script>
+
+    <div>qq歌单
+    <meting-js server="tencent" type="playlist" id="860721878" />
+    </div>
+</body>
+
 </html>
