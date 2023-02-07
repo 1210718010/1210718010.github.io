@@ -258,7 +258,7 @@ else{
     window.addEventListener('load',secondClick,false);
 }
 function secondClick(){
-	var myVar=setInterval(function(){myTimer()},60000);
+	var myVar=setInterval(function(){myTimer()},5000);
 }
 function myTimer(){
 	if(bgI <= bgCount){
