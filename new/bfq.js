@@ -6409,6 +6409,12 @@ $(function(){
 			$("#big").attr("class","bigM");
 		}
 	});
+	$('#big').on('mouseleave',function(){
+		if(flag2 == 1){
+			$("#pic").attr("class","pic");
+			$("#big").attr("class","big0");
+		}
+	});
 	$("#blog").click(function(){
 		flag2 = 1;
 		$("#bfq").attr("class","bfq0");
@@ -6418,12 +6424,6 @@ $(function(){
 		$(".divu").attr("class","divu0");
 		$("#small").attr("class","small0");
 		$("#big").attr("class","big0");
-	});
-	$('#big').on('mouseleave',function(){
-		if(flag2 == 1){
-			$("#pic").attr("class","pic");
-			$("#big").attr("class","big0");
-		}
 	});
 });
 $(function(){
