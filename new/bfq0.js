@@ -6415,6 +6415,17 @@ $(function(){
 			$("#big").attr("class","big0");
 		}
 	});
+	$("#blog").click(function(){
+		flag2 = 0;
+		$("#bfq").attr("class","bfq");
+		$("#pic").attr("class","pic");
+		$(".line0").attr("class","line");
+		$(".divs0").attr("class","divs");
+		$("#audio").attr("class","audio");
+		$(".divu0").attr("class","divu");
+		$("#small").attr("class","small");
+		$("#big").attr("class","big");
+	});
 });
 $(function(){
     $(".stop").click(function(){
