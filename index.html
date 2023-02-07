@@ -4,22 +4,45 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<meta name="description" content="木辛木杉的个人网站和博客，会时不时放一些平时出去玩拍的照片，偶尔会发一些写的代码，欢迎访问！">
+		<meta name="description" content="某不知名高中生的个人网站和博客，会时不时放一些平时出去玩拍的照片，偶尔会发一些写的代码，欢迎访问！">
 		<title>木辛木杉</title>
 		<link rel="shortcut icon" type="image/x-icon" href="https://muxmus.com/favicon.ico">
 		<link rel="stylesheet" href="/new/main.css">
 		<link rel="stylesheet" href="/new/bfq.css">
 		<link rel="stylesheet" href="/new/bg.css">
+		<link rel="stylesheet" href="/css/github-dark.min.css">
 		<script src="/js/jquery-3.6.0.min.js"></script>
+		<script src="/js/jquery.pjax.js"></script>
+		<script src="/js/highlight.min.js"></script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).on('ready pjax:end', function(event) {
+				var bbb = $('#bbb');
+				var ccc = $('#ccc');
+				var slider = $('#slider');
+				bbb.click(function(){
+					slider.animate({right:0},500);
+					bbb.attr("class","gb");
+					ccc.attr("class","dk");
+				});
+				ccc.click(function(){
+					slider.animate({right:-350},500);
+					ccc.attr("class","gb");
+					bbb.attr("class","dk");
+				});
+				hljs.highlightAll();
+			});
+			hljs.highlightAll();
+		</script>
 	</head>
 	<body>
 		<div id="main-content">
 			<div class="divz">
-				<h1><a href="" title="木辛木杉"><em class="title">木辛木杉</em></a></h1>
+				<h1><a date-pjax href="" title="木辛木杉"><em class="title">木辛木杉</em></a></h1>
 				<p>
 					<a href="/info/" target="_blank"><em>个人</em></a>
 					&nbsp;<strong>|</strong>&nbsp;
-					<a href="/blog/" target="_blank"><em>博客</em></a>
+					<a date-pjax href="/blog/"><em>博客</em></a>
 					&nbsp;<strong>|</strong>&nbsp;
 					<a href="/map/" target="_blank"><em>目录</em></a>
 					&nbsp;<strong>|</strong>&nbsp;
