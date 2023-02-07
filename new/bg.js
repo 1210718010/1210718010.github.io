@@ -258,7 +258,7 @@ else{
     window.addEventListener('load',secondClick,false);
 }
 function secondClick(){
-	var myVar=setInterval(function(){myTimer()},5000);
+	var myVar = setInterval(function(){myTimer()},5000);
 }
 function myTimer(){
 	if(bgI <= bgCount){
@@ -273,11 +273,11 @@ function myTimer(){
 		autoSwitch();
 	}
 }
-document.addEventListener('visibilitychange',function(){
-	if(document.hidden){
+document.addEventListener("visibilitychange",function(){
+	if(document.visibilityState === 'visible'){
 		clearInterval(myVar);
 	}else{
-		secondClick()
+		secondClick();
 	}
 });
 function autoSwitch(){
