@@ -80,7 +80,7 @@ code {
 	border-style: solid;
 	border-width: 0px;
 	border-radius: 40px;
-	background-color: rgba(111,127,105,0.7);
+	background-color: rgba(200,200,200,0.7);
 	color: rgba(0,0,0,0.8);
 }
 
@@ -240,8 +240,9 @@ code {
 	right: -350px;
 	bottom: 0;
 	width: 350px;
-	background-color: rgba(71,87,65,0.8);
+	background-color: rgba(80,80,80,0.8);
 	transition: right 0.1s;
 	overflow-x: hidden;
 	overflow-y: auto;
+	z-index: 80;
 }
