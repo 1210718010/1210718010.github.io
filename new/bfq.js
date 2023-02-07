@@ -6409,6 +6409,16 @@ $(function(){
 			$("#big").attr("class","bigM");
 		}
 	});
+	$("#blog").click(function(){
+		flag2 = 1;
+		$("#bfq").attr("class","bfq0");
+		$(".line").attr("class","line0");
+		$(".divs").attr("class","divs0");
+		$("#audio").attr("class","audio0");
+		$(".divu").attr("class","divu0");
+		$("#small").attr("class","small0");
+		$("#big").attr("class","big0");
+	});
 	$('#big').on('mouseleave',function(){
 		if(flag2 == 1){
 			$("#pic").attr("class","pic");
