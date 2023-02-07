@@ -13,14 +13,6 @@
 		<script src="/js/jquery.pjax.js"></script>
 		<script src="/js/highlight.min.js"></script>
 		<script>
-			flag2 = 1;
-			$("#bfq").attr("class","bfq0");
-			$(".line").attr("class","line0");
-			$(".divs").attr("class","divs0");
-			$("#audio").attr("class","audio0");
-			$(".divu").attr("class","divu0");
-			$("#small").attr("class","small0");
-			$("#big").attr("class","big0");
 			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
 			$(document).on('ready pjax:end', function(event) {
 				var bbb = $('#bbb');
@@ -94,5 +86,15 @@
 		<script src="/new/bg.js"></script>
 		<div id="bfq" class="bfq"></div>
 		<script src="/new/bfq.js"></script>
+		<script>
+			flag2 = 1;
+			$("#bfq").attr("class","bfq0");
+			$(".line").attr("class","line0");
+			$(".divs").attr("class","divs0");
+			$("#audio").attr("class","audio0");
+			$(".divu").attr("class","divu0");
+			$("#small").attr("class","small0");
+			$("#big").attr("class","big0");
+		</script>
 	</body>
 </html>
