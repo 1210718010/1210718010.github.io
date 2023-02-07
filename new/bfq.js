@@ -1,6 +1,6 @@
 // JavaScript Document
-// Update: 2023.02.07 17:17(GMT+8)
-$("#bfq").append("<audio id=\"music\" preload=\"auto\" onerror=\"onError()\" ></audio><div class=\"circle\"><img id=\"pic\" src=\"\" /></div><div class=\"line\"></div><div id=\"audio\"><div id=\"audio1\" class=\"audio1\"><img class=\"stop\" alt=\"\" src=\"https://muxmus.com/img/zt.svg\" /></div><div id=\"audio2\" class=\"audio2\"><img class=\"stop\" alt=\"\" src=\"https://muxmus.com/img/bf.svg\" /></div><div class=\"divl\"><img id=\"last\" class=\"last1\" alt=\"\" src=\"https://muxmus.com/img/last.svg\" /></div><div class=\"divn\"><img id=\"next\" class=\"next1\" alt=\"\" src=\"https://muxmus.com/img/next.svg\" /></div></div><div class=\"divu\"><img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" /><img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" /></div><div class=\"divs\"><p id=\"songs\" class=\"song1\"></p><p id=\"singer\" class=\"singer1\"></p></div>");
+// Update: 2023.02.07 21:29(UTC+8)
+$("#bfq").append("<audio id=\"music\" preload=\"auto\" onerror=\"onError()\" ></audio><div class=\"circle\"><img id=\"pic\" class=\"pic\" src=\"\" /></div><div class=\"line\"></div><div id=\"audio\" class=\"audio\"><div id=\"audio1\" class=\"audio1\"><img class=\"stop\" alt=\"\" src=\"https://muxmus.com/img/zt.svg\" /></div><div id=\"audio2\" class=\"audio2\"><img class=\"stop\" alt=\"\" src=\"https://muxmus.com/img/bf.svg\" /></div><div class=\"divl\"><img id=\"last\" class=\"last1\" alt=\"\" src=\"https://muxmus.com/img/last.svg\" /></div><div class=\"divn\"><img id=\"next\" class=\"next1\" alt=\"\" src=\"https://muxmus.com/img/next.svg\" /></div></div><div class=\"divu\"><img id=\"up\" class=\"up1\" alt=\"\" src=\"https://muxmus.com/img/up.svg\" /><img id=\"down\" class=\"down1\" alt=\"\" src=\"https://muxmus.com/img/down.svg\" /></div><div class=\"divs\"><p id=\"songs\" class=\"song1\"></p><p id=\"singer\" class=\"singer1\"></p></div><div id=\"small\" class=\"small\"><img alt=\"\" src=\"https://muxmus.com/img/small.svg\" /></div><div id=\"big\" class=\"big\"><img alt=\"\" src=\"https://muxmus.com/img/big.svg\" /></div>");
 var song = [
     {
         title: "阳光开朗大男孩",
@@ -4329,7 +4329,7 @@ var song = [
         pic: "https://api.i-meto.com/meting/api?server=tencent&type=pic&id=002if7UF4RpVpM&auth=ff251d3d676c60eb36990c02ea6fd7ba310c1fce"
     },
     {
-        title: "La gloire à mes genoux",
+        title: "La gloire à mes genoux",
         author: "Le Rouge Et Le Noir",
         url: "https://api.i-meto.com/meting/api?server=tencent&type=url&id=000e2sWi0OYDTX&auth=f5a1272b9984565be51ee4450ae925fd0c6a8efa",
         pic: "https://api.i-meto.com/meting/api?server=tencent&type=pic&id=004f2uix1n9hCv&auth=6c198c4a526b03315403abb208b32d88c445ff35"
@@ -5428,7 +5428,7 @@ var song = [
     },
     {
         title: "Will I Make It Out Alive",
-        author: "tofû / Tommee Profitt",
+        author: "tofû / Tommee Profitt",
         url: "https://api.i-meto.com/meting/api?server=tencent&type=url&id=0026DtOl2EOOhB&auth=ded9377bc1053e83e9a0c5e6fa13dde9752d5ae3",
         pic: "https://api.i-meto.com/meting/api?server=tencent&type=pic&id=003hqpMy1WyLv4&auth=9d8084c50beb2eb37f4e0b36d733375008404c2d"
     },
@@ -6374,11 +6374,47 @@ var original = new Array;
 var i = 0;
 var num = 0;
 var flag = 0;
+var flag2 = 0;
 for (var j = 0; j <= count; j++){
     original[j] = j;
 }
 original.sort(function(){
     return 0.5 - Math.random();
+});
+$(function(){
+	$("#small").click(function(){
+		flag2 = 1;
+		$("#bfq").attr("class","bfq0");
+		$(".line").attr("class","line0");
+		$(".divs").attr("class","divs0");
+		$("#audio").attr("class","audio0");
+		$(".divu").attr("class","divu0");
+		$("#small").attr("class","small0");
+		$("#big").attr("class","big0");
+	});
+	$("#big").click(function(){
+		flag2 = 0;
+		$("#bfq").attr("class","bfq");
+		$("#pic").attr("class","pic");
+		$(".line0").attr("class","line");
+		$(".divs0").attr("class","divs");
+		$("#audio").attr("class","audio");
+		$(".divu0").attr("class","divu");
+		$("#small").attr("class","small");
+		$("#big").attr("class","big");
+	});
+	$('#big').on('mouseenter',function(){
+		if(flag2 == 1){
+			$("#pic").attr("class","pic0");
+			$("#big").attr("class","bigM");
+		}
+	});
+	$('#big').on('mouseleave',function(){
+		if(flag2 == 1){
+			$("#pic").attr("class","pic");
+			$("#big").attr("class","big0");
+		}
+	});
 });
 $(function(){
     $(".stop").click(function(){
