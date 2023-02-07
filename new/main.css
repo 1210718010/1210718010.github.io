@@ -200,7 +200,7 @@ code {
 	z-index: 99;
 	width: 40px;
 	height: 40px;
-	background: rgba(0,0,0,0.00);
+	background: rgba(200,200,200,0.5);
 	transform: translate(-60px,20px);
 }
 
