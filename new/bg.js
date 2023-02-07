@@ -259,6 +259,13 @@ else{
 }
 function secondClick(){
 	var myVar = setInterval(function(){myTimer()},5000);
+	document.addEventListener("visibilitychange",function(){
+		if(document.visibilityState === 'visible'){
+			clearInterval(myVar);
+		}else{
+			secondClick();
+		}
+	});
 }
 function myTimer(){
 	if(bgI <= bgCount){
@@ -273,13 +280,6 @@ function myTimer(){
 		autoSwitch();
 	}
 }
-document.addEventListener("visibilitychange",function(){
-	if(document.visibilityState === 'visible'){
-		clearInterval(myVar);
-	}else{
-		secondClick();
-	}
-});
 function autoSwitch(){
 	$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"//px2.rainchan.win/img/original/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
 	document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
