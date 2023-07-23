@@ -47,6 +47,10 @@ em:not(.title):hover {
 	text-decoration: underline;
 }
 
+em .title :hover {
+	text-decoration: none;
+}
+
 code {
 	font-size: 17px;
 }
