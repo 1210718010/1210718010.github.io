@@ -51,6 +51,7 @@ em:not(.title):hover {
 
 em .title :hover {
 	text-decoration: none;
+}
 
 code {
 	font-size: 17px;
