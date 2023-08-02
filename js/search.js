@@ -2,12 +2,12 @@
 document.write("<div class=\"divm\">");
 document.write("	<input type=\"text\" value=\"\" id=\"search\" />");
 document.write("	<div class=\"divin\">");
-document.write("		<img onClick=\"getinput()\" alt=\"搜索\" id=\"ss\" src=\"/img/search.svg\" />");
+document.write("		<img onClick=\"getinput()\" alt=\"搜索\" id=\"ss\" src=\"https://muxmus.com/img/search.svg\" />");
 document.write("	</div>");
 document.write("</div>");
 function getinput(){
 	var con = document.getElementById('search').value;
-	window.location.href=("//cn.bing.com/search?q=" + con);
+	window.location.href=("https://cn.bing.com/search?q=" + con);
 }
 $("#search").bind("keydown",function(e){
 	let theEvent = e || window.event;
