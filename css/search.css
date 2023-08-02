@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+body {
+	background-color: black;
+	font-family: "LXGW WenKai Screen", sans-serif;
+}
+
 .divm {
 	position: fixed;
 	top: 50%;
