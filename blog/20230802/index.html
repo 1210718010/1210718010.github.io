@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>低仿pixiv自动轮播背景 ~ 木辛木杉</title>
+		<link rel="shortcut icon" type="image/x-icon" href="https://muxmus.com/favicon.ico">
+		<link rel="stylesheet" href="https://muxmus.com/css/main.css">
+		<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
+		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
+		<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<script src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js"></script>
+		<script src="https://muxmus.com/js/highlight.min.js"></script>
+		<script>
+			$(document).pjax('a[date-pjax]', '#main-content', {
+				fragment: '#main-content', timeout: '60000'
+			});
+			$(document).on('ready pjax:end', function(event) {
+				var bbb = $('#bbb');
+				var ccc = $('#ccc');
+				var slider = $('#slider');
+				bbb.click(function(){
+					slider.animate({right:0},500);
+					bbb.attr("class","gb");
+					ccc.attr("class","dk");
+				});
+				ccc.click(function(){
+					slider.animate({right:-350},500);
+					ccc.attr("class","gb");
+					bbb.attr("class","dk");
+				});
+				hljs.highlightAll();
+			});
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body>
+		<div id="main-content">
+			<div class="divm text-left">
+				<div id="back">
+					<a date-pjax href="https://muxmus.com">返回首页</a>
+				</div>
+				<br>
+				<br>
+				<h2>低仿pixiv自动轮播背景</h2>
+				<p class="date">2023.08.02 10:05</p>
+				<br>
+				<p>svg图都是去<a class="lianJie" target="_blank" href="https://www.iconfont.cn/">阿里的图标库</a>里找的</p>
+				<p>需要引用<a class="lianJie" target="_blank" href="https://jquery.com/">jQuery</a></p>
+				<br>
+				<div class="tuPian">
+					<a target="_blank" href="https://img.vipkidstatic.com/int/im/kr/8a7a44cd-4f8a-4570-83be-5cbcddf9b66f.png"><img class="heng" src="https://img.vipkidstatic.com/int/im/kr/8a7a44cd-4f8a-4570-83be-5cbcddf9b66f.png" alt="" /></a>
+				</div>
+				<br>
+				<a class="lianJie" target="_blank" href="./demo.html">Demo</a>
+				<br>
+				<br>
+				<a class="lianJie" target="_blank" href="https://github.com/1210718010/1210718010.github.io/blob/master/css/bg.css">bg.css</a>
+				<br>
+				<a class="lianJie" target="_blank" href="https://github.com/1210718010/1210718010.github.io/blob/master/js/bg.js">bg.js</a>
+				<br>
+				<br>
+				<pre><code class="language-html">
+&ltlink rel="stylesheet" href="https://muxmus.com/css/bg.css"&gt
+&ltscript src="https://muxmus.com/js/jquery-3.6.0.min.js"&gt&lt/script&gt
+
+&ltdiv id="bg"&gt&lt/div&gt
+&ltscript src="https://muxmus.com/js/bg.js"&gt&lt/script&gt
+				</code></pre>
+				<p class="zhuShi">ps：bg.js文件可能需要引用在&lt/div&gt的后面</p>
+				<p class="zhuShi">ps：下面的示例直接使用的pixiv的图片，可自行改用代理，或其他图片</p>
+				<pre><code class="language-js">
+// JavaScript Document
+$("#bg").append("&ltdiv id=\"bg1\"&gt&lt/div&gt&ltdiv id=\"bg2\"&gt&lt/div&gt&ltdiv id=\"artist\"&gt&ltspan id=\"bgName\"&gt&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&ltimg id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" &gt&ltimg id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" &gt&ltimg id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" &gt&ltimg id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" &gt&lta id=\"title\" href=\"\" target=\"_blank\"&gt&lt/a&gt&lt/span&gt&lt/div&gt&ltdiv class=\"left\"&gt&ltdiv class=\"left1\"&gt&ltsvg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"&gt&ltpath d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"&gt&lt/path&gt&lt/svg&gt&lt/div&gt&lt/div&gt&ltdiv class=\"right\"&gt&ltdiv class=\"right1\"&gt&ltsvg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"&gt&ltpath d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"&gt&lt/path&gt&lt/svg&gt&lt/div&gt&lt/div&gt");
+var img = [
+	{
+		id: "34844544",  \\这里放p站作品id
+		title: "星月夜",  \\这里放作品名称
+		artist: "c7肘",  \\这里放作品画师
+		url: "2013/04/07/01/53/07/34844544_p0.jpg"  \\这里放p站作品原图后面那一长串
+	},
+	{
+		id: "id",
+		title: "title",
+		artist: "artist",
+		url: "url"
+	},
+	...
+];
+var bgCount = img.length - 1;
+var bgOriginal = new Array;
+var bgI = 0;
+var bgNum = 0;
+var bgFlag = 0;
+var lastFlag = 0;
+for (var bgJ = 0; bgJ <= bgCount; bgJ++){
+    bgOriginal[bgJ] = bgJ;
+}
+bgOriginal.sort(function(){
+    return 0.5 - Math.random();
+});
+function secondClick(){
+	var timer = setInterval(function(){
+		nextSwitch();
+	},60000);
+	$("#bf").click(function(){
+    	 $("#bf").attr("class","zt");
+    	 $("#zt").attr("class","bf");
+    	 clearInterval(timer);
+    });
+    $("#zt").click(function(){
+    	 $("#bf").attr("class","bf");
+    	 $("#zt").attr("class","zt");
+    	 secondClick();
+    });
+}
+function nextSwitch(){
+	if(bgI <= bgCount){
+		autoSwitch();
+	}else{
+		bgNum = bgOriginal[bgCount];
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifNext();
+		bgI = 0;
+		autoSwitch();
+	}
+}
+function lastSwitch(){
+	if(bgI >= 2){
+		bgI -= 2;
+		autoSwitch();
+	}else{
+		bgNum = bgOriginal[0];
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifLast();
+		bgI = bgCount;
+		autoSwitch();
+	}
+}
+function autoSwitch(){
+	if(bgFlag == 0){
+		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://i.pximg.net/img-original/img/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
+		document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
+	}else{
+		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://i.pximg.net/img-original/img/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: 119; opacity: 1;");
+		document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
+	}
+	$("#title").attr("href","https://www.pixiv.net/artworks/" + img[bgOriginal[bgI]].id);
+	if(bgI < bgCount){
+		bgI += 1;
+		$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://i.pximg.net/img-original/img/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -11; opacity: 0;");
+	}else{
+		bgI += 1;
+	}
+}
+function ifNext(){
+	if(bgOriginal[0] == bgNum){
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifNext();
+	}
+}
+function ifLast(){
+	if(bgOriginal[bgCount] == bgNum){
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		ifLast();
+	}
+}
+$(function(){
+	autoSwitch();
+});
+if(document.all){
+    window.attachEvent('onload',secondClick);
+}
+else{
+    window.addEventListener('load',secondClick,false);
+}
+$(function(){
+    $("#yc").click(function(){
+    	$("#yc").attr("class","xs");
+    	$("#xs").attr("class","yc");
+    	document.getElementById("bg1").style.zIndex = "119";
+    	bgFlag = 1;
+    });
+    $("#xs").click(function(){
+    	$("#yc").attr("class","yc");
+    	$("#xs").attr("class","xs");
+    	document.getElementById("bg1").style.zIndex = "-10";
+    	bgFlag = 0;
+    });
+    $(".left").click(function(){
+    	lastSwitch();
+    });
+    $(".right").click(function(){
+    	nextSwitch();
+    });
+});
+				</code></pre>
+				<br>
+			</div>
+		</div>
+		<div id="cbl"></div>
+		<script src="https://muxmus.com/js/cbl.js"></script>
+		<meting-js
+			server="tencent"
+			type="playlist"
+			id="860721878"
+			fixed="true"
+			theme="#8E8CD8"
+			order="random"
+			volume="0.3">
+		</meting-js>
+		<div id="bg"></div>
+		<script src="https://muxmus.com/js/bg.js"></script>
+	</body>
+</html>
