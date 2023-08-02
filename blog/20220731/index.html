@@ -4,15 +4,19 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>自制网页js音乐播放器 ~ 博客 ~ 木辛木杉</title>
-		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-		<link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="/css/bfq.css">
-		<link rel="stylesheet" href="/css/github-dark.min.css">
-		<script src="/js/jquery-3.6.0.min.js"></script>
-		<script src="/js/jquery.pjax.js"></script>
-		<script src="/js/highlight.min.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="https://muxmus.com/favicon.ico">
+		<link rel="stylesheet" href="https://muxmus.com/css/main.css">
+		<link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.1.0/style.css" />
+		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
+		<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<script src="https://unpkg.com/meting@2.0.1/dist/Meting.min.js"></script>
+		<script src="https://muxmus.com/js/highlight.min.js"></script>
 		<script>
-			$(document).pjax('a[date-pjax]', '#main-content', {fragment: '#main-content', timeout: '10000'});
+			$(document).pjax('a[date-pjax]', '#main-content', {
+				fragment: '#main-content', timeout: '60000'
+			});
 			$(document).on('ready pjax:end', function(event) {
 				var bbb = $('#bbb');
 				var ccc = $('#ccc');
@@ -32,9 +36,14 @@
 			hljs.highlightAll();
 		</script>
 	</head>
-	<body bgcolor="#97a791">
+	<body>
 		<div id="main-content">
-			<div class="divm">
+			<div class="divm text-left">
+				<div id="back">
+					<a date-pjax href="https://muxmus.com">返回首页</a>
+				</div>
+				<br>
+				<br>
 				<h2>自制网页js音乐播放器</h2>
 				<p class="date">2022.07.31 13:23</p>
 				<br>
@@ -306,32 +315,21 @@ $(function(){
 });
 //调整音量
 				</code></pre>
+				<br>
 			</div>
-			<div id="slider">
-				<img class="tx" src="/img/bk_8.png" alt="" />
-				<div class="js">
-					<br>
-					<p><a date-pjax href="/blog/">返回目录</a></p>
-					<br>
-					<p>[置顶] 自制网页js音乐播放器</p>
-					<p><a date-pjax href="/blog/20220912/">中秋节拍月亮，结果还拍到了木星</a></p>
-					<p><a date-pjax href="/blog/20220731-5/">将自己的网址当成短链来使用</a></p>
-					<p><a date-pjax href="/blog/20220731-4/">js复制时自动添加版权声明</a></p>
-					<p><a date-pjax href="/blog/20220731-3/">js在网页中显示当前时间</a></p>
-					<p><a date-pjax href="/blog/20220731-2/">js自制一个带有搜索框的主页</a></p>
-					<p><a date-pjax href="/blog/20220727-2/">天台山</a></p>
-					<p><a date-pjax href="/blog/20220727/">中华大扁锹饲养日志</a></p>
-				</div>
-			</div>
-			<div class="dk" id="bbb">
-				<img class="cd" alt="" src="/img/cd.svg" />
-			</div>
-			<div class="gb" id="ccc">
-				<img class="cd" alt="" src="/img/gb.svg" />
-			</div>
-			<script src="/js/cbl.js"></script>
-			<script src="/js/link.js"></script>
 		</div>
-		<script src="//cdn.jsdelivr.net/gh/1210718010/1210718010.github.io@master/js/bfq.js"></script>
+		<div id="cbl"></div>
+		<script src="https://muxmus.com/js/cbl.js"></script>
+		<meting-js
+			server="tencent"
+			type="playlist"
+			id="860721878"
+			fixed="true"
+			theme="#8E8CD8"
+			order="random"
+			volume="0.3">
+		</meting-js>
+		<div id="bg"></div>
+		<script src="https://muxmus.com/js/bg.js"></script>
 	</body>
 </html>
