@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+.divb {
+	position: fixed;
+	top: 100%;
+	left: 0%;
+	z-index: 2;
+	width: 80px;
+	height: 60px;
+	background: rgba(0,0,0,0.00);
+	cursor: default;
+	transform: translate(10px,-70px);
+}
+
+.divn {
+	position: fixed;
+	top: 100%;
+	left: 0%;
+	width: 25px;
+	height: 25px;
+	background: rgba(0,0,0,0.00);
+	transform: translate(50px,-30px);
+}
+
+.divs {
+	position: fixed;
+	top: 100%;
+	left: 0%;
+	z-index: 1;
+	width: 500px;
+	height: 20px;
+	background: rgba(0,0,0,0.00);
+	transform: translate(60px,-54px);
+}
+
+.song1 {
+	z-index: 0;
+	color: #000;
+	font-size: 15px;
+	opacity: 0.7;
+	cursor: default;
+}
+
+.song2 {
+	z-index: -1;
+	color: #000;
+	font-size: 15px;
+	opacity: 0;
+	cursor: default;
+}
+
+.up1 {
+	z-index: -1;
+	width: 17px;
+	height: 17px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.up2 {
+	z-index: 0;
+	width: 17px;
+	height: 17px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.up2:hover {
+	opacity: 1.0;
+}
+
+.down1 {
+	z-index: -1;
+	width: 17px;
+	height: 17px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.down2 {
+	z-index: 0;
+	width: 17px;
+	height: 17px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.down2:hover {
+	opacity: 1.0;
+}
+
+.next1 {
+	z-index: -1;
+	width: 25px;
+	height: 25px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.next2 {
+	z-index: 0;
+	width: 25px;
+	height: 25px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.next2:hover {
+	opacity: 1.0;
+}
+
+#audio {
+	cursor: pointer;
+}
+
+#stop {
+	width: 40px;
+	height: 40px;
+	opacity: 0.8;
+}
+
+#stop:hover {
+	opacity: 1.0;
+}
