@@ -4,6 +4,9 @@
             <loc>https://muxmus.com/</loc>
       </url>
       <url>
+            <loc>https://muxmus.com/tab/</loc>
+      </url>
+      <url>
             <loc>https://muxmus.com/blog/</loc>
       </url>
       <url>
@@ -13,22 +16,7 @@
             <loc>https://muxmus.com/map/</loc>
       </url>
       <url>
-            <loc>https://muxmus.com/tab/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/blog/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/blog/20201225/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/blog/20210601/</loc>
-      </url>
-      <url>
             <loc>https://muxmus.com/blog/20220727/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/blog/20220727-2/</loc>
       </url>
       <url>
             <loc>https://muxmus.com/blog/20220731/</loc>
@@ -37,15 +25,9 @@
             <loc>https://muxmus.com/blog/20220731-2/</loc>
       </url>
       <url>
-            <loc>https://muxmus.com/blog/20220731-3/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/blog/20220731-4/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/blog/20220731-5/</loc>
-      </url>
-      <url>
             <loc>https://muxmus.com/blog/20220912/</loc>
+      </url>
+      <url>
+            <loc>https://muxmus.com/blog/20230802/</loc>
       </url>
 </urlset>
