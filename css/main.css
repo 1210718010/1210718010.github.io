@@ -49,6 +49,11 @@ em:not(.title):hover {
 	text-decoration: underline;
 }
 
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 code {
 	font-size: 17px;
 }
