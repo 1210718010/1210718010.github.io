@@ -2,7 +2,8 @@
 /* CSS Document */
 
 body {
-	background-image: url(/img/texture.png);
+	background-image: url(https://muxmus.com/img/texture.png);
+	font-family: "LXGW WenKai Screen", sans-serif;
 }
 
 a {
