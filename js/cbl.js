@@ -26,7 +26,7 @@ $(function(){
 		input.value = text;
 		input.select();
 		document.execCommand("copy");
-		alert("复制成功 " + text);
+		alert("复制成功 原神 " + text);
 	});
 	$("#textKlbq").click(function(){
 		var text = $("#textKlbq").attr("alt");
@@ -34,15 +34,7 @@ $(function(){
 		input.value = text;
 		input.select();
 		document.execCommand("copy");
-		alert("复制成功 " + text);
-	});
-	$("#text19").click(function(){
-		var text = $("#text19").attr("alt");
-		var input = document.getElementById("input");
-		input.value = text;
-		input.select();
-		document.execCommand("copy");
-		alert("复制成功 " + text);
+		alert("复制成功 卡拉彼丘 " + text);
 	});
 	$("#textDz").click(function(){
 		var text = $("#textDz").attr("alt");
@@ -50,6 +42,14 @@ $(function(){
 		input.value = text;
 		input.select();
 		document.execCommand("copy");
-		alert("复制成功 " + text);
+		alert("复制成功 蛋仔派对 " + text);
+	});
+	$("#text19").click(function(){
+		var text = $("#text19").attr("alt");
+		var input = document.getElementById("input");
+		input.value = text;
+		input.select();
+		document.execCommand("copy");
+		alert("复制成功 重返未来：1999 " + text);
 	});
 });
