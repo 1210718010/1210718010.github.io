@@ -1,7 +1,19 @@
 // JavaScript Document
-// Update: 2024.1.7 21:41(UTC+8)
+// Update: 2024.1.7 22:49(UTC+8)
 $("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><div id=\"artist\"><span id=\"bgName\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" ><img id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" ><img id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" ><img id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" ><a id=\"title\" href=\"\" target=\"_blank\"></a></span></div><div class=\"left\"><div class=\"left1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div><div class=\"right\"><div class=\"right1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div>");
 var img = [
+	{
+		id: "84603466",
+		title: "VISIONS",
+		artist: "米山舞",
+		url: "2020/09/25/19/55/14/84603466_p0.jpg"
+	},
+	{
+		id: "93596357",
+		title: "esc.006",
+		artist: "米山舞",
+		url: "2021/10/22/00/13/46/93596357_p0.jpg"
+	},
 	{
 		id: "70059505",
 		title: "受験生の夏",
@@ -67,18 +79,6 @@ var img = [
 		title: "遅刻魔女",
 		artist: "くっか",
 		url: "2020/05/29/21/26/43/81943456_p0.jpg"
-	},
-	{
-		id: "82528811",
-		title: "熱帯金魚",
-		artist: "トーコ",
-		url: "2020/06/24/08/29/37/82528811_p0.jpg"
-	},
-	{
-		id: "88823878",
-		title: "記憶",
-		artist: "トーコ",
-		url: "2021/03/31/06/21/47/88823878_p0.jpg"
 	},
 	{
 		id: "67101372",
@@ -169,7 +169,116 @@ var img = [
 		title: "",
 		artist: "雨陌",
 		url: "2021/05/28/18/15/12/90149890_p0.png"
-	}
+	},
+	{
+		id: "109010006",
+		title: "Oh, Rain shower",
+		artist: "コウ乃トリ",
+		url: "2023/06/14/19/42/36/109010006_p0.png"
+	},
+	{
+		id: "93187055",
+		title: "FES Time Memories",
+		artist: "Csyday",
+		url: "2021/10/03/07/32/45/93187055_p0.jpg"
+	},
+	{
+		id: "104289966",
+		title: "雪が降ってきた！",
+		artist: "紺屋鴉江",
+		url: "2023/01/06/20/08/57/104289966_p0.jpg"
+	},
+	{
+		id: "86644511",
+		title: "原神印象图",
+		artist: "zi13591",
+		url: "2020/12/30/13/15/59/86644511_p3.jpg"
+	},
+	{
+		id: "92161881",
+		title: "モンド城",
+		artist: "藤ちょこ（藤原）",
+		url: "2021/08/22/00/00/10/92161881_p0.jpg"
+	},
+	{
+		id: "93077711",
+		title: "原神一周年！",
+		artist: "池本ゆーこ",
+		url: "2021/09/28/15/32/22/93077711_p0.jpg"
+	},
+	{
+		id: "95681846",
+		title: "原神拜年祭x洛天依",
+		artist: "Yolanda",
+		url: "2022/01/22/00/56/09/95681846_p0.jpg"
+	},
+	{
+		id: "101664845",
+		title: "💙",
+		artist: "Yolanda",
+		url: "2022/10/03/20/36/46/101664845_p0.jpg"
+	},
+	{
+		id: "97833640",
+		title: "薄櫻が綻ぶ時",
+		artist: "ATDAN-",
+		url: "2022/04/24/01/05/47/97833640_p0.jpg"
+	},
+	{
+		id: "113904028",
+		title: "Amusement Park",
+		artist: "ATDAN-",
+		url: "2023/12/03/01/52/20/113904028_p0.jpg"
+	},
+	{
+		id: "101660930",
+		title: "ちいさな冒険者",
+		artist: "猩猩",
+		url: "2022/10/03/17/14/47/101660930_p1.jpg"
+	},
+	{
+		id: "100022190",
+		title: "夏日晚风",
+		artist: "久.",
+		url: "2022/07/27/02/32/25/100022190_p0.jpg"
+	},
+	{
+		id: "100307641",
+		title: "Goldfish",
+		artist: "Taroco",
+		url: "2022/08/07/20/50/04/100307641_p0.jpg"
+	},
+	{
+		id: "100339292",
+		title: "愛の階段",
+		artist: "Anmi@画集発売中",
+		url: "2022/08/09/00/00/10/100339292_p0.jpg"
+	},
+	{
+		id: "100857791",
+		title: "モーニング ★ スター",
+		artist: "Recneps-SAIS",
+		url: "2022/08/30/00/18/22/100857791_p0.png"
+	},
+	{
+		id: "102452474",
+		title: "NAHIDA纳西妲",
+		artist: "KANA",
+		url: "2023/03/18/06/58/14/102452474_p0.jpg"
+	},
+	{
+		id: "113058386",
+		title: "雨散歩",
+		artist: "ふぃーる　日曜日 西 ね32a",
+		url: "2023/11/02/00/00/21/113058386_p0.jpg"
+	},
+	{
+		id: "113866439",
+		title: "【今日魔女】预售中",
+		artist: "balabling",
+		url: "2023/12/01/20/58/36/113866439_p0.jpg"
+	},
+	
 ];
 var bgCount = img.length - 1;
 var bgOriginal = new Array;
