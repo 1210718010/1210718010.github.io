@@ -157,7 +157,7 @@ var img = [
 		title: "",
 		artist: "雨陌",
 		url: "2021/01/27/16/37/07/87337809_p0.png"
-	}
+	},
 	{
 		id: "88417243",
 		title: "",
@@ -169,7 +169,7 @@ var img = [
 		title: "",
 		artist: "雨陌",
 		url: "2021/05/28/18/15/12/90149890_p0.png"
-	},
+	}
 ];
 var bgCount = img.length - 1;
 var bgOriginal = new Array;
