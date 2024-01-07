@@ -1,30 +1,12 @@
 // JavaScript Document
-// Update: 2023.7.18 15:12(UTC+8)
+// Update: 2024.1.7 21:41(UTC+8)
 $("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><div id=\"artist\"><span id=\"bgName\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" ><img id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" ><img id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" ><img id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" ><a id=\"title\" href=\"\" target=\"_blank\"></a></span></div><div class=\"left\"><div class=\"left1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div><div class=\"right\"><div class=\"right1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div>");
 var img = [
 	{
-		id: "101114306",
-		title: "アクアショップ",
+		id: "70059505",
+		title: "受験生の夏",
 		artist: "杉87",
-		url: "2022/09/10/00/30/02/101114306_p0.jpg"
-	},
-	{
-		id: "100517229",
-		title: "残照",
-		artist: "杉87",
-		url: "2022/08/18/13/28/18/100517229_p0.jpg"
-	},
-	{
-		id: "99828937",
-		title: "海上の駄菓子屋",
-		artist: "杉87",
-		url: "2022/07/20/02/06/27/99828937_p0.jpg"
-	},
-	{
-		id: "99016503",
-		title: "水没の夏",
-		artist: "杉87",
-		url: "2022/06/13/00/30/02/99016503_p0.jpg"
+		url: "2019/01/13/00/38/40/70059505_p0.jpg"
 	},
 	{
 		id: "98260510",
@@ -33,16 +15,22 @@ var img = [
 		url: "2022/05/11/00/58/08/98260510_p0.jpg"
 	},
 	{
-		id: "70059505",
-		title: "受験生の夏",
+		id: "99016503",
+		title: "水没の夏",
 		artist: "杉87",
-		url: "2019/01/13/00/38/40/70059505_p0.jpg"
+		url: "2022/06/13/00/30/02/99016503_p0.jpg"
 	},
 	{
-		id: "65047674",
-		title: "何処まで行けるのだろう",
+		id: "99828937",
+		title: "海上の駄菓子屋",
 		artist: "杉87",
-		url: "2018/02/03/21/23/46/65047674_p0.jpg"
+		url: "2022/07/20/02/06/27/99828937_p0.jpg"
+	},
+	{
+		id: "100517229",
+		title: "残照",
+		artist: "杉87",
+		url: "2022/08/18/13/28/18/100517229_p0.jpg"
 	},
 	{
 		id: "102940261",
@@ -51,28 +39,10 @@ var img = [
 		url: "2022/11/20/07/50/26/102940261_p0.jpg"
 	},
 	{
-		id: "100039624",
-		title: "Lycoris Recoil",
-		artist: "粉帮老大",
-		url: "2022/07/28/07/19/50/100039624_p0.jpg"
-	},
-	{
-		id: "81943456",
-		title: "遅刻魔女",
+		id: "63601864",
+		title: "じめじめ日和",
 		artist: "くっか",
-		url: "2020/05/29/21/26/43/81943456_p0.jpg"
-	},
-	{
-		id: "75925271",
-		title: "ジュライドライ",
-		artist: "くっか",
-		url: "2019/07/27/00/43/16/75925271_p0.jpg"
-	},
-	{
-		id: "75925245",
-		title: "幽Tuber",
-		artist: "くっか",
-		url: "2019/07/27/00/41/58/75925245_p0.jpg"
+		url: "2017/06/28/12/00/58/63601864_p0.jpg"
 	},
 	{
 		id: "70140023",
@@ -81,16 +51,22 @@ var img = [
 		url: "2018/08/11/14/24/51/70140023_p0.jpg"
 	},
 	{
-		id: "63601864",
-		title: "じめじめ日和",
+		id: "75925245",
+		title: "幽Tuber",
 		artist: "くっか",
-		url: "2017/06/28/12/00/58/63601864_p0.jpg"
+		url: "2019/07/27/00/41/58/75925245_p0.jpg"
 	},
 	{
-		id: "88823878",
-		title: "記憶",
-		artist: "トーコ",
-		url: "2021/03/31/06/21/47/88823878_p0.jpg"
+		id: "75925271",
+		title: "ジュライドライ",
+		artist: "くっか",
+		url: "2019/07/27/00/43/16/75925271_p0.jpg"
+	},
+	{
+		id: "81943456",
+		title: "遅刻魔女",
+		artist: "くっか",
+		url: "2020/05/29/21/26/43/81943456_p0.jpg"
 	},
 	{
 		id: "82528811",
@@ -99,16 +75,10 @@ var img = [
 		url: "2020/06/24/08/29/37/82528811_p0.jpg"
 	},
 	{
-		id: "102257565",
-		title: "I DON'T LOVE YOU",
-		artist: "Miv4t",
-		url: "2022/10/27/00/12/21/102257565_p0.jpg"
-	},
-	{
-		id: "72235081",
-		title: "IRIDESCENT",
-		artist: "Miv4t",
-		url: "2018/12/23/00/16/04/72235081_p0.jpg"
+		id: "88823878",
+		title: "記憶",
+		artist: "トーコ",
+		url: "2021/03/31/06/21/47/88823878_p0.jpg"
 	},
 	{
 		id: "67101372",
@@ -117,22 +87,22 @@ var img = [
 		url: "2018/02/04/09/37/11/67101372_p0.jpg"
 	},
 	{
-		id: "101532841",
-		title: "天蓋を超えて",
-		artist: "Nengoro(ネんごろぅ)",
-		url: "2022/09/28/00/00/23/101532841_p0.png"
+		id: "72235081",
+		title: "IRIDESCENT",
+		artist: "Miv4t",
+		url: "2018/12/23/00/16/04/72235081_p0.jpg"
 	},
 	{
-		id: "101862996",
-		title: "虚像",
-		artist: "Nengoro(ネんごろぅ)",
-		url: "2022/10/12/00/00/16/101862996_p0.png"
+		id: "102257565",
+		title: "I DON'T LOVE YOU",
+		artist: "Miv4t",
+		url: "2022/10/27/00/12/21/102257565_p0.jpg"
 	},
 	{
-		id: "100879225",
-		title: "晩夏より。",
-		artist: "Nengoro(ネんごろぅ)",
-		url: "2022/08/31/00/00/17/100879225_p0.png"
+		id: "104923272",
+		title: "PAPERCUT 4.0",
+		artist: "Miv4t",
+		url: "2023/01/30/00/01/17/104923272_p0.jpg"
 	},
 	{
 		id: "90150693",
@@ -177,65 +147,29 @@ var img = [
 		url: "2016/07/08/00/33/45/57793944_p0.png"
 	},
 	{
-		id: "70937229",
-		title: "翔鶴",
-		artist: "藤ちょこ（藤原）",
-		url: "2018/09/30/00/03/27/70937229_p0.png"
-	},
-	{
-		id: "85527668",
-		title: "空渡り",
-		artist: "mocha",
-		url: "2020/11/08/00/42/47/85527668_p0.png"
-	},
-	{
-		id: "87148917",
-		title: "森の遺跡",
-		artist: "mocha",
-		url: "2021/01/19/01/00/24/87148917_p0.png"
-	},
-	{
-		id: "91269619",
-		title: "葉月",
-		artist: "mocha",
-		url: "2021/07/16/00/43/47/91269619_p0.png"
-	},
-	{
-		id: "76752787",
-		title: "ZIPANG",
-		artist: "mocha",
-		url: "2019/09/13/00/42/06/76752787_p0.png"
-	},
-	{
-		id: "84661248",
-		title: "藤重ね",
-		artist: "mocha",
-		url: "2020/09/28/01/06/24/84661248_p0.png"
-	},
-	{
-		id: "85776163",
-		title: "ブルーブルーブルー",
-		artist: "mocha",
-		url: "2020/11/20/01/17/48/85776163_p0.png"
-	},
-	{
-		id: "66337051",
-		title: "天使のはしご",
-		artist: "mocha",
-		url: "2017/12/18/00/56/22/66337051_p0.png"
-	},
-	{
 		id: "63450144",
-		title: "no title",
+		title: "",
 		artist: "雨陌",
 		url: "2017/06/18/20/05/30/63450144_p0.png"
 	},
 	{
+		id: "87337809",
+		title: "",
+		artist: "雨陌",
+		url: "2021/01/27/16/37/07/87337809_p0.png"
+	}
+	{
 		id: "88417243",
-		title: "no title",
+		title: "",
 		artist: "雨陌",
 		url: "2021/03/13/18/08/24/88417243_p0.png"
-	}
+	},
+	{
+		id: "90149890",
+		title: "",
+		artist: "雨陌",
+		url: "2021/05/28/18/15/12/90149890_p0.png"
+	},
 ];
 var bgCount = img.length - 1;
 var bgOriginal = new Array;
