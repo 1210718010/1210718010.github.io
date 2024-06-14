@@ -318,16 +318,16 @@ function lastSwitch(){
 }
 function autoSwitch(){
 	if(bgFlag == 0){
-		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://web.muxmus.com:5001/pixiv/" + img[bgOriginal[bgI]].id + "_p" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
+		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://media.muxmus.com:5000/pixiv/" + img[bgOriginal[bgI]].id + "_p" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
 		document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
 	}else{
-		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://web.muxmus.com:5001/pixiv/" + img[bgOriginal[bgI]].id + "_p" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: 119; opacity: 1;");
+		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://media.muxmus.com:5000/pixiv/" + img[bgOriginal[bgI]].id + "_p" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: 119; opacity: 1;");
 		document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
 	}
 	$("#title").attr("href","https://www.pixiv.net/artworks/" + img[bgOriginal[bgI]].id);
 	if(bgI < bgCount){
 		bgI += 1;
-		$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://web.muxmus.com:5001/pixiv/" + img[bgOriginal[bgI]].id + "_p" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -11; opacity: 0;");
+		$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://media.muxmus.com:5000/pixiv/" + img[bgOriginal[bgI]].id + "_p" + img[bgOriginal[bgI]].url + "\") center center / cover no-repeat fixed black; z-index: -11; opacity: 0;");
 	}else{
 		bgI += 1;
 	}
