@@ -312,6 +312,44 @@ code {
 
 /* bg */
 
+body {
+	background-color: black;
+}
+
+#bg1 {
+	position: fixed;		
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	transform: translate(0px, 0px);
+	z-index: -10;
+	opacity: 0;
+	transition: opacity 1.5s ease-in-out;
+}
+
+#bg2 {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	transform: translate(0px, 0px);
+	z-index: -11;
+	opacity: 1;
+}
+
+#bg3 {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	transform: translate(0px, 0px);
+	z-index: -12;
+	opacity: 0;
+}
+
 .bf {
 	width: 20px;
 	height: 20px;
@@ -367,12 +405,12 @@ code {
 
 .left {
 	position: fixed;
-    top: 50%;
-    left: 0%;
-    width: 16px;
-    height: 120px;
-    text-align: center;
-    transform: translate(0%,-50%);
+	top: 50%;
+	left: 0%;
+	width: 16px;
+    	height: 120px;
+    	text-align: center;
+    	transform: translate(0%,-50%);
 	text-align: center;
 	background-color: rgba(230,230,230,0.6);
 	z-index: 120;
@@ -393,12 +431,12 @@ code {
 
 .right {
 	position: fixed;
-    top: 50%;
-    left: 100%;
-    width: 16px;
-    height: 120px;
-    text-align: center;
-    transform: translate(-100%,-50%);
+    	top: 50%;
+    	left: 100%;
+    	width: 16px;
+    	height: 120px;
+    	text-align: center;
+    	transform: translate(-100%,-50%);
 	text-align: center;
 	background-color: rgba(230,230,230,0.6);
 	z-index: 120;
