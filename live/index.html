@@ -13,6 +13,7 @@
 		<div id="dplayer" style="width: 50%;"></div>
 		<div id="live"></div>
 		<script>
+			var liveLink = "https://media.muxmus.com:5001/live/木辛木杉的直播.flv"
 			$("#live").append("<p id=\"liveText1\">尝试连接中……</p><p id=\"liveText2\"></p><a href=\"potplayer://" + liveLink + "\">在PotPlayer中打开</a><br><a href=\"vlc://" + liveLink + "\">在VLC中打开</a><br><a href=\"intent:" + liveLink + "#Intent;package=com.mxtech.videoplayer.pro;end\">在MX Player中打开</a>");
 			var liveFlag = false;
 			var postCode;
@@ -21,7 +22,6 @@
 			var getText;
 			var postLink;
 			var getLink;
-			var liveLink = "https://media.muxmus.com:5001/live/木辛木杉的直播.flv"
 			const dp = new DPlayer({
 				container: document.getElementById('dplayer'),
 				live: true,
