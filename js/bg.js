@@ -174,13 +174,13 @@ function secondClick(){
 	if(bg3.complete){
 		if(autoFlag){
 			clearInterval(timer);
-			timer = setInterval("nextSwitch()",20000);
+			timer = setInterval("nextSwitch()",60000);
 		};
 	}else{
 		bg3.onload = function(){
 			if(autoFlag){
 				clearInterval(timer);
-				timer = setInterval("nextSwitch()",20000);
+				timer = setInterval("nextSwitch()",60000);
 			};
 		};
 	};
