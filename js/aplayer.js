@@ -18,7 +18,6 @@ $.ajax({
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: currentPlayMeta.name,
 				artist: currentPlayMeta.artist,
-				album: currentPlayMeta.artist,
 				artwork: [{ src: currentPlayMeta.cover || '' }],
 			});
 			navigator.mediaSession.setActionHandler('previoustrack',function(){
