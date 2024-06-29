@@ -189,8 +189,8 @@ $(function(){
     $("#yc").click(function(){
     	$("#yc").attr("class","xs");
     	$("#xs").attr("class","yc");
-    	zIndex1 = "z-index: 110;";
-    	zIndex2 = "z-index: 109;";
+    	zIndex1 = "z-index: 115;";
+    	zIndex2 = "z-index: 114;";
     	$("#bg1").attr("style",$("#bg1").attr("style") + zIndex1);
     	$("#bg2").attr("style",$("#bg2").attr("style") + zIndex2);
     });
