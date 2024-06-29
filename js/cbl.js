@@ -23,21 +23,12 @@ $(function(){
 	$("#textYs").click(function(){
 		var text = $("#textYs").attr("alt");
 		var input = document.getElementById("input");
+		//input.setAttribute("readonly","readonly");
 		input.setAttribute("value",text);
 		input.setSelectionRange(0, 9999);
 		input.select();
 		document.execCommand("copy");
 		alert("复制成功 原神 " + text);
-
-		const input = document.createElement('input');
-		input.setAttribute('readonly', 'readonly');
-		input.setAttribute('value',text);
-		document.body.appendChild(input);
-		input.setSelectionRange(0, 9999);
-		input.select();
-		document.execCommand('copy');
-		document.body.removeChild(input);
-		
 	});
 	$("#textKlbq").click(function(){
 		var text = $("#textKlbq").attr("alt");
