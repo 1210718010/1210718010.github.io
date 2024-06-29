@@ -23,9 +23,7 @@ $(function(){
 	$("#textYs").click(function(){
 		var text = $("#textYs").attr("alt");
 		var input = document.getElementById("input");
-		//input.setAttribute("readonly","readonly");
-		input.setAttribute("value",text);
-		input.setSelectionRange(0, 9999);
+		input.value = text;
 		input.select();
 		document.execCommand("copy");
 		alert("复制成功 原神 " + text);
