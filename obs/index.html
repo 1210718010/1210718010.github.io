@@ -50,18 +50,46 @@
 	<body>
 		<script src="https://muxmus.com/js/time.js"></script>
 		<div id="aplayer"></div>
-		<script src="https://muxmus.com/js/aplayer.js"></script>
 		<script>
-			window.onload = function(){
-				ap.volume(1,true);
-				var button = document.getElementsByTagName("button");
-				for(var onloadi = 0;onloadi < button.length;onloadi++){
-					if(button[onloadi].className == "aplayer-icon"){
-						button[onloadi].click;
+			$.ajax({
+				type:"get",
+				url:"https://file.muxmus.com:5000/api/music",
+				dataType:"json",
+				success:function(jsonData){
+					const ap = new APlayer({
+						container: document.getElementById("aplayer"),
+						fixed: true,
+						theme: "#8E8CD8",
+						order: "random",
+						volume: 0.3,
+						lrcType: 3,
+						audio: jsonData,
+						autoplay: true,
+					});
+					ap.on('play', () => {
+						const currentPlayMeta = ap.list.audios[ap.list.index];
+						navigator.mediaSession.metadata = new MediaMetadata({
+							title: currentPlayMeta.name,
+							artist: currentPlayMeta.artist,
+							artwork: [{ src: currentPlayMeta.cover || '' }],
+						});
+						navigator.mediaSession.setActionHandler('previoustrack',function(){
+							ap.skipBack();
+						});
+						navigator.mediaSession.setActionHandler('nexttrack',function(){
+							ap.skipForward();
+						});
+					});
+					ap.volume(1,true);
+					var button = document.getElementsByTagName("button");
+					for(var onloadi = 0;onloadi < button.length;onloadi++){
+						if(button[onloadi].className == "aplayer-icon"){
+							button[onloadi].click;
+						};
 					};
-				};
-				ap.play();
-			};
+					ap.play();
+				},
+			});
 		</script>
 		<div id="bg"></div>
 		<script src="https://muxmus.com/js/bg.js"></script>
