@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>OBS</title>
+		<link rel="shortcut icon" type="image/x-icon" href="https://muxmus.com/favicon.ico">
+		<link rel="stylesheet" href="https://muxmus.com/css/time.css">
+		<link rel="stylesheet" href="https://muxmus.com/css/search.css">
+		<link rel="stylesheet" href="https://muxmus.com/css/bg.css">
+		<link rel="stylesheet" href="https://muxmus.com/css/APlayer.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
+		<script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<script src="https://muxmus.com/js/Meting.min.js"></script>
+		<style>
+			body {
+				margin: 0px;
+				transform: scale(2);
+				transform-origin: top left;
+				width: 50vw;
+				height: 50vh;
+				overflow: hidden;
+			}
+			.aplayer.aplayer-fixed .aplayer-lrc {
+				width: 95%;
+				transform:  translate(-50%,-50%);
+				left: 50%;
+				top: 50%;
+				text-shadow: 0px 0px 1px #6A3905;
+				-webkit-text-stroke: 0.1px #6A3905;
+			}
+			.aplayer .aplayer-lrc {
+				height: 49px;
+			}
+			.aplayer .aplayer-lrc p {
+				font-size: 14px;
+				color: #fff;
+				opacity: 0.7;
+			}
+			.aplayer .aplayer-lrc .aplayer-lrc-current {
+				font-size: 20px;
+				color: #fff;
+				text-shadow: 0px 0px 2px #6A3905;
+				-webkit-text-stroke: 0.2px #6A3905;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://muxmus.com/js/time.js"></script>
+		<div id="aplayer"></div>
+		<script src="https://muxmus.com/js/aplayer.js"></script>
+		<div id="bg"></div>
+		<script src="https://muxmus.com/js/bg.js"></script>
+	</body>
+</html>
