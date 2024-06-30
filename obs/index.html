@@ -81,12 +81,7 @@
 						});
 					});
 					ap.volume(1,true);
-					var button = document.getElementsByTagName("button");
-					for(var onloadi = 0;onloadi < button.length;onloadi++){
-						if(button[onloadi].className == "aplayer-icon"){
-							button[onloadi].click;
-						};
-					};
+					 $("#aplayer").attr("class","aplayer aplayer-withlist aplayer-fixed");
 					ap.play();
 				},
 			});
