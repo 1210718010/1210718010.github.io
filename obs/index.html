@@ -52,8 +52,16 @@
 		<div id="aplayer"></div>
 		<script src="https://muxmus.com/js/aplayer.js"></script>
 		<script>
-			ap.volume(1,true);
-			ap.play();
+			window.onload = function(){
+				ap.volume(1,true);
+				var button = document.getElementsByTagName("button");
+				for(var onloadi = 0;onloadi < button.length;onloadi++){
+					if(button[onloadi].className == "aplayer-icon"){
+						button[onloadi].click;
+					};
+				};
+				ap.play();
+			};
 		</script>
 		<div id="bg"></div>
 		<script src="https://muxmus.com/js/bg.js"></script>
