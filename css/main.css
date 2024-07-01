@@ -243,7 +243,6 @@ code {
 
 @media all and (orientation : portrait) {
 	
-
 	#slider {
 		position: fixed;
 		top: 0;
@@ -257,6 +256,7 @@ code {
 		opacity: 0;
 		z-index: 100;
 	}
+	
 	.divm {
 		position: fixed;
 		top: 50%;
@@ -306,6 +306,10 @@ code {
 		background: rgba(0,0,0,0);
 		transform: translate(10px,30px);
 		font-size: 15px;
+	}
+
+	.aplayer.aplayer-fixed .aplayer-lrc {
+		left: 84px !important;
 	}
 
 }
