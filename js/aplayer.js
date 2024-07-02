@@ -9,7 +9,7 @@ $.ajax({
 			fixed: true,
 			theme: "#8E8CD8",
 			order: "random",
-			volume: 0.1,
+			volume: 0.3,
 			lrcType: 3,
 			audio: jsonData,
 		});
