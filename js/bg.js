@@ -1,5 +1,5 @@
 // JavaScript Document
-// Update: 2024.6.26 18:10(UTC+8)
+// Update: 2024.7.13 02:57(UTC+8)
 $("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><img id=\"bg3\"></img><div id=\"artist\"><span id=\"bgName\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" ><img id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" ><img id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" ><img id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" ><a id=\"title\" href=\"\" target=\"_blank\"></a></span></div><div class=\"left\"><div class=\"left1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div><div class=\"right\"><div class=\"right1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div>");
 var animation = false;
 var nextFlag = true;
@@ -17,7 +17,7 @@ var zIndex1 = "z-index: -10;";
 var zIndex2 = "z-index: -11;";
 $.ajax({
 	type:"get",
-	url: "https://file.muxmus.com:5000/api/pixiv",
+	url: "https://api.muxmus.com:5000/pixiv",
 	dataType:"json",
 	success:function(jsonData){
 		bgCount = jsonData.length - 1;
