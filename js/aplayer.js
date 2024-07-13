@@ -22,9 +22,11 @@ $.ajax({
 			});
 			navigator.mediaSession.setActionHandler('previoustrack',function(){
 				ap.skipBack();
+				ap.play();
 			});
 			navigator.mediaSession.setActionHandler('nexttrack',function(){
 				ap.skipForward();
+				ap.play();
 			});
 		});
 	},
