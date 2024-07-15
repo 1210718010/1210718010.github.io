@@ -41,8 +41,11 @@ em .img {
 	font-style: normal;
 }
 
-em img:hover {
-	transform:rotate(20deg);
+em .logo {
+	transition: .6s;
+
+em .logo:hover {
+	transform: rotate(-360deg);
 }
 
 em:not(.title):hover {
