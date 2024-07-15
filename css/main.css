@@ -43,6 +43,7 @@ em .img {
 
 em .logo {
 	transition: .6s;
+}
 
 em .logo:hover {
 	transform: rotate(-360deg);
