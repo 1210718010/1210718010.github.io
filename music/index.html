@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="zh-CN">
 	<head>
@@ -22,7 +21,7 @@
 		<script>
 			$.ajax({
 				type:"get",
-				url:"https://file.muxmus.com:5000/api/music",
+				url:"https://api.muxmus.com:5000/music",
 				dataType:"json",
 				success:function(jsonData){
 					const ap = new APlayer({
@@ -42,9 +41,11 @@
 						});
 						navigator.mediaSession.setActionHandler('previoustrack',function(){
 							ap.skipBack();
+							ap.play();
 						});
 						navigator.mediaSession.setActionHandler('nexttrack',function(){
 							ap.skipForward();
+							ap.play();
 						});
 					});
 				},
