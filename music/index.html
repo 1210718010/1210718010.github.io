@@ -6,13 +6,9 @@
 		<title>音乐 ~ 木辛木杉</title>
 		<link rel="shortcut icon" type="image/x-icon" href="https://muxmus.com/favicon.ico">
 		<link rel="stylesheet" href="https://muxmus.com/css/APlayer.min.css">
-		<link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.1.0/style.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
 		<script src="https://muxmus.com/js/APlayer.min.js"></script>
 		<style>
-			body {
-				font-family: "LXGW WenKai Screen", sans-serif;
-			}
 			h1, h3 {
 				color: white;
 				margin: 0 3%;
@@ -43,11 +39,14 @@
 				max-width: 100% !important;
 				width: 100% !important;
 			}
+			.aplayer .aplayer-lrc {
+				height: 110px  !important;
+			}
 			.aplayer.aplayer-fixed .aplayer-lrc {
-				width: 60%;
-				transform:  translate(-50%,-50%);
-				left: 65%;
-				top: 50%;
+				width: 60% !important;
+				transform:  translate(-50%,-50%) !important;
+				left: 65% !important;
+				top: 50% !important;
 			}
 			.aplayer .aplayer-list ol li {
 				height: 33px !important;
@@ -67,11 +66,14 @@
 					border-radius: 10px;
 					filter: drop-shadow(0px 0px 8px black);
 				}
+				.aplayer .aplayer-lrc {
+					height: 112px  !important;
+				}
 				.aplayer.aplayer-fixed .aplayer-lrc {
-					width: 95%;
-					transform:  translate(-50%,-50%);
-					top: 75%;
-					left: 50%;
+					width: 95% !important;
+					transform:  translate(-50%,-50%) !important;
+					top: 80% !important;
+					left: 50% !important;
 				}
 			}
 		</style>
