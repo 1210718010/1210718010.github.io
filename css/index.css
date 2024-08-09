@@ -40,6 +40,9 @@ em .img {
 }
 
 em .logo {
+	width: 40px;
+	height: 40px;
+	margin: 15px 0px 0px 0px;
 	transition: .6s;
 }
 
@@ -58,11 +61,6 @@ pre {
 
 code {
 	font-size: 17px;
-}
-
-.logo {
-	width: 40px;
-	height: 85px;
 }
 
 .lianJie {
