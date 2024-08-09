@@ -132,6 +132,11 @@ code {
 .tx {
 	width: 100px;
 	height: 100px;
+	transition: .6s;
+}
+
+.tx:hover {
+	transform: rotate(-360deg);
 }
 
 .scrolling-area {
