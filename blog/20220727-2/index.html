@@ -12,6 +12,7 @@
 		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
 		<script src="https://muxmus.com/js/APlayer.min.js"></script>
 		<script src="https://muxmus.com/js/highlight.min.js"></script>
+		<script src="https://unpkg.com/twikoo@1.6.39/dist/twikoo.min.js"></script>
 		<script>
 			$(document).pjax('a[date-pjax]', '#main-content', {
 				fragment: '#main-content', timeout: '60000'
@@ -148,6 +149,15 @@
 <div class="tuPian"><a target="_blank" href="https://img.muxmus.com:5000/blog/20220727-2/第一天晚上/24.jpg"><img class="heng" src="https://img.muxmus.com:5000/blog/20220727-2/第一天晚上/24.jpg" alt="" /></a></div><br>
 				<p class="dateTime">· 完</p>
 				<br>
+				<script src="https://muxmus.com/js/link.js"></script>
+				<div id="tcomment"></div>
+				<script>
+					twikoo.init({
+						envId: 'https://twikoo.muxmus.com:5000',
+						el: '#tcomment',
+						lang: 'zh-CN',
+					})
+				</script>
 			</div>
 		</div>
 		<div id="cbl"></div>
