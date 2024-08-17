@@ -243,6 +243,10 @@ pre {
 	font-size: 15px;
 }
 
+.tk-main {
+	text-align: left;
+}
+
 @media all and (orientation : portrait) {
 	
 
