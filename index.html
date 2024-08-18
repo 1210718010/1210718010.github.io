@@ -34,6 +34,11 @@
 					bbb.attr("class","dk");
 				});
 				hljs.highlightAll();
+				twikoo.init({
+					envId: 'https://twikoo.muxmus.com:5000',
+					el: '#tcomment',
+					lang: 'zh-CN',
+				})
 			});
 			hljs.highlightAll();
 		</script>
@@ -85,6 +90,13 @@
 				<br>
 				<br>
 				<script src="https://muxmus.com/js/link.js"></script>
+				<script>
+					twikoo.init({
+						envId: 'https://twikoo.muxmus.com:5000',
+						el: '#tcomment',
+						lang: 'zh-CN',
+					})
+				</script>
 			</div>
 		</div>
 		<div id="cbl"></div>
