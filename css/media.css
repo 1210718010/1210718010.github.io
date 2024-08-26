@@ -231,7 +231,7 @@ body {
 	}
 
 	.videoDiv {
-		width: auto;
+		width: calc(100% - 20px);
 		margin: 5px;
 		padding: 5px;
 	}
