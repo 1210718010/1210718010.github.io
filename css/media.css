@@ -247,6 +247,16 @@ body {
 		border-radius: 8px;
 	}
 
+	.videoDiv a {
+		font-size: 22px;
+	}
+
+	.videoDiv img {
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+	}
+
 	.rightDiv .titleP {
 		line-height: 0px;
 	}
