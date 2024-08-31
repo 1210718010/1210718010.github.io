@@ -13,6 +13,9 @@ body {
 	height: 26px;
 	color: white;
 	cursor: default;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .topDiv span {
@@ -215,6 +218,7 @@ body {
 	.topDiv {
 		background: rgba(0,0,0,0.6);
 		text-align: center;
+		direction: rtl;
 	}
 
 	.mainDiv {
@@ -263,10 +267,6 @@ body {
 		width: 40px;
 		height: 40px;
 		border-radius: 8px;
-	}
-
-	.rightDiv .titleP {
-		line-height: 0px;
 	}
 
 	.rightDiv .seasonP {
