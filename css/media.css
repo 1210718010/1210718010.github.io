@@ -10,7 +10,7 @@ body {
 .topDiv {
 	font-size: 18px;
 	width: 100%;
-	height: 23.34px;
+	height: 24px;
 	color: white;
 	cursor: default;
 	overflow: hidden;
@@ -217,7 +217,6 @@ body {
 @media all and (orientation : portrait) {
 
 	.topDiv {
-		background: rgba(0,0,0,0.6);
 		text-align: center;
 	}
 
