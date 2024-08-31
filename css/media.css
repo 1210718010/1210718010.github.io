@@ -20,6 +20,7 @@ body {
 
 .topDiv span {
 	background: rgba(0,0,0,0.6);
+	border-radius: 0px 0px 6px 0px;
 }
 
 .topDiv a {
@@ -218,6 +219,10 @@ body {
 	.topDiv {
 		background: rgba(0,0,0,0.6);
 		text-align: center;
+	}
+
+	.topDiv span {
+		border-radius: 0px 0px 6px 6px;
 	}
 
 	.mainDiv {
