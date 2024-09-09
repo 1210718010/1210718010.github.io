@@ -23,7 +23,7 @@ $.ajax({
 		bgCount = jsonData.length - 1;
 		for (var i = 0;i <= bgCount;i++){
 			pixiv[i] = jsonData[i];
-			pixiv[i].url += "@4000w.webp";
+			pixiv[i].url += "@3840w_2160h.webp";
 			bgOriginal[i] = i;
 		};
 		bgOriginal.sort(function(){
