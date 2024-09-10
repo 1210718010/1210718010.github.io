@@ -88,6 +88,7 @@ body {
 	background-color: rgba(230,230,230,0.6);
 	z-index: 120;
 	cursor: pointer;
+	border-radius: 0px 20px 20px 0px;
 }
 
 .left1 {
@@ -114,6 +115,7 @@ body {
 	background-color: rgba(230,230,230,0.6);
 	z-index: 120;
 	cursor: pointer;
+	border-radius: 20px 0px 0px 20px;
 }
 
 .right1 {
@@ -148,13 +150,14 @@ body {
 #bgName {
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
+	border-radius: 0px 0px 20px 0px;
 }
 
 #title {
 	color: rgb(0,0,0);
 	text-decoration: none;
 	cursor: pointer;
-	margin: 2px 0px 4px 0px;
+	margin: 2px 0px 10px 0px;
 }
 
 #title:hover {
