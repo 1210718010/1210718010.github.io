@@ -473,8 +473,8 @@ body {
 	left: 0;
 	z-index: 120;
 	width: 20px;
-	height: calc(50% - 60px);
-	background: rgba(0,0,0,0);
+	max-height: calc(50% - 60px);
+	background: rgb(230,230,230,0.6);
 	font-size: 15px;
 	line-height: 20px;
 	writing-mode: vertical-rl;
@@ -486,11 +486,7 @@ body {
 } 
 
 #bgName {
-	position: fixed;
-	left: 0;
-	color: rgb(0,0,0);
-	background: rgb(230,230,230,0.6);
-	border-radius: 0px 0px 20px 0px;
+	color: black;
 }
 
 #title {
