@@ -475,6 +475,7 @@ body {
 	width: 20px;
 	height: calc(50% - 60px);
 	background: rgba(0,0,0,0);
+	font-size: 15px;
 	line-height: 20px;
 	writing-mode: vertical-rl;
 	text-orientation: sideways;
@@ -485,6 +486,8 @@ body {
 } 
 
 #bgName {
+	position: fixed;
+	left: 0;
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
 	border-radius: 0px 0px 20px 0px;
@@ -494,7 +497,7 @@ body {
 	color: rgb(0,0,0);
 	text-decoration: none;
 	cursor: pointer;
-	margin: 2px 0px 10px 0px;
+	margin: 42px 0px 10px 0px;
 }
 
 #title:hover {
