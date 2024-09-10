@@ -469,20 +469,19 @@ body {
 
 #artist {
 	position: fixed;
-	top: 0%;
-	left: 0%;
+	top: 0;
+	left: 0;
 	z-index: 120;
 	width: 20px;
 	height: calc(50% - 60px);
 	background: rgba(0,0,0,0);
-	text-align: left;
 	font-size: 15px;
-	transform: translate(0%,0%);
 	writing-mode: vertical-rl;
 	text-orientation: sideways;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	border-radius: 0px 0px 20px 0px;
 } 
 
 #bgName {
