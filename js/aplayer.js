@@ -4,7 +4,7 @@ $.ajax({
 	url:"https://api.muxmus.com:5000/music",
 	dataType:"json",
 	success:function(jsonData){
-		for(int i = 0; i <= jsonData.length - 1; i++){
+		for(var i = 0; i <= jsonData.length - 1; i++){
 			jsonData[i].pic += "@350w.webp"
 		}
 		const ap = new APlayer({
