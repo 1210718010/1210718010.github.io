@@ -475,7 +475,7 @@ body {
 	width: 20px;
 	height: calc(50% - 60px);
 	background: rgba(0,0,0,0);
-	font-size: 15px;
+	font-size: 16px;
 	writing-mode: vertical-rl;
 	text-orientation: sideways;
 	white-space: nowrap;
@@ -485,8 +485,6 @@ body {
 } 
 
 #bgName {
-	display: ruby;
-	width: 24px;
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
 	border-radius: 0px 0px 20px 0px;
