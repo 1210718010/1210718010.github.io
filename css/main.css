@@ -309,6 +309,14 @@ pre {
 		all: unset;
 	}
 
+	.divm::-webkit-scrollbar-thumb {
+		all: unset;
+	}
+
+	.divm::-webkit-scrollbar-thumb:hover {
+		all: unset;
+	}
+
 	.js {
 		max-width: calc(100vh - 150px);
 		max-height: calc(100vh - 100px);
