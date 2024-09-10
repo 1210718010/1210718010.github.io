@@ -486,7 +486,7 @@ body {
 
 #bgName {
 	display: ruby;
-	width: 20px;
+	width: 24px;
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
 	border-radius: 0px 0px 20px 0px;
@@ -497,7 +497,6 @@ body {
 	text-decoration: none;
 	cursor: pointer;
 	margin: 2px 0px 10px 0px;
-	position: relative;
 }
 
 #title:hover {
