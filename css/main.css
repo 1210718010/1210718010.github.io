@@ -485,6 +485,8 @@ body {
 } 
 
 #bgName {
+	display: block;
+	width: 20px;
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
 	border-radius: 0px 0px 20px 0px;
