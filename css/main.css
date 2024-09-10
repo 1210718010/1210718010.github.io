@@ -485,7 +485,7 @@ body {
 } 
 
 #bgName {
-	display: ruby;
+	display: math;
 	width: 20px;
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
@@ -506,8 +506,8 @@ body {
 @media all and (orientation : portrait) {
 
 	.bf {
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	position: absolute;
 	top: 0;
 	z-index: 99;
@@ -515,8 +515,8 @@ body {
 }
 
 .zt {
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	position: absolute;
 	top: 0;
 	opacity: 0;
@@ -524,8 +524,8 @@ body {
 }
 
 .yc {
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	position: absolute;
 	top: 20px;
 	z-index: 99;
@@ -533,8 +533,8 @@ body {
 }
 
 .xs {
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	position: absolute;
 	top: 20px;
 	opacity: 0;
