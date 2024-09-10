@@ -366,10 +366,6 @@ body {
 	height: 20px;
 	position: absolute;
 	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: left;
 	z-index: 99;
 	cursor: pointer;
 }
@@ -379,10 +375,6 @@ body {
 	height: 20px;
 	position: absolute;
 	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: left;
 	opacity: 0;
 	z-index: -99;
 }
@@ -391,11 +383,7 @@ body {
 	width: 20px;
 	height: 20px;
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 20px;
-	right: 0;
-	margin: left;
+	top: 20px;
 	z-index: 99;
 	cursor: pointer;
 }
@@ -404,11 +392,7 @@ body {
 	width: 20px;
 	height: 20px;
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 20px;
-	right: 0;
-	margin: left;
+	top: 20px;
 	opacity: 0;
 	z-index: -99;
 }
@@ -417,9 +401,9 @@ body {
 .left {
 	position: fixed;
 	top: 50%;
-	left: 0%;
-	width: 16px;
-    	height: 120px;
+    	left: 0%;
+    	width: 20px;
+    	height: 80px;
     	text-align: center;
     	transform: translate(0%,-50%);
 	text-align: center;
@@ -429,8 +413,8 @@ body {
 }
 
 .left1 {
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -444,8 +428,8 @@ body {
 	position: fixed;
     	top: 50%;
     	left: 100%;
-    	width: 16px;
-    	height: 120px;
+	width: 20px;
+    	height: 80px;
     	text-align: center;
     	transform: translate(-100%,-50%);
 	text-align: center;
@@ -455,8 +439,8 @@ body {
 }
 
 .right1 {
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -470,15 +454,17 @@ body {
 	top: 0%;
 	left: 0%;
 	z-index: 120;
-	width: 85%;
-	height: 20px;
+	width: 20px;
+	height: calc(50% - 60px);
 	background: rgba(0,0,0,0);
 	text-align: left;
 	font-size: 15px;
 	transform: translate(0%,0%);
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 } 
 
 #bgName {
