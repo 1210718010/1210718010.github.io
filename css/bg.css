@@ -145,10 +145,6 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	border-radius: 0px 0px 20px 0px;
-} 
-
-#bgName {
-	color: black;
 }
 
 #title {
