@@ -118,6 +118,19 @@ pre {
 	text-decoration: underline;
 }
 
+.divm::-webkit-scrollbar {
+	width: 12px;
+}
+
+.divm::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	background-color: #858585;
+}
+
+.divm::-webkit-scrollbar-thumb:hover{
+	background-color:#333;
+}
+
 .text-left {
 	text-align: left !important;
 }
@@ -242,8 +255,8 @@ pre {
 	font-size: 15px;
 }
 
-.tk-main {
-	/*text-align: left;*/
+.twikoo {
+	text-align: left;
 }
 
 @media all and (orientation : portrait) {
