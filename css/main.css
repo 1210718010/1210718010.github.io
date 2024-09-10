@@ -485,7 +485,7 @@ body {
 } 
 
 #bgName {
-	display: block;
+	display: ruby;
 	width: 20px;
 	color: rgb(0,0,0);
 	background: rgb(230,230,230,0.6);
