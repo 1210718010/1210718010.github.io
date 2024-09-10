@@ -131,33 +131,31 @@ body {
 
 #artist {
 	position: fixed;
-	top: 0%;
-	left: 0%;
+	top: 0;
+	left: 0;
 	z-index: 120;
 	width: 20px;
-	height: calc(50% - 60px);
-	background: rgba(0,0,0,0);
-	text-align: left;
+	max-height: calc(50% - 60px);
+	background: rgb(230,230,230,0.6);
 	font-size: 15px;
-	transform: translate(0%,0%);
+	line-height: 20px;
 	writing-mode: vertical-rl;
 	text-orientation: sideways;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	border-radius: 0px 0px 20px 0px;
 } 
 
 #bgName {
-	color: rgb(0,0,0);
-	background: rgb(230,230,230,0.6);
-	border-radius: 0px 0px 20px 0px;
+	color: black;
 }
 
 #title {
-	color: rgb(0,0,0);
+	color: black;
 	text-decoration: none;
 	cursor: pointer;
-	margin: 2px 0px 10px 0px;
+	margin: 42px 0px 10px 0px;
 }
 
 #title:hover {
