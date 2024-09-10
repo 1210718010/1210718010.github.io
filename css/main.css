@@ -87,6 +87,7 @@ pre {
 	background-color: rgba(230,230,230,0.8);
 	color: rgb(0,0,0);
 	z-index: 1;
+	border: 2px solid rgba(0,0,0,0);
 }
 
 .divm .heng {
@@ -289,6 +290,7 @@ pre {
 		background-color: rgba(230,230,230,0.7);
 		color: rgb(0,0,0);
 		z-index: 1;
+		border: 0px;
 	}
 
 	.divm .heng {
@@ -301,6 +303,10 @@ pre {
 		width: 60%;
 		max-width: 300px;
 		height: auto;
+	}
+	
+	.divm::-webkit-scrollbar {
+		all: unset;
 	}
 
 	.js {
