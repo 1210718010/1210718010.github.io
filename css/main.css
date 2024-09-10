@@ -475,7 +475,6 @@ body {
 	width: 20px;
 	height: calc(50% - 60px);
 	background: rgba(0,0,0,0);
-	font-size: 15px;
 	line-height: 20px;
 	writing-mode: vertical-rl;
 	text-orientation: sideways;
