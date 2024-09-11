@@ -34,9 +34,15 @@
             <loc>https://muxmus.com/blog/20230802/</loc>
       </url>
       <url>
-            <loc>https://live.muxmus.com:5000</loc>
+            <loc>https://music.muxmus.com:5000</loc>
       </url>
       <url>
-            <loc>https://music.muxmus.com:5000</loc>
+            <loc>https://um.muxmus.com:5000</loc>
+      </url>
+      <url>
+            <loc>https://i.muxmus.com:5000</loc>
+      </url>
+      <url>
+            <loc>https://live.muxmus.com:5000</loc>
       </url>
 </urlset>
