@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>音乐 ~ 木辛木杉</title>
+		<link rel="shortcut icon" type="image/x-icon" href="https://img.muxmus.com:5000/icon/favicon.ico">
+		<link rel="stylesheet" href="https://file.muxmus.com:5000/css/APlayer.full-screen.min.css">
+		<script src="https://file.muxmus.com:5000/js/jquery-3.6.0.min.js"></script>
+		<script src="https://file.muxmus.com:5000/js/APlayer.full-screen.min.js"></script>
+		<style>
+			body {
+				margin: 0;
+			}
+			h2, h4 {
+				color: white;
+				filter: drop-shadow(0px 0px 3px black);
+				width: 100%;
+				margin: 0;
+			}
+			h4 {
+				opacity: .8;
+			}
+			#bgPic {
+				position: fixed;
+				top: -10%;
+				left: -10%;
+				width: 120%;
+				height: 120%;
+				transform: translate(0px);
+				filter: blur(20px) brightness(.6) contrast(.8);
+				z-index: -99;
+			}
+			#apPic {
+				width: 45vh;
+				height: 45vh;
+				border-radius: 2vh;
+				filter: drop-shadow(0px 0px 8px black);
+				margin: 0 0 5vh;
+			}
+			#info {
+				margin: 5vh;
+				width: 45vh;
+			}
+			#info svg {
+				width: 30px;
+				height: 30px;
+				padding: 3px;
+				border-radius: 10px;
+				background-color: #333;
+				cursor: pointer;
+				opacity: .8;
+				border: 2px solid #fff;
+			}
+			#info svg:hover {
+				opacity: 1;
+			}
+			#info svg path {
+				fill: #fff;
+			}
+			#control {
+				width: 100%;
+				margin: 10% auto 0;
+				display: flex;
+				justify-content: center;
+			}
+			#control svg {
+				margin: 0 5px;
+			}
+			#icon-order {
+				margin: 0 auto 0 0;
+			}
+			#icon-loop {
+				margin: 0 0 0 auto;
+			}
+			#icon-lrc {
+				position: fixed;
+				top: calc(100% - 60px);
+				left: calc(100% - 120px);
+			}
+			#icon-list {
+				position: fixed;
+				top: calc(100% - 60px);
+				left: calc(100% - 60px);
+				z-index: 101;
+			}
+			.aplayer.aplayer-fixed {
+				max-width: 100% !important;
+				width: 100% !important;
+			}
+			.aplayer.aplayer-fixed .aplayer-body {
+				max-width: 100% !important;
+				width: 100% !important;
+				top: 100% !important;
+			}
+			.aplayer .aplayer-lrc {
+				height: 270px !important;
+			}
+			.aplayer .aplayer-lrc .aplayer-lrc-contents  {
+				transition: all .5s ease-in-out !important;
+			}
+			.aplayer .aplayer-lrc p {
+				font-size: 24px !important;
+				line-height: 44px !important;
+				height: 44px !important;
+				transition: all .45s ease-in-out !important;
+			}
+			.aplayer .aplayer-lrc p.aplayer-lrc-current {
+				font-size: 30px !important;
+			}
+			.aplayer.aplayer-fixed .aplayer-lrc {
+				width: calc(100% - 60vh) !important;
+				transform: translateY(-50%) !important;
+				left: 55vh !important;
+				top: 50% !important;
+				font-weight: 500; !important;
+				-webkit-text-stroke: 0px #6A3905 !important;
+				text-shadow: 0px 0px 2px #6A3905, 1.5px 1.5px 3px #6A3905 !important;
+			}
+			.aplayer.aplayer-fixed .aplayer-info {
+				transition: none !important;
+			}
+			.aplayer .aplayer-list {
+				transition: max-height .5s ease;
+			}
+			.aplayer .aplayer-list ol li {
+				height: 70px !important;
+				line-height: 40px !important;
+				box-sizing: border-box;
+				border-top: 2px solid #e9e9e9 !important;
+				font-size: 18px !important;
+			}
+			.aplayer .aplayer-list ol li .aplayer-list-cur {
+				width: 5px !important;
+				height: 50px !important;
+				position: absolute !important;
+				left: 0 !important;
+				top: 10px !important;
+			}
+			.aplayer .aplayer-list ol li .aplayer-list-index {
+				position: relative !important;
+				top: 14px !important;
+			}
+			.aplayer .aplayer-list ol li .aplayer-list-title {
+				position: absolute !important;
+				white-space: nowrap !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+9999) .aplayer-list-title {
+				width: calc(100% - 80px) !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+999) .aplayer-list-title {
+				width: calc(100% - 70px) !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+99) .aplayer-list-title {
+				width: calc(100% - 60px) !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+9) .aplayer-list-title {
+				width: calc(100% - 50px) !important;
+			}
+			.aplayer .aplayer-list ol li .aplayer-list-author {
+				position: absolute !important;
+				bottom: 0 !important;
+				white-space: nowrap !important;
+				overflow: hidden !important;
+				text-overflow: ellipsis !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+9999) .aplayer-list-author {
+				width: calc(100% - 80px) !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+999) .aplayer-list-author {
+				width: calc(100% - 70px) !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+99) .aplayer-list-author {
+				width: calc(100% - 60px) !important;
+			}
+			.aplayer .aplayer-list ol li:nth-child(-n+9) .aplayer-list-author {
+				width: calc(100% - 50px) !important;
+			}
+			.aplayer.aplayer-fixed .aplayer-list {
+				width: min(40%, 500px) !important;
+				height: 100% !important;
+				position: fixed !important;
+				top: 0px !important;
+				left: 100% !important;
+				transform: translate(-100%, 0%) !important;
+				background-color: white !important;
+				z-index: 99 !important;
+				box-sizing: border-box;
+				border: 2px solid #eee !important;
+				border-top-width: 0 !important;
+				border-bottom-width: 0 !important;
+			}
+			.aplayer.aplayer-fixed .aplayer-list:not(.aplayer-list-hide) {
+				max-height: 100% !important;
+			}
+			.aplayer .aplayer-list ol {
+				max-height: 100% !important;
+			}
+			@media all and (orientation : portrait) {
+				h2, h4 {
+					width: auto;
+					margin: 10px calc(50% - 40vw) 0;
+				}
+				#bgPic {
+					filter: blur(12px) brightness(.6) contrast(.8);
+				}
+				#apPic {
+					width: 80vw;
+					height: 80vw;
+					margin: 0 auto 20px;
+					border-radius: 10px;
+					filter: drop-shadow(0px 0px 8px black);
+				}
+				#info {
+					margin: 10% auto;
+				}
+				#control {
+					width: auto;
+					margin: 20px calc(50% - 40vw) 0;
+				}
+				.aplayer .aplayer-lrc {
+					height: 180px  !important;
+				}
+				.aplayer .aplayer-lrc p {
+					font-size: 20px !important;
+					line-height: 44px !important;
+					height: 44px !important;
+				}
+				.aplayer .aplayer-lrc p.aplayer-lrc-current {
+					font-size: 20px !important;
+				}
+				.aplayer.aplayer-fixed .aplayer-lrc {
+					width: 95% !important;
+					transform:  translate(-50%,-50%) !important;
+					top: 80% !important;
+					left: 50% !important;
+				}
+				.aplayer.aplayer-fixed .aplayer-list {
+					width: 100% !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bgPic"></div>
+		<div id=info>
+			<div id="apPic"></div>
+			<h2 id="apName"></h2>
+			<h4 id="apArtist"></h4>
+			<div id="control">
+			<span id="icon-order">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22.667 4l7 6-7 6 7 6-7 6v-4h-3.653l-3.76-3.76 2.827-2.827 2.587 2.587h2v-8h-2l-12 12h-6v-4h4.347l12-12h3.653v-4zM2.667 8h6l3.76 3.76-2.827 2.827-2.587-2.587h-4.347v-4z"></path></svg>
+			</span>
+			<span id="icon-back">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M25.468 6.947c-0.326-0.172-0.724-0.151-1.030 0.057l-6.438 4.38v-3.553c0-0.371-0.205-0.71-0.532-0.884-0.326-0.172-0.724-0.151-1.030 0.057l-12 8.164c-0.274 0.186-0.438 0.496-0.438 0.827s0.164 0.641 0.438 0.827l12 8.168c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-3.556l6.438 4.382c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-16.333c0-0.371-0.205-0.71-0.532-0.884z"></path></svg>
+			</span>
+			<span id="icon-play">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31"><path d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path></svg>
+			</span>
+			<span id="icon-forward">
+				<svg style="transform:rotate(180deg)" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M25.468 6.947c-0.326-0.172-0.724-0.151-1.030 0.057l-6.438 4.38v-3.553c0-0.371-0.205-0.71-0.532-0.884-0.326-0.172-0.724-0.151-1.030 0.057l-12 8.164c-0.274 0.186-0.438 0.496-0.438 0.827s0.164 0.641 0.438 0.827l12 8.168c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-3.556l6.438 4.382c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-16.333c0-0.371-0.205-0.71-0.532-0.884z"></path></svg>
+			</span>
+			<span id="icon-loop">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 29 32"><path d="M9.333 9.333h13.333v4l5.333-5.333-5.333-5.333v4h-16v8h2.667v-5.333zM22.667 22.667h-13.333v-4l-5.333 5.333 5.333 5.333v-4h16v-8h-2.667v5.333z"></path></svg>
+			</span></div>
+			<span id="icon-lrc">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M26.667 5.333h-21.333c-0 0-0.001 0-0.001 0-1.472 0-2.666 1.194-2.666 2.666 0 0 0 0.001 0 0.001v-0 16c0 0 0 0.001 0 0.001 0 1.472 1.194 2.666 2.666 2.666 0 0 0.001 0 0.001 0h21.333c0 0 0.001 0 0.001 0 1.472 0 2.666-1.194 2.666-2.666 0-0 0-0.001 0-0.001v0-16c0-0 0-0.001 0-0.001 0-1.472-1.194-2.666-2.666-2.666-0 0-0.001 0-0.001 0h0zM5.333 16h5.333v2.667h-5.333v-2.667zM18.667 24h-13.333v-2.667h13.333v2.667zM26.667 24h-5.333v-2.667h5.333v2.667zM26.667 18.667h-13.333v-2.667h13.333v2.667z"></path></svg>
+			</span>
+			<span id="icon-list">
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 22 32"><path d="M20.8 14.4q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2zM1.6 11.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2zM20.8 20.8q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2z"></path></svg>
+			</span>
+		</div>
+		<div id="aplayer"></div>
+		<script>
+			var apFlag = false;
+			$.ajax({
+				type:"get",
+				url:"https://api.muxmus.com:5000/music",
+				dataType:"json",
+				success:function(jsonData){
+					const ap = new APlayer({
+						container: document.getElementById("aplayer"),
+						fixed: true,
+						theme: "#8E8CD8",
+						volume: 0.3,
+						order: "random",
+						lrcType: 3,
+						audio: jsonData,
+					});
+					ap.on("loadstart", () => {
+						var date = new Date()
+						console.log('切换：' + date + '.' + date.getMilliseconds())
+						const currentPlayMeta = ap.list.audios[ap.list.index];
+						document.getElementById("apName").innerHTML = currentPlayMeta.name;
+						document.getElementById("apArtist").innerHTML = currentPlayMeta.artist;
+						if(apFlag){
+							ap.play();
+							$("#bgPic").attr("style","background: url(\"" + currentPlayMeta.cover + "\") center center / cover no-repeat fixed black; transition: background 1.5s;");
+							$("#apPic").attr("style","background: url(\"" + currentPlayMeta.cover + "\") center / cover no-repeat black; transition: background 1.5s;");
+						}else{
+							$("#bgPic").attr("style","background: url(\"" + currentPlayMeta.cover + "\") center center / cover no-repeat fixed black;");
+							$("#apPic").attr("style","background: url(\"" + currentPlayMeta.cover + "\") center / cover no-repeat black;");
+						};
+						apFlag = true;
+						navigator.mediaSession.metadata = new MediaMetadata({
+							title: currentPlayMeta.name,
+							artist: currentPlayMeta.artist,
+							artwork: [{src: currentPlayMeta.cover + "@350w.webp", size: "350x350", type: "image/webp"}]
+						});
+						navigator.mediaSession.setActionHandler("previoustrack",function(){
+							ap.skipBack();
+						});
+						navigator.mediaSession.setActionHandler("nexttrack",function(){
+							ap.skipForward();
+						});
+					});
+					ap.on('play',function(){
+						document.getElementById("icon-play").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 17 32"><path d="M14.080 4.8q2.88 0 2.88 2.048v18.24q0 2.112-2.88 2.112t-2.88-2.112v-18.24q0-2.048 2.88-2.048zM2.88 4.8q2.88 0 2.88 2.048v18.24q0 2.112-2.88 2.112t-2.88-2.112v-18.24q0-2.048 2.88-2.048z"></path></svg>'
+					});
+					ap.on('pause',function(){
+						document.getElementById("icon-play").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31"><path d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path></svg>'
+					});
+					$("#aplayer").attr("class","aplayer aplayer-withlist aplayer-fixed");
+					$("#icon-play").click(function(){
+						if(ap.audio.paused){
+							ap.play();
+						}else{
+							ap.pause();
+						};
+					});
+					$("#icon-back").click(function(){
+						ap.skipBack()
+						ap.play();
+					});
+					$("#icon-forward").click(function(){
+						var date = new Date()
+						console.log('下一首：' + date + '.' + date.getMilliseconds())
+						ap.skipForward();
+						ap.play();
+					});
+					$("#icon-lrc").click(function(){
+						ap.lrc.toggle();
+					});
+					$("#icon-list").click(function(){
+						ap.list.toggle();
+					});
+				},
+			});
+		</script>
+	</body>
+</html>
