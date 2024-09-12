@@ -21,7 +21,7 @@ $.ajax({
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: currentPlayMeta.name,
 				artist: currentPlayMeta.artist,
-				artwork: [{src: currentPlayMeta.cover, size: "350x350", type: "image/webp"}]
+				artwork: [{src: currentPlayMeta.cover + "@350w.webp", size: "350x350", type: "image/webp"}]
 			});
 			navigator.mediaSession.setActionHandler("previoustrack",function(){
 				ap.skipBack();
