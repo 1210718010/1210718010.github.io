@@ -16,7 +16,7 @@ $.ajax({
 			lrcType: 3,
 			audio: jsonData,
 		});
-		ap.on("loadeddata", () => {
+		ap.on("loadstart", () => {
 			const currentPlayMeta = ap.list.audios[ap.list.index];
 			navigator.mediaSession.metadata = new MediaMetadata({
 				title: currentPlayMeta.name,
