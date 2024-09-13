@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="zh-CN">
 	<head>
@@ -235,7 +234,7 @@
 			}
 			@media all and (orientation : portrait) {
 				.con{
-					margin: 20px calc(50% - 40vw) 0;
+					/*margin: 20px calc(50% - 40vw) 0;*/
 				}
 				h2, h4 {
 					width: auto;
@@ -253,6 +252,7 @@
 				}
 				#info {
 					margin: 10% auto;
+					width: 80vw;
 				}
 				#control {
 					width: auto;
@@ -404,12 +404,14 @@
 			function isElementOverlapped(elementA, elementB){
 				let rectA = elementA.getBoundingClientRect();
 				let rectB = elementB.getBoundingClientRect();
-				return !(
-					rectA.top >= rectB.bottom ||
-					rectA.right <= rectB.left ||
-					rectA.bottom <= rectB.top ||
-					rectA.left >= rectB.right
-					);
+				return (
+					rectA.top == rectB.top ||
+					rectA.bottom == rectB.bottom
+				//	rectA.top >= rectB.bottom ||
+				//	rectA.right <= rectB.left ||
+				//	rectA.bottom <= rectB.top ||
+				//	rectA.left >= rectB.right
+				);
 			};
 			$(document).ready(function(){
 				$(window).resize(function(){
