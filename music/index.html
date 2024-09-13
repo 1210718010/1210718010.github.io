@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="zh-CN">
 	<head>
@@ -12,7 +13,7 @@
 			body {
 				margin: 0;
 			}
-			h2, h4 {
+			.wrap {
 				color: white;
 				filter: drop-shadow(0px 0px 3px black);
 				width: 100%;
@@ -47,12 +48,13 @@
 				height: 30px;
 				padding: 3px;
 				border-radius: 10px;
-				background-color: #333;
+				background-color: rgba(51,51,51,.6);
 				cursor: pointer;
 				opacity: .8;
 				border: 2px solid #fff;
 			}
 			#info svg:hover {
+				background-color: rgb(51 51 51);
 				opacity: 1;
 			}
 			#info svg path {
@@ -83,6 +85,39 @@
 				top: calc(100% - 60px);
 				left: calc(100% - 60px);
 				z-index: 101;
+			}
+			.wrap{
+				position: relative;
+    			line-height: 2;
+    			height: 2em;
+    			overflow: hidden;
+			}
+			.title{
+    			display: block;
+    			white-space: nowrap;
+    			text-overflow: ellipsis;
+    			overflow: hidden;
+    			position: relative;
+    			top: -4em;
+			}
+			.txt{
+				display: block;
+    			max-height: 4em;
+    			overflow: hidden;
+			}
+			.title{
+  				display: inline-block;
+  				animation: move 10s .3s linear infinite;
+			}
+			.title::after{
+  				content: attr(data-title);
+  				padding: 0 5em;
+			}
+			@keyframes move {
+				to {
+    				transform: translate3d(-50%, 0, 0);
+    				--trunc: true;
+    			}
 			}
 			.aplayer.aplayer-fixed {
 				max-width: 100% !important;
@@ -199,6 +234,9 @@
 				max-height: 100% !important;
 			}
 			@media all and (orientation : portrait) {
+				.con{
+					margin: 20px calc(50% - 40vw) 0;
+				}
 				h2, h4 {
 					width: auto;
 					margin: 10px calc(50% - 40vw) 0;
@@ -233,8 +271,8 @@
 				}
 				.aplayer.aplayer-fixed .aplayer-lrc {
 					width: 95% !important;
-					transform:  translate(-50%,-50%) !important;
-					top: 80% !important;
+					transform: translate(-50%,-100%) !important;
+					top: calc(100% - 80px) !important;
 					left: 50% !important;
 				}
 				.aplayer.aplayer-fixed .aplayer-list {
@@ -247,8 +285,14 @@
 		<div id="bgPic"></div>
 		<div id=info>
 			<div id="apPic"></div>
-			<h2 id="apName"></h2>
-			<h4 id="apArtist"></h4>
+			<div class="con">
+				<h2 class="wrap" id="apName">
+					<span class="txt">Name</span>
+				</h2>
+				<h4 class="wrap" id="apArtist">
+					<span class="txt">Artist</span>
+				</h4>
+			</div>
 			<div id="control">
 			<span id="icon-order">
 				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22.667 4l7 6-7 6 7 6-7 6v-4h-3.653l-3.76-3.76 2.827-2.827 2.587 2.587h2v-8h-2l-12 12h-6v-4h4.347l12-12h3.653v-4zM2.667 8h6l3.76 3.76-2.827 2.827-2.587-2.587h-4.347v-4z"></path></svg>
@@ -291,10 +335,11 @@
 					});
 					ap.on("loadstart", () => {
 						var date = new Date()
-						console.log('切换：' + date + '.' + date.getMilliseconds())
 						const currentPlayMeta = ap.list.audios[ap.list.index];
-						document.getElementById("apName").innerHTML = currentPlayMeta.name;
-						document.getElementById("apArtist").innerHTML = currentPlayMeta.artist;
+						document.getElementById("apName").innerHTML = '<span class="txt">' + currentPlayMeta.name + '</span><span class="title" data-title="' + currentPlayMeta.name + '">' + currentPlayMeta.name + '</span>';
+						document.getElementById("apArtist").innerHTML = '<span class="txt">' + currentPlayMeta.artist + '</span><span class="title" data-title="' + currentPlayMeta.artist + '">' + currentPlayMeta.artist + '</span>';
+						overflow(0);
+						overflow(1);
 						if(apFlag){
 							ap.play();
 							$("#bgPic").attr("style","background: url(\"" + currentPlayMeta.cover + "\") center center / cover no-repeat fixed black; transition: background 1.5s;");
@@ -336,7 +381,6 @@
 					});
 					$("#icon-forward").click(function(){
 						var date = new Date()
-						console.log('下一首：' + date + '.' + date.getMilliseconds())
 						ap.skipForward();
 						ap.play();
 					});
@@ -347,6 +391,31 @@
 						ap.list.toggle();
 					});
 				},
+			});
+			function overflow(i){
+				var txt = document.getElementsByClassName('txt')[i];
+				var title = document.getElementsByClassName('title')[i];
+				if(isElementOverlapped(txt, title)){
+					txt.style.opacity = 0;
+				}else{
+					txt.style.opacity = 1;
+				};
+			};
+			function isElementOverlapped(elementA, elementB){
+				let rectA = elementA.getBoundingClientRect();
+				let rectB = elementB.getBoundingClientRect();
+				return !(
+					rectA.top >= rectB.bottom ||
+					rectA.right <= rectB.left ||
+					rectA.bottom <= rectB.top ||
+					rectA.left >= rectB.right
+					);
+			};
+			$(document).ready(function(){
+				$(window).resize(function(){
+					overflow(0);
+					overflow(1);
+				});
 			});
 		</script>
 	</body>
