@@ -474,7 +474,7 @@ body {
 	z-index: 120;
 	width: 20px;
 	max-height: calc(50% - 60px);
-	background: rgb(230,230,230,0.6);
+	background: rgba(230,230,230,0.6);
 	font-size: 15px;
 	line-height: 20px;
 	writing-mode: vertical-rl;
@@ -494,6 +494,32 @@ body {
 
 #title:hover {
 	text-decoration: underline;
+}
+
+/* twikoo */
+
+.twikoo .el-input-group__prepend {
+	border-color: rgb(0 0 0 / .5);
+}
+
+.twikoo .el-input-group__prepend:hover {
+	border-color: #000;
+}
+
+.twikoo .el-input__inner {
+	border-color: rgb(0 0 0 / .5);
+}
+
+.twikoo .el-input__inner:hover {
+	border-color: #000;
+}
+
+.twikoo .el-textarea__inner {
+	border-color: rgb(0 0 0 / .5);
+}
+
+.twikoo .el-textarea__inner:hover {
+	border-color: #000;
 }
 
 /* github-dark */
