@@ -1,5 +1,4 @@
 // JavaScript Document
-// Update: 2024.9.10 00:03(UTC+8)
 $("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><img id=\"bg3\"></img><div id=\"artist\"><img id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" ><img id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" ><img id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" ><img id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" ><a id=\"title\" href=\"\" target=\"_blank\"></a></div><div class=\"left\"><div class=\"left1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div><div class=\"right\"><div class=\"right1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div>");
 var animation = false;
 var nextFlag = true;
@@ -37,7 +36,7 @@ $.ajax({
 function animationStart(){
 	clearInterval(timer);
 	$("#bg1").attr("style","background: url(\"" + thisPixiv.url + "\") center center / cover no-repeat fixed black; opacity: 1;" + zIndex1);
-	document.getElementById("title").innerHTML = "id：" + thisPixiv.id + " | 画师：" + thisPixiv.artist;
+	document.getElementById("title").innerHTML = "id: " + thisPixiv.id + " 画师：" + thisPixiv.artist;
 	$("#title").attr("href","https://www.pixiv.net/artworks/" + thisPixiv.id);
 	animation = true;
 	time = setTimeout("animationEnd()",1500);
@@ -47,7 +46,7 @@ function animationEnd(){
 	$("#bg1").attr("style","transition: none; opacity: 0;" + zIndex1);
 	$("#bg2").attr("style","background: url(\"" + thisPixiv.url + "\") center center / cover no-repeat fixed black;" + zIndex2);
 	$("#bg3").attr("src",nextPixiv.url);
-	document.getElementById("title").innerHTML = "id：" + thisPixiv.id + " | 画师：" + thisPixiv.artist;
+	document.getElementById("title").innerHTML = "id: " + thisPixiv.id + " 画师：" + thisPixiv.artist;
 	$("#title").attr("href","https://www.pixiv.net/artworks/" + thisPixiv.id);
 	if(autoFlag){
 		secondClick();
