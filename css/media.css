@@ -4,7 +4,8 @@
 body {
 	background: url("https://img.muxmus.com:5000/pixiv/87461089_p1.png") center center / cover no-repeat fixed black;
 	margin: 0px;
-	font-family: "LXGW WenKai GB Screen", sans-serif;
+	font-family: "LXGW WenKai GB Screen";
+	font-weight: normal;
 }
 
 .topDiv {
