@@ -536,7 +536,7 @@ pre,code {
 	font-family: "LXGW WenKai Mono", sans-serif;
 }
 
-.hljs {
+pre,code.hljs {
   color: #24292e;
   background: #ffffff;
 }
