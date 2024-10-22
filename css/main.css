@@ -541,6 +541,7 @@ code.hljs {
   display: block;
   overflow-x: auto;
   padding: 1em;
+  border-radius: 1vw;
 }
 
 .hljs-doctag,
