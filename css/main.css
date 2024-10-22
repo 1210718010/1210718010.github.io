@@ -538,7 +538,10 @@ pre,code {
 
 pre,code.hljs {
   color: #24292e;
-  background: #ffffff;
+  background: rgba(255, 255, 255, .8);
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
 }
 
 .hljs-doctag,
