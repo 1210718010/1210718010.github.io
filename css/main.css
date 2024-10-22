@@ -498,6 +498,11 @@ body {
 
 /* twikoo */
 
+input,textarea {
+	font-family: "LXGW WenKai GB Screen";
+	font-weight: normal;
+}
+
 .twikoo .el-input-group__prepend {
 	border-color: rgb(0 0 0 / .4) !important;
 }
