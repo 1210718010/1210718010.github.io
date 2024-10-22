@@ -91,6 +91,10 @@ pre {
 	z-index: 1;
 }
 
+.divm .tuPian {
+	text-align: inherit;
+}
+
 .divm .heng {
 	width: 60%;
 	max-width: 600px;
@@ -101,10 +105,6 @@ pre {
 	width: 40%;
 	max-width: 400px;
 	height: auto;
-}
-
-.divm .tuPian {
-	text-align: center;
 }
 
 .divm .zhuShi {
