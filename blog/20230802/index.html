@@ -51,7 +51,7 @@
 				<br>
 				<br>
 				<h2>低仿pixiv自动轮播背景</h2>
-				<p class="date">2023.08.02 10:05 | 访问量:<span id="twikoo_visitors"></span></p>
+				<p class="date">发布于：2023.08.02 10:05 | 最后编辑于：2024.10.22 14:20 | 访问量:<span id="twikoo_visitors"></span></p>
 				<br>
 				<p>改了又改的背景终于是看的过去了，再次重写ui后，写篇博客记录一下</p>
 				<br>
@@ -78,135 +78,226 @@
 				<p class="zhuShi">ps：bg.js文件可能需要引用在&lt/div&gt的后面</p>
 				<p class="zhuShi">ps：下面的示例直接使用的pixiv的图片，可自行改用代理，或其他图片</p>
 				<pre><code class="language-js">// JavaScript Document
-$("#bg").append("&ltdiv id=\"bg1\"&gt&lt/div&gt&ltdiv id=\"bg2\"&gt&lt/div&gt&ltdiv id=\"artist\"&gt&ltspan id=\"bgName\"&gt&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&ltimg id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" &gt&ltimg id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" &gt&ltimg id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" &gt&ltimg id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" &gt&lta id=\"title\" href=\"\" target=\"_blank\"&gt&lt/a&gt&lt/span&gt&lt/div&gt&ltdiv class=\"left\"&gt&ltdiv class=\"left1\"&gt&ltsvg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"&gt&ltpath d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"&gt&lt/path&gt&lt/svg&gt&lt/div&gt&lt/div&gt&ltdiv class=\"right\"&gt&ltdiv class=\"right1\"&gt&ltsvg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"&gt&ltpath d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"&gt&lt/path&gt&lt/svg&gt&lt/div&gt&lt/div&gt");
-var img = [
-	{
-		id: "34844544",  \\这里放p站作品id
-		title: "星月夜",  \\这里放作品名称
-		artist: "c7肘",  \\这里放作品画师
-		url: "2013/04/07/01/53/07/34844544_p0.jpg"  \\这里放p站作品原图后面那一长串
-	},
-	{
-		id: "id",
-		title: "title",
-		artist: "artist",
-		url: "url"
-	},
-	...
-];
-var bgCount = img.length - 1;
-var bgOriginal = new Array;
+$("#bg").append("<div id=\"bg1\"></div><div id=\"bg2\"></div><img id=\"bg3\"></img><div id=\"artist\"><img id=\"bf\" class=\"bf\" src=\"https://muxmus.com/img/bf.svg\" alt=\"\" ><img id=\"zt\" class=\"zt\" src=\"https://muxmus.com/img/zt.svg\" alt=\"\" ><img id=\"yc\" class=\"yc\" src=\"https://muxmus.com/img/yc.svg\" alt=\"\" ><img id=\"xs\" class=\"xs\" src=\"https://muxmus.com/img/xs.svg\" alt=\"\" ><a id=\"title\" href=\"\" target=\"_blank\"></a></div><div class=\"left\"><div class=\"left1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div><div class=\"right\"><div class=\"right1\"><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 32 32\"><path d=\"M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z\"></path></svg></div></div>");
+var animation = false;
+var nextFlag = true;
+var autoFlag = true;
 var bgI = 0;
-var bgNum = 0;
-var bgFlag = 0;
-var lastFlag = 0;
-for (var bgJ = 0; bgJ <= bgCount; bgJ++){
-    bgOriginal[bgJ] = bgJ;
-}
-bgOriginal.sort(function(){
-    return 0.5 - Math.random();
+var bgCount;
+var bgNum;
+var time;
+var timer;
+var pixiv = new Array();
+var bgOriginal = new Array();
+var thisPixiv;
+var nextPixiv;
+var zIndex1 = "z-index: -10;";
+var zIndex2 = "z-index: -11;";
+$.ajax({
+	type:"get",
+	url: "https://api.muxmus.com:5000/pixiv",
+	dataType:"json",
+	success:function(jsonData){
+		bgCount = jsonData.length - 1;
+		for (var i = 0;i <= bgCount;i++){
+			pixiv[i] = jsonData[i];
+			pixiv[i].url += "@3840w_2160h.webp";
+			bgOriginal[i] = i;
+		};
+		bgOriginal.sort(function(){
+			return 0.5 - Math.random();
+		});
+		thisPixiv = pixiv[bgOriginal[0]];
+		nextPixiv = pixiv[bgOriginal[1]];
+		animationStart();
+	},
 });
-function secondClick(){
-	var timer = setInterval(function(){
-		nextSwitch();
-	},60000);
-	$("#bf").click(function(){
-    	 $("#bf").attr("class","zt");
-    	 $("#zt").attr("class","bf");
-    	 clearInterval(timer);
-    });
-    $("#zt").click(function(){
-    	 $("#bf").attr("class","bf");
-    	 $("#zt").attr("class","zt");
-    	 secondClick();
-    });
-}
+function animationStart(){
+	clearInterval(timer);
+	$("#bg1").attr("style","background: url(\"" + thisPixiv.url + "\") center center / cover no-repeat fixed black; opacity: 1;" + zIndex1);
+	document.getElementById("title").innerHTML = "id: " + thisPixiv.id + " 画师：" + thisPixiv.artist;
+	$("#title").attr("href","https://www.pixiv.net/artworks/" + thisPixiv.id);
+	animation = true;
+	time = setTimeout("animationEnd()",1500);
+};
+function animationEnd(){
+	animation = false;
+	$("#bg1").attr("style","transition: none; opacity: 0;" + zIndex1);
+	$("#bg2").attr("style","background: url(\"" + thisPixiv.url + "\") center center / cover no-repeat fixed black;" + zIndex2);
+	$("#bg3").attr("src",nextPixiv.url);
+	document.getElementById("title").innerHTML = "id: " + thisPixiv.id + " 画师：" + thisPixiv.artist;
+	$("#title").attr("href","https://www.pixiv.net/artworks/" + thisPixiv.id);
+	if(autoFlag){
+		secondClick();
+	};
+};
 function nextSwitch(){
-	if(bgI <= bgCount){
-		autoSwitch();
+	if(bgI <= bgCount - 2){
+		if(animation){
+			if(!nextFlag){
+				bgI++;
+				clearTimeout(time);
+				thisPixiv = pixiv[bgOriginal[bgI]];
+				nextPixiv = pixiv[bgOriginal[bgI + 1]];
+				animationEnd();
+			}else{
+				clearTimeout(time);
+				thisPixiv = pixiv[bgOriginal[bgI]];
+				nextPixiv = pixiv[bgOriginal[bgI + 1]];
+				animationEnd();
+			};
+		}else{
+			bgI++;
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI + 1]];
+			animationStart();
+		};
+	}else if(bgI == bgCount - 1){
+		if(animation){
+			if(!nextFlag){
+				bgI++;
+				clearTimeout(time);
+				thisPixiv = pixiv[bgOriginal[bgI]];
+				nextPixiv = pixiv[bgOriginal[bgI]];
+				animationEnd();
+			}else{
+				clearTimeout(time);
+				thisPixiv = pixiv[bgOriginal[bgI]];
+				nextPixiv = pixiv[bgOriginal[bgI + 1]];
+				animationEnd();
+			};
+		}else{
+			bgI++;
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI]];
+			animationStart();
+		};
 	}else{
-		bgNum = bgOriginal[bgCount];
-		bgOriginal.sort(function(){
-			return 0.5 - Math.random();
-		});
-		ifNext();
-		bgI = 0;
-		autoSwitch();
-	}
-}
+		if(animation){
+			clearTimeout(time);
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI]];
+			animationEnd();
+		}else{
+			bgNum = bgOriginal[bgCount];
+			bgOriginal.sort(function(){
+				return 0.5 - Math.random();
+			});
+			ifNext();
+			bgI = 0;
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI + 1]];
+			animationStart();
+		};
+	};
+	nextFlag = true;
+};
 function lastSwitch(){
-	if(bgI >= 2){
-		bgI -= 2;
-		autoSwitch();
+	if(bgI >= 1){
+		if(animation){
+			if(nextFlag){
+				bgI--;
+				clearTimeout(time);
+				thisPixiv = pixiv[bgOriginal[bgI]];
+				nextPixiv = pixiv[bgOriginal[bgI]];
+				animationEnd();
+			}else{
+				clearTimeout(time);
+				thisPixiv = pixiv[bgOriginal[bgI]];
+				nextPixiv = pixiv[bgOriginal[bgI]];
+				animationEnd();
+			};
+		}else{
+			bgI--;
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI]];
+			animationStart();
+		};
 	}else{
-		bgNum = bgOriginal[0];
-		bgOriginal.sort(function(){
-			return 0.5 - Math.random();
-		});
-		ifLast();
-		bgI = bgCount;
-		autoSwitch();
-	}
-}
-function autoSwitch(){
-	if(bgFlag == 0){
-		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://i.pximg.net/img-original/img/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -10; opacity: 1;");
-		document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
-	}else{
-		$("#bg1").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://i.pximg.net/img-original/img/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: 119; opacity: 1;");
-		document.getElementById("title").innerHTML = "id：" + img[bgOriginal[bgI]].id + " | 画师：" + img[bgOriginal[bgI]].artist;
-	}
-	$("#title").attr("href","https://www.pixiv.net/artworks/" + img[bgOriginal[bgI]].id);
-	if(bgI < bgCount){
-		bgI += 1;
-		$("#bg2").attr("style","position: fixed; top: 0%; left: 0%; width: 100%; height: 100%; transform: translate(0px, 0px); background: url(\"https://i.pximg.net/img-original/img/" + img[bgOriginal[bgI]].id + "\") center center / cover no-repeat fixed black; z-index: -11; opacity: 0;");
-	}else{
-		bgI += 1;
-	}
-}
+		if(animation){
+			clearTimeout(time);
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI]];
+			animationEnd();
+		}else{
+			bgNum = bgOriginal[bgCount];
+			bgOriginal.sort(function(){
+				return 0.5 - Math.random();
+			});
+			ifLast();
+			bgI = bgCount;
+			thisPixiv = pixiv[bgOriginal[bgI]];
+			nextPixiv = pixiv[bgOriginal[bgI]];
+			animationStart();
+		};
+	};
+	nextFlag = false;
+};
 function ifNext(){
 	if(bgOriginal[0] == bgNum){
 		bgOriginal.sort(function(){
 			return 0.5 - Math.random();
 		});
 		ifNext();
-	}
-}
+	};
+};
 function ifLast(){
 	if(bgOriginal[bgCount] == bgNum){
 		bgOriginal.sort(function(){
 			return 0.5 - Math.random();
 		});
 		ifLast();
-	}
-}
-$(function(){
-	autoSwitch();
-});
-if(document.all){
-    window.attachEvent('onload',secondClick);
-}
-else{
-    window.addEventListener('load',secondClick,false);
-}
+	};
+};
+function secondClick(){
+	if(bg3.complete){
+		if(autoFlag){
+			clearInterval(timer);
+			timer = setInterval("nextSwitch()",60000);
+		};
+	}else{
+		bg3.onload = function(){
+			if(autoFlag){
+				clearInterval(timer);
+				timer = setInterval("nextSwitch()",60000);
+			};
+		};
+	};
+};
 $(function(){
     $("#yc").click(function(){
     	$("#yc").attr("class","xs");
     	$("#xs").attr("class","yc");
-    	document.getElementById("bg1").style.zIndex = "119";
-    	bgFlag = 1;
+    	zIndex1 = "z-index: 115;";
+    	zIndex2 = "z-index: 114;";
+    	$("#bg1").attr("style",$("#bg1").attr("style") + zIndex1);
+    	$("#bg2").attr("style",$("#bg2").attr("style") + zIndex2);
     });
     $("#xs").click(function(){
     	$("#yc").attr("class","yc");
     	$("#xs").attr("class","xs");
-    	document.getElementById("bg1").style.zIndex = "-10";
-    	bgFlag = 0;
+    	zIndex1 = "z-index: -10;";
+    	zIndex2 = "z-index: -11;";
+    	$("#bg1").attr("style",$("#bg1").attr("style") + zIndex1);
+    	$("#bg2").attr("style",$("#bg2").attr("style") + zIndex2);
     });
     $(".left").click(function(){
     	lastSwitch();
     });
     $(".right").click(function(){
     	nextSwitch();
+    });
+	$("#bf").click(function(){
+    	 $("#bf").attr("class","zt");
+    	 $("#zt").attr("class","bf");
+    	 autoFlag = false;
+    	 clearInterval(timer);
+    });
+    $("#zt").click(function(){
+    	 $("#bf").attr("class","bf");
+    	 $("#zt").attr("class","zt");
+    	 autoFlag = true;
+    	 secondClick();
     });
 });</code></pre>
 				<br>
