@@ -9,7 +9,7 @@ body {
 	font-weight: normal;
 }
 
-h2 {
+h1,h2 {
 	cursor: default;
 	font-weight: 100;
 }
@@ -126,7 +126,6 @@ pre {
 
 .date {
 	font-size: 13px;
-	white-space: break-spaces;
 }
 
 .tx {
