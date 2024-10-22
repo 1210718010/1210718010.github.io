@@ -5,7 +5,8 @@
 
 body {
 	background-color: black;
-	font-family: "LXGW WenKai GB Screen", sans-serif;
+	font-family: "LXGW WenKai GB Screen";
+	font-weight: normal;
 }
 
 p {
@@ -532,7 +533,8 @@ body {
 /* github-dark */
 
 pre,code {
-	font-family: "LXGW WenKai Mono", sans-serif;
+	font-family: "LXGW WenKai Mono GB Screen";
+	font-weight: normal;
 }
 
 code.hljs {
