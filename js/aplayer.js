@@ -3,10 +3,9 @@ $.ajax({
 	type:"get",
 	url:"https://api.muxmus.com/music",
 	dataType:"json",
-	success:function(json){
-		var jsonData = json;
+	success:function(jsonData){
 		for(var i = 0; i <= jsonData.length - 1; i++){
-			jsonData[i].pic += "@350w.webp";
+			jsonData[i].cover += "@350w.webp";
 		};
 		const ap = new APlayer({
 			container: document.getElementById("aplayer"),
