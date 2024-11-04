@@ -1,7 +1,7 @@
 // JavaScript Document
 $.ajax({
 	type:"get",
-	url:"https://api.muxmus.com:5000/music",
+	url:"https://api.muxmus.com/music",
 	dataType:"json",
 	success:function(jsonData){
 		for(var i = 0; i <= jsonData.length - 1; i++){
