@@ -3,7 +3,8 @@ $.ajax({
 	type:"get",
 	url:"https://api.muxmus.com/music",
 	dataType:"json",
-	success:function(jsonData){
+	success:function(json){
+		var jsonData = json;
 		for(var i = 0; i <= jsonData.length - 1; i++){
 			jsonData[i].pic += "@350w.webp";
 		};
