@@ -8,7 +8,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="https://muxmus.com/favicon.ico">
 		<link rel="stylesheet" href="https://muxmus.com/css/main.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/APlayer.min.css">
-		<link rel="stylesheet" href="https://file.muxmus.com:5000/css/lxgw-wenkai-screen-web/style.css">
+		<link rel="stylesheet" href="https://file.muxmus.com/css/lxgw-wenkai-screen-web/style.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
 		<script src="https://muxmus.com/js/jquery.pjax.js"></script>
 		<script src="https://muxmus.com/js/APlayer.min.js"></script>
@@ -34,7 +34,7 @@
 				});
 				hljs.highlightAll();
 				twikoo.init({
-					envId: 'https://twikoo.muxmus.com:5000',
+					envId: 'https://twikoo.muxmus.com',
 					el: '#tcomment',
 					lang: 'zh-CN',
 				})
@@ -60,7 +60,7 @@
 				<p>需要引用<a class="lianJie" target="_blank" href="https://jquery.com/">jQuery</a></p>
 				<br>
 				<div class="tuPian">
-					<a target="_blank" href="https://img.muxmus.com:5000/blog/20230802/1.png"><img class="heng" src="https://img.muxmus.com:5000/blog/20230802/1.png@1200w_1200h.webp" alt="" /></a>
+					<a target="_blank" href="https://img.muxmus.com/blog/20230802/1.png"><img class="heng" src="https://img.muxmus.com/blog/20230802/1.png@1200w_1200h.webp" alt="" /></a>
 				</div>
 				<br>
 				<a class="lianJie" target="_blank" href="./demo.html">Demo</a>
@@ -96,7 +96,7 @@ var zIndex1 = "z-index: -10;";
 var zIndex2 = "z-index: -11;";
 $.ajax({
 	type:"get",
-	url: "https://api.muxmus.com:5000/pixiv",
+	url: "https://api.muxmus.com/pixiv",
 	dataType:"json",
 	success:function(jsonData){
 		bgCount = jsonData.length - 1;
@@ -306,7 +306,7 @@ $(function(){
 				<div id="tcomment"></div>
 				<script>
 					twikoo.init({
-						envId: 'https://twikoo.muxmus.com:5000',
+						envId: 'https://twikoo.muxmus.com',
 						el: '#tcomment',
 						lang: 'zh-CN',
 					})
