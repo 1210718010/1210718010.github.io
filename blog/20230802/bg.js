@@ -16,7 +16,7 @@ var zIndex1 = "z-index: -10;";
 var zIndex2 = "z-index: -11;";
 $.ajax({
 	type:"get",
-	url: "https://api.muxmus.com:5000/pixiv",
+	url: "https://api.muxmus.com/pixiv",
 	dataType:"json",
 	success:function(jsonData){
 		bgCount = jsonData.length - 1;
