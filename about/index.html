@@ -25,15 +25,20 @@
 			<p>4. 上述部署在家中的服务，从2024年11月4日起，都套了层Cloudflare，并做了端口回源处理。目前IPv4也可以正常访问了，并且端口号也改为了默认的80、443。但是延迟相比原来会高些，所以对延迟和带宽高需求的服务也提供和原来一样的直连方式：</p>
 			<ul>
 				<li>
-					<a href="https://music.muxmus.com" target="_blank">音乐 | https://music.muxmus.com（Cloudflare代理）</a>
+					音乐 <a href="https://music.muxmus.com" target="_blank">https://music.muxmus.com</a>（Cloudflare代理）
 					<br>
-					→ <a href="https://music-v6.muxmus.com:5000" target="_blank">音乐 | https://music-v6.muxmus.com:5000（IPv6直连）</a>
+					↓
+					<br>
+					<a href="https://music-v6.muxmus.com:5000" target="_blank">https://music-v6.muxmus.com:5000</a>（IPv6直连）
 				</li>
 				<li>
-					<a href="https://img.muxmus.com" target="_blank">图片 | https://img.muxmus.com（Cloudflare代理）</a>
+					图片 <a href="https://img.muxmus.com" target="_blank">https://img.muxmus.com</a>（Cloudflare代理）
 					<br>
-					→ <a href="https://img-v6.muxmus.com:5000" target="_blank">图片 | https://img-v6.muxmus.com:5000（IPv6直连）</a>
+					→
+					<br>
+					<a href="https://img-v6.muxmus.com:5000" target="_blank">https://img-v6.muxmus.com:5000</a>（IPv6直连）
 				</li>
+				<p>……</p>
 			</ul>
 			<p>5. 为节省流量和带宽，本站的大部分图片会在服务器上先压缩并转码为WebP格式后再进行传输，并设有缓存期限30天。如果遇到图片加载稍慢，可能是该图片30天内无人访问，正在重新压缩转码，请耐心等待。</p>
 			<p>6. 绝大部分音乐(歌词及专辑图)来自<a href="https://y.qq.com/n/ryqq/playlist/860721878" target="_blank">QQ音乐</a>，少部分缺失的歌词及专辑图通过网易云音乐和哔哩哔哩进行补齐。</p>
