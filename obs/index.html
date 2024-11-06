@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://muxmus.com/css/search.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/bg.css">
 		<link rel="stylesheet" href="https://muxmus.com/css/APlayer.min.css">
-		<link rel="stylesheet" href="https://unpkg.com/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+		<link rel="stylesheet" href="https://file-v6.muxmus.com:5000/css/lxgw-wenkai-screen-web/style.css">
 		<script src="https://muxmus.com/js/jquery-3.6.0.min.js"></script>
 		<script src="https://muxmus.com/js/APlayer.min.js"></script>
 		<style>
@@ -28,7 +28,7 @@
 		<script>
 			$.ajax({
 				type:"get",
-				url:"https://api.muxmus.com:5000/music",
+				url:"https://api-v6.muxmus.com:5000/music",
 				dataType:"json",
 				success:function(jsonData){
 					const ap = new APlayer({
