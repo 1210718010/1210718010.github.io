@@ -34,30 +34,12 @@
             <loc>https://muxmus.com/blog/20230802/</loc>
       </url>
       <url>
-            <loc>https://music.muxmus.com:5000</loc>
+            <loc>https://music.muxmus.com</loc>
       </url>
       <url>
-            <loc>https://music.muxmus.com:5000</loc>
+            <loc>https://um.muxmus.com</loc>
       </url>
       <url>
-            <loc>https://muxmus.com/music/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/i/</loc>
-      </url>
-      <url>
-            <loc>https://muxmus.com/live/</loc>
-      </url>
-      <url>
-            <loc>https://music.muxmus.com:5000</loc>
-      </url>
-      <url>
-            <loc>https://um.muxmus.com:5000</loc>
-      </url>
-      <url>
-            <loc>https://i.muxmus.com:5000</loc>
-      </url>
-      <url>
-            <loc>https://live.muxmus.com:5000</loc>
+            <loc>https://i.muxmus.com</loc>
       </url>
 </urlset>
