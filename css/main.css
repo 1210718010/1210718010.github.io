@@ -536,6 +536,14 @@ input,textarea {
 	color: rgb(0 0 0 / .7) !important;
 }
 
+.tk-submit-action-icon.__markdown {
+	display: none !important;
+}
+
+.tk-footer {
+	display: none !important;
+}
+
 /* github-dark */
 
 pre,code {
