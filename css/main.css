@@ -258,8 +258,8 @@ pre {
 
 @keyframes typing {
   0% { width: 0; }
-  30% { width: 16em; }
-  60% { width: 16em; }
+  40% { width: 16em; }
+  80% { width: 16em; }
   90% { width: 0; }
   100% { width: 0; }
 }
