@@ -222,7 +222,7 @@ pre {
 #slider {
 	position: fixed;
 	top: 0;
-	right: -100%;
+	right: -400px;
 	bottom: 0;
 	width: 400px;
 	background-color: rgba(80,80,80,0.8);
@@ -291,6 +291,7 @@ pre {
 @media all and (orientation : portrait) {
 	
 	#slider {
+		right: -100%;
 		width: 100%;
 	}
 	
