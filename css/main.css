@@ -563,6 +563,15 @@ input,textarea {
 pre,code {
 	font-family: "LXGW WenKai Mono GB Screen";
 	font-weight: normal;
+	tab-size: 4;
+}
+
+@media all and (orientation : portrait) {
+
+	pre,code {
+		tab-size: 2;
+	}
+	
 }
 
 code.hljs {
