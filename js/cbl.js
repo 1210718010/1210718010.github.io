@@ -10,7 +10,7 @@ $(document).ready(function(){
 		ccc.attr("class","dk")
 	});
 	ccc.click(function(){
-		slider.css({'right':'-100%','opacity':'0'});
+		slider.css({'right':'-400px','opacity':'0'});
 		ccc.attr("class","gb");
 		bbb.attr("class","dk")
 	});
