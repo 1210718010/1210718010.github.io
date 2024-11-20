@@ -8,7 +8,7 @@ $(document).ready(function(){
 		slider.css({'right':'0px','opacity':'1'});
 		bbb.attr("class","gb");
 		ccc.attr("class","dk");
-    });
+	});
 	ccc.click(function(){
 		slider.css({'right':'-400px','opacity':'0'});
 		ccc.attr("class","gb");
