@@ -11,10 +11,12 @@ $(document).on('ready pjax:end', function(event) {
 		}
 	})
         hljs.highlightAll();
+	hljs.initLineNumbersOnLoad();
         twikoo.init({
                 envId: 'https://twikoo.muxmus.com',
                 el: '#tcomment',
                 lang: 'zh-CN'
                 })
         });
-hljs.highlightAll()
+hljs.highlightAll();
+hljs.initLineNumbersOnLoad()
