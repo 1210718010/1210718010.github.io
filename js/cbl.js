@@ -5,12 +5,12 @@ $(document).ready(function(){
 	var ccc = $("#ccc");
 	var slider = $("#slider");
 	bbb.click(function(){
-		slider.css({'right':'0','opacity':'1'});
+		slider.css({'transform':'translateX(0)','opacity':'1'});
 		bbb.attr("class","gb");
 		ccc.attr("class","dk")
 	});
 	ccc.click(function(){
-		slider.css({'right':'-400px','opacity':'0'});
+		slider.css({'transform':'translateX(100%)','opacity':'0'});
 		ccc.attr("class","gb");
 		bbb.attr("class","dk")
 	});
