@@ -566,25 +566,33 @@ pre,code {
 	tab-size: 4;
 }
 
+.hljs-ln .hljs-ln-numbers {
+    user-select: none;
+    text-align: right;
+    color: rgba(0,0,0,.3);
+    border-right: 1.5px solid rgba(0,0,0,.1);
+    vertical-align: top;
+    padding-right: 10px;
+}
+
+.hljs-ln .hljs-ln-code {
+    padding-left: 10px;
+}
+
 @media all and (orientation : portrait) {
 
 	pre,code {
 		tab-size: 2;
 	}
+
+	.hljs-ln .hljs-ln-numbers {
+		padding-left: 5px;
+	}
+
+	.hljs-ln .hljs-ln-code {
+		padding-left: 5px;
+	}
 	
-}
-
-.hljs-ln .hljs-ln-numbers {
-    user-select: none;
-    text-align: center;
-    color: rgba(0,0,0,.4);
-    border-right: 1.5px solid rgba(0,0,0,.4);
-    vertical-align: top;
-    padding-right: 5px;
-}
-
-.hljs-ln .hljs-ln-code {
-    padding-left: 5px;
 }
 
 code.hljs {
