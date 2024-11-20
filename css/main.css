@@ -222,7 +222,7 @@ pre {
 #slider {
 	position: fixed;
 	top: 0;
-	right: -400px;
+	right: -100%;
 	bottom: 0;
 	width: 400px;
 	background-color: rgba(80,80,80,0.8);
@@ -291,17 +291,7 @@ pre {
 @media all and (orientation : portrait) {
 	
 	#slider {
-		position: fixed;
-		top: 0;
-		right: -100%;
-		bottom: 0;
 		width: 100%;
-		background-color: rgba(80,80,80,0.8);
-		transition: right 0.1s;
-		overflow-x: hidden;
-		overflow-y: auto;
-		opacity: 0;
-		z-index: 100;
 	}
 	
 	.divm {
