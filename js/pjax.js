@@ -2,7 +2,7 @@ $(document).pjax('a[date-pjax]', '#main-content', {
         fragment: '#main-content', timeout: '60000'
         });
 $(document).on('ready pjax:end', function(event) {
-        var bbb = $("#bbb");
+        /*var bbb = $("#bbb");
 	var ccc = $("#ccc");
 	var slider = $("#slider");
 	bbb.click(function(){
@@ -14,7 +14,15 @@ $(document).on('ready pjax:end', function(event) {
 		slider.css({'right':'-400px','opacity':'0'});
 		ccc.attr("class","gb");
 		bbb.attr("class","dk")
-        });
+        });*/
+	var sliderHref = window.location.href;
+	$("#slider-link a").each(function(){
+		if($(this).attr('href') == sliderHref){
+			$(this).css('display','none')
+		}else{
+			$(this).css('display','unset')
+		}
+	})
         hljs.highlightAll();
         twikoo.init({
                 envId: 'https://twikoo.muxmus.com',
