@@ -222,9 +222,9 @@ pre {
 #slider {
 	position: fixed;
 	top: 0;
-	right: -400px;
 	bottom: 0;
 	width: 400px;
+	transform: translateX(100%);
 	background-color: rgba(80,80,80,0.8);
 	transition: right 0.1s;
 	overflow-x: hidden;
@@ -291,7 +291,6 @@ pre {
 @media all and (orientation : portrait) {
 	
 	#slider {
-		right: -100%;
 		width: 100%;
 	}
 	
