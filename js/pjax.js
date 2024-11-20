@@ -8,12 +8,12 @@ $(document).on('ready pjax:end', function(event) {
 	bbb.click(function(){
 		slider.css({'right':'0px','opacity':'1'});
 		bbb.attr("class","gb");
-		ccc.attr("class","dk");
+		ccc.attr("class","dk")
         });
 	ccc.click(function(){
 		slider.css({'right':'-400px','opacity':'0'});
 		ccc.attr("class","gb");
-		bbb.attr("class","dk");
+		bbb.attr("class","dk")
         });
         hljs.highlightAll();
         twikoo.init({
@@ -22,4 +22,4 @@ $(document).on('ready pjax:end', function(event) {
                 lang: 'zh-CN'
                 })
         });
-hljs.highlightAll();
+hljs.highlightAll()
