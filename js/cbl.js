@@ -17,9 +17,9 @@ $(document).ready(function(){
 	var sliderHref = window.location.href;
 	$("#slider-link a").each(function(){
 		if($(this).attr('href') == sliderHref){
-			$(this).css('display','none')
+			$(this).css({'pointer-events':'none','opacity':'.7','background-color':'#000','border-radius':'5px','padding':'2px'})
 		}else{
-			$(this).css('display','unset')
+			$(this).removeAttr("style","")
 		}
 	})
 });
