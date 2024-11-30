@@ -1,4 +1,5 @@
 // JavaScript Document
+var offset = 0.3;
 $.ajax({
 	type:"get",
 	url:"https://api.muxmus.com/music",
@@ -32,5 +33,8 @@ $.ajax({
 				ap.play();
 			});
 		});
-	},
+		ap.on('timeupdate', () => {
+			ap.lrc.update(ap.audio.currentTime + offset);
+		});
+	}
 });
