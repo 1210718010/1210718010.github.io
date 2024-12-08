@@ -83,9 +83,9 @@ p {
 }
 
 .tk-extras {
-	color: #000;
+	color: #000 !important;
 }
 
 .tk-nick-link:hover {
-	color: #0051af;
+	color: #0051af !important;
 }
