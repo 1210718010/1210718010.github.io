@@ -558,6 +558,14 @@ input,textarea {
 	display: none !important;
 }
 
+.tk-extras {
+	color: #000;
+}
+
+.tk-nick-link:hover {
+	color: #0051af;
+}
+
 /* github-dark */
 
 pre,code {
