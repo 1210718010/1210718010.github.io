@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /js/
-Disallow: /css/
-Disallow: /img/
-Disallow: /s/
-Disallow: /new/
-Disallow: /obs/
